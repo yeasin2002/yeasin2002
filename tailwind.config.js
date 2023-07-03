@@ -22,6 +22,21 @@ module.exports = withMT({
     },
     extend: {
       colors: {
+        //  my custom colors code
+
+        //  black groups
+        conf: "#111121",
+        mastery: "#0D1117",
+        fines: "#0A0A29",
+        pop: "#645954",
+        mint: {
+          100: "#031B15",
+          200: "#0A1815",
+        },
+        // white groups
+        sup: "#F6F6F6",
+
+        //  color palette provided by ui.shadCn
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

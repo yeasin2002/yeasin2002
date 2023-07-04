@@ -4,7 +4,7 @@ const MobileNav = () => {
   return (
     <nav>
       <div>
-        <HiMenuAlt2 className="flex  justify-end" />
+        <HiMenuAlt2 className="flex justify-end" />
       </div>
     </nav>
   );

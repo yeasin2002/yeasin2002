@@ -18,11 +18,11 @@ const navItems: navItemsTypes[] = [
 const LargeDeviceNav: React.FC = () => {
   const [active, setActive] = useState<activeState>("home");
   return (
-    <nav className="flex justify-between px-10 warmFlame p-4  text-sup">
+    <nav className="warmFlame text-sup flex justify-between p-4 px-10">
       <div>Logo </div>
       {/* menus */}
       <div className="">
-        <motion.ul layoutId="navList" className="flex gap-2  items-center">
+        <motion.ul layoutId="navList" className="flex items-center gap-2">
           {navItems.map((val) => {
             return (
               <div key={val.name} className="relative">
@@ -31,16 +31,16 @@ const LargeDeviceNav: React.FC = () => {
                 </li>
                 {active === val.name && "navActive" && (
                   <motion.span
-                    // transition={{
-                    //   duration: 5,
-                    // }}
+                      // transition=
+                      //   duration:
+                      //
                     layoutId="bump"
-                    className=" inline-block absolute top-0 left-0 w-full h-full rounded-md bg-light-blue-700   "
+                    className=" bg-light-blue-700 absolute top-0 left-0 inline-block w-full h-full rounded-md"
                   ></motion.span>
                 )}
                 <span
                   onClick={() => setActive(val.name)}
-                  className="absolute top-0 left-0  z-10 text-white navList  "
+                  className="navList  absolute top-0 left-0 z-10 text-white"
                 >
                   {val.name}
                 </span>
@@ -52,5 +52,4 @@ const LargeDeviceNav: React.FC = () => {
     </nav>
   );
 };
-
 export default LargeDeviceNav;

@@ -3,7 +3,7 @@ import LargeDeviceNav from "@/components/Nav/LargeDeviceNav";
 
 export default function Home() {
   return (
-    <main className="w-screen h-screen warmFlame">
+    <main className="warmFlame w-screen h-screen">
       <LargeDeviceNav />
       {/* <MobileNav /> */}
     </main>

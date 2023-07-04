@@ -28,7 +28,7 @@ module.exports = withMT({
         conf: "#111121",
         mastery: "#0D1117",
         fines: "#0A0A29",
-        pop: "#645954",
+        pop: "#1D1D1F",
         mint: {
           100: "#031B15",
           200: "#0A1815",

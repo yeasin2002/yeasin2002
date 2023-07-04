@@ -1,7 +1,11 @@
+import LargeDeviceNav from "@/components/Nav/LargeDeviceNav";
+// import MobileNav from "@/components/Nav/MobileNav";
+
 export default function Home() {
   return (
-    <main>
-      <h1 className="font-bold text-teal-600 ">Yeasin 2002</h1>
+    <main className="w-screen h-screen warmFlame">
+      <LargeDeviceNav />
+      {/* <MobileNav /> */}
     </main>
   );
 }

@@ -26,21 +26,27 @@ const LargeDeviceNav: React.FC = () => {
           {navItems.map((val) => {
             return (
               <div key={val.name} className="relative">
-                <li onClick={() => setActive(val.name)} className="navList">
+                <li
+                  onClick={() => setActive(val.name)}
+                  className="navList"
+                  onMouseEnter={() => {
+                    console.log("fired");
+                  }}
+                >
                   {val.name}
                 </li>
                 {active === val.name && "navActive" && (
                   <motion.span
-                      // transition=
-                      //   duration:
-                      //
+                    // transition=
+                    //   duration:
+                    //
                     layoutId="bump"
                     className=" bg-light-blue-700 absolute top-0 left-0 inline-block w-full h-full rounded-md"
                   ></motion.span>
                 )}
                 <span
                   onClick={() => setActive(val.name)}
-                  className="navList  absolute top-0 left-0 z-10 text-white"
+                  className="navList absolute top-0 left-0 z-10 text-white"
                 >
                   {val.name}
                 </span>

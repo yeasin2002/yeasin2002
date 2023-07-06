@@ -3,22 +3,24 @@
 import { createContext, useState } from "react";
 import React from "react";
 
+export type themeType = "Greenish" | "Midnight-Blue";
+
 interface contextTypes {
-  theme: "default" | "warmFlame";
-  setTheme: React.Dispatch<React.SetStateAction<string>>;
+  theme: themeType;
+  setTheme: React.Dispatch<React.SetStateAction<themeType>>;
 }
 
-const themeContext = createContext<contextTypes>({
-  theme: "default",
+export const themeContext = createContext<contextTypes>({
+  theme: "Midnight-Blue",
   setTheme: () => {},
 });
 const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [theme, setTheme] = useState("default");
+  const [theme, setTheme] = useState<themeType>("Greenish");
 
   return (
     <themeContext.Provider
       value={{
-        theme: "default",
+        theme: theme,
         setTheme,
       }}
     >

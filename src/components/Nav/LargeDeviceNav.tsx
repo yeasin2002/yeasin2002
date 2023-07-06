@@ -18,7 +18,7 @@ const navItems: navItemsTypes[] = [
 const LargeDeviceNav: React.FC = () => {
   const [active, setActive] = useState<activeState>("home");
   return (
-    <nav className="warmFlame text-sup flex justify-between p-4 px-10">
+    <nav className=" text-sup xl:flex justify-between hidden p-4 px-10">
       <div>Logo </div>
       {/* menus */}
       <div className="">

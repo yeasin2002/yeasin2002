@@ -78,10 +78,14 @@
 }
 
 @layer components {
-  /*  navigation bat */
-  .warmFlame {
-    @apply bg-gradient-to-r from-mint-100 to-mint-200;
+  /*? them colors  */
+  .Greenish {
+    @apply bg-gradient-to-r from-mint-100 to-mint-200 text-sup;
   }
+  .Midnight-Blue {
+    @apply bg-gradient-to-r from-conf to-mastery text-sup;
+  }
+  /*  navigation bat */
   .navList {
     @apply px-4 py-2 cursor-pointer;
   }

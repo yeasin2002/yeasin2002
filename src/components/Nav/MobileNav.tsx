@@ -2,9 +2,10 @@ import { HiMenuAlt2 } from "react-icons/hi";
 
 const MobileNav = () => {
   return (
-    <nav>
+    <nav className="xl:hidden block">
       <div>
-        <HiMenuAlt2 className="flex justify-end" />
+        <HiMenuAlt2 className="text-white" />
+        Mobile Nav
       </div>
     </nav>
   );

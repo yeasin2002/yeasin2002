@@ -30,6 +30,10 @@ module.exports = withMT({
         fines: "#0A0A29",
         pop: "#1D1D1F",
         midnight: "#251C31",
+        amethyst: "#693B93",
+        paste: "#3CE3B3",
+        fog: "#E7F0FD",
+
         mint: {
           100: "#031B15",
           200: "#0A1815",

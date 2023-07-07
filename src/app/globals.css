@@ -97,4 +97,9 @@
   .SwiperSlide {
     @apply bg-sup w-52 h-52 inline-block;
   }
+
+  /* arrow icons  */
+  .arrowIcons {
+    @apply w-10 h-10;
+  }
 }

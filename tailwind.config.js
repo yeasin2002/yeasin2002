@@ -101,6 +101,6 @@ module.exports = withMT({
   plugins: [
     require("tailwindcss-animate"),
     require("flowbite/plugin"),
-    require("daisyui"),
+    // require("daisyui"),
   ],
 });

@@ -10,9 +10,9 @@ export default function Home() {
   const { theme } = useContext(themeContext);
 
   return (
-    <main className={`w-screen h-screen ${theme}`}>
+    <div className={`${theme}`}>
       <Nav />
       <Hero />
-    </main>
+    </div>
   );
 }

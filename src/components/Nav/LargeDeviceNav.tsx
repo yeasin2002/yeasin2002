@@ -37,9 +37,6 @@ const LargeDeviceNav: React.FC = () => {
                 </li>
                 {active === val.name && "navActive" && (
                   <motion.span
-                    // transition=
-                    //   duration:
-                    //
                     layoutId="bump"
                     className=" bg-light-blue-700 absolute top-0 left-0 inline-block w-full h-full rounded-md"
                   ></motion.span>

@@ -92,4 +92,9 @@
   .navActive {
     @apply p-1 bg-blue-500 rounded-lg;
   }
+
+  /* swiper's */
+  .SwiperSlide {
+    @apply bg-sup w-52 h-52 inline-block;
+  }
 }

@@ -29,11 +29,13 @@ module.exports = withMT({
         mastery: "#0D1117",
         fines: "#0A0A29",
         pop: "#1D1D1F",
+        midnight: "#251C31",
         mint: {
           100: "#031B15",
           200: "#0A1815",
         },
         // white groups
+        smokes: "#F2F6FE",
         sup: "#F6F6F6",
 
         //  color palette provided by ui.shadCn

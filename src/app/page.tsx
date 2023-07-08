@@ -7,12 +7,14 @@ import Nav from "@/components/Nav/Nav";
 import Hero from "@/pages/Hero/Hero";
 import About from "@/pages/About/About";
 import Skills from "@/pages/Skills/Skills";
+import useColorTheme from "@/hooks/useColorTheme";
 
 export default function Home() {
-  const { theme } = useContext(themeContext);
+  const { color, BgColor } = useColorTheme();
+  // const { theme } = useContext(themeContext);
 
   return (
-    <div className={`${theme}  container  `}>
+    <div className={`${BgColor}  ${color}  container  `}>
       <Nav />
       <Hero />
       <About />

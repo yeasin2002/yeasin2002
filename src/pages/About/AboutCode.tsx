@@ -4,15 +4,14 @@ type Props = {};
 
 const AboutCode = (props: Props) => {
   return (
-    <div className=" overflow-x-hidden">
+    <div className=" border-sup overflow-x-hidden border">
       <pre>
         {`
-   import { aboutType } from "./about.d";
+  import { aboutType } from "./about.d";
 
-     const AboutMe = (): aboutType => {
+  const AboutMe = (): aboutType => {
        return {
-         name: "md kawsar islam yeasin",
-         bio: "orem ipsum dolor sit amet consectetur adipisicing elit. Ratione cum ",
+         name: "Md Kawsar Islam Yeasin",
          role: "front end developer",
          age: 20,
          gender: "male",
@@ -20,8 +19,7 @@ const AboutCode = (props: Props) => {
          phone: "01632227965",
          mail: "mdkawsarislam@gmail.com",
        };
-     };
-     
+  }; 
      `}
       </pre>
     </div>

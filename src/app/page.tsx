@@ -6,6 +6,7 @@ import { useContext } from "react";
 import Nav from "@/components/Nav/Nav";
 import Hero from "@/pages/Hero/Hero";
 import About from "@/pages/About/About";
+import Skills from "@/pages/Skills/Skills";
 
 export default function Home() {
   const { theme } = useContext(themeContext);
@@ -15,6 +16,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <About />
+      <Skills />
     </div>
   );
 }

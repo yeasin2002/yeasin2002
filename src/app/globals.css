@@ -78,6 +78,13 @@
 }
 
 @layer components {
+  /*! global  */
+  .title {
+    @apply flex items-center justify-center text-2xl font-bold;
+  }
+  .eachSections {
+    @apply w-full;
+  }
   /*? them colors  */
   .Greenish {
     @apply bg-gradient-to-r from-mint-100 to-mint-200 text-sup;

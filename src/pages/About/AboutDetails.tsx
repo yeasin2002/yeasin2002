@@ -8,7 +8,7 @@ type Props = {};
 
 const AboutDetails = (props: Props) => {
   return (
-    <div className="grid grid-cols-2">
+    <div className="grid grid-cols-2 py-10">
       <AboutCode />
       <div className="justify-self-center self-center">
         <Image src={yeasin} alt="Yeasin" className="w-60 h-60 rounded-full" />

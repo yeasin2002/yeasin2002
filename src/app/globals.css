@@ -82,6 +82,9 @@
   .title {
     @apply flex items-center justify-center text-2xl font-bold;
   }
+  .into-center {
+    @apply flex items-center justify-center;
+  }
   .eachSections {
     @apply w-full;
   }
@@ -108,5 +111,9 @@
   /* arrow icons  */
   .arrowIcons {
     @apply w-10 h-10;
+  }
+  /* buttons  */
+  .btn {
+    @apply px-4 py-2 rounded-lg outline-none;
   }
 }

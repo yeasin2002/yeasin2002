@@ -1,7 +1,11 @@
 import React from "react";
 
-const Button_Secondary = () => {
-  return <div>Button_Secondary</div>;
+interface Props {
+  children: React.ReactNode;
+}
+
+const Button_Secondary = ({ children }: Props) => {
+  return <button>{children}</button>;
 };
 
 export default Button_Secondary;

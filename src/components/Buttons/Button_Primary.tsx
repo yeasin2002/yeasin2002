@@ -1,7 +1,11 @@
 import React from "react";
 
-const Button_Primary = () => {
-  return <div>Button_Primary</div>;
+interface Button_PrimaryProps  {
+  children: React.ReactNode;
+}
+
+const Button_Primary = ({ children, ...rest }: Button_PrimaryProps) => {
+  return <button {...rest}>{children}</button>;
 };
 
 export default Button_Primary;

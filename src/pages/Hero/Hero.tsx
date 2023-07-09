@@ -12,7 +12,7 @@ import round from "../../assets/bloobs/Ellipse.svg";
 type Props = {};
 const Hero = (props: Props) => {
   return (
-    <main className="h-5/6 relative">
+    <main className="h-5/6 relative z-50">
       <section className="body-font text-gray-600">
         <div className="md:flex-row container flex flex-col items-center px-5 py-24 mx-auto">
           <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0 flex flex-col items-center mb-16 text-center">
@@ -25,18 +25,10 @@ const Hero = (props: Props) => {
             </p>
           </div>
           <div className="lg:max-w-lg md:w-1/2 w-5/6">
-            <Image src={man} alt="man" className="z-0" />
+            <Image src={man} alt="man" className="z-0 select-none" />
           </div>
         </div>
       </section>
-
-      {/* <div>
-        <Image
-          className=" absolute bottom-0 right-0 z-10"
-          src={round}
-          alt="bloobs"
-        />
-      </div> */}
     </main>
   );
 };

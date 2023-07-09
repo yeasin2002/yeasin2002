@@ -14,7 +14,7 @@ export default function Home() {
   // const { theme } = useContext(themeContext);
 
   return (
-    <div className={`${BgColor}  ${color}  container  `}>
+    <div className={`${BgColor}  ${color}   container  `}>
       <Nav />
       <Hero />
       <About />

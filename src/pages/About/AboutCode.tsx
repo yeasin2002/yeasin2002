@@ -4,6 +4,7 @@ import { Tilt } from "react-tilt";
 // assets
 import bloods from "@/assets/bloobs/Rings.svg";
 import Image from "next/image";
+import Round from "@/components/Icons/Round";
 
 const AboutCode = () => {
   const tiltOptions = {
@@ -52,7 +53,7 @@ const AboutCode = () => {
         <Image
           src={bloods}
           alt="icons"
-          className="text-paste  absolute bottom-0 right-0"
+          className=" absolute bottom-0 right-0"
         />
       </div>
     </Tilt>

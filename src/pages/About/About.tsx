@@ -6,9 +6,9 @@ import AboutDetails from "./AboutDetails";
 
 const About = () => {
   return (
-    <section className="w-full">
+    <section className="eachSections">
       <div className="flex justify-center">
-        <h3 className="text-paste flex items-center text-4xl font-bold">
+        <h3 className="title">
           <ArrowLeft />
           About me
           <Line />

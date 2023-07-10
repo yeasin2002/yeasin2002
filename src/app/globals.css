@@ -80,13 +80,13 @@
 @layer components {
   /*! global  */
   .title {
-    @apply flex items-center justify-center text-2xl font-bold;
+    @apply text-paste flex items-center justify-center text-2xl font-bold;
   }
   .into-center {
     @apply flex items-center justify-center;
   }
   .eachSections {
-    @apply w-full;
+    @apply w-full pt-10 pb-3;
   }
   /*? them colors  */
   .Greenish {
@@ -115,5 +115,18 @@
   /* buttons  */
   .btn {
     @apply px-4 py-2 rounded-lg outline-none;
+  }
+
+  /* skill sections  */
+  .eachSkill {
+    @apply gap-x-2 gap-y-2 grid grid-cols-4;
+  }
+  .SubTitle {
+    @apply mt-10 mb-2 text-xl font-bold;
+  }
+
+  /*  sliders */
+  .slides {
+    @apply text-mastery  flex;
   }
 }

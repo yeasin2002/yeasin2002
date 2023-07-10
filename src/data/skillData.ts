@@ -4,7 +4,7 @@ import { AiFillAlipayCircle } from "react-icons/ai";
 const skillData: skillDataTypes = {
   FrontEnd: [
     {
-      title: "html",
+      title: "HTML",
       icon: AiFillAlipayCircle,
       stage: "advance",
     },
@@ -14,12 +14,37 @@ const skillData: skillDataTypes = {
       stage: "advance",
     },
     {
+      title: "PostCSS",
+      icon: AiFillAlipayCircle,
+      stage: "intermediate",
+    },
+    {
       title: "TailwindCSS",
       icon: AiFillAlipayCircle,
       stage: "advance",
     },
     {
       title: "JavaScript",
+      icon: AiFillAlipayCircle,
+      stage: "intermediate",
+    },
+    {
+      title: "React.js",
+      icon: AiFillAlipayCircle,
+      stage: "intermediate",
+    },
+    {
+      title: "Redux",
+      icon: AiFillAlipayCircle,
+      stage: "intermediate",
+    },
+    {
+      title: "Redux Thunk, RTK Query",
+      icon: AiFillAlipayCircle,
+      stage: "intermediate",
+    },
+    {
+      title: "Next.js 13",
       icon: AiFillAlipayCircle,
       stage: "intermediate",
     },
@@ -44,6 +69,11 @@ const skillData: skillDataTypes = {
     },
     {
       title: "Figma",
+      icon: AiFillAlipayCircle,
+      stage: "intermediate",
+    },
+    {
+      title: "VS Code",
       icon: AiFillAlipayCircle,
       stage: "intermediate",
     },

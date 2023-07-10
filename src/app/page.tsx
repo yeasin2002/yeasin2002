@@ -8,6 +8,8 @@ import Hero from "@/pages/Hero/Hero";
 import About from "@/pages/About/About";
 import Skills from "@/pages/Skills/Skills";
 import useColorTheme from "@/hooks/useColorTheme";
+import Testimonials from "@/pages/Testimonials/Testimonials";
+import Projects from "@/pages/projects/Projects";
 
 export default function Home() {
   const { color, BgColor } = useColorTheme();
@@ -19,6 +21,8 @@ export default function Home() {
       <Hero />
       <About />
       <Skills />
+      <Projects />
+      <Testimonials />
     </div>
   );
 }

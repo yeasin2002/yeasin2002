@@ -1,7 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+
+//  components
 import ThemeSwitcher from "./ThemeSwitcher";
+import logo from "@/assets/icons/logo.jpg";
 
 type activeState = "home" | "about" | "contact" | "blogs" | "projects";
 interface navItemsTypes {
@@ -18,9 +22,9 @@ const navItems: navItemsTypes[] = [
 const LargeDeviceNav: React.FC = () => {
   const [active, setActive] = useState<activeState>("home");
   return (
-    <nav className="into-center xl:flex hidden">
-      <div className=" text-sup flex justify-between flex-1 p-4 px-10">
-        <div>Logo </div>
+    <nav className="into-center xl:flex hidden select-none">
+      <div className=" text-sup into-center justify-between flex-1 p-4 px-10">
+        <Image src={logo} alt="logo" className="w-16 h-16 rounded-full" />
         {/* menus */}
         <div className="">
           <motion.ul layoutId="navList" className="flex items-center gap-2">

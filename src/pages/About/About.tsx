@@ -3,6 +3,7 @@ import ArrowLeft from "./arrows/ArrowLeft";
 import Arrow_Forward from "./arrows/Arrow_Forward";
 import Line from "./arrows/Line";
 import AboutDetails from "./AboutDetails";
+import Education from "./Education/Education";
 
 const About = () => {
   return (
@@ -17,6 +18,7 @@ const About = () => {
       </div>
 
       <AboutDetails />
+      <Education />
     </section>
   );
 };

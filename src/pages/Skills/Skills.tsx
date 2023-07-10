@@ -16,6 +16,7 @@ const Skills = () => {
           ))}
         </div>
       </div>
+
       {/*  back end  */}
       <div>
         <h3 className="SubTitle">Back End</h3>

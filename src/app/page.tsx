@@ -10,6 +10,8 @@ import Skills from "@/pages/Skills/Skills";
 import useColorTheme from "@/hooks/useColorTheme";
 import Testimonials from "@/pages/Testimonials/Testimonials";
 import Projects from "@/pages/projects/Projects";
+import Contact from "@/pages/contact/Contact";
+import Footer from "@/pages/Footer/Footer";
 
 export default function Home() {
   const { color, BgColor } = useColorTheme();
@@ -23,6 +25,8 @@ export default function Home() {
       <Skills />
       <Projects />
       <Testimonials />
+      <Contact />
+      <Footer />
     </div>
   );
 }

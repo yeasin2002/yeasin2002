@@ -1,9 +1,11 @@
 import React from "react";
 import { Tilt } from "react-tilt";
 
-type Props = {};
+// assets
+import bloods from "@/assets/bloobs/Rings.svg";
+import Image from "next/image";
 
-const AboutCode = (props: Props) => {
+const AboutCode = () => {
   const tiltOptions = {
     reverse: false, // reverse the tilt direction
     max: 10, // max tilt rotation (degrees)
@@ -20,7 +22,7 @@ const AboutCode = (props: Props) => {
   return (
     <Tilt
       options={tiltOptions}
-      className=" rounded-lg"
+      className=" relative rounded-lg"
       //  glass effect
       style={{
         background: `rgba(255,255,255,.1)`,
@@ -35,16 +37,24 @@ const AboutCode = (props: Props) => {
   const AboutMe = (): aboutType => {
        return {
          name: "Md Kawsar Islam Yeasin",
-         role: "front end developer",
+         role: "Front End Web Developer",
          age: 20,
          gender: "male",
-         address: "Dhaka, Cantonment, Dhaka-1206",
+         address: "Dhaka, Cantonment,Dhaka-1206",
          phone: "01632227965",
          mail: "mdkawsarislam@gmail.com",
        };
   }; 
      `}
       </pre>
+
+      <div>
+        <Image
+          src={bloods}
+          alt="icons"
+          className="text-paste  absolute bottom-0 right-0"
+        />
+      </div>
     </Tilt>
   );
 };

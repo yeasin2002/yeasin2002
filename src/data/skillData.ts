@@ -24,29 +24,29 @@ const skillData: skillDataTypes = {
       stage: "advance",
     },
     {
-      title: "JavaScript",
+      title: "JavaScript / ECMA Script",
       icon: AiFillAlipayCircle,
       stage: "intermediate",
     },
     {
       title: "React.js",
       icon: AiFillAlipayCircle,
-      stage: "intermediate",
+      stage: "advance",
     },
     {
       title: "Redux",
       icon: AiFillAlipayCircle,
-      stage: "intermediate",
+      stage: "advance",
     },
     {
       title: "Redux Thunk, RTK Query",
       icon: AiFillAlipayCircle,
-      stage: "intermediate",
+      stage: "advance",
     },
     {
       title: "Next.js 13",
       icon: AiFillAlipayCircle,
-      stage: "intermediate",
+      stage: "beginner",
     },
   ],
   backEnd: [
@@ -63,14 +63,14 @@ const skillData: skillDataTypes = {
   ],
   tools: [
     {
-      title: "vite",
+      title: "Vite",
       icon: AiFillAlipayCircle,
       stage: "intermediate",
     },
     {
       title: "Figma",
       icon: AiFillAlipayCircle,
-      stage: "intermediate",
+      stage: "beginner",
     },
     {
       title: "VS Code",

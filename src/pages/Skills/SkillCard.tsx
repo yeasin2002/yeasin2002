@@ -8,16 +8,18 @@ export interface cardProps {
   stage: "beginner" | "intermediate" | "advance";
 }
 const SkillCard = ({ children, Icon, stage }: cardProps) => {
-  // let textColor;
-  // if (stage === "beginner") {
-  //   textColor = "text-amethyst";
-  // } else if (stage === "intermediate") {
-  //   textColor = "text-mastery";
-  // } else {
-  //   textColor = "text-conf";
-  // }
+  let textColor;
+  if (stage === "beginner") {
+    textColor = "shadow-amethyst";
+  } else if (stage === "intermediate") {
+    textColor = "shadow-fog";
+  } else {
+    textColor = "shadow-teal-700";
+  }
   return (
-    <div className="bg-sup hover:bg-gray-200 text-mastery flex items-center py-3 transition-all rounded-sm cursor-pointer">
+    <div
+      className={`${textColor}   bg-sup text-conf font-medium capitalize hover:bg-gray-200 flex items-center py-3 transition-all rounded-sm shadow-md cursor-pointer`}
+    >
       <div className="mx-4">
         <Icon />
       </div>
@@ -25,5 +27,4 @@ const SkillCard = ({ children, Icon, stage }: cardProps) => {
     </div>
   );
 };
-
 export default SkillCard;

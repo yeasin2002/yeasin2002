@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -7,7 +6,6 @@ import { ImLocation } from "react-icons/im";
 
 //  assets
 import man from "../../assets/avatar/Saly-13.svg";
-import round from "../../assets/bloobs/Ellipse.svg";
 
 type Props = {};
 const Hero = (props: Props) => {
@@ -25,12 +23,11 @@ const Hero = (props: Props) => {
             </p>
           </div>
           <div className="lg:max-w-lg md:w-1/2 w-5/6">
-            <Image src={man} alt="man" className="z-0 select-none" />
+            <Image src={man} alt="man" className=" select-none" />
           </div>
         </div>
       </section>
     </main>
   );
 };
-
 export default Hero;

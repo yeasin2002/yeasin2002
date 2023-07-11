@@ -26,13 +26,19 @@ const ThemeSwitcher = (props: Props) => {
           <div className="bg-sup hover:bg-gray-500 text-mastery top-12 -z-0 absolute right-0 inline-block w-32 p-1 transition-all rounded-sm">
             <p
               className="inline-block my-1 border-b border-gray-600 cursor-pointer"
-              onClick={() => setTheme("Midnight-Blue")}
+              onClick={() => {
+                setTheme("Midnight-Blue");
+                setIsOpen(false);
+              }}
             >
               Midnight Blue
             </p>
             <p
               className="inline-block my-1 border-b border-gray-600 cursor-pointer"
-              onClick={() => setTheme("Greenish")}
+              onClick={() => {
+                setTheme("Greenish");
+                setIsOpen(false);
+              }}
             >
               Greenish
             </p>

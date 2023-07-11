@@ -10,7 +10,7 @@ import tailwind from "@/assets/icons/tailwind.svg";
 import react from "@/assets/icons/react.svg";
 import next from "@/assets/icons/next.svg";
 import redux from "@/assets/icons/redux.svg";
-import node from "@/assets/icons/nodejs.svg";
+import node from "@/assets/icons/Nodejs.svg";
 import git from "@/assets/icons/git.svg";
 import github from "@/assets/icons/github.svg";
 import vsCode from "@/assets/icons/vsCode.svg";

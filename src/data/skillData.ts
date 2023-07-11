@@ -24,6 +24,16 @@ const skillData: skillDataTypes = {
       stage: "advance",
     },
     {
+      title: "windicss",
+      icon: AiFillAlipayCircle,
+      stage: "advance",
+    },
+    {
+      title: "open-props",
+      icon: AiFillAlipayCircle,
+      stage: "intermediate",
+    },
+    {
       title: "JavaScript / ECMA Script",
       icon: AiFillAlipayCircle,
       stage: "intermediate",
@@ -60,8 +70,23 @@ const skillData: skillDataTypes = {
       icon: AiFillAlipayCircle,
       stage: "beginner",
     },
+    {
+      title: "JWT",
+      icon: AiFillAlipayCircle,
+      stage: "beginner",
+    },
   ],
   tools: [
+    {
+      title: "Git ",
+      icon: AiFillAlipayCircle,
+      stage: "intermediate",
+    },
+    {
+      title: "Github",
+      icon: AiFillAlipayCircle,
+      stage: "intermediate",
+    },
     {
       title: "Vite",
       icon: AiFillAlipayCircle,

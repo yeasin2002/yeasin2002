@@ -1,4 +1,3 @@
-import { themeContext } from "@/context/ThemeProvider";
 import React, { useContext } from "react";
 import { IconType } from "react-icons";
 

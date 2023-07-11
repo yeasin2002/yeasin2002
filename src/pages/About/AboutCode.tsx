@@ -1,6 +1,11 @@
 import React from "react";
 import { Tilt } from "react-tilt";
 
+import AboutString from "./AboutMeFuncString";
+
+//  syntax highlighter
+import { Highlight, themes } from "prism-react-renderer";
+
 // assets
 import bloods from "@/assets/bloobs/Rings.svg";
 import Image from "next/image";
@@ -31,24 +36,20 @@ const AboutCode = () => {
         backdropFilter: `blur(5px)`,
       }}
     >
-      <pre>
-        {`
-  import { aboutType } from "./about.d";
-
-  const AboutMe = (): aboutType => {
-       return {
-         name: "Md Kawsar Islam Yeasin",
-         role: "Front End Web Developer",
-         age: 20,
-         gender: "male",
-         address: "Dhaka, Cantonment,Dhaka-1206",
-         phone: "01632227965",
-         mail: "mdkawsarislam@gmail.com",
-       };
-  }; 
-     `}
-      </pre>
-
+      <Highlight theme={themes.okaidia} code={AboutString} language="tsx">
+        {({ className, style, tokens, getLineProps, getTokenProps }) => (
+          <pre className="bg-transparent">
+            {tokens.map((line, i) => (
+              <div key={i} {...getLineProps({ line })}>
+                {line.map((token, key) => (
+                  <span key={key} {...getTokenProps({ token })} />
+                ))}
+              </div>
+            ))}
+          </pre>
+        )}
+      </Highlight>
+      {/* <pre>{AboutString}</pre> */}
       <div>
         <Image
           src={bloods}

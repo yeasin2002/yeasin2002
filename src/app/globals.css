@@ -117,15 +117,9 @@
     @apply px-4 py-2 rounded-lg outline-none;
   }
 
-  /* skill sections  */
-  .eachSkill {
-    @apply gap-x-3 gap-y-4 grid grid-cols-4;
-  }
   .SubTitle {
     @apply mt-10 mb-2 text-xl font-bold;
   }
-
-  /*  sliders */
   .slides {
     @apply text-mastery flex;
   }

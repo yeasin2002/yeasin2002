@@ -4,7 +4,7 @@ const AboutString = `
   const AboutMe = (): aboutType => {
      return {
        name: "Md Kawsar Islam Yeasin",
-       role: ${(<div className="text-red-700">Front End Web Developer</div>)} ,
+       role: "Front End Web Developer",
        age: 20,
        gender: "male",
        address: "Dhaka, Cantonment,Dhaka-1206",

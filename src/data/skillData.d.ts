@@ -2,12 +2,14 @@ import { IconType } from "react-icons";
 
 export interface Item {
   title: string;
-  icon: IconType;
+  icon: any;
   stage: "beginner" | "intermediate" | "advance";
   reference?: string;
 }
 export default interface skillDataTypes {
-  FrontEnd: Item[];
+  Language: Item[];
+  CssFramework: Item[];
+  JSFramework: Item[];
   backEnd: Item[];
   tools: Item[];
 }

@@ -28,10 +28,9 @@ const AboutCode = () => {
   return (
     <Tilt
       options={tiltOptions}
-      className=" relative rounded-lg"
-      //  glass effect
+      className=" sm:text-base md:text-lg relative overflow-hidden text-xs rounded-lg"
       style={{
-        background: `rgba(255,255,255,.1)`,
+        background: `rgba(255,255,255,.01)`,
         boxShadow: "0 25px 45px rgba(0,0,0,.2)",
         backdropFilter: `blur(5px)`,
       }}
@@ -61,3 +60,11 @@ const AboutCode = () => {
   );
 };
 export default AboutCode;
+
+// style=
+//
+// background: `rgba(255,255,255,.1)`
+// boxShadow: "0 25px 45px rgba(0,0,0,.2)"
+// backdropFilter: `blur(5px)`
+//
+//

@@ -1,9 +1,12 @@
+import Image from "next/image";
 import React, { useContext } from "react";
-import { IconType } from "react-icons";
+
+//  icons
+import codding from "@/assets/icons/coding.svg";
 
 export interface cardProps {
   children: React.ReactNode;
-  Icon: IconType;
+  Icon: any;
   stage: "beginner" | "intermediate" | "advance";
 }
 const SkillCard = ({ children, Icon, stage }: cardProps) => {
@@ -17,10 +20,10 @@ const SkillCard = ({ children, Icon, stage }: cardProps) => {
   }
   return (
     <div
-      className={`${textColor}   bg-sup text-conf font-medium capitalize hover:bg-gray-200 flex items-center py-3 transition-all rounded-sm shadow-md cursor-pointer`}
+      className={`${textColor}   bg-sup text-conf font-medium capitalize hover:bg-gray-200 flex items-center py-2 md:py-3 transition-all rounded-sm shadow-md cursor-pointer`}
     >
       <div className="mx-4">
-        <Icon />
+        <Image src={Icon} alt={"Icons"} className="w-7 h-7" />
       </div>
       <p className={` flex-1 `}>{children}</p>
     </div>

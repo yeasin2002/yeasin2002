@@ -1,0 +1,5 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="op-icon" viewBox="0 0 200 200" width="200"  height="200" >
+          <line class="op-icon-p" x1="65" x2="65" y1="100" y2="175" stroke-width="25px" stroke="#BAC8FF"></line>
+          <circle class="op-icon-p" cx="100" cy="100" r="35" fill="#000000" stroke-width="25px" stroke="#BAC8FF" fill-opacity="0"></circle>
+          <circle class="op-icon-o" cx="100" cy="100" r="85" fill="#000000" stroke-width="25px" stroke="#748FFC" fill-opacity="0"></circle>
+        </svg>

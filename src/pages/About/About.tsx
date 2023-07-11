@@ -4,6 +4,7 @@ import Arrow_Forward from "./arrows/Arrow_Forward";
 import Line from "./arrows/Line";
 import AboutDetails from "./AboutDetails";
 import Education from "./Education/Education";
+import ContactVia from "./ContactVia";
 
 const About = () => {
   return (
@@ -18,6 +19,7 @@ const About = () => {
       </div>
 
       <AboutDetails />
+      <ContactVia />
       <Education />
     </section>
   );

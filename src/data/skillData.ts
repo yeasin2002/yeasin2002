@@ -1,105 +1,137 @@
 import skillDataTypes from "./skillData.d";
-import { AiFillAlipayCircle } from "react-icons/ai";
+
+// default icon
+import AiFillAlipayCircle from "@/assets/icons/coding.svg";
+//  icons
+import html from "@/assets/icons/html.svg";
+import css from "@/assets/icons/css.svg";
+import js from "@/assets/icons/js.svg";
+import tailwind from "@/assets/icons/tailwind.svg";
+import react from "@/assets/icons/react.svg";
+import next from "@/assets/icons/next.svg";
+import redux from "@/assets/icons/redux.svg";
+import node from "@/assets/icons/node.js.svg";
+import git from "@/assets/icons/git.svg";
+import github from "@/assets/icons/github.svg";
+import vsCode from "@/assets/icons/vsCode.svg";
+import figma from "@/assets/icons/figma.svg";
+import typeScript from "@/assets/icons/typescript.svg";
+import openProps from "@/assets/icons/openProps.svg";
+import postcss from "@/assets/icons/PostCSS.svg";
+import windiCSS from "@/assets/icons/windiCss.svg";
+import jwt from "@/assets/icons/jwt.svg";
+import vite from "@/assets/icons/vite.svg";
+import express from "@/assets/icons/express.svg";
 
 const skillData: skillDataTypes = {
-  FrontEnd: [
+  Language: [
     {
       title: "HTML",
-      icon: AiFillAlipayCircle,
+      icon: html,
       stage: "advance",
     },
     {
       title: "CSS",
-      icon: AiFillAlipayCircle,
+      icon: css,
+      stage: "advance",
+    },
+
+    {
+      title: "JavaScript / ECMA Script",
+      icon: js,
+      stage: "intermediate",
+    },
+    {
+      title: "TypeScript",
+      icon: typeScript,
+      stage: "intermediate",
+    },
+  ],
+  CssFramework: [
+    {
+      title: "TailwindCSS",
+      icon: tailwind,
       stage: "advance",
     },
     {
       title: "PostCSS",
-      icon: AiFillAlipayCircle,
+      icon: postcss,
       stage: "intermediate",
     },
     {
-      title: "TailwindCSS",
-      icon: AiFillAlipayCircle,
-      stage: "advance",
-    },
-    {
       title: "windicss",
-      icon: AiFillAlipayCircle,
+      icon: windiCSS,
       stage: "advance",
     },
     {
       title: "open-props",
-      icon: AiFillAlipayCircle,
+      icon: openProps,
       stage: "intermediate",
     },
-    {
-      title: "JavaScript / ECMA Script",
-      icon: AiFillAlipayCircle,
-      stage: "intermediate",
-    },
+  ],
+  JSFramework: [
     {
       title: "React.js",
-      icon: AiFillAlipayCircle,
+      icon: react,
       stage: "advance",
     },
     {
       title: "Redux",
-      icon: AiFillAlipayCircle,
+      icon: redux,
       stage: "advance",
     },
     {
       title: "Redux Thunk, RTK Query",
-      icon: AiFillAlipayCircle,
+      icon: redux,
       stage: "advance",
     },
     {
       title: "Next.js 13",
-      icon: AiFillAlipayCircle,
+      icon: next,
       stage: "beginner",
     },
   ],
   backEnd: [
     {
       title: "Node.js",
-      icon: AiFillAlipayCircle,
+      icon: node,
       stage: "beginner",
     },
     {
       title: "Express.js",
-      icon: AiFillAlipayCircle,
+      icon: express,
       stage: "beginner",
     },
     {
       title: "JWT",
-      icon: AiFillAlipayCircle,
+      icon: jwt,
       stage: "beginner",
     },
   ],
   tools: [
     {
       title: "Git ",
-      icon: AiFillAlipayCircle,
+      icon: git,
       stage: "intermediate",
     },
     {
       title: "Github",
-      icon: AiFillAlipayCircle,
+      icon: github,
       stage: "intermediate",
     },
     {
       title: "Vite",
-      icon: AiFillAlipayCircle,
+      icon: vite,
       stage: "intermediate",
     },
     {
       title: "Figma",
-      icon: AiFillAlipayCircle,
+      icon: figma,
       stage: "beginner",
     },
     {
       title: "VS Code",
-      icon: AiFillAlipayCircle,
+      icon: vsCode,
       stage: "intermediate",
     },
   ],

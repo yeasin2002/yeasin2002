@@ -4,10 +4,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/scrollbar";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
-// import "swiper/css/navigation";
+
 // import required modules
-import { Pagination, Navigation } from "swiper/modules";
+import { Keyboard, Scrollbar, Navigation, Pagination } from "swiper/modules";
+
 import EachReview from "./EachReview";
 
 const Testimonials = () => {
@@ -27,19 +30,30 @@ const Testimonials = () => {
       <div>
         <Swiper
           slidesPerView={1}
+          centeredSlides={false}
+          slidesPerGroupSkip={2}
           spaceBetween={30}
-          loop={true}
+          grabCursor={true}
+          keyboard={{
+            enabled: true,
+          }}
+          breakpoints={{
+            769: {
+              slidesPerView: 2,
+              slidesPerGroup: 2,
+            },
+          }}
+          scrollbar={true}
+          navigation={true}
           pagination={{
             clickable: true,
           }}
-          navigation={true}
-          modules={[Pagination, Navigation]}
-          className="mySwiper h-40 mt-10"
+          modules={[Keyboard, Scrollbar, Navigation, Pagination]}
+          className="mySwiper"
         >
           {[5, 58, 82, 58, 7, 7, 1].map((value, i) => {
             return (
-              <SwiperSlide className="slides" key={i}>
-                <EachReview />
+              <SwiperSlide key={value}>
                 <EachReview />
               </SwiperSlide>
             );

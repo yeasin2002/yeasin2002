@@ -1,6 +1,5 @@
 import skillData from "@/data/skillData";
 import React from "react";
-import SkillCard from "./SkillCard";
 import LoopOverSkill from "./LoopOverSkill";
 
 const Skills = () => {

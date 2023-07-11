@@ -10,7 +10,7 @@ import tailwind from "@/assets/icons/tailwind.svg";
 import react from "@/assets/icons/react.svg";
 import next from "@/assets/icons/next.svg";
 import redux from "@/assets/icons/redux.svg";
-import node from "@/assets/icons/node.js.svg";
+import node from "@/assets/icons/nodejs.svg";
 import git from "@/assets/icons/git.svg";
 import github from "@/assets/icons/github.svg";
 import vsCode from "@/assets/icons/vsCode.svg";
@@ -22,6 +22,7 @@ import windiCSS from "@/assets/icons/windiCss.svg";
 import jwt from "@/assets/icons/jwt.svg";
 import vite from "@/assets/icons/vite.svg";
 import express from "@/assets/icons/express.svg";
+import MongoDB from "@/assets/icons/Mongo.png";
 
 const skillData: skillDataTypes = {
   Language: [
@@ -37,7 +38,7 @@ const skillData: skillDataTypes = {
     },
 
     {
-      title: "JavaScript / ECMA Script",
+      title: "JavaScript / ECMAScript",
       icon: js,
       stage: "intermediate",
     },
@@ -52,6 +53,7 @@ const skillData: skillDataTypes = {
       title: "TailwindCSS",
       icon: tailwind,
       stage: "advance",
+      reference: "https://tailwindcss.com/",
     },
     {
       title: "PostCSS",
@@ -100,6 +102,11 @@ const skillData: skillDataTypes = {
     {
       title: "Express.js",
       icon: express,
+      stage: "beginner",
+    },
+    {
+      title: "MongoDB",
+      icon: MongoDB,
       stage: "beginner",
     },
     {

@@ -1,5 +1,5 @@
+import React from "react";
 import Image from "next/image";
-import React, { useContext } from "react";
 
 //  icons
 import { BiLinkExternal as CopyIcons } from "react-icons/bi";

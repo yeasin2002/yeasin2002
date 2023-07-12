@@ -1,7 +1,5 @@
 import skillDataTypes from "./skillData.d";
 
-// default icon
-import AiFillAlipayCircle from "@/assets/icons/coding.svg";
 //  icons
 import html from "@/assets/icons/html.svg";
 import css from "@/assets/icons/css.svg";
@@ -23,6 +21,7 @@ import jwt from "@/assets/icons/jwt.svg";
 import vite from "@/assets/icons/vite.svg";
 import express from "@/assets/icons/express.svg";
 import MongoDB from "@/assets/icons/Mongo.png";
+import rtk from "@/assets/icons/rtk.jpg";
 
 const skillData: skillDataTypes = {
   Language: [
@@ -84,7 +83,7 @@ const skillData: skillDataTypes = {
     },
     {
       title: "Redux Thunk, RTK Query",
-      icon: redux,
+      icon: rtk,
       stage: "advance",
     },
     {

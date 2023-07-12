@@ -10,6 +10,6 @@ export default interface skillDataTypes {
   Language: Item[];
   CssFramework: Item[];
   JSFramework: Item[];
-  backEnd: Item[];
-  tools: Item[];
+  BackEnd: Item[];
+  Tools: Item[];
 }

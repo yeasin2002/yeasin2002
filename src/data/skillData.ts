@@ -21,6 +21,7 @@ import jwt from "@/assets/icons/jwt.svg";
 import vite from "@/assets/icons/vite.svg";
 import express from "@/assets/icons/express.svg";
 import MongoDB from "@/assets/icons/Mongo.png";
+import mongoose from "@/assets/icons/mongoose.png";
 import rtk from "@/assets/icons/rtk.jpg";
 
 const skillData: skillDataTypes = {
@@ -77,7 +78,7 @@ const skillData: skillDataTypes = {
       stage: "advance",
     },
     {
-      title: "Redux",
+      title: "Redux, Redux Toolkit",
       icon: redux,
       stage: "advance",
     },
@@ -92,7 +93,7 @@ const skillData: skillDataTypes = {
       stage: "beginner",
     },
   ],
-  backEnd: [
+  BackEnd: [
     {
       title: "Node.js",
       icon: node,
@@ -109,12 +110,17 @@ const skillData: skillDataTypes = {
       stage: "beginner",
     },
     {
+      title: "mongoose",
+      icon: mongoose,
+      stage: "beginner",
+    },
+    {
       title: "JWT",
       icon: jwt,
       stage: "beginner",
     },
   ],
-  tools: [
+  Tools: [
     {
       title: "Git ",
       icon: git,

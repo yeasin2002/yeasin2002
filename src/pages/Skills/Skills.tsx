@@ -9,14 +9,14 @@ const Skills = () => {
       <LoopOverSkill skillType={skillData.Language} title="Language" />
       <LoopOverSkill
         skillType={skillData.CssFramework}
-        title="CSS Frameworks"
+        title="CSS Frameworks / libraries"
       />
       <LoopOverSkill
         skillType={skillData.JSFramework}
         title="JavaScript Frameworks / libraries"
       />
-      <LoopOverSkill skillType={skillData.backEnd} title="Back End" />
-      <LoopOverSkill skillType={skillData.tools} title="Tools" />
+      <LoopOverSkill skillType={skillData.BackEnd} title="Back End" />
+      <LoopOverSkill skillType={skillData.Tools} title="Tools" />
     </section>
   );
 };

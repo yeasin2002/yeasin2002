@@ -3,13 +3,13 @@ const AboutString = `
 
   const AboutMe = (): aboutType => {
      return {
-       name: "Md Kawsar Islam Yeasin",
-       role: "Front End Web Developer",
-       age: 20,
-       gender: "male",
-       address: "Dhaka, Cantonment,Dhaka-1206",
-       phone: "01632227965",
-       mail: "mdkawsarislam@gmail.com",
+       Name: "Md Kawsar Islam Yeasin",
+       Role: "Front End Web Developer",
+       Age: 20,
+       Gender: "male",
+       Address: "Dhaka, Cantonment,Dhaka-1206",
+       Phone: "01632227965",
+       Mail: "mdkawsarislam@gmail.com",
      };
    }; 
    `;

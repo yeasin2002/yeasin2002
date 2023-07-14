@@ -51,7 +51,7 @@ const Testimonials = () => {
           modules={[Keyboard, Scrollbar, Navigation, Pagination]}
           className="mySwiper"
         >
-          {[5, 58, 82, 58, 7, 7, 1].map((value, i) => {
+          {[5, 55, 82, 58, 7, 8, 1].map((value, i) => {
             return (
               <SwiperSlide key={value}>
                 <EachReview />

@@ -1,7 +1,7 @@
 import React from "react";
 // import { Tilt } from "react-tilt";
 
-import { AboutString } from "./AboutMeFuncString";
+import { AboutString } from "../../lib/AboutMeFuncString";
 
 //  syntax highlighter
 import { Highlight, themes } from "prism-react-renderer";

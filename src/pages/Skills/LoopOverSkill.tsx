@@ -19,7 +19,7 @@ const LoopOverSkill = ({ skillType, title }: Props) => {
       <div>
         <h3 className="SubTitle"> {title}</h3>
         <div className="gap-x-3 sm:grid-cols-2 gap-y-4 md:grid-cols-3 xl:grid-cols-4 grid grid-cols-1">
-          {skillType.map((val) => (
+          {skillType?.map((val) => (
             <SkillCard
               stage={val.stage}
               key={val.title}

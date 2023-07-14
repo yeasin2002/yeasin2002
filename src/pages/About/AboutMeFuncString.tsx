@@ -1,4 +1,4 @@
-const AboutString = `
+export const AboutString = `
   import { aboutType } from "./about.d";
 
   const AboutMe = (): aboutType => {
@@ -16,5 +16,3 @@ const AboutString = `
      }; 
    }; 
    `;
-
-export default AboutString;

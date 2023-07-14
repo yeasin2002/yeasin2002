@@ -37,12 +37,12 @@ const Testimonials = () => {
           keyboard={{
             enabled: true,
           }}
-          breakpoints={{
-            769: {
-              slidesPerView: 2,
-              slidesPerGroup: 2,
-            },
-          }}
+          // breakpoints={{
+          //   769: {
+          //     slidesPerView: 2,
+          //     slidesPerGroup: 2,
+          //   },
+          // }}
           scrollbar={true}
           navigation={true}
           pagination={{

@@ -10,7 +10,10 @@ const AboutString = `
        Address: "Dhaka, Cantonment,Dhaka-1206",
        Phone: "01632227965",
        Mail: "mdkawsarislam@gmail.com",
-     };
+       Language: [
+             "Bangla", "English", "Hindi", "Urdu" 
+          ]
+     }; 
    }; 
    `;
 

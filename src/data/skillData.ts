@@ -16,7 +16,8 @@ import figma from "@/assets/icons/figma.svg";
 import typeScript from "@/assets/icons/typescript.svg";
 import openProps from "@/assets/icons/openProps.svg";
 import postcss from "@/assets/icons/PostCSS.svg";
-import windiCSS from "@/assets/icons/windiCss.svg";
+import unoCSS from "@/assets/icons/unoCSS.svg";
+import Bootstrap from "@/assets/icons/Bootstrap.svg";
 import jwt from "@/assets/icons/jwt.svg";
 import vite from "@/assets/icons/vite.svg";
 import express from "@/assets/icons/express.svg";
@@ -56,13 +57,18 @@ const skillData: skillDataTypes = {
       reference: "https://tailwindcss.com/",
     },
     {
+      title: "Bootstrap",
+      icon: Bootstrap,
+      stage: "intermediate",
+    },
+    {
       title: "PostCSS",
       icon: postcss,
       stage: "intermediate",
     },
     {
-      title: "windicss",
-      icon: windiCSS,
+      title: "unoCSS",
+      icon: unoCSS,
       stage: "advance",
     },
     {

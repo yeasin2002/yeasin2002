@@ -1,6 +1,5 @@
 "use client";
-import { themeContext } from "@/context/ThemeProvider";
-import { useContext } from "react";
+import { useScroll, useTransform, motion } from "framer-motion";
 
 // components
 import Nav from "@/components/Nav/Nav";
@@ -15,10 +14,11 @@ import Footer from "@/pages/Footer/Footer";
 
 export default function Home() {
   const { color, BgColor } = useColorTheme();
-  // const { theme } = useContext(themeContext);
+  const { scrollXProgress } = useScroll();
+  const y = useTransform(scrollXProgress, [0, 1], ["0%", "50%"]);
 
   return (
-    <div className={`${BgColor}  ${color}   container  `}>
+    <motion.div className={`${BgColor}  ${color}   container  `}>
       <Nav />
       <Hero />
       <About />
@@ -27,6 +27,6 @@ export default function Home() {
       <Testimonials />
       <Contact />
       <Footer />
-    </div>
+    </motion.div>
   );
 }

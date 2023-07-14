@@ -1,5 +1,5 @@
 import React from "react";
-import { Tilt } from "react-tilt";
+// import { Tilt } from "react-tilt";
 
 import AboutString from "./AboutMeFuncString";
 
@@ -9,7 +9,6 @@ import { Highlight, themes } from "prism-react-renderer";
 // assets
 import bloods from "@/assets/bloobs/Rings.svg";
 import Image from "next/image";
-import Round from "@/components/Icons/Round";
 
 const AboutCode = () => {
   const tiltOptions = {
@@ -26,8 +25,8 @@ const AboutCode = () => {
     "max-glare": "1",
   };
   return (
-    <Tilt
-      options={tiltOptions}
+    <div
+      // options={tiltOptions}
       className=" sm:text-base md:text-lg relative overflow-hidden text-xs rounded-lg"
       style={{
         background: `rgba(255,255,255,.01)`,
@@ -56,7 +55,7 @@ const AboutCode = () => {
           className=" absolute bottom-0 right-0"
         />
       </div>
-    </Tilt>
+    </div>
   );
 };
 export default AboutCode;

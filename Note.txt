@@ -1,9 +1,0 @@
-https://karkipramesh.com.np
-
-
-Code highlight Animation Resources:
-
-https://highlightjs.org/
-https://prismjs.com/examples.html
-https://github.com/ssbeefeater/react-typed
-https://www.npmjs.com/package/react-live

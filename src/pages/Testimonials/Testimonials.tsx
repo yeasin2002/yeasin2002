@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { AiFillPlusCircle } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";

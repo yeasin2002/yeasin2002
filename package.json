@@ -1,6 +1,14 @@
 {
   "name": "yeasin2002",
   "version": "0.1.0",
+  "keywords": [
+    "yeasin",
+    "yeasin2002",
+    "Md Kawsar Islam Yeasin",
+    "kawsar",
+    "Md kawsar",
+    "dev yeasin"
+  ],
   "author": {
     "name": "md kawsar islam yeasin",
     "email": "mdkawsarislam2002@gmail.com",
@@ -39,7 +47,6 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
-    "react-tilt": "^1.0.2",
     "react-toastify": "^9.1.3",
     "sharp": "^0.32.2",
     "swiper": "^10.0.3",

@@ -12,12 +12,14 @@ import node from "@/assets/icons/Nodejs.svg";
 import git from "@/assets/icons/git.svg";
 import github from "@/assets/icons/github.svg";
 import vsCode from "@/assets/icons/vsCode.svg";
+import notion from "@/assets/icons/notion.svg";
 import figma from "@/assets/icons/figma.svg";
 import typeScript from "@/assets/icons/typescript.svg";
 import openProps from "@/assets/icons/openProps.svg";
 import postcss from "@/assets/icons/PostCSS.svg";
 import unoCSS from "@/assets/icons/unoCSS.svg";
 import Bootstrap from "@/assets/icons/Bootstrap.svg";
+import SASS from "@/assets/icons/SASS.svg";
 import jwt from "@/assets/icons/jwt.svg";
 import vite from "@/assets/icons/vite.svg";
 import express from "@/assets/icons/express.svg";
@@ -74,6 +76,11 @@ const skillData: skillDataTypes = {
     {
       title: "open-props",
       icon: openProps,
+      stage: "intermediate",
+    },
+    {
+      title: "SASS",
+      icon: SASS,
       stage: "intermediate",
     },
   ],
@@ -150,6 +157,11 @@ const skillData: skillDataTypes = {
     {
       title: "VS Code",
       icon: vsCode,
+      stage: "intermediate",
+    },
+    {
+      title: "Notion",
+      icon: notion,
       stage: "intermediate",
     },
   ],

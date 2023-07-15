@@ -3,7 +3,7 @@ import AboutCode from "./AboutCode";
 import Image from "next/image";
 
 //  image
-import yeasin from "../../assets/avatar/yeasin.jpg";
+import yeasin from "../../assets/avatar/me/yeasin-2.jpg";
 
 const AboutDetails = () => {
   return (

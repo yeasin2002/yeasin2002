@@ -2,10 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
-import { ImLocation } from "react-icons/im";
 
 //  assets
 import man from "../../assets/avatar/Saly-13.svg";
+import Parallax from "./Parallax";
 
 type Props = {};
 const Hero = (props: Props) => {
@@ -22,8 +22,9 @@ const Hero = (props: Props) => {
               Software, Coding, And Ideas
             </p>
           </div>
-          <div className="lg:max-w-lg md:w-1/2 w-5/6">
-            <Image src={man} alt="man" className=" select-none" />
+          <div className="lg:max-w-lg md:w-1/2 relative w-5/6">
+            <Image src={man} alt="man" className=" z-0 select-none" />
+            {/* <Parallax /> */}
           </div>
         </div>
       </section>

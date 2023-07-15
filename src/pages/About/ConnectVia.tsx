@@ -3,6 +3,7 @@ import React from "react";
 //  icons  & assets
 import Threads from "@/components/Icons/Threads";
 import Medium from "@/components/Icons/Medium";
+import Showcase from "@/components/Icons/ShowCase";
 
 import {
   AiFillLinkedin,
@@ -44,6 +45,10 @@ const contactList = [
   {
     name: "Threads",
     components: <Threads />,
+  },
+  {
+    name: "Showcase",
+    components: <Showcase />,
   },
 ];
 

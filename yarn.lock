@@ -2617,6 +2617,11 @@ react-is@^16.13.1:
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-tilty@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-tilty/-/react-tilty-3.0.0.tgz#d3b483aad6fc096a5c44e79fe676f7b305f5ff5b"
+  integrity sha512-rlYqUC7dzSftZsHZ/tC8r/O2XjQUvhy23MPa4sHfbce68FYAKUyzE6EUsR/fo9+q988WN/QBVsrCxoM2vcWnHA==
+
 react-toastify@^9.1.3:
   version "9.1.3"
   resolved "https://registry.npmjs.org/react-toastify/-/react-toastify-9.1.3.tgz"

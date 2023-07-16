@@ -1,5 +1,5 @@
 import React from "react";
-// import { Tilt } from "react-tilt";
+import Tilty from "react-tilty";
 
 import { AboutString } from "../../lib/AboutMeFuncString";
 
@@ -25,8 +25,11 @@ const AboutCode = () => {
     "max-glare": "1",
   };
   return (
-    <div
-      // options={tiltOptions}
+    <Tilty
+      max={10}
+      reverse={false}
+      speed={100}
+      maxGlare={1}
       className=" sm:text-base md:text-lg relative overflow-hidden text-xs rounded-lg"
       style={{
         background: `rgba(255,255,255,.01)`,
@@ -55,15 +58,7 @@ const AboutCode = () => {
           className=" absolute bottom-0 right-0"
         />
       </div>
-    </div>
+    </Tilty>
   );
 };
 export default AboutCode;
-
-// style=
-//
-// background: `rgba(255,255,255,.1)`
-// boxShadow: "0 25px 45px rgba(0,0,0,.2)"
-// backdropFilter: `blur(5px)`
-//
-//

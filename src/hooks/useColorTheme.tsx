@@ -1,4 +1,6 @@
-import React, { useContext, useState } from "react";
+"use client";
+
+import React, { useContext } from "react";
 import { themeContext } from "@/context/ThemeProvider";
 
 type themeColor = {

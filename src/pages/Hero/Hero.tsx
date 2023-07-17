@@ -10,7 +10,7 @@ import Parallax from "./Parallax";
 type Props = {};
 const Hero = (props: Props) => {
   return (
-    <main className="h-5/6 relative z-50">
+    <main className="h-5/6  relative">
       <section className="body-font text-gray-600">
         <div className="md:flex-row container flex flex-col items-center px-5 py-24 mx-auto">
           <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0 flex flex-col items-center mb-16 text-center">
@@ -23,7 +23,11 @@ const Hero = (props: Props) => {
             </p>
           </div>
           <div className="lg:max-w-lg md:w-1/2 relative w-5/6">
-            <Image src={man} alt="man" className=" z-0 select-none" />
+            <Image
+              src={man}
+              alt="man"
+              className=" pointer-events-none select-none"
+            />
             {/* <Parallax /> */}
           </div>
         </div>

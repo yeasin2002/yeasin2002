@@ -22,7 +22,7 @@ const navItems: navItemsTypes[] = [
 const LargeDeviceNav: React.FC = () => {
   const [active, setActive] = useState<activeState>("home");
   return (
-    <nav className="into-center xl:flex hidden select-none">
+    <nav className="into-center md:flex hidden select-none">
       <div className=" text-sup into-center justify-between flex-1 p-4 px-10">
         <Image src={logo} alt="logo" className="w-16 h-16 rounded-full" />
         {/* menus */}

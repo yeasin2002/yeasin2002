@@ -21,11 +21,15 @@ const SkillCard = ({ children, Icon, stage, link = "" }: cardProps) => {
   }
   return (
     <div
-      className={`${textColor} select-none group  bg-sup text-conf font-medium capitalize hover:bg-gray-200 flex items-center py-2 md:py-3 transition-all rounded-sm shadow-md cursor-pointer`}
+      className={`${textColor} select-none group    bg-sup text-conf font-medium capitalize hover:bg-gray-200 flex items-center py-2 md:py-3 transition-all rounded-sm shadow-md cursor-pointer`}
     >
       <div className="into-center w-full">
         <div className="mx-4">
-          <Image src={Icon} alt={"Icons"} className="w-7 h-7" />
+          <Image
+            src={Icon}
+            alt={"Icons"}
+            className="w-7 h-7  pointer-events-none"
+          />
         </div>
         <p className={` flex-1 `}>{children}</p>
       </div>

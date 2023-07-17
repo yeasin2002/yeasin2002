@@ -24,7 +24,7 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
         setTheme,
       }}
     >
-      {children}
+      <div>{children}</div>
     </themeContext.Provider>
   );
 };

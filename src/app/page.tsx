@@ -1,4 +1,6 @@
 "use client";
+import { MouseEvent } from "react";
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 
 // components
 import Nav from "@/components/Nav/Nav";
@@ -10,13 +12,15 @@ import Testimonials from "@/pages/Testimonials/Testimonials";
 import Projects from "@/pages/projects/Projects";
 import Contact from "@/pages/contact/Contact";
 import Footer from "@/pages/Footer/Footer";
-import Blob from "@/components/Globals/Blob";
 
 export default function Home() {
   const { color, BgColor } = useColorTheme();
 
   return (
-    <div className={`${BgColor}  ${color}   container  `}>
+    <motion.div
+      className={`${BgColor}  ${color}   container  `}
+      // onMouseMove={handleMouseMove}
+    >
       <Nav />
       <Hero />
       <About />
@@ -25,9 +29,6 @@ export default function Home() {
       <Testimonials />
       <Contact />
       <Footer />
-
-      {/*  global */}
-      <Blob />
-    </div>
+    </motion.div>
   );
 }

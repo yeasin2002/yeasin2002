@@ -1,5 +1,4 @@
 "use client";
-import { useScroll, useTransform, motion } from "framer-motion";
 
 // components
 import Nav from "@/components/Nav/Nav";
@@ -11,14 +10,13 @@ import Testimonials from "@/pages/Testimonials/Testimonials";
 import Projects from "@/pages/projects/Projects";
 import Contact from "@/pages/contact/Contact";
 import Footer from "@/pages/Footer/Footer";
+import Blob from "@/components/Globals/Blob";
 
 export default function Home() {
   const { color, BgColor } = useColorTheme();
-  const { scrollXProgress } = useScroll();
-  const y = useTransform(scrollXProgress, [0, 1], ["0%", "50%"]);
 
   return (
-    <motion.div className={`${BgColor}  ${color}   container  `}>
+    <div className={`${BgColor}  ${color}   container  `}>
       <Nav />
       <Hero />
       <About />
@@ -27,6 +25,9 @@ export default function Home() {
       <Testimonials />
       <Contact />
       <Footer />
-    </motion.div>
+
+      {/*  global */}
+      <Blob />
+    </div>
   );
 }

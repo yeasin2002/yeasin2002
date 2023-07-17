@@ -4,7 +4,7 @@ import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 
 import useColorTheme from "@/hooks/useColorTheme";
 
-const PageWrapper = ({ children }: { children: React.ReactNode }) => {
+const Wrapper = ({ children }: { children: React.ReactNode }) => {
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
   const { color, BgColor } = useColorTheme();
@@ -17,18 +17,14 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div
-      className={`${BgColor}  ${color}   container  `}
+      className={`${BgColor}  ${color}  w-full      `}
       onMouseMove={handleMouseMove}
     >
       <motion.div
+        className="z-0 px-8 transition-all"
         style={{
           background: useMotionTemplate`
-      radial-gradient(
-        650px circle at ${mouseX}px ${mouseY}px,
-        rgba(14, 165, 233, 0.15),
-        transparent 80%
-      )
-    `,
+      radial-gradient( 650px circle at ${mouseX}px ${mouseY}px, rgba(14, 165, 233, 0.15),transparent 80% )`,
         }}
       >
         {children}
@@ -37,4 +33,4 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default PageWrapper;
+export default Wrapper;

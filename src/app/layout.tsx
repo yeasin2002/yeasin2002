@@ -1,7 +1,12 @@
+import { Metadata } from "next";
 import ThemeProvider from "@/context/ThemeProvider";
-import "./globals.css";
+import Wrapper from "@/components/Globals/Wrapper";
 
-export const metadata = {
+// styles
+import "./globals.css";
+import "../styles/keyframe.css";
+
+export const metadata: Metadata = {
   title: "Md Kawsar Islam Yeasin",
   description:
     "Md Kawsar Islam Yeasin , a software Developer,Front end web developer, web developer and web designer,programmer, and freelancer from Bangladesh.",
@@ -15,7 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <Wrapper>{children}</Wrapper>
+        </ThemeProvider>
       </body>
     </html>
   );

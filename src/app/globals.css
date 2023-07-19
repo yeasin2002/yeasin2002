@@ -123,4 +123,7 @@
   .slides {
     @apply text-mastery flex;
   }
+  .underBorder {
+    @apply border-sup bg-slate-800 placeholder:text-gray-300 text-paste w-full p-2 border-b-2 rounded-md outline-none;
+  }
 }

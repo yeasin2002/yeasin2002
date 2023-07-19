@@ -8,18 +8,26 @@ const Contact = () => {
 
       <form>
         <div className=" gap-x-2 md:flex-row gap-y-2 flex flex-col my-4">
-          <Input type="text" placeholder="Your Name" />
-          <Input type="email" placeholder="Your Email" />
+          <Input type="text" placeholder="Your Name" className="underBorder" />
+          <Input
+            type="email"
+            placeholder="Your Email"
+            className="underBorder"
+          />
         </div>
         <div className=" gap-x-2 md:flex-row gap-y-2 md:mt-0 flex flex-col my-4 mt-5">
-          <Input type="number" placeholder="contact number" />
-          <Input type="text" placeholder="Subject" />
+          <Input
+            type="number"
+            placeholder="contact number"
+            className="underBorder"
+          />
+          <Input type="text" placeholder="Subject" className="underBorder" />
         </div>
         <textarea
           name="userMessage"
           id="userMessage"
           placeholder="Write your message"
-          className="md:h-60 h-96  w-full block p-2.5  text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
+          className="md:h-60 h-96 underBorder  w-full block p-2.5  text-sm   rounded-lg   "
         ></textarea>
         <button
           type="submit"

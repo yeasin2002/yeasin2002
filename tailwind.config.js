@@ -99,8 +99,8 @@ module.exports = {
     },
   },
   plugins: [
-    require("tailwindcss-animate"),
-    require("flowbite/plugin"),
+    // require("tailwindcss-animate"),
+    // require("flowbite/plugin"),
     // require("daisyui"),
   ],
 };

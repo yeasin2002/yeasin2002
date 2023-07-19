@@ -1,17 +1,15 @@
 @keyframes rotate {
   from {
     rotate: 0deg;
-    transform: translateX(0px);
-    transform: translateY(0px);
+    transform: rotate(0deg);
   }
 
   to {
-    rotate: 360deg;
-    transform: translateX(20px);
-    transform: translateY(100px);
+    rotate: 50deg;
+    transform: rotate(360deg);
   }
 }
 
 #box {
-  animation: rotate 20s infinite both;
+  animation: rotate 10s infinite backwards;
 }

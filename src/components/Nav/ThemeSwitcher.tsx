@@ -27,20 +27,20 @@ const ThemeSwitcher = (props: Props) => {
             <p
               className="inline-block my-1 border-b border-gray-600 cursor-pointer"
               onClick={() => {
-                setTheme("Midnight-Blue");
-                setIsOpen(false);
-              }}
-            >
-              Midnight Blue
-            </p>
-            <p
-              className="inline-block my-1 border-b border-gray-600 cursor-pointer"
-              onClick={() => {
                 setTheme("Greenish");
                 setIsOpen(false);
               }}
             >
               Greenish
+            </p>
+            <p
+              className="inline-block my-1 border-b border-gray-600 cursor-pointer"
+              onClick={() => {
+                setTheme("Midnight-Blue");
+                setIsOpen(false);
+              }}
+            >
+              Midnight Blue
             </p>
           </div>
         )}

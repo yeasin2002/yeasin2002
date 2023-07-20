@@ -1,5 +1,12 @@
 {
   "css.validate": false,
   "tailwindCSS.emmetCompletions": true,
-  "cSpell.words": ["clsx", "lucide", "Swiper", "toastify", "windicss"]
+  "cSpell.words": [
+    "clsx",
+    "lucide",
+    "Swiper",
+    "toastify",
+    "Vashantek",
+    "windicss"
+  ]
 }

@@ -19,7 +19,7 @@ const About = () => {
       </div>
 
       <AboutDetails />
-      <ContactVia />
+
       <Education />
     </section>
   );

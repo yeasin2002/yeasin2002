@@ -1,4 +1,4 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 
 //  icons  & assets
 import Threads from "@/components/Icons/Threads";
@@ -17,52 +17,52 @@ const contactList = [
   {
     name: "Facebook",
     components: <BsFacebook />,
+    link: "facebook.com",
   },
   {
     name: "Github",
     components: <BiLogoGithub />,
+    link: "",
   },
   {
     name: "Linkedin",
     components: <AiFillLinkedin />,
+    link: "",
   },
   {
     name: "WhatsApp",
     components: <AiOutlineWhatsApp />,
+    link: "",
   },
   {
     name: "Instagram",
     components: <AiOutlineInstagram />,
+    link: "",
   },
   {
     name: "Twitter",
     components: <BiLogoTwitter />,
+    link: "",
   },
   {
     name: "Medium",
     components: <Medium />,
-  },
-  {
-    name: "Threads",
-    components: <Threads />,
-  },
-  {
-    name: "Showcase",
-    components: <Showcase />,
+    link: "",
   },
 ];
+interface connections extends HtmlHTMLAttributes<HTMLDivElement> {}
 
-const ContactVia = () => {
+const ContactVia = ({ ...props }: connections) => {
   return (
-    <div>
+    <div {...props}>
       <h3>Connected Via </h3>
 
       <div className="gap-x-2 flex items-center">
         {contactList.map((val, index) => {
           return (
-            <span className="" key={index}>
+            <a href={val.link} target="_blank" className="text-2xl" key={index}>
               {val.components}
-            </span>
+            </a>
           );
         })}
       </div>

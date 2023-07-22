@@ -7,20 +7,21 @@ import Image from "next/image";
 import ThemeSwitcher from "./ThemeSwitcher";
 import logo from "@/assets/icons/logo.jpg";
 
-type activeState = "home" | "about" | "contact" | "blogs" | "projects";
+type activeState = "Home" | "About" | "Contact" | "Blogs" | "Projects";
 interface navItemsTypes {
   name: activeState;
+  link: string;
 }
 
 const navItems: navItemsTypes[] = [
-  { name: "home" },
-  { name: "about" },
-  { name: "contact" },
-  { name: "projects" },
+  { name: "Home", link: "/" },
+  { name: "About", link: "#aboutMe" },
+  { name: "Contact", link: "/" },
+  { name: "Projects", link: "/" },
 ];
 
 const LargeDeviceNav: React.FC = () => {
-  const [active, setActive] = useState<activeState>("home");
+  // const [active, setActive] = useState<activeState>("home");
   return (
     <nav className="into-center md:flex hidden select-none">
       <div className=" text-sup into-center justify-between flex-1 p-4 px-10">
@@ -30,29 +31,12 @@ const LargeDeviceNav: React.FC = () => {
           <motion.ul layoutId="navList" className="flex items-center gap-2">
             {navItems.map((val) => {
               return (
-                <div key={val.name} className="relative">
-                  <li
-                    onClick={() => setActive(val.name)}
-                    className="navList"
-                    onMouseEnter={() => {
-                      console.log("fired");
-                    }}
-                  >
-                    {val.name}
-                  </li>
-                  {active === val.name && "navActive" && (
-                    <motion.span
-                      layoutId="bump"
-                      className=" bg-light-blue-700 absolute top-0 left-0 inline-block w-full h-full rounded-md"
-                    ></motion.span>
-                  )}
-                  <span
-                    onClick={() => setActive(val.name)}
-                    className="navList absolute top-0 left-0 z-10 text-white"
-                  >
-                    {val.name}
-                  </span>
-                </div>
+                <li
+                  className="hover:text-mint-100 bg-paste text-mint-200 px-2 transition-all rounded-lg cursor-pointer"
+                  key={val.name}
+                >
+                  <a href={val.link}> {val.name}</a>
+                </li>
               );
             })}
           </motion.ul>

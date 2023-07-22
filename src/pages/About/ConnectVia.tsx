@@ -1,10 +1,7 @@
 import React, { HtmlHTMLAttributes } from "react";
 
 //  icons  & assets
-import Threads from "@/components/Icons/Threads";
 import Medium from "@/components/Icons/Medium";
-import Showcase from "@/components/Icons/ShowCase";
-
 import {
   AiFillLinkedin,
   AiOutlineInstagram,
@@ -17,36 +14,37 @@ const contactList = [
   {
     name: "Facebook",
     components: <BsFacebook />,
-    link: "facebook.com",
+    link: "https://www.facebook.com/mdkawsarislam2002/",
   },
   {
     name: "Github",
     components: <BiLogoGithub />,
-    link: "",
+    link: "https://github.com/Mdkawsarislam2002/",
   },
   {
     name: "Linkedin",
     components: <AiFillLinkedin />,
-    link: "",
+    link: "https://www.linkedin.com/in/md-kawsar-islam-yeasin-8bb808222/",
   },
-  {
-    name: "WhatsApp",
-    components: <AiOutlineWhatsApp />,
-    link: "",
-  },
+
   {
     name: "Instagram",
     components: <AiOutlineInstagram />,
-    link: "",
+    link: "https://www.instagram.com/mdkawsarislam2002/",
   },
   {
     name: "Twitter",
     components: <BiLogoTwitter />,
-    link: "",
+    link: "https://twitter.com/mdkawsar2002",
   },
   {
     name: "Medium",
     components: <Medium />,
+    link: "https://medium.com/@mdkawsarislamyeasin",
+  },
+  {
+    name: "WhatsApp",
+    components: <AiOutlineWhatsApp />,
     link: "",
   },
 ];

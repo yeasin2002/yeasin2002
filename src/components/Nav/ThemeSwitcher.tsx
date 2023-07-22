@@ -4,6 +4,7 @@ import { themeContext } from "@/context/ThemeProvider";
 import Link from "next/link";
 import React, { useContext, useState } from "react";
 import { BiSearch } from "react-icons/bi";
+import { Button } from "../ui/button";
 
 type Props = {};
 
@@ -12,9 +13,11 @@ const ThemeSwitcher = (props: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="into-center gap-x-2 ml-10">
-      <Link className="btn bg-paste text-conf " href={"/blogs"}>
-        Blogs
-      </Link>
+      <Button className="bg-paste text-conf">
+        <Link className="" href={"/blogs"}>
+          Blogs
+        </Link>
+      </Button>
       <div className="relative top-0 left-0">
         <span
           className=" into-center bg-fog text-mastery p-3 rounded-full cursor-pointer select-none"

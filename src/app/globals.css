@@ -124,6 +124,6 @@
     @apply text-mastery flex;
   }
   .underBorder {
-    @apply border-sup focus:bg-slate-700 bg-slate-800 placeholder:text-gray-300 text-paste w-full p-2 transition-all border-b-2 rounded-md outline-none;
+    @apply border-sup w-full p-2 transition-all border-b-2 rounded-md outline-none;
   }
 }

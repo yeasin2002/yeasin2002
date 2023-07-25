@@ -1,14 +1,12 @@
 "use client";
-
-import { themeContext } from "@/context/ThemeProvider";
-import Link from "next/link";
 import React, { useContext, useState } from "react";
-import { BiSearch } from "react-icons/bi";
+import Link from "next/link";
+import { themeContext } from "@/context/ThemeProvider";
+
 import { Button } from "../ui/button";
+import { AiFillSetting } from "react-icons/ai";
 
-type Props = {};
-
-const ThemeSwitcher = (props: Props) => {
+const ThemeSwitcher = () => {
   const { theme, setTheme } = useContext(themeContext);
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -23,7 +21,7 @@ const ThemeSwitcher = (props: Props) => {
           className=" into-center bg-fog text-mastery p-3 rounded-full cursor-pointer select-none"
           onClick={() => setIsOpen((pre) => !pre)}
         >
-          <BiSearch />
+          <AiFillSetting className=" text-xl" />
         </span>
         {isOpen && (
           <div className="bg-sup hover:bg-gray-500 text-mastery top-12 -z-0 absolute right-0 inline-block w-32 p-1 transition-all rounded-sm">

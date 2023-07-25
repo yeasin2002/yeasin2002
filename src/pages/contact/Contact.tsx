@@ -1,7 +1,19 @@
 import React from "react";
 import { Input } from "@/components/ui/input";
 
+import useGEneratedColor from "@/hooks/useGeneratedColor";
+
 const Contact = () => {
+  const { theStyles } = useGEneratedColor({
+    GreenishColorValue: {
+      styles:
+        "focus:bg-emerald-700 bg-emerald-800 placeholder:text-gray-300 text-conf",
+    },
+    MidnightBlueColorValue: {
+      styles:
+        "focus:bg-slate-700 bg-slate-800 placeholder:text-gray-300 text-paste",
+    },
+  });
   return (
     <section className="eachSections">
       <h3 className="title">Contact</h3>
@@ -27,7 +39,7 @@ const Contact = () => {
           name="userMessage"
           id="userMessage"
           placeholder="Write your message"
-          className="md:h-60 h-96 underBorder  w-full block p-2.5  text-sm   rounded-lg   "
+          className={`md:h-60 h-96 underBorder  w-full block p-2.5  text-sm   rounded-lg   ${theStyles}`}
         ></textarea>
         <button
           type="submit"

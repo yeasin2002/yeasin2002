@@ -10,6 +10,9 @@
   }
 }
 
-#box {
-  animation: rotate 10s infinite backwards;
+.spinner {
+  animation: rotate 10s infinite reverse;
+}
+.bigSpinner {
+  animation: rotate 8s infinite alternate-re verse;
 }

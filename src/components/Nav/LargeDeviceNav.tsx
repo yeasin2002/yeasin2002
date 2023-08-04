@@ -7,7 +7,7 @@ import Image from "next/image";
 import ThemeSwitcher from "./ThemeSwitcher";
 import logo from "@/assets/icons/logo.jpg";
 
-type activeState = "Home" | "About" | "Contact" | "Blogs" | "Projects";
+type activeState = "Home" | "About" | "Contact" | "Projects";
 interface navItemsTypes {
   name: activeState;
   link: string;
@@ -20,7 +20,10 @@ const navItems: navItemsTypes[] = [
   { name: "Projects", link: "/" },
 ];
 
+type activeStatus = "Home" | "About" | "Contact" | "Projects";
+
 const LargeDeviceNav: React.FC = () => {
+  const [activeBar, setActiveBar] = useState<activeStatus>("Home");
   // const [active, setActive] = useState<activeState>("home");
   return (
     <nav className="into-center md:flex hidden select-none">
@@ -28,15 +31,24 @@ const LargeDeviceNav: React.FC = () => {
         <Image src={logo} alt="logo" className="w-16 h-16 rounded-full" />
         {/* menus */}
         <div className="">
-          <motion.ul layoutId="navList" className="flex items-center gap-2">
+          <motion.ul layoutId="navList" className=" flex items-center gap-2">
             {navItems.map((val) => {
               return (
-                <li
-                  className="hover:text-mint-100 bg-paste text-mint-200 px-2 transition-all rounded-lg cursor-pointer"
-                  key={val.name}
-                >
-                  <a href={val.link}> {val.name}</a>
-                </li>
+                <>
+                  <li
+                    onClick={() => setActiveBar(val.name)}
+                    className="text-sup relative z-0 px-2 transition-all rounded-lg cursor-pointer"
+                    key={val.name}
+                  >
+                    {val.name}
+                    {activeBar === val.name && (
+                      <motion.div
+                        layoutId="active-pill"
+                        className="bg-paste text-conf absolute bottom-0 left-0 w-full h-1 px-2 rounded-full"
+                      ></motion.div>
+                    )}
+                  </li>
+                </>
               );
             })}
           </motion.ul>

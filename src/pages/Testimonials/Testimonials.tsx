@@ -14,6 +14,8 @@ import "swiper/css/pagination";
 import { Keyboard, Scrollbar, Navigation, Pagination } from "swiper/modules";
 
 import EachReview from "./EachReview";
+import DummyFeedback from "../../data/DummyFeedback";
+import FeedbackCard from "./Feedback";
 
 const Testimonials = () => {
   return (
@@ -31,7 +33,7 @@ const Testimonials = () => {
       {/* others Reviews */}
       <div>
         <Swiper
-          slidesPerView={1}
+          slidesPerView={2}
           centeredSlides={false}
           slidesPerGroupSkip={2}
           spaceBetween={30}
@@ -53,10 +55,15 @@ const Testimonials = () => {
           modules={[Keyboard, Scrollbar, Navigation, Pagination]}
           className="mySwiper"
         >
-          {[5, 55, 82, 58, 7, 8, 1].map((value, i) => {
+          {DummyFeedback.map((value, i) => {
             return (
-              <SwiperSlide key={value}>
-                <EachReview />
+              <SwiperSlide key={value.id}>
+                <FeedbackCard
+                  content={value.content}
+                  img={value.img}
+                  name={value.name}
+                  title={value.title}
+                />
               </SwiperSlide>
             );
           })}

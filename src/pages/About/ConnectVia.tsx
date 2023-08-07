@@ -12,11 +12,6 @@ import { BsFacebook } from "react-icons/bs";
 
 const contactList = [
   {
-    name: "Facebook",
-    components: <BsFacebook />,
-    link: "https://www.facebook.com/mdkawsarislam2002/",
-  },
-  {
     name: "Github",
     components: <BiLogoGithub />,
     link: "https://github.com/Mdkawsarislam2002/",
@@ -26,11 +21,10 @@ const contactList = [
     components: <AiFillLinkedin />,
     link: "https://www.linkedin.com/in/md-kawsar-islam-yeasin-8bb808222/",
   },
-
   {
-    name: "Instagram",
-    components: <AiOutlineInstagram />,
-    link: "https://www.instagram.com/mdkawsarislam2002/",
+    name: "Facebook",
+    components: <BsFacebook />,
+    link: "https://www.facebook.com/mdkawsarislam2002/",
   },
   {
     name: "Twitter",
@@ -38,15 +32,21 @@ const contactList = [
     link: "https://twitter.com/mdkawsar2002",
   },
   {
-    name: "Medium",
-    components: <Medium />,
-    link: "https://medium.com/@mdkawsarislamyeasin",
+    name: "Instagram",
+    components: <AiOutlineInstagram />,
+    link: "https://www.instagram.com/mdkawsarislam2002/",
   },
-  {
-    name: "WhatsApp",
-    components: <AiOutlineWhatsApp />,
-    link: "",
-  },
+
+  // {
+  //   name: "Medium",
+  //   components: <Medium />,
+  //   link: "https://medium.com/@mdkawsarislamyeasin",
+  // },
+  // {
+  //   name: "WhatsApp",
+  //   components: <AiOutlineWhatsApp />,
+  //   link: "",
+  // },
 ];
 interface connections extends HtmlHTMLAttributes<HTMLDivElement> {}
 
@@ -55,7 +55,7 @@ const ContactVia = ({ ...props }: connections) => {
     <div {...props}>
       <h3>Connected Via </h3>
 
-      <div className="gap-x-2 flex items-center">
+      <div className="gap-x-4 flex items-center my-2">
         {contactList.map((val, index) => {
           return (
             <a href={val.link} target="_blank" className="text-2xl" key={index}>

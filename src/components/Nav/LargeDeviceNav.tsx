@@ -14,10 +14,10 @@ interface navItemsTypes {
 }
 
 const navItems: navItemsTypes[] = [
-  { name: "Home", link: "/" },
+  { name: "Home", link: "#home" },
   { name: "About", link: "#aboutMe" },
-  { name: "Contact", link: "/" },
-  { name: "Projects", link: "/" },
+  { name: "Contact", link: "#contact" },
+  { name: "Projects", link: "#projects" },
 ];
 
 type activeStatus = "Home" | "About" | "Contact" | "Projects";
@@ -26,7 +26,7 @@ const LargeDeviceNav: React.FC = () => {
   const [activeBar, setActiveBar] = useState<activeStatus>("Home");
   // const [active, setActive] = useState<activeState>("home");
   return (
-    <nav className="into-center md:flex hidden select-none">
+    <nav className="into-center md:flex bg-mastery fixed top-0 left-0 z-50 hidden w-full select-none">
       <div className=" text-sup into-center justify-between flex-1 p-4 px-10">
         <Image src={logo} alt="logo" className="w-16 h-16 rounded-full" />
         {/* menus */}
@@ -37,10 +37,13 @@ const LargeDeviceNav: React.FC = () => {
                 <>
                   <li
                     onClick={() => setActiveBar(val.name)}
-                    className="text-sup relative z-0 px-2 transition-all rounded-lg cursor-pointer"
+                    className="text-sup  relative z-0 transition-all"
                     key={val.name}
                   >
-                    {val.name}
+                    <a href={val.link} className="px-2 cursor-pointer">
+                      {" "}
+                      {val.name}
+                    </a>
                     {activeBar === val.name && (
                       <motion.div
                         layoutId="active-pill"

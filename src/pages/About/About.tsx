@@ -7,7 +7,7 @@ import Education from "./Education/Education";
 
 const About = () => {
   return (
-    <section id="aboutMe" className="eachSections">
+    <section id="aboutMe" className="eachSections" about="#aboutMe">
       <div className="flex justify-center">
         <h3 className="title">
           <ArrowLeft />

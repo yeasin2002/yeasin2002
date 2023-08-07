@@ -1,8 +1,7 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 
 import yeasin from "../../assets/avatar/me/Yeasin2002.jpg";
-
 import ContactVia from "./ConnectVia";
 
 const MyAvatar = () => {

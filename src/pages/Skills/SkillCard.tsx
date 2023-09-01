@@ -1,16 +1,15 @@
 import React from "react";
 import Image from "next/image";
 
-//  icons
+//  icons and types
 import { BiLinkExternal as CopyIcons } from "react-icons/bi";
+import { Item } from "./LoopOverSkill";
 
-export interface cardProps {
+export interface cardProps extends Item {
   children: React.ReactNode;
-  Icon: any;
-  stage: "beginner" | "intermediate" | "advance";
-  link?: string;
 }
-const SkillCard = ({ children, Icon, stage, link = "" }: cardProps) => {
+
+const SkillCard = ({ children, icon, stage, reference = "" }: cardProps) => {
   let textColor;
   if (stage === "beginner") {
     textColor = "shadow-amethyst";
@@ -21,25 +20,27 @@ const SkillCard = ({ children, Icon, stage, link = "" }: cardProps) => {
   }
   return (
     <div
-      className={`${textColor} select-none group    bg-sup text-conf font-medium capitalize hover:bg-gray-200 flex items-center py-2 md:py-3 transition-all rounded-sm shadow-md cursor-pointer`}
+      className={`${textColor} select-none group    bg-sup text-conf font-medium capitalize hover:bg-gray-200 flex items-center py-2 md:py-3 transition-all rounded-sm shadow-md`}
     >
       <div className="into-center w-full">
         <div className="mx-4">
           <Image
-            src={Icon}
+            src={icon}
             alt={"Icons"}
-            className="w-7 h-7  pointer-events-none"
+            className="w-7 h-7 pointer-events-none"
           />
         </div>
         <p className={` flex-1 `}>{children}</p>
       </div>
-      <a
-        target="_blank"
-        className="justify-self-end group-hover:opacity-100 pr-2 transition-all opacity-0"
-        href={link}
-      >
-        <CopyIcons className="text-mastery" />
-      </a>
+      {reference && (
+        <a
+          target="_blank"
+          className="justify-self-end group-hover:opacity-100 pr-2 transition-all opacity-0"
+          href={reference}
+        >
+          <CopyIcons className="text-mastery" />
+        </a>
+      )}
     </div>
   );
 };

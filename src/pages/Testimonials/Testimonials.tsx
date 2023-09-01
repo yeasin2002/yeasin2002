@@ -22,31 +22,24 @@ const Testimonials = () => {
     <section className="eachSections">
       <h2 className="title">Testimonials</h2>
 
-      <div>
-        <div className="into-center justify-end">
-          <span className=" bg-amber-500 p-3 rounded-full">
-            <AiFillPlusCircle className="text-mastery" />
-          </span>
-        </div>
-      </div>
-
       {/* others Reviews */}
       <div>
         <Swiper
-          slidesPerView={2}
+          slidesPerView={1}
           centeredSlides={false}
-          slidesPerGroupSkip={2}
+          slidesPerGroupSkip={1}
           spaceBetween={30}
           grabCursor={true}
           keyboard={{
             enabled: true,
           }}
-          // breakpoints={{
-          //   769: {
-          //     slidesPerView: 2,
-          //     slidesPerGroup: 2,
-          //   },
-          // }}
+          breakpoints={{
+            1000: {
+              slidesPerView: 2,
+              slidesPerGroup: 2,
+              spaceBetween: 30,
+            },
+          }}
           scrollbar={true}
           navigation={true}
           pagination={{

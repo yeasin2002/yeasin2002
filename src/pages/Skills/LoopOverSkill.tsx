@@ -6,6 +6,7 @@ export interface Item {
   icon: any;
   stage: "beginner" | "intermediate" | "advance";
   reference?: string;
+  additionalInfo?: string;
 }
 
 interface Props {
@@ -21,10 +22,12 @@ const LoopOverSkill = ({ skillType, title }: Props) => {
         <div className="gap-x-3 sm:grid-cols-2 gap-y-4 md:grid-cols-3 xl:grid-cols-4 grid grid-cols-1">
           {skillType?.map((val) => (
             <SkillCard
+              title={val.title}
               stage={val.stage}
               key={val.title}
-              Icon={val.icon}
-              link={val.reference}
+              icon={val.icon}
+              reference={val.reference}
+              additionalInfo={val.additionalInfo}
             >
               {val.title}
             </SkillCard>

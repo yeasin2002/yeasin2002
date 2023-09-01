@@ -5,6 +5,7 @@ import vgc from "@/assets/avatar/Academy/VGC.jpg";
 import bgss from "@/assets/avatar/Academy/BGSS.png";
 
 import EduCard from "./EduCard";
+import AcademyContact from "./AcademyContact";
 
 const Academic = () => {
   return (

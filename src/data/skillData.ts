@@ -1,8 +1,6 @@
 import skillDataTypes from "./skillData.d";
 
-//  icons
-
-// front end
+//! front end
 import html from "@/assets/icons/html.svg";
 import css from "@/assets/icons/css.svg";
 import js from "@/assets/icons/js.svg";
@@ -13,19 +11,20 @@ import redux from "@/assets/icons/redux.svg";
 import typeScript from "@/assets/icons/typescript.svg";
 import openProps from "@/assets/icons/openProps.svg";
 import postcss from "@/assets/icons/PostCSS.svg";
-import unoCSS from "@/assets/icons/unoCSS.svg";
 import Bootstrap from "@/assets/icons/Bootstrap.svg";
 import SASS from "@/assets/icons/SASS.svg";
 import rtk from "@/assets/icons/rtk.jpg";
+import unoCSS from "@/assets/icons/unoCSS.svg";
 
-// back ends
+//! back ends
 import node from "@/assets/icons/Nodejs.svg";
 import express from "@/assets/icons/express.svg";
 import MongoDB from "@/assets/icons/Mongo.png";
 import mongoose from "@/assets/icons/mongoose.png";
 import sql from "@/assets/icons/sql.png";
 import MySql from "@/assets/icons/mySQL.svg";
-//  tools
+
+//! tools
 import git from "@/assets/icons/git.svg";
 import github from "@/assets/icons/github.svg";
 import vsCode from "@/assets/icons/vsCode.svg";
@@ -39,11 +38,13 @@ const skillData: skillDataTypes = {
       title: "HTML",
       icon: html,
       stage: "advance",
+      additionalMessage: "markup",
     },
     {
       title: "CSS",
       icon: css,
       stage: "advance",
+      additionalMessage: "styling",
     },
 
     {
@@ -80,11 +81,6 @@ const skillData: skillDataTypes = {
       stage: "intermediate",
     },
 
-    {
-      title: "unoCSS",
-      icon: unoCSS,
-      stage: "advance",
-    },
     {
       title: "open-props",
       icon: openProps,
@@ -129,19 +125,10 @@ const skillData: skillDataTypes = {
       icon: MongoDB,
       stage: "beginner",
     },
-    // {
-    //   title: "mongoose",
-    //   icon: mongoose,
-    //   stage: "beginner",
-    // },
-    // {
-    //   title: "SQL",
-    //   icon: sql,
-    //   stage: "beginner",
-    // },
+
     {
-      title: "MySQL",
-      icon: MySql,
+      title: "mongoose",
+      icon: mongoose,
       stage: "beginner",
     },
   ],
@@ -159,17 +146,17 @@ const skillData: skillDataTypes = {
     {
       title: "Vite",
       icon: vite,
-      stage: "intermediate",
+      stage: "advance",
     },
     {
       title: "Figma",
       icon: figma,
-      stage: "beginner",
+      stage: "intermediate",
     },
     {
       title: "VS Code",
       icon: vsCode,
-      stage: "intermediate",
+      stage: "advance",
     },
     {
       title: "Notion",

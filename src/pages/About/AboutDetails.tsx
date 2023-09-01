@@ -7,9 +7,9 @@ import MyAvatar from "./MyAvatar";
 const AboutDetails = () => {
   return (
     <>
-      <div className="xl:grid-cols-2 gap-y-8 xl:gap-y-0 grid grid-cols-1 py-10">
-        <AboutCode />
+      <div className="md:grid-cols-2 gap-y-8 md:gap-y-0 grid grid-cols-1 py-10">
         <MyAvatar />
+        <AboutCode />
       </div>
     </>
   );

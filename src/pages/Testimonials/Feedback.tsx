@@ -9,7 +9,7 @@ interface feedbackInterface {
 }
 
 const FeedbackCard = ({ content, name, title, img }: feedbackInterface) => (
-  <div className="flex justify-between flex-col px-10 py-12 rounded-[20px]  max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 feedback-card">
+  <div className="flex justify-between flex-col w-full px-10 py-12 rounded-[20px]   md:mr-10 sm:mr-5 mr-0 my-5 feedback-card">
     <Image
       src={quotes}
       alt="double_quotes"

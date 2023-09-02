@@ -2,9 +2,7 @@ import React from "react";
 import Academic from "./Academic";
 import Training from "./Training";
 
-type Props = {};
-
-const Education = (props: Props) => {
+const Education = () => {
   return (
     <div className="mt-20">
       <h3 className="SubTitle my-6">Education & Training</h3>

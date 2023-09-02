@@ -5,11 +5,17 @@ import Image from "next/image";
 import { BiLinkExternal as CopyIcons } from "react-icons/bi";
 import { Item } from "./LoopOverSkill";
 
-export interface cardProps extends Item {
-  children: React.ReactNode;
-}
+// export interface cardProps extends Item {
+//   children: React.ReactNode;
+// }
 
-const SkillCard = ({ children, icon, stage, reference = "" }: cardProps) => {
+const SkillCard = ({
+  title,
+  icon,
+  stage,
+  reference = "",
+  additionalMessage,
+}: Item) => {
   let textColor;
   if (stage === "beginner") {
     textColor = "shadow-amethyst";
@@ -18,9 +24,10 @@ const SkillCard = ({ children, icon, stage, reference = "" }: cardProps) => {
   } else {
     textColor = "shadow-teal-700";
   }
+
   return (
     <div
-      className={`${textColor} select-none group    bg-sup text-conf font-medium capitalize hover:bg-gray-200 flex items-center py-2 md:py-3 transition-all rounded-sm shadow-md`}
+      className={`select-none group    bg-sup text-conf font-medium  hover:bg-gray-200 flex items-center py-2 md:py-3 transition-all rounded-sm shadow-md ${textColor} `}
     >
       <div className="into-center w-full">
         <div className="mx-4">
@@ -28,9 +35,20 @@ const SkillCard = ({ children, icon, stage, reference = "" }: cardProps) => {
             src={icon}
             alt={"Icons"}
             className="w-7 h-7 pointer-events-none"
+            loading="lazy"
           />
         </div>
-        <p className={` flex-1 `}>{children}</p>
+
+        <div className=" gap-x-2 flex flex-1">
+          <h3>{title}</h3>
+          {additionalMessage && (
+            <p className="self-end text-xs text-blue-300">
+              {"("}
+              {additionalMessage}
+              {")"}
+            </p>
+          )}
+        </div>
       </div>
       {reference && (
         <a

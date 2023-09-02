@@ -15,6 +15,7 @@ import Bootstrap from "@/assets/icons/Bootstrap.svg";
 import SASS from "@/assets/icons/SASS.svg";
 import rtk from "@/assets/icons/rtk.jpg";
 import unoCSS from "@/assets/icons/unoCSS.svg";
+import styledComponents from "@/assets/icons/styled-components.jpg";
 
 //! back ends
 import node from "@/assets/icons/Nodejs.svg";
@@ -82,8 +83,13 @@ const skillData: skillDataTypes = {
     },
 
     {
-      title: "open-props",
+      title: "Open-Props",
       icon: openProps,
+      stage: "intermediate",
+    },
+    {
+      title: "Styled-Components",
+      icon: styledComponents,
       stage: "intermediate",
     },
   ],
@@ -127,9 +133,10 @@ const skillData: skillDataTypes = {
     },
 
     {
-      title: "mongoose",
+      title: "Mongoose",
       icon: mongoose,
       stage: "beginner",
+      additionalMessage: "NO-SQL ORM",
     },
   ],
   Tools: [
@@ -162,6 +169,7 @@ const skillData: skillDataTypes = {
       title: "Notion",
       icon: notion,
       stage: "intermediate",
+      additionalMessage: "Project Management",
     },
   ],
 };

@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-// const withMT = require("@material-tailwind/react/utils/withMT");
 
 module.exports = {
   darkMode: ["class"],
@@ -98,9 +97,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    // require("tailwindcss-animate"),
-    // require("flowbite/plugin"),
-    // require("daisyui"),
-  ],
+  plugins: [],
 };

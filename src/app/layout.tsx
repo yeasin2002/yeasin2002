@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="scroll-smooth ">
+    <html lang="en" className="scroll-smooth">
+      <body>
         <ThemeProvider>
           <Wrapper>{children}</Wrapper>
         </ThemeProvider>

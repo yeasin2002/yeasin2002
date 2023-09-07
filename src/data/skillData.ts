@@ -136,7 +136,6 @@ const skillData: skillDataTypes = {
       title: "Mongoose",
       icon: mongoose,
       stage: "beginner",
-      additionalMessage: "NO-SQL ORM",
     },
   ],
   Tools: [
@@ -159,6 +158,7 @@ const skillData: skillDataTypes = {
       title: "Figma",
       icon: figma,
       stage: "intermediate",
+      additionalMessage: "UI/XI, Figma to HTML/React",
     },
     {
       title: "VS Code",

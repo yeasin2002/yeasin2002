@@ -1,10 +1,13 @@
+import Image from "next/image";
 import React from "react";
+
 import contactList from "@/data/contactInfo/contactInfo";
 import Logo from "@/components/Globals/Logo";
+import waveImg from "./wave.svg";
 
 const Footer = () => {
   return (
-    <footer className="eachSections pb-14 mt-20">
+    <footer className="eachSections pb-14 mt-20 ">
       <div className="flex justify-between">
         <Logo />
 

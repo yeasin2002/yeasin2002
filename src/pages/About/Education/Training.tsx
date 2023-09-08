@@ -6,18 +6,22 @@ import Image from "next/image";
 
 const Training = () => {
   return (
-    <div
-      className={` gap-x-2 bg-conf/75 flex   flex-col p-2 my-2 focus:bg-slate-700 bg-slate-800 placeholder:text-gray-300 h-full sm:h-3/6 `}
-    >
-      <div className=" flex items-center">
-        <Image src={lws} alt="VGC" className="mr-2" />
+    <div className=" bg-conf/75 focus:bg-slate-700 bg-slate-800 h-5/6 mt-3">
+      <div className=" md:flex-row md:items-center gap-y-4 flex flex-col items-start justify-between w-full h-full">
+        <div className=" flex items-center">
+          <Image src={lws} alt="VGC" className="mr-2" />
+          <div>
+            <h4>Think in a redux way</h4>
+            <p> learn with sumit </p>
+          </div>
+        </div>
         <div>
-          <h4>Think in a redux way</h4>
-          <p> learn with sumit </p>
+          <button className="px-2 py-1 border border-red-700 rounded-lg">
+            certificates
+          </button>
         </div>
       </div>
     </div>
   );
 };
-
 export default Training;

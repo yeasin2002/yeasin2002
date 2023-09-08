@@ -2,7 +2,6 @@ import React from "react";
 import projectData from "@/data/Projects/projectData";
 
 import ProjectCard from "./ProjectCard";
-import SliderCard from "./SliderCard";
 
 const Projects = () => {
   return (

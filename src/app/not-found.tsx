@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { BsArrowLeft } from "react-icons/bs";
-import notFoundImg from "@/assets/not-foundAndError/notFound.jpg";
+import notFoundImg from "@/assets/not-foundAndErrorAndLoading/notFound.jpg";
 
 const NotFoundPage = () => {
   return (

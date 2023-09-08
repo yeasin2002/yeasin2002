@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import errorPage from "@/assets/not-foundAndError/error.jpg";
+import errorPage from "@/assets/not-foundAndErrorAndLoading/error.jpg";
 
 const NotFoundPage = () => {
   return (

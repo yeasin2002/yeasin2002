@@ -7,6 +7,9 @@ import twindCli from "@/assets/projects/twindCli.png";
 import chainVers from "@/assets/projects/chiptoChainvers.png";
 import kiyMovie from "@/assets/projects/kiyMovie.png";
 
+// extra
+import next from "@/assets/projects/nextjs.png";
+
 export type projectTypes = {
   id: number;
   name: string;
@@ -45,10 +48,10 @@ const projectData: projectTypes[] = [
     gitHubLink: "",
   },
   {
-    id: 3,
-    name: "KIY Movie",
+    id: 4,
+    name: "kiyMovie",
     ProjectImage: kiyMovie,
-    liveLink: "https://kiy-movies.netlify.app/",
+    liveLink: "https://crypto-chainverse.netlify.app/",
     gitHubLink: "",
   },
 ];

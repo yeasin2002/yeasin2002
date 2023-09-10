@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body>
+      <body id={"my-scrollbar"}>
         <ThemeProvider>
           <Wrapper>{children}</Wrapper>
         </ThemeProvider>

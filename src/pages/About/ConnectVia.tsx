@@ -15,7 +15,7 @@ const ContactVia = ({ ...props }: connections) => {
               href={val.link}
               key={index}
               target="_blank"
-              className="hover:scale-110 text-2xl transition-all"
+              className={`hover:scale-110 text-2xl transition-all `}
             >
               {val.components}
             </a>

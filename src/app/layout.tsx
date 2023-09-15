@@ -19,6 +19,26 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        {/* 
+  <title>Md Kawsar Islam Yeasin</title>
+  <meta name="description" content="Md Kawsar Islam Yeasin , a software Developer,Front end web developer, web developer and web designer,programmer, and freelancer from Bangladesh.">
+
+ 
+  <meta property="og:url" content="https://yeasin2002.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Md Kawsar Islam Yeasin">
+  <meta property="og:description" content="Md Kawsar Islam Yeasin , a software Developer,Front end web developer, web developer and web designer,programmer, and freelancer from Bangladesh.">
+  <meta property="og:image" content="">
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="yeasin2002.netlify.app">
+  <meta property="twitter:url" content="https://yeasin2002.netlify.app/">
+  <meta name="twitter:title" content="Md Kawsar Islam Yeasin">
+  <meta name="twitter:description" content="Md Kawsar Islam Yeasin , a software Developer,Front end web developer, web developer and web designer,programmer, and freelancer from Bangladesh.">
+  <meta name="twitter:image" content=""> */}
+      </head>
       <body id={"my-scrollbar"}>
         <ThemeProvider>
           <Wrapper>{children}</Wrapper>

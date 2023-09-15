@@ -7,9 +7,6 @@ import twindCli from "@/assets/projects/twindCli.png";
 import chainVers from "@/assets/projects/chiptoChainvers.png";
 import kiyMovie from "@/assets/projects/kiyMovie.png";
 
-// extra
-import next from "@/assets/projects/nextjs.png";
-
 export type projectTypes = {
   id: number;
   name: string;

@@ -10,7 +10,7 @@ const Projects = () => {
       id="projects"
     >
       <h2 className="title">Projects</h2>
-      <div className="w-full h-full  px-10   py-40  rotate-12  ">
+      <div className="w-full h-full   -translate-x-4   py-32  rotate-12  ">
         <SwiperSlider />
       </div>
 

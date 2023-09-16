@@ -39,13 +39,11 @@ const skillData: skillDataTypes = {
       title: "HTML",
       icon: html,
       stage: "advance",
-      additionalMessage: "markup",
     },
     {
       title: "CSS",
       icon: css,
       stage: "advance",
-      additionalMessage: "styling",
     },
 
     {
@@ -158,7 +156,6 @@ const skillData: skillDataTypes = {
       title: "Figma",
       icon: figma,
       stage: "intermediate",
-      additionalMessage: "UI/XI, Figma to HTML/React",
     },
     {
       title: "VS Code",
@@ -169,7 +166,6 @@ const skillData: skillDataTypes = {
       title: "Notion",
       icon: notion,
       stage: "intermediate",
-      additionalMessage: "Project Management",
     },
   ],
 };

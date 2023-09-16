@@ -1,21 +1,14 @@
 import React from "react";
 import Image from "next/image";
 
+// next feature for image hover effect
+// https://codepen.io/Hyperplexed/pen/wvmvqmx
+
 //  icons and types
 import { BiLinkExternal as CopyIcons } from "react-icons/bi";
 import { Item } from "./LoopOverSkill";
 
-// export interface cardProps extends Item {
-//   children: React.ReactNode;
-// }
-
-const SkillCard = ({
-  title,
-  icon,
-  stage,
-  reference = "",
-  additionalMessage,
-}: Item) => {
+const SkillCard = ({ title, icon, stage, reference = "" }: Item) => {
   let textColor;
   if (stage === "beginner") {
     textColor = "shadow-amethyst";
@@ -41,13 +34,6 @@ const SkillCard = ({
 
         <div className=" gap-x-2 flex flex-1">
           <h3>{title}</h3>
-          {additionalMessage && (
-            <p className="self-end text-xs text-blue-300">
-              {"("}
-              {additionalMessage}
-              {")"}
-            </p>
-          )}
         </div>
       </div>
       {reference && (

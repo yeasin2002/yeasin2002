@@ -2,11 +2,12 @@
 
 import React from "react";
 import Image from "next/image";
+import { Typewriter } from "react-simple-typewriter";
 
 //  assets
 import man from "../../assets/avatar/Saly-13.svg";
 import Parallax from "./Parallax";
-import Button_Primary from "@/components/Buttons/Button_Primary";
+// import Button_Primary from "@/components/Buttons/Button_Primary";
 
 const Hero = () => {
   return (
@@ -17,9 +18,24 @@ const Hero = () => {
             <h1 className="title-font sm:text-4xl text-paste first-letter mb-4 text-3xl font-medium">
               Md Kawsar Islam Yeasin
             </h1>
-            <p className=" mb-8 leading-relaxed text-blue-200">
-              Optimistic Learner, Programmer, Loves to talk about Technology,
-              Software, Coding, And Ideas
+            <p className=" mb-4 leading-relaxed text-blue-200">
+              Optimistic Learner, Programmer, Loves to talk about &nbsp;
+              <Typewriter
+                words={["Technology", "Software", "Coding", "Ideas"]}
+                loop={true}
+                cursor
+                cursorStyle="|"
+                typeSpeed={50}
+                deleteSpeed={20}
+                delaySpeed={1000}
+                // onLoopDone={handleDone}
+                // onType={handleType}
+              />
+            </p>
+            <p className="mb-8 leading-relaxed text-blue-200">
+              A self-taught web application developer, Love to build front end
+              and think that how would user interact wth the application. want
+              to build Tools for Developer and contribute to open source.
             </p>
 
             <div className="gap-x-3 flex">

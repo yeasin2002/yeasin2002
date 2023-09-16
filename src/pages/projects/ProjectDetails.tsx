@@ -16,7 +16,7 @@ const ProjectDetails = ({
           src={ProjectImage}
           alt={name}
           loading="lazy"
-          className="w-full h-full  bg-center bg-cover rounded-lg shadow-md"
+          className="w-full h-full  bg-center bg-cover rounded-lg shadow-md pointer-events-none"
         ></Image>
 
         <div className="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 ">

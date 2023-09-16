@@ -1,7 +1,6 @@
 export const AboutString = `
-  import { aboutType } from "./about.d";
 
-  const AboutMe = (): aboutType => {
+  const AboutMe = () => {
      return {
        Name: "Md Kawsar Islam Yeasin",
        Role: "Front End Web Developer",
@@ -15,4 +14,6 @@ export const AboutString = `
           ]
      }; 
    }; 
+
+ export default AboutMe;
    `;

@@ -27,7 +27,6 @@ const LoopOverSkill = ({ skillType, title }: Props) => {
               key={val.title}
               icon={val.icon}
               reference={val.reference}
-              additionalMessage={val.additionalMessage}
             ></SkillCard>
           ))}
         </div>

@@ -5,7 +5,6 @@ export interface Item {
   icon: any;
   stage: "beginner" | "intermediate" | "advance";
   reference?: string;
-  additionalMessage?: string;
 }
 export default interface skillDataTypes {
   Language: Item[];

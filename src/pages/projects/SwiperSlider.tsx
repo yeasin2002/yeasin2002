@@ -13,10 +13,6 @@ const SwiperSlider = () => {
         slidesPerView={1}
         slidesPerGroup={1}
         spaceBetween={40}
-        className="w-full h-full  cursor-pointer "
-        style={{
-          padding: "2rem 2rem ",
-        }}
         breakpoints={{
           1000: {
             slidesPerView: 2,
@@ -24,8 +20,22 @@ const SwiperSlider = () => {
             spaceBetween: 30,
           },
         }}
+        style={{
+          padding: "2rem 2rem ",
+        }}
+        className="w-full h-full  cursor-pointer  "
+        effect={"coverflow"}
+        grabCursor={true}
+        // centeredSlides={true}
+        loop={true}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2.5,
+        }}
       >
-        {projectData.map((val) => {
+        {projectData.map((val, index) => {
           return (
             <SwiperSlide
               key={val.id}

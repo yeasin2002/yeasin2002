@@ -11,8 +11,8 @@
 }
 
 .spinner {
-  animation: rotate 10s infinite reverse;
+  animation: rotate 10s infinite alternate;
 }
 .bigSpinner {
-  animation: rotate 8s infinite alternate-re verse;
+  animation: rotate 8s infinite alternate;
 }

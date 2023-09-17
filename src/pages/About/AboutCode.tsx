@@ -17,7 +17,7 @@ const AboutCode = () => {
       reverse={false}
       speed={100}
       maxGlare={1}
-      className=" sm:text-base md:text-lg relative overflow-hidden text-xs rounded-lg"
+      className=" sm:text-sm   xl:text-2xl mx-10 md:text-sm md:mx-0 md:px-0 sm:mx-24 mt-6 xl:mt-0 inline-block xl:mx-3  relative overflow-hidden text-xs  rounded-lg md:h-full"
       style={{
         background: `rgba(255,255,255,.01)`,
         boxShadow: "0 25px 45px rgba(0,0,0,.2)",
@@ -26,7 +26,7 @@ const AboutCode = () => {
     >
       <Highlight theme={themes.okaidia} code={AboutString} language="tsx">
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <pre className="bg-transparent">
+          <pre className="bg-transparent inline-block">
             {tokens.map((line, i) => (
               <div key={i} {...getLineProps({ line })}>
                 {line.map((token, key) => (
@@ -37,7 +37,7 @@ const AboutCode = () => {
           </pre>
         )}
       </Highlight>
-      {/* <pre>{AboutString}</pre> */}
+
       <div>
         <Image
           src={bloods}

@@ -7,21 +7,29 @@ import { Typewriter } from "react-simple-typewriter";
 //  assets
 import man from "../../assets/avatar/Saly-13.svg";
 import Parallax from "./Parallax";
-// import Button_Primary from "@/components/Buttons/Button_Primary";
 
 const Hero = () => {
   return (
     <main className="h-5/6 relative" id="home">
       <section className="body-font text-gray-600">
-        <div className="md:flex-row container flex flex-col items-center px-5 py-32 mx-auto">
-          <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0 flex flex-col items-center mb-16 text-center">
-            <h1 className="title-font sm:text-4xl text-paste first-letter mb-4 text-3xl font-medium">
+        <div className="md:flex-row  flex flex-col items-center   py-32 ">
+          <div className="lg:flex-grow flex-1 md:w-1/2 lg:pr-24  md:items-start md:text-left md:mb-0 flex flex-col items-center mb-16 text-center">
+            <h1 className="title-font md:text-4xl text-paste first-letter mb-8  font-medium text-2xl  xl:text-6xl 2xl:text-7xl">
               Md Kawsar Islam Yeasin
             </h1>
             <p className=" mb-4 leading-relaxed text-blue-200">
-              Optimistic Learner, Programmer, Loves to talk about &nbsp;
+              Optimistic Learner, Programmer,
+              <br />
+              Loves to talk about &nbsp;
               <Typewriter
-                words={["Technology", "Software", "Coding", "Ideas"]}
+                words={[
+                  "Technology",
+                  "Software",
+                  "Coding",
+                  "Business",
+                  "Finance",
+                  "Ideas",
+                ]}
                 loop={true}
                 cursor
                 cursorStyle="|"
@@ -42,7 +50,6 @@ const Hero = () => {
               <button className="border-paste px-4 py-2 border rounded-sm">
                 Download CV
               </button>
-
               <button className="px-4 py-2 border border-blue-400 rounded-sm">
                 Blogs
               </button>

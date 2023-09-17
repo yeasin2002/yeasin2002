@@ -13,7 +13,7 @@ import ContactVia from "../ConnectVia";
 
 const Imageka = () => {
   return (
-    <div className="lg:order-last cardWrapper ">
+    <div className="md:order-last  cardWrapper ">
       <div id="cards">
         <div className="card" data-color="brown">
           <Image

@@ -1,26 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-
-// next feature for image hover effect
-// https://codepen.io/Hyperplexed/pen/wvmvqmx
 
 //  icons and types
 import { BiLinkExternal as CopyIcons } from "react-icons/bi";
 import { Item } from "./LoopOverSkill";
 
 const SkillCard = ({ title, icon, stage, reference = "" }: Item) => {
+  const [isHovered, setIsHovered] = useState(false);
   let textColor;
-  if (stage === "beginner") {
-    textColor = "shadow-amethyst";
-  } else if (stage === "intermediate") {
-    textColor = "shadow-fog";
-  } else {
-    textColor = "shadow-teal-700";
-  }
+  // if (stage === "beginner") {
+  //   textColor = "shadow-amethyst";
+  // } else if (stage === "intermediate") {
+  //   textColor = "shadow-fog";
+  // } else {
+  //   textColor = "shadow-teal-700";
+  // }
 
   return (
     <div
-      className={`select-none group    bg-sup text-conf font-medium  hover:bg-gray-200 flex items-center py-2 md:py-3 transition-all rounded-sm shadow-md ${textColor} `}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className={`select-none group   link   text-conf font-medium  hover:bg-gray-200 flex items-center py-2 md:py-3 transition-all rounded-sm 
+      shadow-md ${textColor} `}
+      style={{
+        background: ` linear-gradient(97deg, rgba(248,249,250,1) 0%, #e9ecef 50%,   rgba(222,226,230,1) 100%)`,
+      }}
     >
       <div className="into-center w-full">
         <div className="mx-4">

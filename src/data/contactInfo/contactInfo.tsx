@@ -7,40 +7,45 @@ const contactList = [
   {
     name: "Github",
     components: (
-      <BiLogoGithub className="hover:bg-white rounded-full hover:text-slate-950 transition-all" />
+      <BiLogoGithub className=" hover:text-slate-950 transition-all" />
     ),
     link: "https://github.com/Mdkawsarislam2002/",
-    fillColor: "#1F2328",
+
+    bgGradient: ` linear-gradient(39deg, rgba(92,102,115,1) 0%, rgba(31,35,40,1) 100%)`,
   },
   {
     name: "Linkedin",
     components: (
-      <AiFillLinkedin className="hover:text-[#0176B2] transition-all" />
+      <AiFillLinkedin className=" hover:text-slate-950 transition-all" />
     ),
     link: "https://www.linkedin.com/in/yeasin2002/",
-    fillColor: "#3CE3B3",
+
+    bgGradient: `linear-gradient(39deg, rgba(66,175,231,1) 0%, rgba(1,118,178,1) 100%)`,
   },
   {
     name: "Facebook",
-    components: <BsFacebook className="hover:text-[#1777F2] transition-all" />,
+    components: <BsFacebook className=" hover:text-slate-950 transition-all" />,
     link: "https://www.facebook.com/mdkawsarislam2002/",
-    fillColor: "#1777F2",
+
+    bgGradient: `linear-gradient(39deg, rgba(64,125,201,1) 0%, rgba(23,119,242,1) 100%)`,
   },
   {
     name: "Twitter",
     components: (
-      <BiLogoTwitter className="hover:text-[#00C0EF] transition-all" />
+      <BiLogoTwitter className=" hover:text-slate-950 transition-all" />
     ),
     link: "https://twitter.com/mdkawsar2002",
-    fillColor: "#00C0EF",
+
+    bgGradient: `linear-gradient(39deg, rgba(48,204,242,1) 0%, rgba(2,162,201,1) 100%)`,
   },
   {
     name: "Instagram",
     components: (
-      <AiOutlineInstagram className="hover:text-[#FE0288] transition-all" />
+      <AiOutlineInstagram className=" hover:text-slate-950 transition-all" />
     ),
     link: "https://www.instagram.com/mdkawsarislam2002/",
-    fillColor: "#FE0288",
+
+    bgGradient: `linear-gradient(45deg, #405de6 ,#5851db, #833ab4, #c13584, #e1306c, #fd1d1d)`,
   },
 ];
 

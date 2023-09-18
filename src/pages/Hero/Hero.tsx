@@ -3,14 +3,17 @@
 import React from "react";
 import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
+import { BsDownload } from "react-icons/bs";
 
 //  assets
 import man from "../../assets/avatar/Saly-13.svg";
 import Parallax from "./Parallax";
+import BlueStar_Btn from "@/components/Unique/Buttons/BlueStar/BlueStar_Btn";
+import KindCougar from "@/components/Unique/Buttons/kindCougar/KindCougar";
 
 const Hero = () => {
   return (
-    <main className="h-5/6 relative" id="home">
+    <main className="h-full relative" id="home">
       <section className="body-font text-gray-600">
         <div className="md:flex-row  flex flex-col items-center   py-32 ">
           <div className="lg:flex-grow flex-1 md:w-1/2 lg:pr-24  md:items-start md:text-left md:mb-0 flex flex-col items-center mb-16 text-center">
@@ -46,13 +49,12 @@ const Hero = () => {
               to build Tools for Developer and contribute to open source.
             </p>
 
-            <div className="gap-x-3 flex">
-              <button className="border-paste px-4 py-2 border rounded-sm">
-                Download CV
-              </button>
-              <button className="px-4 py-2 border border-blue-400 rounded-sm">
-                Blogs
-              </button>
+            <div className="gap-x-5 flex mt-4">
+              <KindCougar title="Download CV">
+                <BsDownload />
+              </KindCougar>
+
+              <BlueStar_Btn>Blogs</BlueStar_Btn>
             </div>
           </div>
           <div className="lg:max-w-lg md:w-1/2 relative w-5/6">

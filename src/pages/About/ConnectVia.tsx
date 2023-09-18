@@ -1,3 +1,4 @@
+import IconEffect from "@/components/Unique/Buttons/IconEffect/IconEffect";
 import contactList from "@/data/contactInfo/contactInfo";
 import React, { HtmlHTMLAttributes } from "react";
 
@@ -15,7 +16,7 @@ const ContactVia = ({ ...props }: connections) => {
               target="_blank"
               className={`hover:scale-110 text-2xl transition-all `}
             >
-              {val.components}
+              <IconEffect bgColor={val.bgGradient}>{val.components}</IconEffect>
             </a>
           );
         })}

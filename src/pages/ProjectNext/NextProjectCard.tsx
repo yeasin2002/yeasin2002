@@ -44,7 +44,7 @@ const NextProjectCard = ({
         </div>
       </div>
       <div className="flex gap-x-3 ">
-        {tag.map((tech) => {
+        {tag?.map((tech) => {
           return <div key={tech}>{tech}</div>;
         })}
       </div>

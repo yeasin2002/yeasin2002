@@ -17,8 +17,8 @@ const NotFoundPage = () => {
         <p className="mt-4 text-gray-300 00">
           Sorry, we couldn’t find the page you’re looking for. Perhaps you’ve
           <br /> mistyped the URL? Be sure to check your spelling.
-        </p>wa
-
+        </p>
+        wa
         <div className="flex items-center mt-6 gap-x-3">
           <Link
             href={"/"}

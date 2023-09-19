@@ -1,6 +1,6 @@
 import React from "react";
 
-interface Button_PrimaryProps  {
+interface Button_PrimaryProps {
   children: React.ReactNode;
 }
 

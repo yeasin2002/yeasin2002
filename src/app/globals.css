@@ -126,4 +126,7 @@
   .underBorder {
     @apply border-sup w-full p-2 transition-all border-b-2 rounded-md outline-none;
   }
+  .projectShowcase {
+    @apply w-full h-auto border border-teal-500;
+  }
 }

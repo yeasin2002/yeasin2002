@@ -3,7 +3,7 @@ import MainLoader from "@/components/Unique/Loaders/MainLoader";
 
 const Loading = () => {
   return (
-    <section className="">
+    <section className="w-screen h-screen">
       <MainLoader />
     </section>
   );

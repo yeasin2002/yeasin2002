@@ -8,8 +8,8 @@ import Skills from "@/pages/Skills/Skills";
 import Testimonials from "@/pages/Testimonials/Testimonials";
 import Contact from "@/pages/contact/Contact";
 import Footer from "@/pages/Footer/Footer";
-import Projects from "@/pages/projects/Projects";
 import ProjectNext from "@/pages/ProjectNext/ProjectNext";
+// import Projects from "@/pages/projects/Projects";
 
 export default function Home() {
   return (
@@ -18,8 +18,8 @@ export default function Home() {
       <Hero />
       <About />
       <Skills />
-      <Projects />
-      {/* <ProjectNext /> */}
+      {/* <Projects /> */}
+      <ProjectNext />
       <Testimonials />
       <Contact />
       <Footer />

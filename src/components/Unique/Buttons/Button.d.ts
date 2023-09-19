@@ -10,3 +10,6 @@ interface KindCougar extends UniqueBtn {
 interface SpaceBtn extends UniqueBtn {
   title: string;
 }
+interface OverText extends UniqueBtn {
+  text: string;
+}

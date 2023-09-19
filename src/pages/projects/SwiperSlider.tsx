@@ -19,14 +19,24 @@ const SwiperSlider = () => {
             slidesPerGroup: 2,
             spaceBetween: 30,
           },
+          1500: {
+            slidesPerView: 3,
+            slidesPerGroup: 2,
+            spaceBetween: 30,
+          },
+          2000: {
+            slidesPerView: 3,
+            slidesPerGroup: 2,
+            spaceBetween: 30,
+          },
         }}
         style={{
           padding: "2rem 2rem ",
         }}
-        className="w-full h-full  cursor-pointer  "
+        className=" w-full h-full cursor-pointer"
         effect={"coverflow"}
         grabCursor={true}
-        // centeredSlides={true}
+        // centeredSlides={tru
         loop={true}
         coverflowEffect={{
           rotate: 0,
@@ -57,5 +67,4 @@ const SwiperSlider = () => {
     </>
   );
 };
-
 export default SwiperSlider;

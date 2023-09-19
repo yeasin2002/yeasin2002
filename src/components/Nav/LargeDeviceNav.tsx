@@ -31,7 +31,7 @@ const LargeDeviceNav: React.FC = () => {
 
         {/* menus */}
         <div>
-          <motion.ul className=" gap-x-2 flex">
+          <motion.ul className=" gap-x-2 md:gap-x-4 lg:gap-x-6 xl:gap-x-8 2xl:gap-x-10 md:text-base lg:text-lg xl:text-xl 2xl:text-2xl flex text-sm font-medium tracking-wider text-white uppercase">
             {navItems.map((value, index) => {
               return (
                 <motion.div key={index}>

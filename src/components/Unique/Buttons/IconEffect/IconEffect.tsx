@@ -13,17 +13,18 @@ const defaultBg = `linear-gradient(
 const IconEffect = ({
   children,
   bgColor = defaultBg,
+  ...rest
 }: {
   children: React.ReactNode;
   bgColor?: string;
 }) => {
   return (
-    <div>
-      <button className={classes.Btn}>
+    <>
+      <button className={classes.Btn} {...rest}>
         <span className={classes.svgContainer}>{children}</span>
         <span className={classes.BG} style={{ background: bgColor }}></span>
       </button>
-    </div>
+    </>
   );
 };
 

@@ -14,7 +14,7 @@ const ContactVia = ({ ...props }: connections) => {
               href={val.link}
               key={index}
               target="_blank"
-              className={`hover:scale-110 text-2xl transition-all `}
+              className={`hover:scale-110 xl:text-2xl transition-all `}
             >
               <IconEffect bgColor={val.bgGradient}>{val.components}</IconEffect>
             </a>

@@ -12,16 +12,11 @@
     ),
     hsl(260 calc(var(--active) * 97%) calc((var(--active) * 44%) + 12%));
   background: var(--bg);
-  font-size: 1rem;
-  font-weight: 500;
-  border: 0;
+
   cursor: pointer;
-  padding: 0.8em 1em;
-  display: flex;
   align-items: center;
   gap: 0.25em;
   white-space: nowrap;
-  border-radius: 100px;
   position: relative;
   box-shadow: 0 0 calc(var(--active) * 3em) calc(var(--active) * 1em)
       hsl(260 97% 61% / 0.75),

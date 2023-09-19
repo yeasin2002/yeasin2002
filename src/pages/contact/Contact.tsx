@@ -4,19 +4,9 @@ import { Input } from "@/components/ui/input";
 import useGEneratedColor from "@/hooks/useGeneratedColor";
 
 const Contact = () => {
-  const { theStyles } = useGEneratedColor({
-    GreenishColorValue: {
-      styles:
-        "focus:bg-emerald-700 bg-emerald-800 placeholder:text-gray-300 text-conf",
-    },
-    MidnightBlueColorValue: {
-      styles:
-        "focus:bg-slate-700 bg-slate-800 placeholder:text-gray-300 text-paste",
-    },
-  });
   return (
     <section className="eachSections" id="contact">
-      <h3 className="title">Contact</h3>
+      <h3 className="title">Get in Touch </h3>
 
       <form>
         <div className=" gap-x-2 md:flex-row gap-y-2 flex flex-col my-4">
@@ -39,7 +29,7 @@ const Contact = () => {
           name="userMessage"
           id="userMessage"
           placeholder="Write your message"
-          className={`md:h-60 h-96 underBorder  w-full block p-2.5  text-sm   rounded-lg   ${theStyles}`}
+          className={`md:h-60 h-96 underBorder  w-full block p-2.5  text-sm   rounded-lg   focus:bg-slate-700 bg-slate-800 placeholder:text-gray-300 text-paste`}
         ></textarea>
         <button
           type="submit"

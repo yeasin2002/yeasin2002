@@ -11,6 +11,7 @@ import Parallax from "./Parallax";
 import BlueStar_Btn from "@/components/Unique/Buttons/BlueStar/BlueStar_Btn";
 import KindCougar from "@/components/Unique/Buttons/kindCougar/KindCougar";
 import Space_Btn from "@/components/Unique/Buttons/Space_Btn/Space_Btn";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -56,9 +57,11 @@ const Hero = () => {
                 <BsDownload />
               </KindCougar> */}
               <Space_Btn title="Download CV" />
-              <BlueStar_Btn className="2xl:text-2xl xl:text-xl text-lg">
-                Blogs
-              </BlueStar_Btn>
+              <Link href={"/blogs"}>
+                <BlueStar_Btn className="2xl:text-2xl xl:text-xl text-lg">
+                  Blogs
+                </BlueStar_Btn>
+              </Link>
             </div>
           </div>
           <div className="lg:max-w-lg 2xl:h-1/2 2xl:ml-20 relative">

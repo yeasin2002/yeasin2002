@@ -7,7 +7,7 @@ import useColorTheme from "@/hooks/useColorTheme";
 const Wrapper = ({ children }: { children: React.ReactNode }) => {
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
-  const { color, BgColor } = useColorTheme();
+  // const { color, BgColor } = useColorTheme();
 
   function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent) {
     let { left, top } = currentTarget.getBoundingClientRect();
@@ -17,7 +17,11 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div
-      className={`${BgColor}  ${color}  w-full      `}
+      style={{
+        background: `#000000      `,
+        color: "white",
+      }}
+      className={`  w-full      `}
       onMouseMove={handleMouseMove}
     >
       <motion.div

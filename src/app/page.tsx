@@ -6,9 +6,10 @@ import Hero from "@/pages/Hero/Hero";
 import About from "@/pages/About/About";
 import Skills from "@/pages/Skills/Skills";
 import Testimonials from "@/pages/Testimonials/Testimonials";
-import Projects from "@/pages/projects/Projects";
 import Contact from "@/pages/contact/Contact";
 import Footer from "@/pages/Footer/Footer";
+import Projects from "@/pages/projects/Projects";
+import ProjectNext from "@/pages/ProjectNext/ProjectNext";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <About />
       <Skills />
       <Projects />
+      {/* <ProjectNext /> */}
       <Testimonials />
       <Contact />
       <Footer />

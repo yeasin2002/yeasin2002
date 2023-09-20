@@ -1,4 +1,4 @@
-import people from "../assets/dummy/people01.png";
+import people from "../assets/dummy/people02.png";
 
 const DummyFeedback = [
   {
@@ -23,6 +23,14 @@ const DummyFeedback = [
       "Money makes your life easier. If you're lucky to have it, you're lucky.!",
     name: "Imam",
     title: "Back End Developer",
+    img: people,
+  },
+  {
+    id: 4,
+    content:
+      "Live the Life of Your Dreams: Be brave enough to live the life of your dreams according to your vision and purpose instead of the expectations and opinions of others!",
+    name: "Kazi",
+    title: "Kazi Tanvir Islam",
     img: people,
   },
 ];

@@ -2,6 +2,7 @@ import React from "react";
 import { Input } from "@/components/ui/input";
 
 import useGEneratedColor from "@/hooks/useGeneratedColor";
+import SubmitBtn from "@/components/Unique/Buttons/submitBtn/submitBtn";
 
 const Contact = () => {
   return (
@@ -31,12 +32,7 @@ const Contact = () => {
           placeholder="Write your message"
           className={`md:h-60 h-96 underBorder  w-full block p-2.5  text-sm   rounded-lg   focus:bg-slate-700 bg-slate-800 placeholder:text-gray-300 text-paste`}
         ></textarea>
-        <button
-          type="submit"
-          className="px-4 py-2 mt-4 border border-blue-700 rounded-lg"
-        >
-          submit
-        </button>
+        <SubmitBtn>submit</SubmitBtn>
       </form>
     </section>
   );

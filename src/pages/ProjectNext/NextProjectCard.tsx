@@ -20,22 +20,22 @@ const NextProjectCard = ({
   return (
     <div
       className={`w-full h-full  bg-[#080808] rounded-xl  p-4 
-    ${isTranslate && id === 1 && "lg:-translate-y-40"}
+    ${isTranslate && id === 1 && "lg:-translate-y-40 2xl:-translate-y-72"}
     `}
     >
-      <div className="h-72">
+      <div className="h-72 2xl:h-96">
         <Image
-          className="w-full  rounded-lg h-full "
+          className="w-full  rounded-lg h-full  "
           src={ProjectImage}
           alt={name}
         />
       </div>
       <div>
         <div className="flex items-center justify-between my-5 ">
-          <h3 className="text-xl font-bold"> {name} </h3>
-          <div className="flex items-center justify-center gap-x-2">
+          <h3 className="text-xl font-bold 2xl:text-6xl 2xl:py-2"> {name} </h3>
+          <div className="flex items-center justify-center gap-x-2 2xl:gap-x-5">
             <a href={gitHubLink} target="_blank" rel="noopener noreferrer">
-              <BsGithub />
+              <BsGithub className="2xl:text-3xl" />
             </a>
             <a
               href={liveLink}
@@ -43,20 +43,24 @@ const NextProjectCard = ({
               rel="noopener noreferrer"
               className="border border-white rounded-full p-1 "
             >
-              <BsLink45Deg className="" />
+              <BsLink45Deg className="2xl:text-3xl" />
             </a>
           </div>
         </div>
       </div>
-      <div className="flex gap-x-3 ">
+      <div className="flex gap-x-3 2xl:py-2 ">
         {tag?.map((tech) => {
-          return <div key={tech}>{tech}</div>;
+          return (
+            <p className="2xl:text-2xl" key={tech}>
+              {tech}
+            </p>
+          );
         })}
       </div>
 
       <hr />
 
-      <div className="mt-3">{description}</div>
+      <div className="mt-3 2xl:py-4 2xl:text-2xl">{description}</div>
     </div>
   );
 };

@@ -98,5 +98,5 @@ module.exports = {
       },
     },
   },
-  plugins: ["@tailwindcss/container-queries"],
+  plugins: [require("@tailwindcss/container-queries")],
 };

@@ -36,7 +36,7 @@
 
 .title {
   z-index: 2;
-  font-family: "Avalors Personal Use";
+
   font-size: 12px;
   letter-spacing: 5px;
   color: #ffffff;
@@ -171,5 +171,15 @@
   100% {
     transform: scale(0.75);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+@media screen and (min-width: 1566px) {
+  .btn {
+    width: 15rem;
+    height: 5rem;
+  }
+  .title {
+    font-size: 16px;
   }
 }

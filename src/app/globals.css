@@ -124,7 +124,7 @@
     @apply text-mastery flex;
   }
   .underBorder {
-    @apply border-sup w-full p-2 transition-all border-b-2 rounded-md outline-none;
+    @apply border-sup w-full p-2 transition-all border-b-2 rounded-md outline-none 2xl:p-4 lg:p-3;
   }
   .projectShowcase {
     @apply w-full h-auto border border-teal-500;

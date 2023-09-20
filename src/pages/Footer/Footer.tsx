@@ -29,7 +29,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="into-center gap-x-2 mt-5">
+      <div className="into-center gap-x-2 mt-5 sm:text-xl 2xl:text-2xl">
         <p>All Right Reserved </p>
         <p>@yeasin2002.dev</p>
       </div>

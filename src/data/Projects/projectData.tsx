@@ -24,7 +24,7 @@ const projectData: projectTypes[] = [
     ProjectImage: TaskHub,
     gitHubLink: "https://github.com/Mdkawsarislam2002/TaskHub",
     liveLink: "https://taskhub2002.netlify.app/",
-    tag: ["React", "TypeScript", "Tailwindcss"],
+    tag: ["React", "Redux", "Tailwindcss"],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, qui?",
   },
@@ -34,7 +34,7 @@ const projectData: projectTypes[] = [
     ProjectImage: twindCli,
     gitHubLink: "https://github.com/Mdkawsarislam2002/T_Wind-cli",
     liveLink: "",
-    tag: ["React", "TypeScript", "Tailwindcss"],
+    tag: ["nodejs", "TypeScript", "Tailwindcss", "CLI"],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, qui?",
   },
@@ -44,7 +44,7 @@ const projectData: projectTypes[] = [
     ProjectImage: chainVers,
     liveLink: "https://crypto-chainverse.netlify.app/",
     gitHubLink: "",
-    tag: ["React", "TypeScript", "Tailwindcss"],
+    tag: ["React", "Tailwindcss"],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, qui?",
   },
@@ -54,7 +54,7 @@ const projectData: projectTypes[] = [
     ProjectImage: hooBankImg,
     gitHubLink: "https://github.com/Mdkawsarislam2002/project_hoobank",
     liveLink: "",
-    tag: ["React", "TypeScript", "Tailwindcss"],
+    tag: ["React", "module.css"],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, qui?",
   },
@@ -65,7 +65,7 @@ const projectData: projectTypes[] = [
     ProjectImage: kiyMovie,
     liveLink: "https://crypto-chainverse.netlify.app/",
     gitHubLink: "",
-    tag: ["React", "TypeScript", "Tailwindcss"],
+    tag: ["React", "Tailwindcss"],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, qui?",
   },

@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { AiFillPlusCircle } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -13,13 +12,12 @@ import "swiper/css/pagination";
 // import required modules
 import { Keyboard, Scrollbar, Navigation, Pagination } from "swiper/modules";
 
-import EachReview from "./EachReview";
 import DummyFeedback from "../../data/DummyFeedback";
 import FeedbackCard from "./Feedback";
 
 const Testimonials = () => {
   return (
-    <section className="eachSections">
+    <section className="eachSections 2xl:py-10">
       <h2 className="title">Testimonials</h2>
 
       {/* others Reviews */}
@@ -36,6 +34,11 @@ const Testimonials = () => {
           breakpoints={{
             1000: {
               slidesPerView: 2,
+              slidesPerGroup: 2,
+              spaceBetween: 30,
+            },
+            1500: {
+              slidesPerView: 3,
               slidesPerGroup: 2,
               spaceBetween: 30,
             },

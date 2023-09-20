@@ -1,5 +1,14 @@
 interface UniqueBtn extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
+interface OnlyChild extends UniqueBtn {
+  children: React.ReactNode;
+}
+interface ChildAndTxt extends UniqueBtn {
+  children: React.ReactNode;
+  text: string;
+}
+
+// uncommon
 interface BlueStar extends UniqueBtn {
   children: React.ReactNode;
 }

@@ -13,3 +13,6 @@ interface SpaceBtn extends UniqueBtn {
 interface OverText extends UniqueBtn {
   text: string;
 }
+interface FoldTextBtn extends UniqueBtn {
+  children: React.ReactNode;
+}

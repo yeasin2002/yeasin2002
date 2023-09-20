@@ -32,6 +32,7 @@ const ProjectNext = () => {
               liveLink={value.liveLink}
               tag={value.tag}
               description={value.description}
+              isTranslate={true}
             />
           </>
         );

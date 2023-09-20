@@ -3,6 +3,10 @@ import Image from "next/image";
 import React from "react";
 import { BsGithub, BsLink45Deg } from "react-icons/bs";
 
+interface nextProjectCardProps {
+  isTranslate: boolean;
+}
+
 const NextProjectCard = ({
   id,
   name,
@@ -11,11 +15,12 @@ const NextProjectCard = ({
   liveLink,
   description,
   tag,
-}: projectTypes) => {
+  isTranslate,
+}: projectTypes & nextProjectCardProps) => {
   return (
     <div
       className={`w-full h-full  bg-[#080808] rounded-xl  p-4 
-    ${id === 1 && "lg:-translate-y-40"}
+    ${isTranslate && id === 1 && "lg:-translate-y-40"}
     `}
     >
       <div className="h-72">

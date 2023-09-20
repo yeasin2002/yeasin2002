@@ -1,8 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
-// import { Roboto } from "next/font/google";
+import { Roboto } from "next/font/google";
+
+const RobotoFont = Roboto({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 // ? components
 // import ThemeSwitcher from "./ThemeSwitcher";
@@ -26,7 +30,12 @@ const LargeDeviceNav: React.FC = () => {
   const [activeNav, setActiveNav] = useState<activeState>("Home");
   return (
     <nav className="into-center md:flex bg-mastery/40 fixed top-0 left-0 z-50 hidden w-full select-none">
-      <div className=" text-sup into-center justify-between flex-1 p-4 px-10">
+      <div
+        className={
+          " text-sup into-center justify-between flex-1 p-4 px-10 " +
+          RobotoFont.className
+        }
+      >
         <Logo />
 
         {/* menus */}

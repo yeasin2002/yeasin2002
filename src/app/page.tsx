@@ -1,5 +1,6 @@
 "use client";
 
+import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 // components
 import Nav from "@/components/Nav/Nav";
 import Hero from "@/pages/Hero/Hero";
@@ -11,8 +12,12 @@ import Footer from "@/pages/Footer/Footer";
 import ProjectNext from "@/pages/ProjectNext/ProjectNext";
 
 export default function Home() {
+  //! lanis scroll
+  const lenis = useLenis(({ scroll }: { scroll: any }) => {
+    console.log(scroll);
+  });
   return (
-    <>
+    <ReactLenis root>
       <Nav />
       <Hero />
       <About />
@@ -22,6 +27,6 @@ export default function Home() {
       <Testimonials />
       <Contact />
       <Footer />
-    </>
+    </ReactLenis>
   );
 }

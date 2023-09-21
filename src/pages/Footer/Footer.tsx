@@ -1,5 +1,3 @@
-import React from "react";
-
 import contactList from "@/data/contactInfo/contactInfo";
 import Logo from "@/components/Globals/Logo";
 import WaterWave from "./WaterWave";

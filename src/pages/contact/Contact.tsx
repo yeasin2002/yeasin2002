@@ -6,7 +6,7 @@ import SubmitBtn from "@/components/Unique/Buttons/submitBtn/submitBtn";
 
 const Contact = () => {
   return (
-    <section className="eachSections" id="contact">
+    <section className="eachSections sectionHolder" id="contact">
       <h3 className="title">Get in Touch </h3>
 
       <form>

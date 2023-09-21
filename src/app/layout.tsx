@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import ThemeProvider from "@/context/ThemeProvider";
+
 import Wrapper from "@/components/Globals/Wrapper";
 
 // styles
@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body id={"my-scrollbar"}>
+      <body>
         <Wrapper>{children}</Wrapper>
       </body>
     </html>

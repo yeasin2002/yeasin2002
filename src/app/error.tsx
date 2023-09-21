@@ -5,12 +5,12 @@ import errorPage from "@/assets/not-foundAndErrorAndLoading/error.jpg";
 
 const NotFoundPage = () => {
   return (
-    <section className="flex w-full  items-center justify-between h-screen gap-x-20">
-      <div className="w-96 h-96  ring-4 ring-paste/30 rounded-full overflow-hidden">
+    <section className="flex flex-col md:flex-row w-full  items-center justify-between h-screen gap-x-20 px-6 md:px-2 pt-20">
+      <div className="  ring-4 ring-paste/30 rounded-full overflow-hidden">
         <Image
           src={errorPage}
           alt="Yeasin"
-          className="w-full h-full aspect-video"
+          className="w-full h-full aspect-square  md:aspect-video"
         />
       </div>
 

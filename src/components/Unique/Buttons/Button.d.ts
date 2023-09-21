@@ -3,6 +3,9 @@ interface UniqueBtn extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 interface OnlyChild extends UniqueBtn {
   children: React.ReactNode;
 }
+interface OnlyText extends UniqueBtn {
+  text: string;
+}
 interface ChildAndTxt extends UniqueBtn {
   children: React.ReactNode;
   text: string;

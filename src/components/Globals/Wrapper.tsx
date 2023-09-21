@@ -25,7 +25,7 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
       onMouseMove={handleMouseMove}
     >
       <motion.div
-        className="z-0 px-8 transition-all"
+        className="z-0 px-1 transition-all"
         style={{
           background: useMotionTemplate`
       radial-gradient( 650px circle at ${mouseX}px ${mouseY}px, rgba(14, 165, 233, 0.15),transparent 80% )`,

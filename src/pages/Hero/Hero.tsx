@@ -13,7 +13,10 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <main className="xl:py-8 2xl:py-40  2xl:px-10 relative h-full" id="home">
+    <main
+      className=" xl:py-8 2xl:py-40  2xl:px-10 eachSections relative h-full "
+      id="home"
+    >
       <div className="body-font text-gray-600">
         <div className="md:flex-row flex flex-col items-center py-32">
           <div className="lg:flex-grow xl:mr-10 2xl:mr-52 md:w-1/2 lg:pr-24 md:items-start md:text-left md:mb-0 flex flex-col items-center flex-1 mb-16 text-center">

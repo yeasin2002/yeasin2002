@@ -22,7 +22,16 @@ module.exports = {
     },
     extend: {
       colors: {
-        //  my custom colors code
+        shine: {
+          0: "rgb(20, 30, 48)",
+          100: "rgb(36, 59, 85)",
+        },
+        parrot: {
+          100: "rgba(78,186,153,1) ",
+          200: " rgba(54,200,156,1)  ",
+          300: " rgba(33,156,118,1)",
+          400: "rgba(5,119,84,1)",
+        },
 
         //  black groups
         conf: "#111121",

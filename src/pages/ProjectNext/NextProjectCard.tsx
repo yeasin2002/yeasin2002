@@ -1,4 +1,5 @@
 import { projectTypes } from "@/data/Projects/projectData";
+import { GupterFont, RokkittFont, YatraFont } from "@/utils/GoogleFonts";
 import Image from "next/image";
 import React from "react";
 import { BsGithub, BsLink45Deg } from "react-icons/bs";
@@ -32,7 +33,11 @@ const NextProjectCard = ({
       </div>
       <div>
         <div className="flex items-center justify-between my-5 ">
-          <h3 className="text-xl font-bold 2xl:text-6xl 2xl:py-2"> {name} </h3>
+          <h3
+            className={`text-xl font-bold 2xl:text-6xl 2xl:py-2 ${YatraFont.className}`}
+          >
+            {name}
+          </h3>
           <div className="flex items-center justify-center gap-x-2 2xl:gap-x-5">
             <a href={gitHubLink} target="_blank" rel="noopener noreferrer">
               <BsGithub className="2xl:text-3xl" />
@@ -40,8 +45,8 @@ const NextProjectCard = ({
             <a
               href={liveLink}
               target="_blank"
-              rel="noopener noreferrer"
-              className="border border-white rounded-full p-1 "
+              rel="noreferrer"
+              className={`border border-white rounded-full p-1  `}
             >
               <BsLink45Deg className="2xl:text-3xl" />
             </a>
@@ -51,7 +56,7 @@ const NextProjectCard = ({
       <div className="flex gap-x-3 2xl:py-2 ">
         {tag?.map((tech) => {
           return (
-            <p className="2xl:text-2xl" key={tech}>
+            <p className={`2xl:text-2xl ${GupterFont.className} `} key={tech}>
               {tech}
             </p>
           );
@@ -60,7 +65,9 @@ const NextProjectCard = ({
 
       <hr />
 
-      <div className="mt-3 2xl:py-4 2xl:text-2xl">{description}</div>
+      <div className={`mt-3 2xl:py-4 2xl:text-2xl ${RokkittFont.className}`}>
+        {description}
+      </div>
     </div>
   );
 };

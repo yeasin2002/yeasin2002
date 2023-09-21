@@ -1,3 +1,4 @@
+import { GirassolFont } from "@/utils/GoogleFonts";
 import styles from "./submitBtn.module.css";
 const SubmitBtn = ({ children, ...rest }: OnlyChild) => {
   return (
@@ -22,7 +23,7 @@ const SubmitBtn = ({ children, ...rest }: OnlyChild) => {
             </svg>
           </div>
         </div>
-        <span>{children}</span>
+        <span className={GirassolFont.className}>{children}</span>
       </button>
     </>
   );

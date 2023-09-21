@@ -1,12 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Roboto } from "next/font/google";
-
-const RobotoFont = Roboto({
-  weight: "400",
-  subsets: ["latin"],
-});
+import { MenuFont } from "@/utils/GoogleFonts";
 
 // ? components
 // import ThemeSwitcher from "./ThemeSwitcher";
@@ -33,7 +28,7 @@ const LargeDeviceNav: React.FC = () => {
       <div
         className={
           " text-sup into-center justify-between flex-1 p-4 px-10 " +
-          RobotoFont.className
+          MenuFont.className
         }
       >
         <Logo />

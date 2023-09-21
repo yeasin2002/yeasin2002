@@ -4,6 +4,7 @@ import Image from "next/image";
 //  icons and types
 import { BiLinkExternal as CopyIcons } from "react-icons/bi";
 import { Item } from "./LoopOverSkill";
+import { ChelseaFont } from "@/utils/GoogleFonts";
 
 const SkillCard = ({ title, icon, stage, reference = "" }: Item) => {
   let textColor;
@@ -34,7 +35,7 @@ const SkillCard = ({ title, icon, stage, reference = "" }: Item) => {
         </div>
 
         <div className=" gap-x-2 flex flex-1">
-          <h3>{title}</h3>
+          <h3 className={ChelseaFont.className}>{title}</h3>
         </div>
       </div>
       {reference && (

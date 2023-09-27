@@ -6,8 +6,11 @@ interface connections extends HtmlHTMLAttributes<HTMLDivElement> {}
 
 const ContactVia = ({ ...props }: connections) => {
   return (
-    <div {...props}>
-      <div className="gap-x-4 flex items-center my-2">
+    <div
+      {...props}
+      className="flex items-center justify-center md:ml-3 md:justify-start  mt-3"
+    >
+      <div className="gap-x-1 md:gap-x-4 lg:gap-x-8 sm:gap-x-8  flex items-center justify-start  my-2">
         {contactList.map((val, index) => {
           return (
             <a

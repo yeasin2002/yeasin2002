@@ -1,6 +1,5 @@
 import contactList from "@/data/contactInfo/contactInfo";
 import Logo from "@/components/Globals/Logo";
-import WaterWave from "./WaterWave";
 import { DangrekFont, MetalFont } from "@/utils/GoogleFonts";
 
 const Footer = () => {
@@ -8,18 +7,21 @@ const Footer = () => {
     <>
       {/* <WaterWave /> */}
       <footer className="eachSections pb-14 mt-20 ">
-        <div className="flex justify-between">
+        <div className="flex justify-between flex-wrap">
           <Logo />
 
           <div>
-            <div className=" gap-x-4 flex">
+            <div className=" gap-x-1 sm:gap-x-4 flex flex-wrap">
               {contactList.map((val) => {
                 return (
                   <a
+                    style={{
+                      background: val.bgGradient,
+                    }}
                     href={val.link}
                     key={val.name}
                     target="_blank"
-                    className={`hover:scale-110 text-2xl transition-all `}
+                    className={`hover:scale-110 text-2xl transition-all p-1 rounded-full`}
                   >
                     {val.components}
                   </a>

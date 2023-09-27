@@ -11,21 +11,23 @@ import {
   Rokkitt,
   Yatra_One,
   Gupter,
-  IM_Fell_Great_Primer_SC,
   Metal,
   Dangrek,
-  Texturina,
   Maiden_Orange,
   Girassol,
   Modern_Antiqua,
   Milonga,
-  IM_Fell_Great_Primer,
   Shippori_Antique,
   Kelly_Slab,
   Sedgwick_Ave,
   Pragati_Narrow,
   Calistoga,
   Averia_Libre,
+  IM_Fell_Great_Primer,
+  Concert_One,
+  Fugaz_One,
+  Sansita,
+  Chewy,
 } from "next/font/google";
 
 export const TitleFont = Kurale({
@@ -77,10 +79,6 @@ export const GupterFont = Gupter({
   weight: "400",
   subsets: ["latin"],
 });
-export const IM_Fell_Great_Primer_SCFont = IM_Fell_Great_Primer_SC({
-  weight: "400",
-  subsets: ["latin"],
-});
 
 export const MetalFont = Metal({
   weight: "400",
@@ -88,11 +86,6 @@ export const MetalFont = Metal({
 });
 
 export const DangrekFont = Dangrek({
-  weight: "400",
-  subsets: ["latin"],
-});
-
-export const TexturinaFont = Texturina({
   weight: "400",
   subsets: ["latin"],
 });
@@ -138,6 +131,18 @@ export const CalistogaFont = Calistoga({
   subsets: ["latin"],
 });
 export const AveriaLibreFont = Averia_Libre({
+  weight: "400",
+  subsets: ["latin"],
+});
+export const ConcertOne = Concert_One({
+  weight: "400",
+  subsets: ["latin"],
+});
+export const FugazOne = Fugaz_One({
+  weight: "400",
+  subsets: ["latin"],
+});
+export const SansitaFont = Sansita({
   weight: "400",
   subsets: ["latin"],
 });

@@ -1,11 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { MenuFont } from "@/utils/GoogleFonts";
+import { SansitaFont } from "@/utils/GoogleFonts";
 
 // ? components
 // import ThemeSwitcher from "./ThemeSwitcher";
-import logo from "@/assets/icons/logo.jpg";
 import Logo from "../Globals/Logo";
 
 type activeState = "Home" | "About" | "Contact" | "Projects";
@@ -28,7 +27,7 @@ const LargeDeviceNav: React.FC = () => {
       <div
         className={
           " text-sup into-center justify-between flex-1 p-4 px-10 " +
-          MenuFont.className
+          SansitaFont.className
         }
       >
         <Logo />

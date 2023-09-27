@@ -26,7 +26,7 @@ const projectData: projectTypes[] = [
     liveLink: "https://taskhub2002.netlify.app/",
     tag: ["React", "Redux", "Tailwindcss"],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, qui?",
+      "A task management application with the ability to collaborate with others Todo-App is a kind of app that generally used to maintain our day-to-day tasks or list everything that we have to do, with the most important tasks at the top of the list, and the least important tasks at the bottom. It is helpful in planning our daily schedules",
   },
   {
     id: 1,
@@ -36,7 +36,7 @@ const projectData: projectTypes[] = [
     liveLink: "",
     tag: ["nodejs", "TypeScript", "Tailwindcss", "CLI"],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, qui?",
+      "Tailwind is the most popular CSS Framework but installing and using Tailwind CSS from scratch is a little bit complicated, So using twind-cli you can setup Tailwind within a second.",
   },
   {
     id: 2,
@@ -45,18 +45,7 @@ const projectData: projectTypes[] = [
     liveLink: "https://crypto-chainverse.netlify.app/",
     gitHubLink: "",
     tag: ["React", "Tailwindcss"],
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, qui?",
-  },
-  {
-    id: 3,
-    name: "HooBank",
-    ProjectImage: hooBankImg,
-    gitHubLink: "https://github.com/Mdkawsarislam2002/project_hoobank",
-    liveLink: "",
-    tag: ["React", "module.css"],
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, qui?",
+    description: "Landing Page of Crypto currency selling website",
   },
 
   {
@@ -64,10 +53,10 @@ const projectData: projectTypes[] = [
     name: "kiyMovie",
     ProjectImage: kiyMovie,
     liveLink: "https://crypto-chainverse.netlify.app/",
-    gitHubLink: "",
-    tag: ["React", "Tailwindcss"],
+    gitHubLink: "https://github.com/Mdkawsarislam2002/kiy-movies",
+    tag: ["React", "Tailwindcss", "firebase", "IMDB"],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, qui?",
+      "Movie Showing website using IMDB API. You can search for any movie and see the details of the movie.",
   },
 ];
 

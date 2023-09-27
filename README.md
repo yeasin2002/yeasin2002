@@ -19,3 +19,18 @@ Live Link : https://yeasin2002.netlify.app/
   - DevConf : https://devconfbd.com/
   - Refine : https://refine.dev/
   - Js jsmastery : https://www.jsmastery.pro/
+
+### Next work
+
+- Reval animation in all section
+- Navbar animation that depend on scrollbar
+- Hover Effect in Education and training
+- Hover Effect in Skill Card and Liquid Effect
+- Gradient Effect in My Name
+- Project Font and other style
+
+##### Advance
+
+- Crating Blog Page
+- Testimonial add and log in page
+- Server for Blog and Testimonial

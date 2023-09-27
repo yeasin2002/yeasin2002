@@ -9,11 +9,12 @@ import react from "@/assets/icons/react.svg";
 import next from "@/assets/icons/next.svg";
 import redux from "@/assets/icons/redux.svg";
 import typeScript from "@/assets/icons/typescript.svg";
+import tanStackQuery from "@/assets/icons/tankstackQuery.svg";
+import rtk from "@/assets/icons/rtk.jpg";
 import openProps from "@/assets/icons/openProps.svg";
 import postcss from "@/assets/icons/PostCSS.svg";
 import Bootstrap from "@/assets/icons/Bootstrap.svg";
 import SASS from "@/assets/icons/SASS.svg";
-import rtk from "@/assets/icons/rtk.jpg";
 import unoCSS from "@/assets/icons/unoCSS.svg";
 import styledComponents from "@/assets/icons/styled-components.jpg";
 
@@ -32,6 +33,7 @@ import vsCode from "@/assets/icons/vsCode.svg";
 import notion from "@/assets/icons/notion.svg";
 import figma from "@/assets/icons/figma.svg";
 import vite from "@/assets/icons/vite.svg";
+import canva from "@/assets/icons/canva.svg";
 
 const skillData: skillDataTypes = {
   Language: [
@@ -58,40 +60,44 @@ const skillData: skillDataTypes = {
     },
   ],
   CssFramework: [
+    // {
+    //   title: "TailwindCSS",
+    //   icon: tailwind,
+    //   stage: "advance",
+    //   reference: "https://tailwindcss.com/",
+    // },
+    // {
+    //   title: "Bootstrap",
+    //   icon: Bootstrap,
+    //   stage: "intermediate",
+    // },
+    // {
+    //   title: "SASS",
+    //   icon: SASS,
+    //   stage: "intermediate",
+    // },
+    // {
+    //   title: "PostCSS",
+    //   icon: postcss,
+    //   stage: "intermediate",
+    // },
+    // {
+    //   title: "Open-Props",
+    //   icon: openProps,
+    //   stage: "intermediate",
+    // },
+    // {
+    //   title: "Styled-Components",
+    //   icon: styledComponents,
+    //   stage: "intermediate",
+    // },
+  ],
+  JSFramework: [
     {
       title: "TailwindCSS",
       icon: tailwind,
       stage: "advance",
-      reference: "https://tailwindcss.com/",
     },
-    {
-      title: "Bootstrap",
-      icon: Bootstrap,
-      stage: "intermediate",
-    },
-    {
-      title: "SASS",
-      icon: SASS,
-      stage: "intermediate",
-    },
-    {
-      title: "PostCSS",
-      icon: postcss,
-      stage: "intermediate",
-    },
-
-    {
-      title: "Open-Props",
-      icon: openProps,
-      stage: "intermediate",
-    },
-    {
-      title: "Styled-Components",
-      icon: styledComponents,
-      stage: "intermediate",
-    },
-  ],
-  JSFramework: [
     {
       title: "React.js",
       icon: react,
@@ -106,6 +112,11 @@ const skillData: skillDataTypes = {
       title: "Redux Thunk, RTK Query",
       icon: rtk,
       stage: "advance",
+    },
+    {
+      title: "TanStack Query",
+      icon: tanStackQuery,
+      stage: "beginner",
     },
     {
       title: "Next.js 13",
@@ -137,21 +148,17 @@ const skillData: skillDataTypes = {
     },
   ],
   Tools: [
+    // {
+    //   title: "Git ",
+    //   icon: git,
+    //   stage: "intermediate",
+    // },
     {
-      title: "Git ",
-      icon: git,
-      stage: "intermediate",
-    },
-    {
-      title: "Github",
+      title: "Git & Github",
       icon: github,
       stage: "intermediate",
     },
-    {
-      title: "Vite",
-      icon: vite,
-      stage: "advance",
-    },
+
     {
       title: "Figma",
       icon: figma,
@@ -166,6 +173,16 @@ const skillData: skillDataTypes = {
       title: "Notion",
       icon: notion,
       stage: "intermediate",
+    },
+    {
+      title: "Vite",
+      icon: vite,
+      stage: "advance",
+    },
+    {
+      title: "canva",
+      icon: canva,
+      stage: "beginner",
     },
   ],
 };

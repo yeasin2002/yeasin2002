@@ -30,7 +30,7 @@ const EduCard = ({
       />
       <div>
         <h4
-          className={`text-xs sm:text-lg xl:text-xl font-semibold sm:font-bold ${RozhaFont.className}`}
+          className={`text-xs sm:text-lg xl:text-2xl 2xl:text-3xl font-semibold sm:font-bold ${RozhaFont.className}`}
         >
           {name}
         </h4>

@@ -22,7 +22,6 @@ Live Link : https://yeasin2002.netlify.app/
 
 ### Next work
 
-- Reval animation in all section
 - Navbar animation that depend on scrollbar
 - Hover Effect in Education and training
 - Hover Effect in Skill Card and Liquid Effect

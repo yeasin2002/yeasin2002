@@ -18,7 +18,7 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       style={{
-        background: `#000000      `,
+        background: `#000000`,
         color: "white",
       }}
       className={`  w-full      `}

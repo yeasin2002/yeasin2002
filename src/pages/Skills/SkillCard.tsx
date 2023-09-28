@@ -24,8 +24,14 @@ const SkillCard = ({
         className={`select-none group xl:py-4 xl:text-xl 2xl:py-8 2xl:text-4xl   link   text-conf font-medium  hover:bg-gray-200 flex items-center py-2  transition-all rounded-sm  md:rounded-lg md:px-4
       shadow-md  `}
         style={{
-          background: ` linear-gradient(97deg, rgba(248,249,250,1) 0%, #e9ecef 50%,   rgba(222,226,230,1) 100%)`,
+          // background: `hsla(0,0%,100%,.15)`,
+          background: `rgba(71,85,105,.2)`,
+          color: `hsla(0,0%,100%,.85)`,
         }}
+
+        // style={{
+        //   background: ` linear-gradient(97deg, rgba(248,249,250,1) 0%, #e9ecef 50%,   rgba(222,226,230,1) 100%)`,
+        // }}
       >
         <div className="into-center w-full">
           <div className="mx-4">

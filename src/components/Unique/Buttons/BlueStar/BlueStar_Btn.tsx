@@ -1,4 +1,5 @@
 import classes from "./BlueStar.module.css";
+import { HiPencilAlt } from "react-icons/hi";
 
 const BlueStar_Btn = ({ children, ...res }: BlueStar) => {
   return (
@@ -10,7 +11,7 @@ const BlueStar_Btn = ({ children, ...res }: BlueStar) => {
         <span className={classes.spark}></span>
 
         <span className={classes.backdrop}></span>
-        <svg
+        {/* <svg
           className="sparkle"
           viewBox="0 0 24 24"
           fill="none"
@@ -37,7 +38,8 @@ const BlueStar_Btn = ({ children, ...res }: BlueStar) => {
             strokeLinecap="round"
             strokeLinejoin="round"
           ></path>
-        </svg>
+        </svg> */}
+        <HiPencilAlt className="text-black" />
         <span className={`${classes.text} lg:text-2xl`}>{children}</span>
       </button>
     </>

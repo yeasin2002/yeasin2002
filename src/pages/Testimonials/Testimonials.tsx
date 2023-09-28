@@ -58,7 +58,6 @@ const Testimonials = () => {
                 img={value.img}
                 name={value.name}
                 title={value.title}
-                index={value.id}
               />
             </SwiperSlide>
           );

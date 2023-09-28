@@ -6,7 +6,7 @@ import css from "@/assets/icons/css.svg";
 import js from "@/assets/icons/js.svg";
 import tailwind from "@/assets/icons/tailwind.svg";
 import react from "@/assets/icons/react.svg";
-import next from "@/assets/icons/next.svg";
+import next from "@/assets/icons/next2svg.svg";
 import redux from "@/assets/icons/redux.svg";
 import typeScript from "@/assets/icons/typescript.svg";
 import tanStackQuery from "@/assets/icons/tankstackQuery.svg";
@@ -27,13 +27,14 @@ import sql from "@/assets/icons/sql.png";
 import MySql from "@/assets/icons/mySQL.svg";
 
 //! tools
-import git from "@/assets/icons/git.svg";
-import github from "@/assets/icons/github.svg";
+import gitAndGithub from "@/assets/icons/gitAndGithubsvg.svg";
 import vsCode from "@/assets/icons/vsCode.svg";
-import notion from "@/assets/icons/notion.svg";
+import notion from "@/assets/icons/notion2svg.svg";
 import figma from "@/assets/icons/figma.svg";
 import vite from "@/assets/icons/vite.svg";
 import canva from "@/assets/icons/canva.svg";
+import git from "@/assets/icons/git.svg";
+import github from "@/assets/icons/github.svg";
 
 const skillData: skillDataTypes = {
   Language: [
@@ -155,7 +156,7 @@ const skillData: skillDataTypes = {
     // },
     {
       title: "Git & Github",
-      icon: github,
+      icon: gitAndGithub,
       stage: "intermediate",
     },
 

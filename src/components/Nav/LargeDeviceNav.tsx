@@ -3,6 +3,12 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { SansitaFont } from "@/utils/GoogleFonts";
 
+// ? Icons
+import { BiHomeAlt2 as HomeIcon } from "react-icons/bi";
+import { BsPersonCheckFill as AboutIcon } from "react-icons/bs";
+import { CgWorkAlt as WorkIcon } from "react-icons/cg";
+import { RiContactsLine as ContactIcon } from "react-icons/ri";
+
 // ? components
 // import ThemeSwitcher from "./ThemeSwitcher";
 import Logo from "../Globals/Logo";
@@ -11,22 +17,29 @@ type activeState = "Home" | "About" | "Contact" | "Projects";
 interface navItemsTypes {
   name: activeState;
   link: string;
+  Icon?: any;
 }
 
-const navItems: navItemsTypes[] = [
-  { name: "Home", link: "#home" },
-  { name: "About", link: "#aboutMe" },
-  { name: "Projects", link: "#projects" },
-  { name: "Contact", link: "#contact" },
+export const navItems: navItemsTypes[] = [
+  { name: "Home", link: "#home", Icon: HomeIcon },
+  { name: "About", link: "#aboutMe", Icon: AboutIcon },
+  { name: "Projects", link: "#projects", Icon: WorkIcon },
+  { name: "Contact", link: "#contact", Icon: ContactIcon },
 ];
 
 const LargeDeviceNav: React.FC = () => {
   const [activeNav, setActiveNav] = useState<activeState>("Home");
   return (
-    <nav className="into-center md:flex bg-mastery/40 fixed top-0 left-0 z-50 hidden w-full select-none">
+    <nav
+      className="into-center md:flex bg-mastery/40 fixed top-0 left-0 z-50 hidden w-full select-none"
+      style={{
+        background: `hsla(0,0%,100%,.064)`,
+        backdropFilter: `blur(10px)`,
+      }}
+    >
       <div
         className={
-          " text-sup into-center justify-between flex-1 p-4 px-10 " +
+          " text-sup into-center justify-between flex-1 py-3 xl:py-4 2xl:py-6 px-10 " +
           SansitaFont.className
         }
       >

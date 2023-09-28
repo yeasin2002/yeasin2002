@@ -14,14 +14,7 @@ const ContactVia = ({ ...props }: connections) => {
       <div className="gap-x-1 md:gap-x-4 lg:gap-x-8 sm:gap-x-8  flex items-center justify-start  my-2">
         {contactList.map((val, index) => {
           return (
-            <Revel
-              key={index}
-              customVariants={{
-                hidden: { opacity: 0, x: 75 },
-                visible: { opacity: 1, x: 0 },
-              }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-            >
+            <>
               <a
                 href={val.link}
                 target="_blank"
@@ -31,7 +24,7 @@ const ContactVia = ({ ...props }: connections) => {
                   {val.components}
                 </IconEffect>
               </a>
-            </Revel>
+            </>
           );
         })}
       </div>

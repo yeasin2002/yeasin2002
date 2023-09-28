@@ -30,7 +30,7 @@ const projectData: projectTypes[] = [
   },
   {
     id: 1,
-    name: "Twind-CLI",
+    name: "Twind-CLI (Alfa)",
     ProjectImage: twindCli,
     gitHubLink: "https://github.com/Mdkawsarislam2002/T_Wind-cli",
     liveLink: "",

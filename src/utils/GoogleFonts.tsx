@@ -23,11 +23,12 @@ import {
   Pragati_Narrow,
   Calistoga,
   Averia_Libre,
-  IM_Fell_Great_Primer,
   Concert_One,
   Fugaz_One,
   Sansita,
-  Chewy,
+  IM_Fell_Great_Primer,
+  Mooli,
+  Oswald,
 } from "next/font/google";
 
 export const TitleFont = Kurale({
@@ -71,10 +72,7 @@ export const RokkittFont = Rokkitt({
   weight: "400",
   subsets: ["latin"],
 });
-export const YatraFont = Yatra_One({
-  weight: "400",
-  subsets: ["latin"],
-});
+
 export const GupterFont = Gupter({
   weight: "400",
   subsets: ["latin"],
@@ -143,6 +141,14 @@ export const FugazOne = Fugaz_One({
   subsets: ["latin"],
 });
 export const SansitaFont = Sansita({
+  weight: "400",
+  subsets: ["latin"],
+});
+export const MooliFont = Mooli({
+  weight: "400",
+  subsets: ["latin"],
+});
+export const OswaldFont = Oswald({
   weight: "400",
   subsets: ["latin"],
 });

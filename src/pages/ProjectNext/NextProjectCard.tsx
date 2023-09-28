@@ -1,5 +1,5 @@
 import { projectTypes } from "@/data/Projects/projectData";
-import { GupterFont, RokkittFont, YatraFont } from "@/utils/GoogleFonts";
+import { GupterFont, OswaldFont, MooliFont } from "@/utils/GoogleFonts";
 import Image from "next/image";
 import React from "react";
 import { BsGithub, BsLink45Deg } from "react-icons/bs";
@@ -34,7 +34,7 @@ const NextProjectCard = ({
       <div>
         <div className="flex items-center justify-between my-5 ">
           <h3
-            className={`text-xl font-bold 2xl:text-6xl 2xl:py-2 ${YatraFont.className}`}
+            className={`text-xl font-bold 2xl:text-6xl 2xl:py-2 ${OswaldFont.className}`}
           >
             {name}
           </h3>
@@ -65,7 +65,9 @@ const NextProjectCard = ({
 
       <hr />
 
-      <div className={`mt-3 2xl:py-4 2xl:text-2xl ${RokkittFont.className}`}>
+      <div
+        className={`mt-3 text-gray-300 2xl:py-4 2xl:text-2xl ${MooliFont.className}`}
+      >
         {description}
       </div>
     </div>

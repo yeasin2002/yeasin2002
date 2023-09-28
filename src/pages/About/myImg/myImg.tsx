@@ -13,13 +13,15 @@ import me7 from "@/assets/avatar/me/sagufta.jpg";
 import ContactVia from "../ConnectVia";
 
 const Imageka = () => {
+  const randomPic = Math.floor(Math.random() * 2) + 1;
+
   return (
     <div className="md:order-last  flex flex-col justify-between md:justify-start w-full h-full ">
       <div className="flex items-center justify-center flex-1 w-full h-full">
         <div className=" rounded-lg  aspect-auto flex-1   mx-4 sm:mx-7 md:mx-4">
           <Image
             className="w-full h-full  rounded-lg"
-            src={me7}
+            src={randomPic === 1 ? me6 : me7}
             alt="Yeasin"
             loading="lazy"
             width={300}

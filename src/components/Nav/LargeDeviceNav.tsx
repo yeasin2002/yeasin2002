@@ -55,8 +55,9 @@ const LargeDeviceNav: React.FC = () => {
           </motion.ul>
         </div>
       </div>
-      {/* <ThemeSwitcher /> */}
     </nav>
   );
 };
 export default LargeDeviceNav;
+
+//  how to add revel animation using framer motion

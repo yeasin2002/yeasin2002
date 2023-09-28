@@ -1,3 +1,4 @@
+import Revel from "@/components/Globals/Revel";
 import IconEffect from "@/components/Unique/Buttons/IconEffect/IconEffect";
 import contactList from "@/data/contactInfo/contactInfo";
 import React, { HtmlHTMLAttributes } from "react";
@@ -13,14 +14,24 @@ const ContactVia = ({ ...props }: connections) => {
       <div className="gap-x-1 md:gap-x-4 lg:gap-x-8 sm:gap-x-8  flex items-center justify-start  my-2">
         {contactList.map((val, index) => {
           return (
-            <a
-              href={val.link}
+            <Revel
               key={index}
-              target="_blank"
-              className={`hover:scale-110 xl:text-2xl transition-all `}
+              customVariants={{
+                hidden: { opacity: 0, x: 75 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              <IconEffect bgColor={val.bgGradient}>{val.components}</IconEffect>
-            </a>
+              <a
+                href={val.link}
+                target="_blank"
+                className={`hover:scale-110 xl:text-2xl transition-all `}
+              >
+                <IconEffect bgColor={val.bgGradient}>
+                  {val.components}
+                </IconEffect>
+              </a>
+            </Revel>
           );
         })}
       </div>

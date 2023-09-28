@@ -7,8 +7,8 @@ module.exports = {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
-    "path-to-your-node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
-    "path-to-your-node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
+    // "path-to-your-node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
+    // "path-to-your-node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
     "./node_modules/flowbite/**/*.js",
   ],
   theme: {
@@ -107,5 +107,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/container-queries")],
+  plugins: [],
 };

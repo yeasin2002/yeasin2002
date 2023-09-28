@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { MeriendaFont, RozhaFont } from "@/utils/GoogleFonts";
+import Revel from "@/components/Globals/Revel";
 
 export interface Academy extends React.HtmlHTMLAttributes<HTMLDivElement> {
   name: string;
@@ -17,10 +18,8 @@ const EduCard = ({
   ...props
 }: Academy) => {
   return (
-    <div
-      className={` bg-gradient-to-r from-shine-0 to-shine-100  my-4 p-1 flex sm:pl-3 sm:py-2   items-center sm:gap-x-4 gap-x-1 rounded-md   text-blue-100 
-      
-      `}
+    <Revel
+      className={` bg-gradient-to-r from-shine-0 to-shine-100  my-4 p-1 flex sm:pl-3 sm:py-2   items-center sm:gap-x-4 gap-x-1 rounded-md   text-blue-100`}
       {...props}
     >
       <Image
@@ -40,7 +39,7 @@ const EduCard = ({
           {LastExam}-{AcademicYear}
         </p>
       </div>
-    </div>
+    </Revel>
   );
 };
 

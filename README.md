@@ -33,4 +33,5 @@ Live Link : https://yeasin2002.netlify.app/
 
 - Crating Blog Page
 - Testimonial add and log in page
+- Contact Page and Form Data get and sent to email
 - Server for Blog and Testimonial

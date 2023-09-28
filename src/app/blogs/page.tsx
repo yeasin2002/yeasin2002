@@ -1,7 +1,7 @@
 const Blogs = () => {
   return (
-    <div className=" h-screen">
-      <h1>Blogs</h1>
+    <div className="min-h-screen flex  items-center justify-center">
+      <h1 className="text-xl font-bold">Coming Soon</h1>
     </div>
   );
 };

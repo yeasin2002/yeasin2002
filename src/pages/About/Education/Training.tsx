@@ -1,12 +1,14 @@
 import Image from "next/image";
 import DownloadBtn from "@/components/Unique/Buttons/DownloadBtn/DownloadBtn";
+
 //  Assets
 import lws from "@/assets/avatar/Academy/lws.svg";
 import { AveriaLibreFont, Maiden_OrangeFont } from "@/utils/GoogleFonts";
+import Revel from "@/components/Globals/Revel";
 
 const Training = () => {
   return (
-    <div
+    <Revel
       className={`  my-4 p-1 flex sm:pl-3 sm:py-2 items-start lg:flex-row flex-col  justify-between lg:items-center  rounded-md   text-blue-100 
       bg-gradient-to-r from-shine-0 to-shine-100
       `}
@@ -40,7 +42,7 @@ const Training = () => {
       <div className="lg:mr-3 self-end lg:self-auto">
         <DownloadBtn>Certificates</DownloadBtn>
       </div>
-    </div>
+    </Revel>
   );
 };
 export default Training;

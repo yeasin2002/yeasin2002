@@ -17,6 +17,7 @@ import {
   SubtitleFont,
   TitleFont,
 } from "@/utils/GoogleFonts";
+import Revel from "@/components/Globals/Revel";
 
 const Hero = () => {
   return (
@@ -27,11 +28,18 @@ const Hero = () => {
       <div className="body-font text-gray-600">
         <div className="md:flex-row flex flex-col items-center py-32">
           <div className="lg:flex-grow xl:mr-10 2xl:mr-52 md:w-1/2 lg:pr-24 md:items-start md:text-left md:mb-0 flex flex-col items-center flex-1 mb-16 text-center">
-            <h1
-              className={`title-font sm:text-5xl md:text-3xl text-paste first-letter xl:text-6xl 2xl:text-7xl mb-8 text-2xl font-medium ${TitleFont.className} `}
+            <Revel
+              customVariants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 1, y: 0 },
+              }}
             >
-              MD KAWSAR ISLAM YEASIN
-            </h1>
+              <h1
+                className={`title-font sm:text-5xl md:text-3xl text-paste first-letter xl:text-6xl 2xl:text-7xl mb-8 text-2xl font-medium ${TitleFont.className} `}
+              >
+                MD KAWSAR ISLAM YEASIN
+              </h1>
+            </Revel>
 
             <div className="flex flex-col items-start">
               <p className=" lg:text-xl text-left   sm:text-2xl  2xl:text-3xl xl:my-7 2xl:my-10 mb-4 text-lg text-blue-200 ">

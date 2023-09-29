@@ -20,14 +20,6 @@ Live Link : https://yeasin2002.netlify.app/
   - Refine : https://refine.dev/
   - Js jsmastery : https://www.jsmastery.pro/
 
-### Next work
-
-- Navbar animation that depend on scrollbar
-- Hover Effect in Education and training
-- Hover Effect in Skill Card and Liquid Effect
-- Gradient Effect in My Name
-- Project Font and other style
-
 ##### Advance
 
 - Crating Blog Page

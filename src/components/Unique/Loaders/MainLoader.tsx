@@ -1,3 +1,4 @@
+"use client";
 import classes from "./MainLoader.module.css";
 
 const MainLoader = () => {

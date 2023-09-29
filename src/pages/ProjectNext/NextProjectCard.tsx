@@ -20,7 +20,7 @@ const NextProjectCard = ({
 }: projectTypes & nextProjectCardProps) => {
   return (
     <div
-      className={`w-full h-full  bg-[#080808] rounded-xl  p-4 
+      className={`w-full h-full  bg-[#080808] rounded-xl  p-4  
     ${isTranslate && id === 1 && "lg:-translate-y-40 2xl:-translate-y-72"}
     `}
     >
@@ -34,7 +34,7 @@ const NextProjectCard = ({
       <div>
         <div className="flex items-center justify-between my-5 ">
           <h3
-            className={`text-xl font-bold 2xl:text-6xl 2xl:py-2 ${OswaldFont.className}`}
+            className={`text-xl font-bold text-blue-100   2xl:text-6xl 2xl:py-2 ${OswaldFont.className}`}
           >
             {name}
           </h3>
@@ -56,17 +56,20 @@ const NextProjectCard = ({
       <div className="flex gap-x-3 2xl:py-2 ">
         {tag?.map((tech) => {
           return (
-            <p className={`2xl:text-2xl ${GupterFont.className} `} key={tech}>
+            <p
+              className={`2xl:text-2xl text-gray-300 ${GupterFont.className} `}
+              key={tech}
+            >
               {tech}
             </p>
           );
         })}
       </div>
 
-      <hr />
+      <hr className="mt-2 mb-5" />
 
       <div
-        className={`mt-3 text-gray-300 2xl:py-4 2xl:text-2xl ${MooliFont.className}`}
+        className={`mt-3 text-gray-400 2xl:py-4 2xl:text-2xl ${MooliFont.className}`}
       >
         {description}
       </div>

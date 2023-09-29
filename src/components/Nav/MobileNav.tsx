@@ -20,7 +20,11 @@ const MobileNav = () => {
         <Logo />
 
         <div
-          className="inline sm:p-4 p-2 bg-teal-800 rounded-full cursor-pointer "
+          style={{
+            background: `rgba(71,85,105,.2)`,
+            color: `hsla(0,0%,100%,.85)`,
+          }}
+          className="inline sm:p-4 p-2  rounded-full cursor-pointer "
           onClick={() => setIsVisible((pre) => !pre)}
         >
           <RiMenu4Fill />

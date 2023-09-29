@@ -69,7 +69,14 @@ const MobileNavArea = ({ isVisible, setIsVisible }: mobileAre) => {
         }}
       >
         <Logo />
-        <div className="cursor-pointer " onClick={() => setIsVisible(false)}>
+        <div
+          className="cursor-pointer p-3  rounded-full "
+          onClick={() => setIsVisible(false)}
+          style={{
+            background: `rgba(71,85,105,.2)`,
+            color: `hsla(0,0%,100%,.85)`,
+          }}
+        >
           <Cross />
         </div>
       </Revel>

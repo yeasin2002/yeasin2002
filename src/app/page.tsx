@@ -1,6 +1,5 @@
 "use client";
 
-import { ReactLenis } from "@studio-freight/react-lenis";
 // components
 import Nav from "@/components/Nav/Nav";
 import Hero from "@/pages/Hero/Hero";
@@ -13,7 +12,7 @@ import ProjectNext from "@/pages/ProjectNext/ProjectNext";
 
 export default function Home() {
   return (
-    <ReactLenis root>
+    <>
       <Nav />
       <Hero />
       <About />
@@ -22,6 +21,6 @@ export default function Home() {
       <Testimonials />
       <Contact />
       <Footer />
-    </ReactLenis>
+    </>
   );
 }

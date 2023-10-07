@@ -13,13 +13,13 @@ const Academic = () => {
       <EduCard
         name={"Bhashantek Govt. Secondary School"}
         imageData={bgss}
-        AcademicYear={2021}
+        AcademicYear={"2020-2021"}
         LastExam="SSC"
       />
       <EduCard
         name={"Vashantek Govt. Collage"}
         imageData={vgc}
-        AcademicYear={2023}
+        AcademicYear={"2021-2022"}
         LastExam="HSC"
       />
     </div>

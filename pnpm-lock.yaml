@@ -8,6 +8,9 @@ dependencies:
   '@radix-ui/react-slot':
     specifier: ^1.0.2
     version: 1.0.2(@types/react@18.2.14)(react@18.2.0)
+  '@studio-freight/lenis':
+    specifier: ^1.0.26
+    version: 1.0.26
   '@studio-freight/react-lenis':
     specifier: ^0.0.30
     version: 0.0.30(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
@@ -392,8 +395,8 @@ packages:
       throttle-debounce: 5.0.0
     dev: false
 
-  /@studio-freight/lenis@1.0.23:
-    resolution: {integrity: sha512-eV/mGeHzP3D6eEH762CYBOQUMScy6ye9mhmT+GLMx10WaP7tB9OsX4kBBF4WeLgvi5ot4M3XaN2dgoLblNygRQ==}
+  /@studio-freight/lenis@1.0.26:
+    resolution: {integrity: sha512-PLpPMtYoo50Z1otpUpGONK/BkJ0nrE7pY6Q1+KMWuPup+S+XFR/FJOXGkrtISzc6DtHgilbi1b6xDgDluFHsaA==}
     dev: false
 
   /@studio-freight/react-lenis@0.0.30(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0):
@@ -403,7 +406,7 @@ packages:
       react-dom: ^18.2.0
     dependencies:
       '@studio-freight/hamo': 0.6.19(react-dom@18.2.0)(react@18.2.0)
-      '@studio-freight/lenis': 1.0.23
+      '@studio-freight/lenis': 1.0.26
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)

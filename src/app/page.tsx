@@ -9,8 +9,10 @@ import Testimonials from "@/pages/Testimonials/Testimonials";
 import Contact from "@/pages/contact/Contact";
 import Footer from "@/pages/Footer/Footer";
 import ProjectNext from "@/pages/ProjectNext/ProjectNext";
+import { useSmoothScroll } from "@/hooks/useSmothScroll";
 
 export default function Home() {
+  useSmoothScroll();
   return (
     <>
       <Nav />

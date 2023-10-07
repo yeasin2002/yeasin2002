@@ -5,8 +5,25 @@ import DownloadBtn from "@/components/Unique/Buttons/DownloadBtn/DownloadBtn";
 import lws from "@/assets/avatar/Academy/lws.svg";
 import { AveriaLibreFont, Maiden_OrangeFont } from "@/utils/GoogleFonts";
 import Revel from "@/components/Globals/Revel";
+// import myPdf from "../../../assets/doc/reduxCertificate.pdf";
 
 const Training = () => {
+  const downloadPdf = () => {
+    const pdf = ""; // myPdf import url
+    fetch(pdf)
+      .then((response) => response.blob())
+      .then((blob) => {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "my-pdf.pdf";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      });
+  };
+
   return (
     <Revel
       className={`  my-4 p-1 flex sm:pl-3 sm:py-2 items-start lg:flex-row flex-col  justify-between lg:items-center  rounded-md   text-blue-100 

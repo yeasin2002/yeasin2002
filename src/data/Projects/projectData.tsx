@@ -58,6 +58,17 @@ const projectData: projectTypes[] = [
     description:
       "Movie Showing website using IMDB API. You can search for any movie and see the details of the movie.",
   },
+  {
+    id: 5,
+    name: "Insurantly - insurance agency",
+    ProjectImage: kiyMovie,
+    liveLink: "https://insurantly2023.netlify.app/",
+    gitHubLink:
+      "https://github.com/Mdkawsarislam2002/Insurantly-insurance_agency",
+    tag: ["html", "Tailwindcss", "react"],
+    description:
+      "Insurantly is an insurance agency website. You can buy insurance from this website.",
+  },
 ];
 
 export default projectData;

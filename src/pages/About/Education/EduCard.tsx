@@ -6,7 +6,7 @@ import Revel from "@/components/Globals/Revel";
 export interface Academy extends React.HtmlHTMLAttributes<HTMLDivElement> {
   name: string;
   imageData: StaticImageData;
-  AcademicYear: number;
+  AcademicYear: string | number;
   LastExam: "HSC" | "SSC";
 }
 
@@ -36,7 +36,7 @@ const EduCard = ({
         <p
           className={`text-xs mt-2 sm:text-sm  text-gray-400 sm:font-medium ${MeriendaFont.className}`}
         >
-          {LastExam}-{AcademicYear}
+          {LastExam} {AcademicYear}
         </p>
       </div>
     </Revel>

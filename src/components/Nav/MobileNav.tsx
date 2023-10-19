@@ -1,10 +1,10 @@
 "use client";
+import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import { RiMenu4Fill } from "react-icons/ri";
 import Logo from "../Globals/Logo";
-import { useState } from "react";
-import MobileNavArea from "./MobileNavArea";
-import { AnimatePresence } from "framer-motion";
 import Revel from "../Globals/Revel";
+import MobileNavArea from "./MobileNavArea";
 
 const MobileNav = () => {
   const [isVisible, setIsVisible] = useState(false);

@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence, Variants } from "framer-motion";
 import { SansitaFont } from "@/utils/GoogleFonts";
+import { AnimatePresence, Variants, motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
 
 // ? Icons
 import { BiHomeAlt2 as HomeIcon } from "react-icons/bi";
@@ -11,6 +11,7 @@ import { RiContactsLine as ContactIcon } from "react-icons/ri";
 
 // ? components
 // import ThemeSwitcher from "./ThemeSwitcher";
+import FreePalestine from "../Globals/FreePalestine";
 import Logo from "../Globals/Logo";
 
 type activeState = "Home" | "About" | "Contact" | "Projects";
@@ -71,15 +72,16 @@ const LargeDeviceNav: React.FC = () => {
           initial="hidden"
           animate="open"
           exit="exit"
-          className="into-center md:flex bg-mastery/40 fixed top-0 left-0 z-50 hidden w-full select-none"
+          className="into-center md:flex bg-mastery/40 fixed top-0 left-0 z-50 hidden w-full select-none "
           style={{
             background: `hsla(0,0%,100%,.064)`,
             backdropFilter: `blur(10px)`,
           }}
         >
+          <FreePalestine />
           <div
             className={
-              " text-sup into-center justify-between flex-1 py-3 xl:py-4 2xl:py-6 px-10 " +
+              " text-sup into-center justify-between flex-1 py-3 xl:py-4 2xl:py-6 px-10 mt-4 " +
               SansitaFont.className
             }
           >

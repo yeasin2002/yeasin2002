@@ -1,11 +1,12 @@
 import { StaticImageData } from "next/image";
 
 //  projects Images
-import TaskHub from "@/assets/projects/taskHub.png";
-import hooBankImg from "@/assets/projects/hooBank.png";
-import twindCli from "@/assets/projects/twindCli.png";
 import chainVers from "@/assets/projects/chiptoChainvers.png";
+import hooBankImg from "@/assets/projects/hooBank.png";
+import insurgency from "@/assets/projects/insurgency.png";
 import kiyMovie from "@/assets/projects/kiyMovie.png";
+import TaskHub from "@/assets/projects/taskHub.png";
+import twindCli from "@/assets/projects/twindCli.png";
 
 export type projectTypes = {
   id: number;
@@ -30,14 +31,16 @@ const projectData: projectTypes[] = [
   },
   {
     id: 1,
-    name: "Twind-CLI (Alfa)",
-    ProjectImage: twindCli,
-    gitHubLink: "https://github.com/Mdkawsarislam2002/T_Wind-cli",
-    liveLink: "",
-    tag: ["nodejs", "TypeScript", "Tailwindcss", "CLI"],
+    name: "Insurantly - insurance agency",
+    ProjectImage: insurgency,
+    liveLink: "https://insurantly2023.netlify.app/",
+    gitHubLink:
+      "https://github.com/Mdkawsarislam2002/Insurantly-insurance_agency",
+    tag: ["html", "Tailwindcss", "react"],
     description:
-      "Tailwind is the most popular CSS Framework but installing and using Tailwind CSS from scratch is a little bit complicated, So using twind-cli you can setup Tailwind within a second.",
+      "Insurantly is an insurance agency website. You can buy insurance from this website.",
   },
+
   {
     id: 2,
     name: "chiptoChainvers",
@@ -60,14 +63,13 @@ const projectData: projectTypes[] = [
   },
   {
     id: 5,
-    name: "Insurantly - insurance agency",
-    ProjectImage: kiyMovie,
-    liveLink: "https://insurantly2023.netlify.app/",
-    gitHubLink:
-      "https://github.com/Mdkawsarislam2002/Insurantly-insurance_agency",
-    tag: ["html", "Tailwindcss", "react"],
+    name: "Twind-CLI (Alfa)",
+    ProjectImage: twindCli,
+    gitHubLink: "https://github.com/Mdkawsarislam2002/T_Wind-cli",
+    liveLink: "",
+    tag: ["nodejs", "TypeScript", "Tailwindcss", "CLI"],
     description:
-      "Insurantly is an insurance agency website. You can buy insurance from this website.",
+      "Tailwind is the most popular CSS Framework but installing and using Tailwind CSS from scratch is a little bit complicated, So using twind-cli you can setup Tailwind within a second.",
   },
 ];
 

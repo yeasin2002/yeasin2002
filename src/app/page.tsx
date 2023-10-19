@@ -1,15 +1,16 @@
 "use client";
 
 // components
+import FreePalestine from "@/components/Globals/FreePalestine";
 import Nav from "@/components/Nav/Nav";
-import Hero from "@/pages/Hero/Hero";
+import { useSmoothScroll } from "@/hooks/useSmothScroll";
 import About from "@/pages/About/About";
+import Footer from "@/pages/Footer/Footer";
+import Hero from "@/pages/Hero/Hero";
+import ProjectNext from "@/pages/ProjectNext/ProjectNext";
 import Skills from "@/pages/Skills/Skills";
 import Testimonials from "@/pages/Testimonials/Testimonials";
 import Contact from "@/pages/contact/Contact";
-import Footer from "@/pages/Footer/Footer";
-import ProjectNext from "@/pages/ProjectNext/ProjectNext";
-import { useSmoothScroll } from "@/hooks/useSmothScroll";
 
 export default function Home() {
   useSmoothScroll();

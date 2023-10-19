@@ -2,10 +2,11 @@
 
 import React, { Dispatch, SetStateAction } from "react";
 import Logo from "../Globals/Logo";
-import { navItems } from "./LargeDeviceNav";
 import Revel from "../Globals/Revel";
+import { navItems } from "./LargeDeviceNav";
 
 import { Variants, motion } from "framer-motion";
+import FreePalestine from "../Globals/FreePalestine";
 import Cross from "../Icons/Cross";
 // import { GiCrossMark } from "react-icons/gi";
 
@@ -101,6 +102,7 @@ const MobileNavArea = ({ isVisible, setIsVisible }: mobileAre) => {
           );
         })}
       </div>
+      <FreePalestine className="bottom-4 absolute left-0  w-full flex items-center justify-center  gap-x-2" />
     </motion.section>
   );
 };

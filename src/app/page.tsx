@@ -1,7 +1,7 @@
 "use client";
 
 // components
-import FreePalestine from "@/components/Globals/FreePalestine";
+
 import Nav from "@/components/Nav/Nav";
 import { useSmoothScroll } from "@/hooks/useSmothScroll";
 import About from "@/pages/About/About";
@@ -18,7 +18,7 @@ export default function Home() {
     <>
       <Nav />
       <Hero />
-      <About />
+      <About /> 
       <Skills />
       <ProjectNext />
       <Testimonials />

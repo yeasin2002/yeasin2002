@@ -1,40 +1,40 @@
 import skillDataTypes from "./skillData.d";
 
 //! front end
-import html from "@/assets/icons/html.svg";
-import css from "@/assets/icons/css.svg";
-import js from "@/assets/icons/js.svg";
-import tailwind from "@/assets/icons/tailwind.svg";
-import react from "@/assets/icons/react.svg";
-import next from "@/assets/icons/next2svg.svg";
-import redux from "@/assets/icons/redux.svg";
-import typeScript from "@/assets/icons/typescript.svg";
-import tanStackQuery from "@/assets/icons/tankstackQuery.svg";
-import rtk from "@/assets/icons/rtk.jpg";
-import openProps from "@/assets/icons/openProps.svg";
-import postcss from "@/assets/icons/PostCSS.svg";
 import Bootstrap from "@/assets/icons/Bootstrap.svg";
+import postcss from "@/assets/icons/PostCSS.svg";
 import SASS from "@/assets/icons/SASS.svg";
-import unoCSS from "@/assets/icons/unoCSS.svg";
+import css from "@/assets/icons/css.svg";
+import html from "@/assets/icons/html.svg";
+import js from "@/assets/icons/js.svg";
+import next from "@/assets/icons/next2svg.svg";
+import openProps from "@/assets/icons/openProps.svg";
+import react from "@/assets/icons/react.svg";
+import redux from "@/assets/icons/redux.svg";
+import rtk from "@/assets/icons/rtk.png";
 import styledComponents from "@/assets/icons/styled-components.jpg";
+import tailwind from "@/assets/icons/tailwind.svg";
+import tanStackQuery from "@/assets/icons/tankstackQuery.svg";
+import typeScript from "@/assets/icons/typescript.svg";
+import unoCSS from "@/assets/icons/unoCSS.svg";
 
 //! back ends
+import MongoDB from "@/assets/icons/Mongo.png";
 import node from "@/assets/icons/Nodejs.svg";
 import express from "@/assets/icons/express.svg";
-import MongoDB from "@/assets/icons/Mongo.png";
 import mongoose from "@/assets/icons/mongoose.png";
-import sql from "@/assets/icons/sql.png";
 import MySql from "@/assets/icons/mySQL.svg";
+import sql from "@/assets/icons/sql.svg";
 
 //! tools
-import gitAndGithub from "@/assets/icons/gitAndGithubsvg.svg";
-import vsCode from "@/assets/icons/vsCode.svg";
-import notion from "@/assets/icons/notion2svg.svg";
-import figma from "@/assets/icons/figma.svg";
-import vite from "@/assets/icons/vite.svg";
 import canva from "@/assets/icons/canva.svg";
+import figma from "@/assets/icons/figma.svg";
 import git from "@/assets/icons/git.svg";
+import gitAndGithub from "@/assets/icons/gitAndGithubsvg.svg";
 import github from "@/assets/icons/github.svg";
+import notion from "@/assets/icons/notion2svg.svg";
+import vite from "@/assets/icons/vite.svg";
+import vsCode from "@/assets/icons/vsCode.svg";
 
 const skillData: skillDataTypes = {
   Language: [
@@ -58,6 +58,11 @@ const skillData: skillDataTypes = {
       title: "TypeScript",
       icon: typeScript,
       stage: "intermediate",
+    },
+    {
+      title: "SQL",
+      icon: sql,
+      stage: "advance",
     },
   ],
   CssFramework: [
@@ -105,12 +110,12 @@ const skillData: skillDataTypes = {
       stage: "advance",
     },
     {
-      title: "Redux, Redux Toolkit",
+      title: "Redux",
       icon: redux,
       stage: "advance",
     },
     {
-      title: "Redux Thunk, RTK Query",
+      title: "Thunk, RTK Query",
       icon: rtk,
       stage: "advance",
     },
@@ -120,7 +125,7 @@ const skillData: skillDataTypes = {
       stage: "beginner",
     },
     {
-      title: "Next.js 13",
+      title: "Next.js 13+",
       icon: next,
       stage: "beginner",
     },
@@ -145,6 +150,11 @@ const skillData: skillDataTypes = {
     {
       title: "Mongoose",
       icon: mongoose,
+      stage: "beginner",
+    },
+    {
+      title: "MySQL",
+      icon: MySql,
       stage: "beginner",
     },
   ],

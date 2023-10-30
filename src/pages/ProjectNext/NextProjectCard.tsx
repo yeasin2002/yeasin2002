@@ -1,5 +1,5 @@
 import { projectTypes } from "@/data/Projects/projectData";
-import { GupterFont, OswaldFont, MooliFont } from "@/utils/GoogleFonts";
+import { GupterFont, MooliFont, OswaldFont } from "@/utils/GoogleFonts";
 import Image from "next/image";
 import React from "react";
 import { BsGithub, BsLink45Deg } from "react-icons/bs";
@@ -39,17 +39,21 @@ const NextProjectCard = ({
             {name}
           </h3>
           <div className="flex items-center justify-center gap-x-2 2xl:gap-x-5">
-            <a href={gitHubLink} target="_blank" rel="noopener noreferrer">
-              <BsGithub className="2xl:text-3xl" />
-            </a>
-            <a
-              href={liveLink}
-              target="_blank"
-              rel="noreferrer"
-              className={`border border-white rounded-full p-1  `}
-            >
-              <BsLink45Deg className="2xl:text-3xl" />
-            </a>
+            {gitHubLink && (
+              <a href={gitHubLink} target="_blank" rel="noopener noreferrer">
+                <BsGithub className="2xl:text-3xl" />
+              </a>
+            )}
+            {liveLink && (
+              <a
+                href={liveLink}
+                target="_blank"
+                rel="noreferrer"
+                className={`border border-white rounded-full p-1  `}
+              >
+                <BsLink45Deg className="2xl:text-3xl" />
+              </a>
+            )}
           </div>
         </div>
       </div>

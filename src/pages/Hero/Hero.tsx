@@ -1,15 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 
-import React from "react";
 import Image from "next/image";
+import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 
 //  assets
-import man from "../../assets/avatar/Saly-13.svg";
-import Parallax from "./Parallax";
+import Revel from "@/components/Globals/Revel";
 import BlueStar_Btn from "@/components/Unique/Buttons/BlueStar/BlueStar_Btn";
 import Space_Btn from "@/components/Unique/Buttons/Space_Btn/Space_Btn";
-import Link from "next/link";
 import {
   CalistogaFont,
   KellySlabFont,
@@ -17,7 +15,9 @@ import {
   SubtitleFont,
   TitleFont,
 } from "@/utils/GoogleFonts";
-import Revel from "@/components/Globals/Revel";
+import Link from "next/link";
+import man from "../../assets/avatar/Saly-13.svg";
+import Parallax from "./Parallax";
 import Title from "./Title";
 
 const Hero = () => {

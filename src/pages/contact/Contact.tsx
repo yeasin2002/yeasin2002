@@ -1,8 +1,8 @@
-import React from "react";
 import { Input } from "@/components/ui/input";
+import React from "react";
 
-import useGEneratedColor from "@/hooks/useGeneratedColor";
 import SubmitBtn from "@/components/Unique/Buttons/submitBtn/submitBtn";
+import useGEneratedColor from "@/hooks/useGeneratedColor";
 
 const Contact = () => {
   return (

@@ -1,9 +1,9 @@
+import Revel from "@/components/Globals/Revel";
+import OverText from "@/components/Unique/Buttons/OverText/OverText";
+import projectData from "@/data/Projects/projectData";
+import { KellySlabFont, SkranjiFont } from "@/utils/GoogleFonts";
 import Link from "next/link";
 import NextProjectCard from "./NextProjectCard";
-import projectData from "@/data/Projects/projectData";
-import OverText from "@/components/Unique/Buttons/OverText/OverText";
-import { KellySlabFont, SkranjiFont } from "@/utils/GoogleFonts";
-import Revel from "@/components/Globals/Revel";
 
 const ProjectNext = () => {
   return (

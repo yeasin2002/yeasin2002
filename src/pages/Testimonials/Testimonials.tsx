@@ -5,12 +5,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/scrollbar";
 import "swiper/css/navigation";
+import "swiper/css/scrollbar";
 // import "swiper/css/pagination";
 
 // import required modules
-import { Keyboard, Scrollbar, Navigation } from "swiper/modules";
+import { Keyboard, Navigation, Scrollbar } from "swiper/modules";
 
 import DummyFeedback from "../../data/DummyFeedback";
 import FeedbackCard from "./Feedback";

@@ -1,6 +1,7 @@
 import { StaticImageData } from "next/image";
 
 //  projects Images
+import amader_bazar from "@/assets/projects/amader_bazar.png";
 import chainVers from "@/assets/projects/chiptoChainvers.png";
 import hooBankImg from "@/assets/projects/hooBank.png";
 import insurgency from "@/assets/projects/insurgency.png";
@@ -31,18 +32,28 @@ const projectData: projectTypes[] = [
   },
   {
     id: 1,
+    name: "Amader bazar",
+    ProjectImage: amader_bazar,
+    liveLink: "",
+    gitHubLink: "https://github.com/yeasin-2002/Amazer_Bazar-client",
+    tag: ["React", "Tailwindcss", "tanstack-query", "node/express", "mongoDB"],
+    description:
+      "A full stack e-commerce website\n , The project is an online store that sells a variety of products and allows customers to browse, purchase, and track their orders. This repository contains only the code for the dashboard, which provides an interface for store administrators to manage products, view sales data, and track orders",
+  },
+  {
+    id: 2,
     name: "Insurantly - insurance agency",
     ProjectImage: insurgency,
     liveLink: "https://insurantly2023.netlify.app/",
     gitHubLink:
       "https://github.com/Mdkawsarislam2002/Insurantly-insurance_agency",
-    tag: ["html", "Tailwindcss", "react"],
-    description:
-      "Insurantly is an insurance agency website. You can buy insurance from this website.",
+    tag: ["html", "Tailwindcss", "react", "Figma"],
+    description: `
+    Landing page, Figma to React. \n
+    Insurantly   is an insurance agency website. You can buy insurance from this website.    `,
   },
-
   {
-    id: 2,
+    id: 3,
     name: "chiptoChainvers",
     ProjectImage: chainVers,
     liveLink: "https://crypto-chainverse.netlify.app/",

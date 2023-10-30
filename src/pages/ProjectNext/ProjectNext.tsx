@@ -3,6 +3,7 @@ import OverText from "@/components/Unique/Buttons/OverText/OverText";
 import projectData from "@/data/Projects/projectData";
 import { KellySlabFont, SkranjiFont } from "@/utils/GoogleFonts";
 import Link from "next/link";
+import { useId } from "react";
 import NextProjectCard from "./NextProjectCard";
 
 const ProjectNext = () => {
@@ -34,13 +35,15 @@ const ProjectNext = () => {
         </Link>
       </Revel>
       {/*  other dynamic grid colum */}
-      {projectData.slice(0, 3).map((value) => {
+      {projectData.slice(0, 3).map((value, index) => {
+       // eslint-disable-next-line react-hooks/rules-of-hooks
+       const id =  useId();
         return (
           <>
             <NextProjectCard
-              key={value.id}
+              key={id}
               ProjectImage={value.ProjectImage}
-              id={value.id}
+              id={index}
               name={value.name}
               gitHubLink={value.gitHubLink}
               liveLink={value.liveLink}

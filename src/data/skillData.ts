@@ -24,6 +24,7 @@ import node from "@/assets/icons/Nodejs.svg";
 import express from "@/assets/icons/express.svg";
 import mongoose from "@/assets/icons/mongoose.png";
 import MySql from "@/assets/icons/mySQL.svg";
+import sequelize from "@/assets/icons/sequelize.svg";
 import sql from "@/assets/icons/sql.svg";
 
 //! tools
@@ -125,7 +126,7 @@ const skillData: skillDataTypes = {
       stage: "beginner",
     },
     {
-      title: "Next.js 13+",
+      title: "Next.js ",
       icon: next,
       stage: "beginner",
     },
@@ -142,6 +143,11 @@ const skillData: skillDataTypes = {
       stage: "beginner",
     },
     {
+      title: "MySQL",
+      icon: MySql,
+      stage: "beginner",
+    },
+    {
       title: "MongoDB",
       icon: MongoDB,
       stage: "beginner",
@@ -153,17 +159,13 @@ const skillData: skillDataTypes = {
       stage: "beginner",
     },
     {
-      title: "MySQL",
-      icon: MySql,
+      title: "Sequelize",
+      icon: sequelize,
       stage: "beginner",
     },
+ 
   ],
   Tools: [
-    // {
-    //   title: "Git ",
-    //   icon: git,
-    //   stage: "intermediate",
-    // },
     {
       title: "Git & Github",
       icon: gitAndGithub,

@@ -9,7 +9,7 @@ interface nextProjectCardProps {
 }
 
 const NextProjectCard = ({
-  id,
+id, 
   name,
   ProjectImage,
   gitHubLink,

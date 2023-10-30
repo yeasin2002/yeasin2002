@@ -5,7 +5,7 @@ import LiyaxuInput from "@/components/Unique/Input/liyaxuInput";
 import projectData from "@/data/Projects/projectData";
 import NextProjectCard from "@/pages/ProjectNext/NextProjectCard";
 import Link from "next/link";
-import { useState } from "react";
+import { useId, useState } from "react";
 
 const AllProjects = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -38,13 +38,15 @@ const AllProjects = () => {
 
         <div className="@container mt-10">
           <div className="grid grid-cols-1  gap-x-3 gap-y-4 lg:grid-cols-2 ">
-            {filteredProjects.map((value) => {
+            {filteredProjects.map((value , index) => {
+             // eslint-disable-next-line react-hooks/rules-of-hooks
+             const id =  useId();
               return (
                 <>
                   <NextProjectCard
-                    key={value.id}
+                    key={id}
                     ProjectImage={value.ProjectImage}
-                    id={value.id}
+                    id={index}
                     name={value.name}
                     gitHubLink={value.gitHubLink}
                     liveLink={value.liveLink}

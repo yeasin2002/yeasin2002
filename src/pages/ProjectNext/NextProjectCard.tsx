@@ -6,10 +6,11 @@ import { BsGithub, BsLink45Deg } from "react-icons/bs";
 
 interface nextProjectCardProps {
   isTranslate: boolean;
+  id: number
 }
 
 const NextProjectCard = ({
-id, 
+ id, 
   name,
   ProjectImage,
   gitHubLink,

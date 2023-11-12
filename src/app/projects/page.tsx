@@ -42,7 +42,6 @@ const AllProjects = () => {
              // eslint-disable-next-line react-hooks/rules-of-hooks
              const id =  useId();
               return (
-                <>
                   <NextProjectCard
                     key={id}
                     ProjectImage={value.ProjectImage}
@@ -54,7 +53,6 @@ const AllProjects = () => {
                     description={value.description}
                     isTranslate={false}
                   />
-                </>
               );
             })}
           </div>

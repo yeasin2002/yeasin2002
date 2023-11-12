@@ -19,7 +19,7 @@ const Footer = () => {
                       background: val.bgGradient,
                     }}
                     href={val.link}
-                    key={val.name}
+                    key={val.name + val.link}
                     target="_blank"
                     className={`hover:scale-110 text-2xl transition-all p-1 rounded-full`}
                   >

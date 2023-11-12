@@ -18,7 +18,7 @@ const Ring = () => {
           strokeWidth="2px"
           strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-dasharray="3 20 8 1 10 8"
+          strokeDasharray="3 20 8 1 10 8"
           fill="none"
         ></circle>
         <defs>

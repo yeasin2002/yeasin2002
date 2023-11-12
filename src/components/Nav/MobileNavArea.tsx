@@ -90,14 +90,14 @@ const MobileNavArea = ({ isVisible, setIsVisible }: mobileAre) => {
               variants={LinkAnimation}
               initial="initial"
               animate="open"
-              href={val.link}
-              key={val.name}
+              href={val.url}
+              key={val.title}
               custom={index}
               onClick={() => setIsVisible(false)}
               className="flex items-center gap-x-3 text-2xl font-bold text-gray-400 "
             >
-              <val.Icon />
-              <p> {val.name}</p>
+              {val.Icon}
+              <p> {val.title}</p>
             </motion.a>
           );
         })}

@@ -59,11 +59,11 @@ const NextProjectCard = ({
         </div>
       </div>
       <div className="flex gap-x-3 2xl:py-2 ">
-        {tag?.map((tech) => {
+        {tag?.map((tech, i) => {
           return (
             <p
               className={`2xl:text-2xl text-gray-300 ${GupterFont.className} `}
-              key={tech}
+              key={tech+ i }
             >
               {tech}
             </p>

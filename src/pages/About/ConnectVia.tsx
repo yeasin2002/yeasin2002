@@ -14,9 +14,10 @@ const ContactVia = ({ ...props }: connections) => {
       <div className="gap-x-1 md:gap-x-4 lg:gap-x-8 sm:gap-x-8  flex items-center justify-start  my-2">
         {contactList.map((val, index) => {
           return (
-            <>
+            
               <a
                 href={val.link}
+                key={val.name + val.link}
                 target="_blank"
                 className={`hover:scale-110 xl:text-2xl transition-all `}
               >
@@ -24,7 +25,7 @@ const ContactVia = ({ ...props }: connections) => {
                   {val.components}
                 </IconEffect>
               </a>
-            </>
+            
           );
         })}
       </div>

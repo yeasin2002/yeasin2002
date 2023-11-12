@@ -19,8 +19,8 @@ const MainLoader = () => {
         <circle
           transform="rotate(-113,100,100)"
           strokeLinecap="round"
-          stroke-dashoffset="439.82"
-          stroke-dasharray="439.82 439.82"
+          strokeDashoffset="439.82"
+          strokeDasharray="439.82 439.82"
           strokeWidth="2"
           stroke="currentColor"
           fill="none"
@@ -31,8 +31,8 @@ const MainLoader = () => {
           <g fill="none">
             <circle
               transform="rotate(-90)"
-              stroke-dashoffset="402"
-              stroke-dasharray="402.12 402.12"
+              strokeDashoffset="402"
+              strokeDasharray="402.12 402.12"
               strokeWidth="30"
               stroke="hsl(223,90%,50%)"
               r="64"
@@ -40,8 +40,8 @@ const MainLoader = () => {
             ></circle>
             <circle
               transform="rotate(-90)"
-              stroke-dashoffset="465"
-              stroke-dasharray="464.96 464.96"
+              strokeDashoffset="465"
+              strokeDasharray="464.96 464.96"
               strokeWidth="10"
               stroke="hsl(223,90%,60%)"
               r="74"
@@ -49,8 +49,8 @@ const MainLoader = () => {
             ></circle>
             <circle
               transform="rotate(-90)"
-              stroke-dashoffset="339"
-              stroke-dasharray="339.29 339.29"
+              strokeDashoffset="339"
+              strokeDasharray="339.29 339.29"
               strokeWidth="10"
               stroke="hsl(223,90%,40%)"
               r="54"

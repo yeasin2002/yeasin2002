@@ -1,3 +1,5 @@
+"use client"
+
 // components
 import Nav from "@/components/Nav/Nav";
 import About from "@/pages/About/About";

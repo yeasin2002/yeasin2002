@@ -25,6 +25,7 @@
     "push": "pnpm build &&  git push "
   },
   "dependencies": {
+    "@radix-ui/react-popover": "^1.0.7",
     "@radix-ui/react-slot": "^1.0.2",
     "@studio-freight/lenis": "^1.0.26",
     "@studio-freight/react-lenis": "^0.0.30",

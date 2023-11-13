@@ -1,6 +1,7 @@
-import contactList from "@/data/contactInfo/contactInfo";
 import Logo from "@/components/Globals/Logo";
+import contactList, { contactList3D } from "@/data/contactInfo/contactInfo";
 import { DangrekFont, MetalFont } from "@/utils/GoogleFonts";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -12,7 +13,7 @@ const Footer = () => {
 
           <div>
             <div className=" gap-x-1 sm:gap-x-4 flex flex-wrap">
-              {contactList.map((val) => {
+              {contactList3D.map((val) => {
                 return (
                   <a
                     style={{
@@ -23,7 +24,13 @@ const Footer = () => {
                     target="_blank"
                     className={`hover:scale-110 text-2xl transition-all p-1 rounded-full`}
                   >
-                    {val.components}
+                  <Image
+                    src={val.img}
+                    alt={val.name}
+                    width={30}
+                    height={30}
+                    className="rounded-full"
+                  ></Image>
                   </a>
                 );
               })}

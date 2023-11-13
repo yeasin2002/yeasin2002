@@ -1,3 +1,4 @@
+import github from '@/assets/3d/github.png';
 import { projectTypes } from "@/data/Projects/projectData";
 import { GupterFont, MooliFont, OswaldFont } from "@/utils/GoogleFonts";
 import Image from "next/image";
@@ -42,7 +43,13 @@ const NextProjectCard = ({
           <div className="flex items-center justify-center gap-x-2 2xl:gap-x-5">
             {gitHubLink && (
               <a href={gitHubLink} target="_blank" rel="noopener noreferrer">
-                <BsGithub className="2xl:text-3xl" />
+                <Image
+                  src={github}
+                  alt="github"
+                  width={30}
+                  height={30}
+                  className="rounded-full bg-white p-[0.05rem]"
+                />
               </a>
             )}
             {liveLink && (

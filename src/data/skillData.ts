@@ -142,11 +142,7 @@ const skillData: skillDataTypes = {
       icon: express,
       stage: "beginner",
     },
-    {
-      title: "MySQL",
-      icon: MySql,
-      stage: "beginner",
-    },
+   
     {
       title: "MongoDB",
       icon: MongoDB,
@@ -158,11 +154,7 @@ const skillData: skillDataTypes = {
       icon: mongoose,
       stage: "beginner",
     },
-    {
-      title: "Sequelize",
-      icon: sequelize,
-      stage: "beginner",
-    },
+    
  
   ],
   Tools: [
@@ -192,11 +184,7 @@ const skillData: skillDataTypes = {
       icon: vite,
       stage: "advance",
     },
-    {
-      title: "canva",
-      icon: canva,
-      stage: "beginner",
-    },
+  
   ],
 };
 

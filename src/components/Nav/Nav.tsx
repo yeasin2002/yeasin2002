@@ -14,18 +14,18 @@ export  const navItems = [
     Icon: <IconBase/>
   },
   {
-    title: "Shop",
-    url: "/shop",
+    title: "skill",
+    url: "#skill",
     Icon: <IconBase/>
   },
   {
-    title: "login",
-    url: "/login",
+    title: "Projects",
+    url: "#projects",
     Icon: <IconBase/>
   },
   {
     title: "Contact",
-    url: "/contact",
+    url: "#contact",
     Icon: <IconBase/>
   },
 ]

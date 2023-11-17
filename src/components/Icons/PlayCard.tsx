@@ -10,7 +10,7 @@ const PlayCard = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_228_3014)">
+        <g clipPath="url(#clip0_228_3014)">
           <g filter="url(#filter0_ddd_228_3014)">
             <rect
               x="-119.7"

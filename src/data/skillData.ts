@@ -1,14 +1,11 @@
 import skillDataTypes from "./skillData.d";
 
 //! front end
-import Bootstrap from "@/assets/icons/Bootstrap.svg";
-import postcss from "@/assets/icons/PostCSS.svg";
 import SASS from "@/assets/icons/SASS.svg";
 import css from "@/assets/icons/css.svg";
 import html from "@/assets/icons/html.svg";
 import js from "@/assets/icons/js.svg";
 import next from "@/assets/icons/next2svg.svg";
-import openProps from "@/assets/icons/openProps.svg";
 import react from "@/assets/icons/react.svg";
 import redux from "@/assets/icons/redux.svg";
 import rtk from "@/assets/icons/rtk.png";
@@ -17,6 +14,7 @@ import tailwind from "@/assets/icons/tailwind.svg";
 import tanStackQuery from "@/assets/icons/tankstackQuery.svg";
 import typeScript from "@/assets/icons/typescript.svg";
 import unoCSS from "@/assets/icons/unoCSS.svg";
+import zustand from "@/assets/icons/zustand.png";
 
 //! back ends
 import MongoDB from "@/assets/icons/Mongo.png";
@@ -28,11 +26,8 @@ import sequelize from "@/assets/icons/sequelize.svg";
 import sql from "@/assets/icons/sql.svg";
 
 //! tools
-import canva from "@/assets/icons/canva.svg";
 import figma from "@/assets/icons/figma.svg";
-import git from "@/assets/icons/git.svg";
 import gitAndGithub from "@/assets/icons/gitAndGithubsvg.svg";
-import github from "@/assets/icons/github.svg";
 import notion from "@/assets/icons/notion2svg.svg";
 import vite from "@/assets/icons/vite.svg";
 import vsCode from "@/assets/icons/vsCode.svg";
@@ -53,7 +48,7 @@ const skillData: skillDataTypes = {
     {
       title: "JavaScript",
       icon: js,
-      stage: "intermediate",
+      stage: "advance",
     },
     {
       title: "TypeScript",
@@ -63,7 +58,7 @@ const skillData: skillDataTypes = {
     {
       title: "SQL",
       icon: sql,
-      stage: "advance",
+      stage: "intermediate",
     },
   ],
   CssFramework: [
@@ -121,6 +116,11 @@ const skillData: skillDataTypes = {
       stage: "advance",
     },
     {
+      title: "Zustand",
+      icon: zustand,
+      stage: "intermediate",
+    },
+    {
       title: "TanStack Query",
       icon: tanStackQuery,
       stage: "beginner",
@@ -161,13 +161,13 @@ const skillData: skillDataTypes = {
     {
       title: "Git & Github",
       icon: gitAndGithub,
-      stage: "intermediate",
+      stage: "advance",
     },
 
     {
       title: "Figma",
       icon: figma,
-      stage: "intermediate",
+      stage: "beginner",
     },
     {
       title: "VS Code",

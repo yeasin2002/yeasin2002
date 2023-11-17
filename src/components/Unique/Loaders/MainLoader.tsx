@@ -70,7 +70,7 @@ const MainLoader = () => {
                 fill="hsl(223,90%,70%)"
               ></rect>
               <rect
-                clip-path="url(#pencil-eraser)"
+                clipPath="url(#pencil-eraser)"
                 height="30"
                 width="5"
                 fill="hsl(223,90%,60%)"

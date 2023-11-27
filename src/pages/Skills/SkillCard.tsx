@@ -25,9 +25,9 @@ const SkillCard = ({
     boxShadowColor = ` inset 5px -5px 25px #E40009, inset -5px 0px 25px #E40009`
   }
   else if (stage ==="intermediate") {
-    boxShadowColor = ` inset 5px -5px 25px #a9ff68, inset -5px 0px 25px #a9ff68`
+    boxShadowColor = ` inset 5px -5px 25px #FACC15, inset -5px 0px 25px #FACC15`
   } else {
-    boxShadowColor = ` inset 5px -5px 25px #eeef20, inset -5px 0px 25px #eeef20`
+    boxShadowColor = ` inset 5px -5px 25px #166534, inset -5px 0px 25px #166534`
   }
 
   return (

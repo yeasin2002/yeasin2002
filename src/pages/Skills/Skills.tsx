@@ -14,22 +14,22 @@ const Skills = () => {
           className="inline-block w-4 h-4 mr-2 rounded-full bg-red-500"
            ></span>
           <span className="text-gray-300 font-medium">
-            Mastered
+          Most comfortable with
           </span>
         </p>  
         <p className="flex items-center">
           <span 
-          className="inline-block w-4 h-4 mr-2 rounded-full bg-[#a9ff68]"
+          className="inline-block w-4 h-4 mr-2 rounded-full bg-[#166534]"
            ></span>
           <span className="text-gray-300 font-medium">
-            Familiar with
+          Comprehensive skill
           </span>
         </p>  
         <p className="flex items-center">
           <span 
-          className="inline-block w-4 h-4 mr-2 rounded-full bg-[#eeef20]"
+          className="inline-block w-4 h-4 mr-2 rounded-full bg-[#FACC15]"
            ></span>
-          <span className="text-gray-300 font-medium">Learning </span>
+          <span className="text-gray-300 font-medium">Familiar with </span>
         </p>  
       </div>
       <LoopOverSkill skillType={skillData.Language} title="Language" />

@@ -1,7 +1,6 @@
 import skillDataTypes from "./skillData.d";
 
 //! front end
-import SASS from "@/assets/icons/SASS.svg";
 import css from "@/assets/icons/css.svg";
 import html from "@/assets/icons/html.svg";
 import js from "@/assets/icons/js.svg";
@@ -123,7 +122,7 @@ const skillData: skillDataTypes = {
     {
       title: "TanStack Query",
       icon: tanStackQuery,
-      stage: "beginner",
+      stage: "intermediate",
     },
     {
       title: "Next.js ",
@@ -140,7 +139,7 @@ const skillData: skillDataTypes = {
     {
       title: "Express.js",
       icon: express,
-      stage: "beginner",
+      stage: "intermediate",
     },
    
     {
@@ -149,11 +148,7 @@ const skillData: skillDataTypes = {
       stage: "beginner",
     },
 
-    {
-      title: "Mongoose",
-      icon: mongoose,
-      stage: "beginner",
-    },
+    
     
  
   ],
@@ -182,7 +177,7 @@ const skillData: skillDataTypes = {
     {
       title: "Vite",
       icon: vite,
-      stage: "advance",
+      stage: "intermediate",
     },
   
   ],

@@ -21,9 +21,8 @@ const EachReview = (props: Props) => {
         </div>
       </div>
       <div>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur harum
-        inventore, id repellendus quisquam maiores sapiente accusantium sequi
-        deleniti hic!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur harum inventore, id repellendus quisquam
+        maiores sapiente accusantium sequi deleniti hic!
       </div>
     </div>
   );

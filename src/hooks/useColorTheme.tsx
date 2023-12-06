@@ -10,10 +10,7 @@ type themeColor = {
 
 //  colors types
 type colorReturn = "text-sup" | "";
-type bgColorReturn =
-  | ""
-  | "bg-gradient-to-r from-mint-100 to-mint-200"
-  | "bg-gradient-to-r from-conf to-mastery";
+type bgColorReturn = "" | "bg-gradient-to-r from-mint-100 to-mint-200" | "bg-gradient-to-r from-conf to-mastery";
 
 const useColorTheme = (): themeColor => {
   let color: colorReturn = "";

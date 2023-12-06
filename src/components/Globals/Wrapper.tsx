@@ -1,6 +1,6 @@
 "use client";
-import React, { MouseEvent } from "react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import React, { MouseEvent } from "react";
 
 import useColorTheme from "@/hooks/useColorTheme";
 
@@ -21,7 +21,7 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
         background: `#000000`,
         color: "white",
       }}
-      className={`  w-full      `}
+      className={`  w-full       `}
       onMouseMove={handleMouseMove}
     >
       <motion.div

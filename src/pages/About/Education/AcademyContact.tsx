@@ -7,11 +7,7 @@ interface contactProps extends React.HTMLAttributes<HTMLDivElement> {
   websiteLink?: string;
 }
 
-const AcademyContact = ({
-  facebookLink = "",
-  websiteLink = "",
-  ...rest
-}: contactProps) => {
+const AcademyContact = ({ facebookLink = "", websiteLink = "", ...rest }: contactProps) => {
   return (
     <div {...rest} className="gap-x-2 flex">
       <a href={facebookLink}>

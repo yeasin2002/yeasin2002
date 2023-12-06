@@ -53,12 +53,7 @@ const Testimonials = () => {
         {DummyFeedback.map((value, i) => {
           return (
             <SwiperSlide key={value.id}>
-              <FeedbackCard
-                content={value.content}
-                img={value.img}
-                name={value.name}
-                title={value.title}
-              />
+              <FeedbackCard content={value.content} img={value.img} name={value.name} title={value.title} />
             </SwiperSlide>
           );
         })}

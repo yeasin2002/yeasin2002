@@ -3,13 +3,7 @@ import React from "react";
 const PlayCard = () => {
   return (
     <div>
-      <svg
-        width="1423"
-        height="1931"
-        viewBox="0 0 1423 1931"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="1423" height="1931" viewBox="0 0 1423 1931" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_228_3014)">
           <g filter="url(#filter0_ddd_228_3014)">
             <rect
@@ -124,15 +118,8 @@ const PlayCard = () => {
             <feOffset dy="24" />
             <feGaussianBlur stdDeviation="18" />
             <feComposite in2="hardAlpha" operator="out" />
-            <feColorMatrix
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0"
-            />
-            <feBlend
-              mode="normal"
-              in2="BackgroundImageFix"
-              result="effect1_dropShadow_228_3014"
-            />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_228_3014" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -142,15 +129,8 @@ const PlayCard = () => {
             <feOffset dy="8" />
             <feGaussianBlur stdDeviation="6" />
             <feComposite in2="hardAlpha" operator="out" />
-            <feColorMatrix
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"
-            />
-            <feBlend
-              mode="normal"
-              in2="effect1_dropShadow_228_3014"
-              result="effect2_dropShadow_228_3014"
-            />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0" />
+            <feBlend mode="normal" in2="effect1_dropShadow_228_3014" result="effect2_dropShadow_228_3014" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -160,29 +140,12 @@ const PlayCard = () => {
             <feOffset dy="3" />
             <feGaussianBlur stdDeviation="2" />
             <feComposite in2="hardAlpha" operator="out" />
-            <feColorMatrix
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0"
-            />
-            <feBlend
-              mode="normal"
-              in2="effect2_dropShadow_228_3014"
-              result="effect3_dropShadow_228_3014"
-            />
-            <feBlend
-              mode="normal"
-              in="SourceGraphic"
-              in2="effect3_dropShadow_228_3014"
-              result="shape"
-            />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0" />
+            <feBlend mode="normal" in2="effect2_dropShadow_228_3014" result="effect3_dropShadow_228_3014" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect3_dropShadow_228_3014" result="shape" />
           </filter>
           <clipPath id="clip0_228_3014">
-            <rect
-              width="1806"
-              height="1931"
-              fill="white"
-              transform="translate(-383)"
-            />
+            <rect width="1806" height="1931" fill="white" transform="translate(-383)" />
           </clipPath>
         </defs>
       </svg>

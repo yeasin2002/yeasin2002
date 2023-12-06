@@ -31,11 +31,7 @@ const Training = () => {
       `}
     >
       <div className="items-center flex sm:gap-x-4 gap-x-1 ">
-        <Image
-          src={lws}
-          alt={"Learn with sumit"}
-          className="w-16 h-16 xl:w-16 2xl:w-24 2xl:h-24 xl:h-16"
-        />
+        <Image src={lws} alt={"Learn with sumit"} className="w-16 h-16 xl:w-16 2xl:w-24 2xl:h-24 xl:h-16" />
         <div>
           <a
             href="https://www.youtube.com/@LearnwithSumit"

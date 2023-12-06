@@ -40,11 +40,7 @@ const AboutCode = () => {
         </Highlight>
 
         <div>
-          <Image
-            src={bloods}
-            alt="icons"
-            className=" absolute bottom-0 right-0 pointer-events-none "
-          />
+          <Image src={bloods} alt="icons" className=" absolute bottom-0 right-0 pointer-events-none " />
         </div>
       </Tilty>
     </>

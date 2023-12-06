@@ -2,43 +2,38 @@
 import Logo from "$components/Globals/Logo";
 import Link from "next/link";
 
-
-import contact from '$assets/3d/contack.png';
-import skill from '$assets/3d/diary.png';
-import home from '$assets/3d/macos-home-logo.png';
-import project from '$assets/3d/project.png';
-
-
+import contact from "$assets/3d/contack.png";
+import skill from "$assets/3d/diary.png";
+import home from "$assets/3d/macos-home-logo.png";
+import project from "$assets/3d/project.png";
 
 import Image from "next/image";
 import { MobileNav } from "./MobileNav";
 
-
-export  const navItems = [
+export const navItems = [
   {
     title: "Home",
     url: "/",
-    Icon: home
+    Icon: home,
   },
   {
     title: "skill",
     url: "#skill",
-    Icon: skill
+    Icon: skill,
   },
   {
     title: "Projects",
     url: "#projects",
-    Icon: project
+    Icon: project,
   },
   {
     title: "Contact",
     url: "#contact",
-    Icon: contact
+    Icon: contact,
   },
-]
+];
 
- const Nav = () => {
-   
+const Nav = () => {
   return (
     <nav
       className="fixed left-0 right-0  top-3 z-10  mx-auto flex w-10/12 items-center justify-between rounded-lg  py-3 px-5 "
@@ -54,32 +49,26 @@ export  const navItems = [
         <Logo className="h-full w-full " />
       </Link>
 
-
-<MobileNav/>
+      <MobileNav />
 
       <div className="hidden gap-x-6  md:flex ">
-
         {navItems.map((item) => {
           return (
-            <Link href={item.url} defaultValue={"/"} key={item.title + item.url} className="group relative flex items-center gap-x-2 ">
-              <Image
-              width={40}
-              height={40}
-               src={item.Icon}
-               alt={item.title + "Icon"}
-              />
+            <Link
+              href={item.url}
+              defaultValue={"/"}
+              key={item.title + item.url}
+              className="group relative flex items-center gap-x-2 "
+            >
+              <Image width={40} height={40} src={item.Icon} alt={item.title + "Icon"} />
               <p className="cursor-pointer text-lg font-semibold text-gray-50 hover:text-gray-100">{item.title}</p>
-              <span className="absolute -bottom-1  left-0 h-1 w-0 bg-teal-600 transition-all duration-300 group-hover:w-full"/>
+              <span className="absolute -bottom-1  left-0 h-1 w-0 bg-teal-600 transition-all duration-300 group-hover:w-full" />
             </Link>
-          )
+          );
         })}
       </div>
-     
     </nav>
-  )
-}
+  );
+};
 
-
-
-
-export default Nav
+export default Nav;

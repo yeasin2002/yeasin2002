@@ -3,8 +3,8 @@ import { Metadata } from "next";
 import Wrapper from "@/components/Globals/Wrapper";
 
 // styles
-import "./globals.css";
 import "../styles/keyframe.css";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Md Kawsar Islam Yeasin",
@@ -12,14 +12,10 @@ export const metadata: Metadata = {
     "Md Kawsar Islam Yeasin , a software Developer,Front end web developer, web developer and web designer,programmer, and freelancer from Bangladesh.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body>
+      <body className="overflow-x-hidden">
         <Wrapper>{children}</Wrapper>
       </body>
     </html>

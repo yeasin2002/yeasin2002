@@ -16,13 +16,7 @@ const Zero = ({ className, ...rest }: zero) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <ellipse
-          cx="312.5"
-          cy="350"
-          rx="312.5"
-          ry="350"
-          fill="url(#paint0_radial_16_8)"
-        />
+        <ellipse cx="312.5" cy="350" rx="312.5" ry="350" fill="url(#paint0_radial_16_8)" />
         <defs>
           <radialGradient
             id="paint0_radial_16_8"

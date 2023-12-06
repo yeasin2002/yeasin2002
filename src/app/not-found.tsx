@@ -8,12 +8,8 @@ const NotFoundPage = () => {
   return (
     <section className="flex w-full flex-col md:flex-row py-12  items-center justify-between h-screen">
       <div>
-        <p className="text-sm font-medium text-blue-500 dark:text-blue-400">
-          404
-        </p>
-        <h1 className=" text-2xl font-semibold text-red-800 my-3 dark:text-white md:text-3xl">
-          Can Not Found
-        </h1>
+        <p className="text-sm font-medium text-blue-500 dark:text-blue-400">404</p>
+        <h1 className=" text-2xl font-semibold text-red-800 my-3 dark:text-white md:text-3xl">Can Not Found</h1>
         <p className="mt-4 text-gray-300 00">
           Sorry, we couldn’t find the page you’re looking for. Perhaps you’ve
           <br /> mistyped the URL? Be sure to check your spelling.

@@ -4,12 +4,11 @@ import { BiLogoGithub, BiLogoTwitter } from "react-icons/bi";
 import { BsFacebook } from "react-icons/bs";
 
 // assets
-import fb from '@/assets/3d/facebook.png';
-import github from '@/assets/3d/github.png';
-import instagram from '@/assets/3d/instagram.png';
-import linkedin from '@/assets/3d/linkedin.png';
-import twitter from '@/assets/3d/twitter.png';
-
+import fb from "@/assets/3d/facebook.png";
+import github from "@/assets/3d/github.png";
+import instagram from "@/assets/3d/instagram.png";
+import linkedin from "@/assets/3d/linkedin.png";
+import twitter from "@/assets/3d/twitter.png";
 
 const contactList = [
   {
@@ -51,18 +50,7 @@ const contactList = [
 
 export default contactList;
 
-
-
-
-
-
-
-
-
-
-
-
-export  const contactList3D = [
+export const contactList3D = [
   {
     name: "Github",
     img: github,

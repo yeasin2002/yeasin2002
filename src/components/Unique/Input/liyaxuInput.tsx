@@ -36,12 +36,7 @@ const LiyaxuInput = ({ searchValue, setSearchValue }: TextArr) => {
   return (
     <div>
       <div className={styles.formControl}>
-        <input
-          type="value"
-          required={true}
-          value={searchValue}
-          onChange={(e) => setSearchValue(e.target.value)}
-        />
+        <input type="value" required={true} value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
         <label>
           {textArr.map((val) => {
             const delays = `${val.delay}ms`;

@@ -1,10 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import quotes from "../../assets/3d/quotes.svg";
-import {
-  IM_Fell_Great_PrimerFont,
-  Modern_AntiquaFont,
-  ShipporiAntiqueFont,
-} from "@/utils/GoogleFonts";
+import { IM_Fell_Great_PrimerFont, Modern_AntiquaFont, ShipporiAntiqueFont } from "@/utils/GoogleFonts";
 
 interface feedbackInterface {
   content: string;
@@ -15,11 +11,7 @@ interface feedbackInterface {
 
 const FeedbackCard = ({ content, name, title, img }: feedbackInterface) => (
   <div className="flex justify-between flex-col w-full px-10 py-12 rounded-[20px]   md:mr-10 sm:mr-5 mr-0 my-5 feedback-card">
-    <Image
-      src={quotes}
-      alt="double_quotes"
-      className="w-[42.6px] h-[27.6px] object-contain"
-    />
+    <Image src={quotes} alt="double_quotes" className="w-[42.6px] h-[27.6px] object-contain" />
     <p
       className={`font-poppins font-normal text-[18px] leading-[32.4px] 2xl:text-2xl text-white my-10 ${ShipporiAntiqueFont.className}`}
     >

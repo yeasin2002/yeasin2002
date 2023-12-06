@@ -141,16 +141,12 @@ const skillData: skillDataTypes = {
       icon: express,
       stage: "intermediate",
     },
-   
+
     {
       title: "MongoDB",
       icon: MongoDB,
       stage: "beginner",
     },
-
-    
-    
- 
   ],
   Tools: [
     {
@@ -179,7 +175,6 @@ const skillData: skillDataTypes = {
       icon: vite,
       stage: "intermediate",
     },
-  
   ],
 };
 

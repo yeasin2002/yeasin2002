@@ -9,9 +9,7 @@ import TaskHub from "@/assets/projects/taskHub.png";
 import twindCli from "@/assets/projects/twindCli.png";
 import kismatTravel from "@/assets/projects/kismat-travel.png";
 
-
 export type projectTypes = {
-
   name: string;
   ProjectImage: StaticImageData;
   liveLink?: string;
@@ -22,16 +20,14 @@ export type projectTypes = {
 
 const projectData: projectTypes[] = [
   {
-
     name: "Kismat Travels",
     ProjectImage: kismatTravel,
     gitHubLink: "https://github.com/yeasin-2002/Kismat_Travels-OTA/tree/main",
     liveLink: "",
-    tag: ["nextjs 12", "@tanstack/react-query", "zustand", "Tailwindcss" , "shdcnui" , "radix-ui"],
-    description:"An OTA (Online Travel Agency) website. This website is for booking flights from Bangladesh  "
+    tag: ["nextjs 12", "@tanstack/react-query", "zustand", "Tailwindcss", "shdcnui", "radix-ui"],
+    description: "An OTA (Online Travel Agency) website. This website is for booking flights from Bangladesh  ",
   },
   {
-
     name: "TaskHub",
     ProjectImage: TaskHub,
     gitHubLink: "https://github.com/Mdkawsarislam2002/TaskHub",
@@ -41,7 +37,6 @@ const projectData: projectTypes[] = [
       "A task management application with the ability to collaborate with others Todo-App is a kind of app that generally used to maintain our day-to-day tasks or list everything that we have to do, with the most important tasks at the top of the list, and the least important tasks at the bottom. It is helpful in planning our daily schedules",
   },
   {
-
     name: "Amader bazar",
     ProjectImage: amader_bazar,
     liveLink: "",
@@ -51,19 +46,16 @@ const projectData: projectTypes[] = [
       "A full stack e-commerce website\n , The project is an online store that sells a variety of products and allows customers to browse, purchase, and track their orders. This repository contains only the code for the dashboard, which provides an interface for store administrators to manage products, view sales data, and track orders",
   },
   {
-
     name: "Insurantly - insurance agency",
     ProjectImage: insurgency,
     liveLink: "https://insurantly2023.netlify.app/",
-    gitHubLink:
-      "https://github.com/Mdkawsarislam2002/Insurantly-insurance_agency",
+    gitHubLink: "https://github.com/Mdkawsarislam2002/Insurantly-insurance_agency",
     tag: ["html", "Tailwindcss", "react", "Figma"],
     description: `
     Landing page, Figma to React. \n
     Insurantly   is an insurance agency website. You can buy insurance from this website.    `,
   },
   {
-
     name: "chiptoChainvers",
     ProjectImage: chainVers,
     liveLink: "https://crypto-chainverse.netlify.app/",
@@ -73,17 +65,14 @@ const projectData: projectTypes[] = [
   },
 
   {
-
     name: "kiyMovie",
     ProjectImage: kiyMovie,
     liveLink: "https://crypto-chainverse.netlify.app/",
     gitHubLink: "https://github.com/Mdkawsarislam2002/kiy-movies",
     tag: ["React", "Tailwindcss", "firebase", "IMDB"],
-    description:
-      "Movie Showing website using IMDB API. You can search for any movie and see the details of the movie.",
+    description: "Movie Showing website using IMDB API. You can search for any movie and see the details of the movie.",
   },
   {
-
     name: "Twind-CLI (Alfa)",
     ProjectImage: twindCli,
     gitHubLink: "https://github.com/Mdkawsarislam2002/T_Wind-cli",

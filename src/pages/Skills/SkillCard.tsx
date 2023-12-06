@@ -12,22 +12,14 @@ interface thisProps extends Item {
   index: number;
 }
 
-const SkillCard = ({
-  title,
-  icon,
-  stage,
-  reference = "",
-  index,
-}: thisProps) => {
-
-  let boxShadowColor
-  if (stage ==="advance") {
-    boxShadowColor = ` inset 5px -5px 25px #E40009, inset -5px 0px 25px #E40009`
-  }
-  else if (stage ==="intermediate") {
-    boxShadowColor = ` inset 5px -5px 25px #FACC15, inset -5px 0px 25px #FACC15`
+const SkillCard = ({ title, icon, stage, reference = "", index }: thisProps) => {
+  let boxShadowColor;
+  if (stage === "advance") {
+    boxShadowColor = ` inset 5px -5px 25px #E40009, inset -5px 0px 25px #E40009`;
+  } else if (stage === "intermediate") {
+    boxShadowColor = ` inset 5px -5px 25px #FACC15, inset -5px 0px 25px #FACC15`;
   } else {
-    boxShadowColor = ` inset 5px -5px 25px #166534, inset -5px 0px 25px #166534`
+    boxShadowColor = ` inset 5px -5px 25px #166534, inset -5px 0px 25px #166534`;
   }
 
   return (
@@ -39,23 +31,16 @@ const SkillCard = ({
           background: `rgba(71,85,105,.2)`,
           color: `hsla(0,0%,100%,.85)`,
         }}
-
       >
         <div className="into-center w-full">
           <span
             className="absolute top-0 left-0 w-full h-full z-50 opacity-0 group-hover:opacity-60 transition-all"
             style={{
-              boxShadow: boxShadowColor
+              boxShadow: boxShadowColor,
             }}
-           
           ></span>
           <div className="mx-4">
-            <Image
-              src={icon}
-              alt={"Icons"}
-              className="w-7 h-7 xl:w-10 xl:h-10 pointer-events-none"
-              loading="lazy"
-            />
+            <Image src={icon} alt={"Icons"} className="w-7 h-7 xl:w-10 xl:h-10 pointer-events-none" loading="lazy" />
           </div>
 
           <div className=" gap-x-2 flex flex-1">

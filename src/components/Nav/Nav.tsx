@@ -1,4 +1,5 @@
-"use client";
+
+
 import Logo from "$components/Globals/Logo";
 import Link from "next/link";
 

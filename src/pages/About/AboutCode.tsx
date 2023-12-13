@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import Tilty from "react-tilty";
 

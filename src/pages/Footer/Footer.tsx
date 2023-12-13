@@ -1,12 +1,12 @@
 import Logo from "@/components/Globals/Logo";
-import contactList, { contactList3D } from "@/data/contactInfo/contactInfo";
+import { contactList3D } from "@/data/contactInfo/contactInfo";
 import { DangrekFont, MetalFont } from "@/utils/GoogleFonts";
 import Image from "next/image";
 
 const Footer = () => {
   return (
     <>
-      {/* <WaterWave /> */}
+      
       <footer className="eachSections pb-14 mt-20 ">
         <div className="flex justify-between flex-wrap">
           <Logo />

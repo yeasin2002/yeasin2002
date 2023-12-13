@@ -4,10 +4,10 @@ import { StaticImageData } from "next/image";
 import amader_bazar from "@/assets/projects/amader_bazar.png";
 import chainVers from "@/assets/projects/chiptoChainvers.png";
 import insurgency from "@/assets/projects/insurgency.png";
+import kismatTravel from "@/assets/projects/kismat-travel.png";
 import kiyMovie from "@/assets/projects/kiyMovie.png";
 import TaskHub from "@/assets/projects/taskHub.png";
 import twindCli from "@/assets/projects/twindCli.png";
-import kismatTravel from "@/assets/projects/kismat-travel.png";
 
 export type projectTypes = {
   name: string;
@@ -39,7 +39,7 @@ const projectData: projectTypes[] = [
   {
     name: "Amader bazar",
     ProjectImage: amader_bazar,
-    liveLink: "",
+    liveLink: "https://amaderbazar.netlify.app/",
     gitHubLink: "https://github.com/yeasin-2002/Amazer_Bazar-client",
     tag: ["React", "Tailwindcss", "tanstack-query", "node/express", "mongoDB"],
     description:

@@ -54,11 +54,6 @@ const skillData: skillDataTypes = {
       icon: typeScript,
       stage: "intermediate",
     },
-    {
-      title: "SQL",
-      icon: sql,
-      stage: "intermediate",
-    },
   ],
   CssFramework: [
     // {
@@ -105,15 +100,11 @@ const skillData: skillDataTypes = {
       stage: "advance",
     },
     {
-      title: "Redux",
+      title: "Redux Toolkit",
       icon: redux,
       stage: "advance",
     },
-    {
-      title: "Thunk, RTK Query",
-      icon: rtk,
-      stage: "advance",
-    },
+   
     {
       title: "Zustand",
       icon: zustand,

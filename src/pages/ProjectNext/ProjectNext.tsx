@@ -1,9 +1,12 @@
+
+
+import Link from "next/link";
+import { useId } from "react";
+
 import Revel from "@/components/Globals/Revel";
 import OverText from "@/components/Unique/Buttons/OverText/OverText";
 import projectData from "@/data/Projects/projectData";
 import { KellySlabFont, SkranjiFont } from "@/utils/GoogleFonts";
-import Link from "next/link";
-import { useId } from "react";
 import NextProjectCard from "./NextProjectCard";
 
 const ProjectNext = () => {

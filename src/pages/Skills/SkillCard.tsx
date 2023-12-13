@@ -4,9 +4,8 @@ import React from "react";
 //  icons and types
 import Revel from "@/components/Globals/Revel";
 import { ChelseaFont } from "@/utils/GoogleFonts";
-import { BiLinkExternal as CopyIcons } from "react-icons/bi";
 import { Item } from "./LoopOverSkill";
-import styles from "./SkillCardAfterEffect.module.css";
+
 
 interface thisProps extends Item {
   index: number;

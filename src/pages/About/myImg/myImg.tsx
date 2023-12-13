@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 
 //? my Images
@@ -6,11 +7,11 @@ import me1 from "@/assets/avatar/me/clg.jpg";
 import me2 from "@/assets/avatar/me/exam.jpg";
 import me3 from "@/assets/avatar/me/kawsar.jpg";
 import me4 from "@/assets/avatar/me/lackpar.jpeg";
-import me5 from "@/assets/avatar/me/musium.jpg";
 import me6 from "@/assets/avatar/me/lastDayInClg.jpg";
+import me5 from "@/assets/avatar/me/musium.jpg";
 import me7 from "@/assets/avatar/me/sagufta.jpg";
-import ContactVia from "../ConnectVia";
 import { useEffect, useState } from "react";
+import ContactVia from "../ConnectVia";
 
 const Imageka = () => {
   const [whichImg, setWhichImg] = useState(1);

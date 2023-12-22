@@ -1,5 +1,4 @@
 
-
 import Logo from "$components/Globals/Logo";
 import Link from "next/link";
 
@@ -8,7 +7,6 @@ import skill from "$assets/3d/diary.png";
 import home from "$assets/3d/macos-home-logo.png";
 import project from "$assets/3d/project.png";
 
-import Image from "next/image";
 import { MobileNav } from "./MobileNav";
 
 export const navItems = [
@@ -50,24 +48,7 @@ const Nav = () => {
         <Logo className="h-full w-full " />
       </Link>
 
-      <MobileNav />
-
-      <div className="hidden gap-x-6  md:flex ">
-        {navItems.map((item) => {
-          return (
-            <Link
-              href={item.url}
-              defaultValue={"/"}
-              key={item.title + item.url}
-              className="group relative flex items-center gap-x-2 "
-            >
-              <Image width={40} height={40} src={item.Icon} alt={item.title + "Icon"} />
-              <p className="cursor-pointer text-lg font-semibold text-gray-50 hover:text-gray-100">{item.title}</p>
-              <span className="absolute -bottom-1  left-0 h-1 w-0 bg-teal-600 transition-all duration-300 group-hover:w-full" />
-            </Link>
-          );
-        })}
-      </div>
+      <MobileNav />     
     </nav>
   );
 };

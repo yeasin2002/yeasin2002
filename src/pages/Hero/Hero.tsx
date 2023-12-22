@@ -31,10 +31,7 @@ const Hero = () => {
             </div>
             <div className="md:flex-row justify-start w-full items-start gap-y-4 md:gap-y-0  md:gap-x-3  md:items-center  flex flex-col ">
               <Space_Btn
-                title="Download CV"
-               
-              />
-
+                title="Download CV" />
               <Link href={"/blogs"}>
                 <BlueStar_Btn className="2xl:text-2xl xl:text-xl text-lg">Blogs</BlueStar_Btn>
               </Link>

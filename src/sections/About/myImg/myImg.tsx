@@ -20,7 +20,7 @@ import profilePic from "@/assets/avatar/me/rounded.png";
 
 
 const Imageka = () => {
-  // const imgArr = [me1, me2, me3, me4, me5, me6, me7, me8, me9];
+  
 
 
   return (

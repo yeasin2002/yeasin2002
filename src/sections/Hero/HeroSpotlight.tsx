@@ -29,7 +29,7 @@ export function HeroSpotlight() {
           >
           A self-taught Front-end web developer, who loves to build things for the web     with a passion for creating visually appealing web applications and a flair for TypeScript and Next.Js
           </p>
-          <div className="flex  items-center gap-x-4 justify-center mt-10 ">
+          <div className="flex  items-center gap-x-4 justify-center mt-10 flex-col md:flex-row gap-y-3 sm:gap-y-0  ">
                 <Space_Btn
                   title="Download CV" />
                 <Link href={"/blogs"}>

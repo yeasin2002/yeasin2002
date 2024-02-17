@@ -1,4 +1,6 @@
+import { FloatingNav } from "$components/Nav/floating-navbar";
 import Nav from "@/components/Nav/Nav";
+import { navItems } from "@/data";
 import About from "@/sections/About/About";
 import Footer from "@/sections/Footer/Footer";
 import { HeroSpotlight } from "@/sections/Hero/HeroSpotlight";
@@ -9,7 +11,7 @@ import Contact from "@/sections/contact/Contact";
 export default function Home() {
   return (
     <>
-      <Nav />
+      <FloatingNav navItems={navItems} />
       <HeroSpotlight/>
       <About />
       <Skills />

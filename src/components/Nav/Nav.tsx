@@ -1,11 +1,11 @@
 
-import Logo from "$components/Globals/Logo";
+import Logo from "@/components/Globals/Logo";
 import Link from "next/link";
 
-import contact from "$assets/3d/contack.png";
-import skill from "$assets/3d/diary.png";
-import home from "$assets/3d/macos-home-logo.png";
-import project from "$assets/3d/project.png";
+import contact from "@/assets/3d/contack.png";
+import skill from "@/assets/3d/diary.png";
+import home from "@/assets/3d/macos-home-logo.png";
+import project from "@/assets/3d/project.png";
 
 import { MobileNav } from "./MobileNav";
 

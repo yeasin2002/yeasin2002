@@ -22,7 +22,7 @@ const ProjectNext = () => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <h2 className={`text-sup font-bold 2xl:text-5xl text-2xl ${SkranjiFont.className}`}>All Creative Works</h2>
+        <h2 className={` font-bold 2xl:text-5xl silver-text text-2xl ${SkranjiFont.className}`}>All Creative Works</h2>
         <p className={`text-gray-300 mb-6 text-xl 2xl:text-2xl ${KellySlabFont.className}`}>
           {"Here's"} some of my projects that I have worked on.
         </p>

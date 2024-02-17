@@ -4,7 +4,6 @@ import React from "react";
 
 import { CodeBlocks } from "./CodeBlocks";
 import { LayoutGridDemo } from "./ImageGrid";
-import Imageka from "./myImg/myImg";
 
 const AboutDetails = () => {
   return (

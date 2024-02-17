@@ -13,10 +13,13 @@ import tailwind from "@/assets/icons/tailwind.svg";
 import express from "@/assets/icons/skill_icons/ExpressJS-Dark.svg";
 import MongoDB from "@/assets/icons/skill_icons/MongoDB.svg";
 import node from "@/assets/icons/skill_icons/NodeJS-Dark.svg";
+import socket from "@/assets/icons/socketio.svg";
 
 //! tools
 import gitAndGithub from "@/assets/icons/gitAndGithubsvg.svg";
 import figma from "@/assets/icons/skill_icons/Figma-Dark.svg";
+import firebase from "@/assets/icons/skill_icons/firebase.svg";
+import framerMotion from "@/assets/icons/skill_icons/framer-motion.svg";
 import notion from "@/assets/icons/skill_icons/notions.svg";
 import vsCode from "@/assets/icons/skill_icons/vscode.svg";
 import vite from "@/assets/icons/vite.svg";
@@ -80,6 +83,11 @@ const skillData: skillDataTypes = {
       icon: MongoDB,
       stage: "beginner",
     },
+    {
+      title: "socket.io",
+      icon: socket,
+      stage: "beginner",
+    },
   ],
   Tools: [
     {
@@ -87,17 +95,22 @@ const skillData: skillDataTypes = {
       icon: gitAndGithub,
       stage: "intermediate",
     },
-
+    {
+      title: "Firebase",
+      icon: firebase,
+      stage: "beginner",
+    },
+    {
+      title: "Framer Motion",
+      icon: framerMotion,
+      stage: "beginner",
+    },
     {
       title: "Figma",
       icon: figma,
       stage: "beginner",
     },
-    {
-      title: "VS Code",
-      icon: vsCode,
-      stage: "advance",
-    },
+ 
     {
       title: "Notion",
       icon: notion,
@@ -108,6 +121,12 @@ const skillData: skillDataTypes = {
       icon: vite,
       stage: "intermediate",
     },
+    {
+      title: "VS Code",
+      icon: vsCode,
+      stage: "advance",
+    },
+
   ],
 };
 

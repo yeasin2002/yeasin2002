@@ -34,8 +34,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="overflow-x-hidden">
-        <Wrapper>{children}</Wrapper>
+      <body className="overflow-x-hidden"
+            style={{
+              background: `#000000`,
+              color: "white",
+            }}
+      >
+        {children}
       </body>
     </html>
   );

@@ -1,9 +1,9 @@
-<!-- ![yeasin's cover](kawser.png)  -->
-  <!-- <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&text=Dev%20Yeasin&height=150&section=header" alt="Yeasin..." /> -->
 
-  <h1 align="center"> Hi, I'm Md Kawsar Islam Yeasin</h1>
-  <h4 align="center">  I’m a front-end web developer From Dhaka, Bangladesh, also familiar with the Back End. I convert coffee into Code ✌️ </h4>
- 
+
+
+  <h1 align="center"> 💫 Hi, I'm Md Kawsar Islam Yeasin</h1>
+  <h4 align="center">  I’m a front-end web developer From Dhaka, Bangladesh, also familiar with the Back End. I convert coffee into Code ✌️ 
+  </h4>
 
  </br>
 
@@ -16,16 +16,16 @@
 - 🏫 We have a great community called [wd hive](https://github.com/wdhive) , Also have [Messenger](https://l.messenger.com/l.php?u=https%3A%2F%2Fm.me%2Fj%2FAbYRqd07CPovLcls%2F&h=AT3omrCWUUMjE7qdoriL7gyIBQllWEPuFFSKeL1j7ywpWMAZX-x6rCaRmzsT9zjRihEcl2wwa549Z0gS-t3smUB1DQ9H3kjRPA1LWiBqtkedfdFnxaoMeTLho7TMLNiF95L5GA) group where greeks help each other since last two year.
 
 #### Specialized In [ Front End ]
- <!-- ![Specialized In](https://skillicons.dev/icons?i=ts,next,tailwind,redux,zustand) -->
+
 <img src="https://skillicons.dev/icons?i=ts,next,tailwind,redux" /> <img src="./public/icons/zustand.svg" width="50" /> <img src="./public/icons/react-query.svg" width="50" />
 
 #### Familiar with [ Back End ]
-![Back End](https://skillicons.dev/icons?i=nodejs,express,mongodb,python)
+![Back End](https://skillicons.dev/icons?i=nodejs,express,mongodb)
 
 
-#### Tools
+#### Others
 
-<img src="https://skillicons.dev/icons?i=vscode,figma,vite" /> <img src="./public/icons/notions.svg" width="50" />
+<img src="https://skillicons.dev/icons?i=vscode,figma,vite,firebase" /> <img src="./public/icons/notions.svg" width="50" />
 
 
 
@@ -53,35 +53,14 @@
        <img src="https://img.shields.io/badge/leetcode-323330?style=for-the-badge&logo=leetcode&logoColor=white" />
     </a>
 
-    
-
 <br  />
-
-<!-- 
-
-####  🚀 PROJECTS 
-- [Amader Bazar](https://amaderbazar.netlify.app/) - E-Commerce
-- [Crunchy Carriage](https://crunchy-carriage.netlify.app/) - Food Service 
-
- [Click here to see all](https://yeasin2002.netlify.app/projects)
-  
-
-
- #### 🔥  OPEN SOURCE CONTRIBUTIONS
- -  Title   [Live](https://***/), [GitHub Repo](), [PR](), [Issue]()  
- -->
-
 
 
 
 
 <details >
-<summary> 
-    <h3 > 📈 GitHub States (Click to Open) </h3> 
-    
-</summary>
+<summary>  <h3 > 📈 GitHub States (Click to Open) </h3> </summary>
 <br>
-<!-- [![Top Language](https://github-readme-stats.vercel.app/api/top-langs/?username=yeasin-2002)](https://github.com/anuraghazra/github-readme-stats)  -->
 
 ![My GitHub stats](https://github-readme-stats.vercel.app/api?username=yeasin-2002&show_icons=true)
 

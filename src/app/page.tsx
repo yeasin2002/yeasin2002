@@ -10,7 +10,7 @@ import Contact from "@/sections/contact/Contact";
 export default function Home() {
   return (
     <>
-      <FloatingNav navItems={navItems} />
+      <FloatingNav />
       <HeroSpotlight/>
       <About />
       <Skills />

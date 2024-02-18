@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { DetailedHTMLProps, FC, HTMLAttributes } from "react";
 
-import { cn } from "$lib/utils";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { cn } from "@/lib/utils";
 import { robotoSlab } from "@/utils/GoogleFonts";
 import { RiMenu3Fill } from "react-icons/ri";
 import { navItems } from "./Nav";

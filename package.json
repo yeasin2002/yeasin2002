@@ -36,6 +36,7 @@
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.7",
     "framer-motion": "^10.12.18",
+    "lucide-react": "^0.331.0",
     "mongoose": "^7.3.1",
     "next": "14.0.0",
     "postcss": "8.4.24",

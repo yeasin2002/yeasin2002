@@ -9,12 +9,11 @@ import me4 from "@/assets/avatar/me/lastDayInClg.jpg";
 import me3 from "@/assets/avatar/me/pp.png";
 import me1 from "@/assets/avatar/me/sagufta.jpg";
 
-export function LayoutGridDemo() {
+export function LayoutGridCard() {
   return (
     <div className="h-screen py-20 w-full">
       <LayoutGrid cards={cards} />
-      <div className="w-[40rem] h-40 relative">
-        {/* Gradients */}
+      <div className="w-full   h-40 relative hidden ">
         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
         <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />

@@ -39,7 +39,9 @@ const LiyaxuInput = ({ searchValue, setSearchValue, ...rest }: TextArr) => {
   return (
     <div>
       <div className={styles.formControl}>
-        <input type="value" required value={searchValue} onChange={(e) =>  setSearchValue(e?.currentTarget?.value)} 
+        <input type="value"
+         value={searchValue}
+        onChange={(e) =>setSearchValue(e?.currentTarget?.value)} 
         {...rest}
         />
         <label>

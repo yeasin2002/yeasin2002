@@ -1,26 +1,26 @@
 "use client";
 
+import { Meteors } from "$components/aceternity";
 import FoldText from "@/components/Unique/Buttons/FoldText/FoldText";
 import LiyaxuInput from "@/components/Unique/Input/liyaxuInput";
 import projectData from "@/data/Projects/projectData";
 import NextProjectCard from "@/sections//ProjectNext/NextProjectCard";
 import Link from "next/link";
-import { useId, useState } from "react";
+import { useState } from "react";
 
 const AllProjects = () => {
   const [searchValue, setSearchValue] = useState("");
 
-  const filteredProjects = projectData.filter((project) => {
-     return  project?.name?.toLowerCase().includes(searchValue.toLowerCase())
-    }
-  ) as typeof projectData;
+  const filteredProjects = projectData.filter((project) =>   project?.name?.toLowerCase().includes(searchValue.toLowerCase())) || [] as typeof projectData;
+  
 
   return (
-    <>
+    
       <main className=" h-full min-h-screen py-10 px-1 sm:px-2 md:px-4">
+      <Meteors number={20} />
         <div className="flex flex-col md:flex-row gap-y-6 md:gap-x-2 justify-between">
           <div className="order-last md:order-first">
-            <h1 className="text-2xl text-teal-500 font-bold">Projects</h1>
+            <h1 className="text-3xl silver-text font-bold">Projects</h1>
             <p className="text-xl font-semibold text-gray-500">Here is my all projects</p>
           </div>
           <Link href={"/"} className="inline-block">
@@ -35,12 +35,10 @@ const AllProjects = () => {
 
         <div className="@container mt-10">
           <div className="grid grid-cols-1  gap-x-3 gap-y-4 lg:grid-cols-2 ">
-            {filteredProjects.map((value, index) => {
-              // eslint-disable-next-line react-hooks/rules-of-hooks
-              const id = useId();
+            {filteredProjects?.map((value, index) => {             
               return (
                 <NextProjectCard
-                  key={id}
+                  key={index}
                   ProjectImage={value.ProjectImage}
                   id={index}
                   name={value.name}
@@ -55,7 +53,7 @@ const AllProjects = () => {
           </div>
         </div>
       </main>
-    </>
+
   );
 };
 

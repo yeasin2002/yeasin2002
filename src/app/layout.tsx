@@ -1,7 +1,4 @@
-import Wrapper from "@/components/Globals/Wrapper";
 import { Metadata } from "next";
-
-// styles
 import "../styles/keyframe.css";
 import "./globals.css";
 

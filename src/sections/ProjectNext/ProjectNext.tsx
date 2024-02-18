@@ -1,5 +1,3 @@
-
-
 import Link from "next/link";
 import { useId } from "react";
 
@@ -13,7 +11,7 @@ const ProjectNext = () => {
   return (
     <section
       id="projects"
-      className=" grid grid-cols-1 lg:grid-cols-2  2xl:gap-10  gap-4 xl:gap-x-10  md:gap-x-6 xl:gap-y-8  py-32 "
+      className=" grid grid-cols-1 gap-4  py-32  md:gap-x-6 lg:grid-cols-2  xl:gap-x-10 xl:gap-y-8  2xl:gap-10 "
     >
       <Revel
         className="px-4 py-8"
@@ -22,8 +20,14 @@ const ProjectNext = () => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <h2 className={` font-bold 2xl:text-5xl silver-text text-2xl ${SkranjiFont.className}`}>All Creative Works</h2>
-        <p className={`text-gray-300 mb-6 text-xl 2xl:text-2xl ${KellySlabFont.className}`}>
+        <h2
+          className={` silver-text text-2xl font-extrabold 2xl:text-5xl ${SkranjiFont.className}`}
+        >
+          All Creative Works
+        </h2>
+        <p
+          className={`mb-6 text-xl text-gray-300 2xl:text-2xl ${KellySlabFont.className}`}
+        >
           {"Here's"} some of my projects that I have worked on.
         </p>
 

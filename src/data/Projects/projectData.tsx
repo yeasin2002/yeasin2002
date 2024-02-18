@@ -29,7 +29,7 @@ const projectData: projectTypes[] = [
     description:
       "A full stack e-commerce website\n , The project is an online store that sells a variety of products and allows customers to browse, purchase, and track their orders. This repository contains only the code for the dashboard, which provides an interface for store administrators to manage products, view sales data, and track orders",
   },
- 
+
   {
     name: "TaskHub",
     ProjectImage: TaskHub,
@@ -44,10 +44,18 @@ const projectData: projectTypes[] = [
     ProjectImage: kismatTravel,
     gitHubLink: "https://github.com/yeasin-2002/Kismat_Travels-OTA/tree/main",
     liveLink: "",
-    tag: ["nextjs 12", "@tanstack/react-query", "zustand", "Tailwindcss", "shdcnui", "radix-ui"],
-    description: "An OTA (Online Travel Agency) website. This website is for booking flights from Bangladesh  ",
+    tag: [
+      "nextjs 12",
+      "@tanstack/react-query",
+      "zustand",
+      "Tailwindcss",
+      "shdcnui",
+      "radix-ui",
+    ],
+    description:
+      "An OTA (Online Travel Agency) website. This website is for booking flights from Bangladesh  ",
   },
- 
+
   {
     name: "Story Craft - insurance agency",
     ProjectImage: storyCraft,
@@ -60,7 +68,8 @@ const projectData: projectTypes[] = [
     name: "Insurantly - insurance agency",
     ProjectImage: insurgency,
     liveLink: "https://insurantly2023.netlify.app/",
-    gitHubLink: "https://github.com/Mdkawsarislam2002/Insurantly-insurance_agency",
+    gitHubLink:
+      "https://github.com/Mdkawsarislam2002/Insurantly-insurance_agency",
     tag: ["html", "Tailwindcss", "react", "Figma"],
     description: `
     Landing page, Figma to React. \n
@@ -81,7 +90,8 @@ const projectData: projectTypes[] = [
     liveLink: "https://crypto-chainverse.netlify.app/",
     gitHubLink: "https://github.com/Mdkawsarislam2002/kiy-movies",
     tag: ["React", "Tailwindcss", "firebase", "IMDB"],
-    description: "Movie Showing website using IMDB API. You can search for any movie and see the details of the movie.",
+    description:
+      "Movie Showing website using IMDB API. You can search for any movie and see the details of the movie.",
   },
   {
     name: "Twind-CLI (Alfa)",

@@ -6,9 +6,13 @@ import ContactVia from "./ConnectVia";
 
 const MyAvatar = () => {
   return (
-    <div className=" md:order-last flex flex-col justify-between order-first h-full px-6">
-      <div className="justify-self-center self-center justify-between">
-        <Image src={yeasin} alt="Yeasin" className="w-60 h-60 ring-4 ring-paste rounded-full" />
+    <div className=" order-first flex h-full flex-col justify-between px-6 md:order-last">
+      <div className="justify-between self-center justify-self-center">
+        <Image
+          src={yeasin}
+          alt="Yeasin"
+          className="h-60 w-60 rounded-full ring-4 ring-paste"
+        />
       </div>
       <ContactVia />
     </div>

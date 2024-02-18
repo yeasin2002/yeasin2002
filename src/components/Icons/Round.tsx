@@ -2,7 +2,13 @@ import React from "react";
 
 const Round = () => {
   return (
-    <svg width="488" height="425" viewBox="0 0 488 425" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="488"
+      height="425"
+      viewBox="0 0 488 425"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <g opacity="0.8" filter="url(#filter0_f_13_2)">
         <circle
           cx="45.4184"
@@ -23,8 +29,16 @@ const Round = () => {
           color-interpolation-filters="sRGB"
         >
           <feFlood flood-opacity="0" result="BackgroundImageFix" />
-          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-          <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_13_2" />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="BackgroundImageFix"
+            result="shape"
+          />
+          <feGaussianBlur
+            stdDeviation="100"
+            result="effect1_foregroundBlur_13_2"
+          />
         </filter>
         <linearGradient
           id="paint0_linear_13_2"

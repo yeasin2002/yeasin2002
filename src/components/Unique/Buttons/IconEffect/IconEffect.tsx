@@ -10,7 +10,14 @@ const defaultBg = `linear-gradient(
     #bc1888 100%
   )`;
 
-const IconEffect = ({ children, bgColor = defaultBg, ...rest }: { children: React.ReactNode; bgColor?: string }) => {
+const IconEffect = ({
+  children,
+  bgColor = defaultBg,
+  ...rest
+}: {
+  children: React.ReactNode;
+  bgColor?: string;
+}) => {
   return (
     <>
       <button className={classes.Btn} {...rest}>

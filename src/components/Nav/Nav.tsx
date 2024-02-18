@@ -1,4 +1,3 @@
-
 import Logo from "@/components/Globals/Logo";
 import Link from "next/link";
 
@@ -35,7 +34,7 @@ export const navItems = [
 const Nav = () => {
   return (
     <nav
-      className="fixed left-0 right-0  top-3 z-10  mx-auto flex w-10/12 items-center justify-between rounded-lg  py-3 px-5 "
+      className="fixed left-0 right-0  top-3 z-10  mx-auto flex w-10/12 items-center justify-between rounded-lg  px-5 py-3 "
       //  glass effect
       style={{
         background: `rgba(255, 255, 255, 0.2)`,
@@ -48,7 +47,7 @@ const Nav = () => {
         <Logo className="h-full w-full " />
       </Link>
 
-      <MobileNav />     
+      <MobileNav />
     </nav>
   );
 };

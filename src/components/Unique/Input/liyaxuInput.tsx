@@ -1,13 +1,21 @@
-"use client"
+"use client";
 
-import { DetailedHTMLProps, Dispatch, InputHTMLAttributes, SetStateAction } from "react";
+import {
+  DetailedHTMLProps,
+  Dispatch,
+  InputHTMLAttributes,
+  SetStateAction,
+} from "react";
 import styles from "./liyaxuInput.module.css";
 
-interface  TextArr  extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
-{
+interface TextArr
+  extends DetailedHTMLProps<
+    InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  > {
   searchValue: string;
   setSearchValue: Dispatch<SetStateAction<string>>;
-};
+}
 
 const LiyaxuInput = ({ searchValue, setSearchValue, ...rest }: TextArr) => {
   const textArr = [
@@ -39,10 +47,11 @@ const LiyaxuInput = ({ searchValue, setSearchValue, ...rest }: TextArr) => {
   return (
     <div>
       <div className={styles.formControl}>
-        <input type="value"
-         value={searchValue}
-        onChange={(e) =>setSearchValue(e?.currentTarget?.value)} 
-        {...rest}
+        <input
+          type="value"
+          value={searchValue}
+          onChange={(e) => setSearchValue(e?.currentTarget?.value)}
+          {...rest}
         />
         <label>
           {textArr.map((val) => {

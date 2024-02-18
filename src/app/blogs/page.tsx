@@ -3,10 +3,10 @@ import Image from "next/image";
 
 const Blogs = () => {
   return (
-    <div className="min-h-screen flex  flex-col  items-center justify-center">
+    <div className="flex min-h-screen  flex-col  items-center justify-center">
       <h1
         className="
-      text-4xl font-bold text-center text-gray-300 
+      text-center text-4xl font-bold text-gray-300 
       "
       >
         Coming Soon

@@ -7,7 +7,7 @@ const Title = () => {
   return (
     <>
       <h1
-        className={`title-font w-full first-letter block  mb-8 font-extrabold  sm:text-5xl  md:text-3xl   xl:text-6xl 2xl:text-7xl  text-2xl ${TitleFont.className} TitleGradientText `}
+        className={`title-font first-letter mb-8 block  w-full text-2xl  font-extrabold  sm:text-5xl   md:text-3xl xl:text-6xl  2xl:text-7xl ${TitleFont.className} TitleGradientText `}
       >
         MD KAWSAR ISLAM YEASIN
       </h1>

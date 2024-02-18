@@ -10,18 +10,32 @@ export interface Academy extends React.HtmlHTMLAttributes<HTMLDivElement> {
   LastExam: "HSC" | "SSC";
 }
 
-const EduCard = ({ name, imageData, AcademicYear, LastExam, ...props }: Academy) => {
+const EduCard = ({
+  name,
+  imageData,
+  AcademicYear,
+  LastExam,
+  ...props
+}: Academy) => {
   return (
     <Revel
-      className={` bg-gradient-to-r from-shine-0 to-shine-100  my-4 p-1 flex sm:pl-3 sm:py-2   items-center sm:gap-x-4 gap-x-1 rounded-md   text-blue-100`}
+      className={` my-4 flex items-center  gap-x-1 rounded-md bg-gradient-to-r from-shine-0 to-shine-100   p-1 text-blue-100 sm:gap-x-4 sm:py-2   sm:pl-3`}
       {...props}
     >
-      <Image src={imageData} alt={name} className="w-16 h-16 xl:w-16 2xl:w-24 2xl:h-24 xl:h-16" />
+      <Image
+        src={imageData}
+        alt={name}
+        className="h-16 w-16 xl:h-16 xl:w-16 2xl:h-24 2xl:w-24"
+      />
       <div>
-        <h4 className={`text-xs sm:text-lg xl:text-2xl 2xl:text-3xl font-semibold sm:font-bold ${RozhaFont.className}`}>
+        <h4
+          className={`text-xs font-semibold sm:text-lg sm:font-bold xl:text-2xl 2xl:text-3xl ${RozhaFont.className}`}
+        >
           {name}
         </h4>
-        <p className={`text-xs mt-2 sm:text-sm  text-gray-400 sm:font-medium ${MeriendaFont.className}`}>
+        <p
+          className={`mt-2 text-xs text-gray-400  sm:text-sm sm:font-medium ${MeriendaFont.className}`}
+        >
           {LastExam} {AcademicYear}
         </p>
       </div>

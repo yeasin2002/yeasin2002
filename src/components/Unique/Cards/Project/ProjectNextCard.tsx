@@ -22,7 +22,11 @@ const ProjectNextCard = () => {
         </div>
         <div className={classes.data}>
           <div className={classes.img}>
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 80 80">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              viewBox="0 0 80 80"
+            >
               <g strokeWidth="2.00" fill="none" strokeLinecap="butt">
                 <path
                   stroke="#59afb1"
@@ -285,7 +289,14 @@ const ProjectNextCard = () => {
         Q 15.81 38.21 21.32 36.20
         Z"
               ></path>
-              <rect fill="#000000" x="43.75" y="36.77" width="5.00" height="9.74" rx="2.30"></rect>
+              <rect
+                fill="#000000"
+                x="43.75"
+                y="36.77"
+                width="5.00"
+                height="9.74"
+                rx="2.30"
+              ></rect>
               <path
                 fill="#000000"
                 d="M 58.50 36.79
@@ -349,7 +360,10 @@ const ProjectNextCard = () => {
             <span className={classes.likes_text}>22</span>
           </div>
           <div className={classes.comments}>
-            <svg className={classes.comments_svg} viewBox="-405.9 238 56.3 54.8">
+            <svg
+              className={classes.comments_svg}
+              viewBox="-405.9 238 56.3 54.8"
+            >
               <path d="M-391 291.4c0 1.5 1.2 1.7 1.9 1.2 1.8-1.6 15.9-14.6 15.9-14.6h19.3c3.8 0 4.4-.8 4.4-4.5v-31.1c0-3.7-.8-4.5-4.4-4.5h-47.4c-3.6 0-4.4.9-4.4 4.5v31.1c0 3.7.7 4.4 4.4 4.4h10.4v13.5z"></path>
             </svg>
             <span className={classes.comments_text}>12</span>

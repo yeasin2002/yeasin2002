@@ -6,12 +6,17 @@ import Revel from "@/components/Globals/Revel";
 import { ChelseaFont } from "@/utils/GoogleFonts";
 import { Item } from "./LoopOverSkill";
 
-
 interface thisProps extends Item {
   index: number;
 }
 
-const SkillCard = ({ title, icon, stage, reference = "", index }: thisProps) => {
+const SkillCard = ({
+  title,
+  icon,
+  stage,
+  reference = "",
+  index,
+}: thisProps) => {
   let boxShadowColor;
   if (stage === "advance") {
     boxShadowColor = ` inset 5px -5px 25px #E40009, inset -5px 0px 25px #E40009`;
@@ -24,8 +29,8 @@ const SkillCard = ({ title, icon, stage, reference = "", index }: thisProps) => 
   return (
     <Revel transition={{ duration: 0.4, delay: index / 20 }}>
       <div
-        className={`select-none group xl:py-4 xl:text-xl 2xl:py-8 2xl:text-4xl   link   text-conf font-medium   flex items-center py-2   rounded-sm  md:rounded-lg md:px-4
-      shadow-md  hover:scale-105 transition-all relative overflow-hidden group  `}
+        className={`link group group relative flex select-none   items-center   overflow-hidden rounded-sm   py-2 font-medium text-conf   shadow-md  transition-all hover:scale-105
+      md:rounded-lg  md:px-4 xl:py-4 xl:text-xl 2xl:py-8 2xl:text-4xl  `}
         style={{
           background: `rgba(71,85,105,.2)`,
           color: `hsla(0,0%,100%,.85)`,
@@ -33,16 +38,21 @@ const SkillCard = ({ title, icon, stage, reference = "", index }: thisProps) => 
       >
         <div className="into-center w-full">
           <span
-            className="absolute top-0 left-0 w-full h-full z-50 opacity-0 group-hover:opacity-60 transition-all"
+            className="absolute left-0 top-0 z-50 h-full w-full opacity-0 transition-all group-hover:opacity-60"
             style={{
               boxShadow: boxShadowColor,
             }}
           ></span>
           <div className="mx-4">
-            <Image src={icon} alt={"Icons"} className="w-7 h-7 xl:w-10 xl:h-10 pointer-events-none" loading="lazy" />
+            <Image
+              src={icon}
+              alt={"Icons"}
+              className="pointer-events-none h-7 w-7 xl:h-10 xl:w-10"
+              loading="lazy"
+            />
           </div>
 
-          <div className=" gap-x-2 flex flex-1">
+          <div className=" flex flex-1 gap-x-2">
             <h3 className={ChelseaFont.className}>{title}</h3>
           </div>
         </div>

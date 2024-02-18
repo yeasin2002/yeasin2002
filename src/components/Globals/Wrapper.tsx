@@ -3,12 +3,9 @@
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import React, { MouseEvent } from "react";
 
-
-
 const Wrapper = ({ children }: { children: React.ReactNode }) => {
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
-  
 
   function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent) {
     let { left, top } = currentTarget.getBoundingClientRect();
@@ -32,9 +29,7 @@ const Wrapper = ({ children }: { children: React.ReactNode }) => {
       radial-gradient( 650px circle at ${mouseX}px ${mouseY}px, rgba(14, 165, 233, 0.15),transparent 80% )`,
         }}
       >
-
-                {children}
-
+        {children}
       </motion.div>
     </div>
   );

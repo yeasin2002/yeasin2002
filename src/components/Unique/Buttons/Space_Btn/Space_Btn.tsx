@@ -1,9 +1,13 @@
 import classes from "./Space_Btn.module.css";
 
-
 const Space_Btn = ({ title = "space", ...rest }: SpaceBtn) => {
   return (
-    <a  href={"/Yeasin2002.pdf"} download={"yeasin2002"} target="_blank"     rel="noopener noreferrer" >
+    <a
+      href={"/Yeasin2002.pdf"}
+      download={"yeasin2002"}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <button className={classes.btn} {...rest} type="button">
         <strong className={classes.title}>{title}</strong>
         <div id={classes.containerStars}>

@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <FloatingNav />
-      <HeroSpotlight/>
+      <HeroSpotlight />
       <About />
       <Skills />
       <ProjectNext />

@@ -3,7 +3,13 @@ import React from "react";
 const Ring = () => {
   return (
     <div>
-      <svg xmlns="http://www.w3.org/1999/xlink" width="55" height="55" viewBox="0 0 55 55" fill="none">
+      <svg
+        xmlns="http://www.w3.org/1999/xlink"
+        width="55"
+        height="55"
+        viewBox="0 0 55 55"
+        fill="none"
+      >
         <circle
           cx="27.5"
           cy="27.5"

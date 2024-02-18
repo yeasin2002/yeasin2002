@@ -16,7 +16,10 @@ interface paramsProps {
   };
 }
 
-const useGEneratedColor = ({ GreenishColorValue, MidnightBlueColorValue }: paramsProps): returnValue => {
+const useGEneratedColor = ({
+  GreenishColorValue,
+  MidnightBlueColorValue,
+}: paramsProps): returnValue => {
   const { theme } = useContext(themeContext);
 
   let userStyle = "";

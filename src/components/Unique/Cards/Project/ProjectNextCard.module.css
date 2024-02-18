@@ -273,7 +273,9 @@
 }
 
 .slider_738:after {
-  background: linear-gradient(transparent 50%, rgba(255, 255, 255, 0.15) 0) 0 50% / 50% 100%,
+  background:
+    linear-gradient(transparent 50%, rgba(255, 255, 255, 0.15) 0) 0 50% / 50%
+      100%,
     repeating-linear-gradient(
         90deg,
         rgb(255, 255, 255) 0,
@@ -288,7 +290,9 @@
   border: 0.25em solid transparent;
   border-left: 0.4em solid #ffffff;
   border-right: 0 solid transparent;
-  transition: border-left-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
+  transition:
+    border-left-color 0.1s 0.3s ease-out,
+    transform 0.3s ease-out;
   transform: translateX(-22.5%) rotate(90deg);
   transform-origin: 25% 50%;
   position: relative;
@@ -312,5 +316,6 @@
 }
 
 .chk_738:checked + .slider_738:after {
-  transform: rotateZ(90deg) rotateY(180deg) translateY(0.45em) translateX(-1.4em);
+  transform: rotateZ(90deg) rotateY(180deg) translateY(0.45em)
+    translateX(-1.4em);
 }

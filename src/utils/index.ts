@@ -1,2 +1,2 @@
-export * from "./GoogleFonts"
-export * from "./cn"
+export * from "./GoogleFonts";
+export * from "./cn";

@@ -1,6 +1,5 @@
 import chalk from "chalk";
 
-
 export const connectDB = async () => {
   try {
     // await prisma.$connect();

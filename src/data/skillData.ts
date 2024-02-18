@@ -53,7 +53,7 @@ const skillData: skillDataTypes = {
       icon: redux,
       stage: "advance",
     },
-   
+
     {
       title: "Zustand",
       icon: zustand,
@@ -62,9 +62,8 @@ const skillData: skillDataTypes = {
     {
       title: "TanStack Query",
       icon: tanStackQuery,
-      stage: "intermediate",  
+      stage: "intermediate",
     },
- 
   ],
   BackEnd: [
     {
@@ -110,7 +109,7 @@ const skillData: skillDataTypes = {
       icon: figma,
       stage: "beginner",
     },
- 
+
     {
       title: "Notion",
       icon: notion,
@@ -126,7 +125,6 @@ const skillData: skillDataTypes = {
       icon: vsCode,
       stage: "advance",
     },
-
   ],
 };
 

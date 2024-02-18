@@ -31,7 +31,7 @@ import {
   Sedgwick_Ave,
   Shippori_Antique,
   Skranji,
-  Sriracha
+  Sriracha,
 } from "next/font/google";
 
 export const TitleFont = Kurale({
@@ -156,7 +156,6 @@ export const OswaldFont = Oswald({
   subsets: ["latin"],
 });
 
-
 export const robotoSlab = Roboto_Slab({
   weight: "700",
   subsets: ["latin"],
@@ -176,5 +175,3 @@ export const sriracha = Sriracha({
   weight: "400",
   subsets: ["latin"],
 });
-
-

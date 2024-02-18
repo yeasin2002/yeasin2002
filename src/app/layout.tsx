@@ -2,12 +2,11 @@ import { Metadata } from "next";
 import "../styles/keyframe.css";
 import "./globals.css";
 
-
 export const metadata: Metadata = {
   title: "Md Kawsar Islam Yeasin",
   description:
     "Md Kawsar Islam Yeasin , a software Developer,Front end web developer, web developer and web designer,programmer  from Bangladesh.",
-  openGraph:  {
+  openGraph: {
     title: "Md Kawsar Islam Yeasin",
     description:
       "Portfolio of  Md Kawsar Islam Yeasin , a software Developer,Front end web developer, web developer and web designer,programmer,  from Bangladesh.",
@@ -15,7 +14,7 @@ export const metadata: Metadata = {
     locale: "en_IE",
     url: "https://yeasin2002.netlify.app/",
     siteName: "Md Kawsar Islam Yeasin",
-    emails: "mdkawsarislam2002@gmail.com", 
+    emails: "mdkawsarislam2002@gmail.com",
     countryName: "Bangladesh",
     images: [
       {
@@ -28,14 +27,19 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://yeasin2002.netlify.app"),
 };
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="overflow-x-hidden"
-            style={{
-              background: `#000000`,
-              color: "white",
-            }}
+      <body
+        className="overflow-x-hidden"
+        style={{
+          background: `#000000`,
+          color: "white",
+        }}
       >
         {children}
       </body>

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import Tilty from "react-tilty";
@@ -18,7 +18,7 @@ const AboutCode = () => {
         reverse={false}
         speed={100}
         maxGlare={1}
-        className=" sm:text-sm   xl:text-2xl  md:text-sm md:mx-0 md:p x-0 sm:mx-24 mt-6 xl:mt-0 inline-block xl:mx-3  relative overflow-x-hidden text-xs rounded-lg md:h-full"
+        className=" md:p   x-0  relative mt-6 inline-block overflow-x-hidden rounded-lg text-xs sm:mx-24 sm:text-sm md:mx-0  md:h-full md:text-sm xl:mx-3 xl:mt-0 xl:text-2xl"
         style={{
           background: `rgba(255,255,255,.01)`,
           boxShadow: "0 25px 45px rgba(0,0,0,.2)",
@@ -27,7 +27,7 @@ const AboutCode = () => {
       >
         <Highlight theme={themes.okaidia} code={AboutString} language="tsx">
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
-            <pre className="bg-transparent inline-block">
+            <pre className="inline-block bg-transparent">
               {tokens.map((line, i) => (
                 <div key={i} {...getLineProps({ line })}>
                   {line.map((token, key) => (
@@ -40,7 +40,11 @@ const AboutCode = () => {
         </Highlight>
 
         <div>
-          <Image src={bloods} alt="icons" className=" absolute bottom-0 right-0 pointer-events-none " />
+          <Image
+            src={bloods}
+            alt="icons"
+            className=" pointer-events-none absolute bottom-0 right-0 "
+          />
         </div>
       </Tilty>
     </>

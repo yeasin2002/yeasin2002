@@ -3,7 +3,7 @@ import classes from "./MainLoader.module.css";
 
 const MainLoader = () => {
   return (
-    <div className="flex items-center justify-center w-full h-full">
+    <div className="flex h-full w-full items-center justify-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         height="200px"
@@ -57,21 +57,51 @@ const MainLoader = () => {
               className={classes.pencil__body3}
             ></circle>
           </g>
-          <g transform="rotate(-90) translate(49,0)" className={classes.pencil__eraser}>
+          <g
+            transform="rotate(-90) translate(49,0)"
+            className={classes.pencil__eraser}
+          >
             <g className={classes.pencil__eraser__skew}>
-              <rect height="30" width="30" ry="5" rx="5" fill="hsl(223,90%,70%)"></rect>
-              <rect clipPath="url(#pencil-eraser)" height="30" width="5" fill="hsl(223,90%,60%)"></rect>
+              <rect
+                height="30"
+                width="30"
+                ry="5"
+                rx="5"
+                fill="hsl(223,90%,70%)"
+              ></rect>
+              <rect
+                clipPath="url(#pencil-eraser)"
+                height="30"
+                width="5"
+                fill="hsl(223,90%,60%)"
+              ></rect>
               <rect height="20" width="30" fill="hsl(223,10%,90%)"></rect>
               <rect height="20" width="15" fill="hsl(223,10%,70%)"></rect>
               <rect height="20" width="5" fill="hsl(223,10%,80%)"></rect>
-              <rect height="2" width="30" y="6" fill="hsla(223,10%,10%,0.2)"></rect>
-              <rect height="2" width="30" y="13" fill="hsla(223,10%,10%,0.2)"></rect>
+              <rect
+                height="2"
+                width="30"
+                y="6"
+                fill="hsla(223,10%,10%,0.2)"
+              ></rect>
+              <rect
+                height="2"
+                width="30"
+                y="13"
+                fill="hsla(223,10%,10%,0.2)"
+              ></rect>
             </g>
           </g>
-          <g transform="rotate(-90) translate(49,-30)" className={classes.pencil__point}>
+          <g
+            transform="rotate(-90) translate(49,-30)"
+            className={classes.pencil__point}
+          >
             <polygon points="15 0,30 30,0 30" fill="hsl(33,90%,70%)"></polygon>
             <polygon points="15 0,6 30,0 30" fill="hsl(33,90%,50%)"></polygon>
-            <polygon points="15 0,20 10,10 10" fill="hsl(223,10%,10%)"></polygon>
+            <polygon
+              points="15 0,20 10,10 10"
+              fill="hsl(223,10%,10%)"
+            ></polygon>
           </g>
         </g>
       </svg>

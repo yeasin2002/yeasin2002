@@ -10,8 +10,18 @@ import AcademyContact from "./AcademyContact";
 const Academic = () => {
   return (
     <div>
-      <EduCard name={"Bhashantek Govt. Secondary School"} imageData={bgss} AcademicYear={"2020-2021"} LastExam="SSC" />
-      <EduCard name={"Vashantek Govt. Collage"} imageData={vgc} AcademicYear={"2021-2022"} LastExam="HSC" />
+      <EduCard
+        name={"Bhashantek Govt. Secondary School"}
+        imageData={bgss}
+        AcademicYear={"2020-2021"}
+        LastExam="SSC"
+      />
+      <EduCard
+        name={"Vashantek Govt. Collage"}
+        imageData={vgc}
+        AcademicYear={"2021-2022"}
+        LastExam="HSC"
+      />
     </div>
   );
 };

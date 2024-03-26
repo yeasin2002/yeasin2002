@@ -20,7 +20,7 @@
 <img src="https://skillicons.dev/icons?i=ts,next,tailwind,redux" /> <img src="./public/icons/zustand.svg" width="50" /> <img src="./public/icons/react-query.svg" width="50" />
 
 #### Familiar with [ Back End ]
-![Back End](https://skillicons.dev/icons?i=nodejs,express,mongodb)
+![Back End](https://skillicons.dev/icons?i=nodejs,express,mysql)
 
 
 #### Others

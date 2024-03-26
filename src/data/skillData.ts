@@ -3,17 +3,21 @@ import skillDataTypes from "./skillData.d";
 //! front end
 import next from "@/assets/icons/next2svg.svg";
 import react from "@/assets/icons/react.svg";
+import tanStackQuery from "@/assets/icons/skill_icons/react-query.svg";
 import redux from "@/assets/icons/skill_icons/Redux.svg";
 import typeScript from "@/assets/icons/skill_icons/TypeScript.svg";
-import tanStackQuery from "@/assets/icons/skill_icons/react-query.svg";
 import zustand from "@/assets/icons/skill_icons/zustand.svg";
 import tailwind from "@/assets/icons/tailwind.svg";
 
 //! back ends
 import express from "@/assets/icons/skill_icons/ExpressJS-Dark.svg";
-import MongoDB from "@/assets/icons/skill_icons/MongoDB.svg";
+import mysql from "@/assets/icons/skill_icons/MySQL.svg";
 import node from "@/assets/icons/skill_icons/NodeJS-Dark.svg";
-import socket from "@/assets/icons/socketio.svg";
+import postgreSQL from "@/assets/icons/skill_icons/postgresql.svg";
+import Sequelize from "@/assets/icons/skill_icons/Sequelize.svg";
+
+// import MongoDB from "@/assets/icons/skill_icons/MongoDB.svg";
+// import socket from "@/assets/icons/socketio.svg";
 
 //! tools
 import gitAndGithub from "@/assets/icons/gitAndGithubsvg.svg";
@@ -51,7 +55,7 @@ const skillData: skillDataTypes = {
     {
       title: "Redux Toolkit",
       icon: redux,
-      stage: "advance",
+      stage: "intermediate",
     },
 
     {
@@ -62,7 +66,7 @@ const skillData: skillDataTypes = {
     {
       title: "TanStack Query",
       icon: tanStackQuery,
-      stage: "intermediate",
+      stage: "advance",
     },
   ],
   BackEnd: [
@@ -78,15 +82,21 @@ const skillData: skillDataTypes = {
     },
 
     {
-      title: "MongoDB",
-      icon: MongoDB,
+      title: "MySQL",
+      icon: mysql,
       stage: "beginner",
     },
+
     {
-      title: "socket.io",
-      icon: socket,
+      title: "Sequelize",
+      icon: Sequelize,
       stage: "beginner",
     },
+    // {
+    //   title: "socket.io",
+    //   icon: socket,
+    //   stage: "beginner",
+    // },
   ],
   Tools: [
     {

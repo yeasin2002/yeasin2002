@@ -12,8 +12,9 @@
 
 - 💬 Loves to Talk about Technology, Software, Coding, And Ideas 
 - 🤝 Open for Collaboration, Excited to collaborate on innovative projects.
+- 💥 Explorering Bunjs,MySQL 
 - 🌱 currently learning many things Such as Nextjs, JavaScript, and TypeScript Fundamentals & Advance and  Back-End with Node/express
-- 🏫 We have a great community called [wd hive](https://github.com/wdhive) , Also have [Messenger](https://l.messenger.com/l.php?u=https%3A%2F%2Fm.me%2Fj%2FAbYRqd07CPovLcls%2F&h=AT3omrCWUUMjE7qdoriL7gyIBQllWEPuFFSKeL1j7ywpWMAZX-x6rCaRmzsT9zjRihEcl2wwa549Z0gS-t3smUB1DQ9H3kjRPA1LWiBqtkedfdFnxaoMeTLho7TMLNiF95L5GA) group where greeks help each other since last two year.
+
 
 #### Specialized In [ Front End ]
 

@@ -53,10 +53,15 @@
        <img src="https://img.shields.io/badge/leetcode-323330?style=for-the-badge&logo=leetcode&logoColor=white" />
     </a>
 
+<a href="https://dev.to/yeasin2002">
+       <img src="https://img.shields.io/badge/dev.to-323330?style=for-the-badge&logo=dev.to&logoColor=white" />
+    </a>
+
 <br  />
 
 
 
+<!-- 
 
 <details >
 <summary>  <h3 > 📈 GitHub States (Click to Open) </h3> </summary>
@@ -70,7 +75,7 @@
 [![Leetcode Stats](https://leetcard.jacoblin.cool/yeasin2002)](https://leetcode.com/yeasin2002)
 
 </details>
-
+--> 
 
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=80&section=footer&fontSize=20"  /></p>

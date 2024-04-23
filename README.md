@@ -62,11 +62,13 @@
 
 
 
-<!-- 
 
 <details >
-<summary>  <h3 > 📈 GitHub States (Click to Open) </h3> </summary>
-<br>
+<summary>  <h4 > 📈 GitHub States (Click to Open) </h4> </summary>
+<be>
+
+  ![yeasin-2002's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=yeasin-2002&theme=vue-dark&show_icons=true&hide_border=true&layout=compact)
+
 
 ![My GitHub stats](https://github-readme-stats.vercel.app/api?username=yeasin-2002&show_icons=true)
 
@@ -75,8 +77,9 @@
 
 [![Leetcode Stats](https://leetcard.jacoblin.cool/yeasin2002)](https://leetcode.com/yeasin2002)
 
+
+
 </details>
---> 
 
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=80&section=footer&fontSize=20"  /></p>

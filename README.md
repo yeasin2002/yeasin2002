@@ -7,13 +7,12 @@
 
  </br>
 
-##### Currently, **I'm open to work and employment opportunities near Dhaka or Remote**.  [Download My CV](https://drive.google.com/file/d/1pLKyzj2BLvAKvWZCmg7OIhOWcydbO1xT/view?usp=sharing)
+##### Currently, **I'm open to work and employment opportunities near Dhaka or Remote**.  [Download My CV](https://drive.google.com/file/d/1Mg_3eN4rJPD3rvfv4LLEBAwpcw42sLwB/view?usp=drive_link)
 
 
 - 💬 Loves to Talk about Technology, Software, Coding, And Ideas 
 - 🤝 Open for Collaboration, Excited to collaborate on innovative projects.
-- 💥 Explorering Bunjs,MySQL 
-- 🌱 currently learning many things Such as Nextjs, JavaScript, and TypeScript Fundamentals & Advance and  Back-End with Node/express
+- 🌱 Explorering Go,MySQL,MongoDB  etc. 
 
 
 #### Specialized In [ Front End ]

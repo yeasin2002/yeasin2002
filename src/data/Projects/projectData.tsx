@@ -1,7 +1,8 @@
-import { StaticImageData } from "next/image";
+import type { StaticImageData } from "next/image";
 
 //  projects Images
 import amader_bazar from "@/assets/projects/amader_bazar.png";
+import brightshift from "@/assets/projects/brightshift.png";
 import chainVers from "@/assets/projects/chiptoChainvers.png";
 import insurgency from "@/assets/projects/insurgency.png";
 import kismatTravel from "@/assets/projects/kismat-travel.png";
@@ -12,6 +13,7 @@ import twindCli from "@/assets/projects/twindCli.png";
 
 export type projectTypes = {
   name: string;
+  notes?: string;
   ProjectImage: StaticImageData;
   liveLink?: string;
   gitHubLink?: string;
@@ -29,15 +31,15 @@ const projectData: projectTypes[] = [
     description:
       "A full stack e-commerce website\n , The project is an online store that sells a variety of products and allows customers to browse, purchase, and track their orders. This repository contains only the code for the dashboard, which provides an interface for store administrators to manage products, view sales data, and track orders",
   },
-
   {
-    name: "TaskHub",
-    ProjectImage: TaskHub,
-    gitHubLink: "https://github.com/Mdkawsarislam2002/TaskHub",
-    liveLink: "https://taskhub2002.netlify.app/",
-    tag: ["React", "Redux", "Tailwindcss"],
+    name: "brightshift ",
+    notes: "Under Development",
+    ProjectImage: brightshift,
+    liveLink: "",
+    gitHubLink: "",
+    tag: ["Go", "Wails", "Nextjs", "Hybrid application"],
     description:
-      "A task management application with the ability to collaborate with others Todo-App is a kind of app that generally used to maintain our day-to-day tasks or list everything that we have to do, with the most important tasks at the top of the list, and the least important tasks at the bottom. It is helpful in planning our daily schedules",
+      "A hybrid application for the job seeker, This website will show all the job circulars. And you can set your preference and get a notification when a job circular is published. \n Currently it's under development.",
   },
   {
     name: "Kismat Travels",
@@ -54,6 +56,15 @@ const projectData: projectTypes[] = [
     ],
     description:
       "An OTA (Online Travel Agency) website. This website is for booking flights from Bangladesh  ",
+  },
+  {
+    name: "TaskHub",
+    ProjectImage: TaskHub,
+    gitHubLink: "https://github.com/Mdkawsarislam2002/TaskHub",
+    liveLink: "https://taskhub2002.netlify.app/",
+    tag: ["React", "Redux", "Tailwindcss"],
+    description:
+      "A task management application with the ability to collaborate with others Todo-App is a kind of app that generally used to maintain our day-to-day tasks or list everything that we have to do, with the most important tasks at the top of the list, and the least important tasks at the bottom. It is helpful in planning our daily schedules",
   },
 
   {

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DetailedHTMLProps, FC, HTMLAttributes } from "react";
+import type { DetailedHTMLProps, FC, HTMLAttributes } from "react";
 
 import {
   Popover,

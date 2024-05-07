@@ -143,4 +143,7 @@
   .projectShowcase {
     @apply h-auto w-full border border-teal-500;
   }
+  .contact-input-wrapper {
+    @apply my-4 grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-2 
+  }
 }

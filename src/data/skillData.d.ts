@@ -12,4 +12,5 @@ export default interface skillDataTypes {
   FrontEnd: Item[];
   BackEnd: Item[];
   Tools: Item[];
+  Vision: Item[];
 }

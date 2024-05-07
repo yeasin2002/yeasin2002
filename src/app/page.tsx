@@ -6,7 +6,7 @@ import ProjectNext from "@/sections/ProjectNext/ProjectNext";
 import Skills from "@/sections/Skills/Skills";
 import Contact from "@/sections/contact/Contact";
 
-// import { LenisWrapper } from "@/components/Globals/LenisWrapper";
+import { Toaster } from "react-hot-toast";
 
 export default function Home() {
   return (
@@ -18,6 +18,7 @@ export default function Home() {
       <ProjectNext />
       <Contact />
       <Footer />
+      <Toaster />
     </>
   );
 }

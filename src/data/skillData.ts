@@ -1,4 +1,4 @@
-import skillDataTypes from "./skillData.d";
+import type skillDataTypes from "./skillData.d";
 
 //! front end
 import next from "@/assets/icons/next2svg.svg";
@@ -11,22 +11,20 @@ import tailwind from "@/assets/icons/tailwind.svg";
 
 //! back ends
 import express from "@/assets/icons/skill_icons/ExpressJS-Dark.svg";
-import mysql from "@/assets/icons/skill_icons/MySQL.svg";
+import mongodb from "@/assets/icons/skill_icons/MongoDB.svg";
 import node from "@/assets/icons/skill_icons/NodeJS-Dark.svg";
-import postgreSQL from "@/assets/icons/skill_icons/postgresql.svg";
-import Sequelize from "@/assets/icons/skill_icons/Sequelize.svg";
-
-// import MongoDB from "@/assets/icons/skill_icons/MongoDB.svg";
-// import socket from "@/assets/icons/socketio.svg";
 
 //! tools
 import gitAndGithub from "@/assets/icons/gitAndGithubsvg.svg";
 import figma from "@/assets/icons/skill_icons/Figma-Dark.svg";
-import firebase from "@/assets/icons/skill_icons/firebase.svg";
 import framerMotion from "@/assets/icons/skill_icons/framer-motion.svg";
 import notion from "@/assets/icons/skill_icons/notions.svg";
-import vsCode from "@/assets/icons/skill_icons/vscode.svg";
-import vite from "@/assets/icons/vite.svg";
+
+// Vision
+import docker from "@/assets/icons/skill_icons/Docker.svg";
+import go from "@/assets/icons/skill_icons/GoLang.svg";
+import linux from "@/assets/icons/skill_icons/Linux-Dark.svg";
+import mysql from "@/assets/icons/skill_icons/MySQL.svg";
 
 const skillData: skillDataTypes = {
   FrontEnd: [
@@ -82,21 +80,10 @@ const skillData: skillDataTypes = {
     },
 
     {
-      title: "MySQL",
-      icon: mysql,
-      stage: "beginner",
+      title: "MongoDB",
+      icon: mongodb,
+      stage: "intermediate",
     },
-
-    {
-      title: "Sequelize",
-      icon: Sequelize,
-      stage: "beginner",
-    },
-    // {
-    //   title: "socket.io",
-    //   icon: socket,
-    //   stage: "beginner",
-    // },
   ],
   Tools: [
     {
@@ -104,16 +91,7 @@ const skillData: skillDataTypes = {
       icon: gitAndGithub,
       stage: "intermediate",
     },
-    {
-      title: "Firebase",
-      icon: firebase,
-      stage: "beginner",
-    },
-    {
-      title: "Framer Motion",
-      icon: framerMotion,
-      stage: "beginner",
-    },
+
     {
       title: "Figma",
       icon: figma,
@@ -126,14 +104,31 @@ const skillData: skillDataTypes = {
       stage: "intermediate",
     },
     {
-      title: "Vite",
-      icon: vite,
-      stage: "intermediate",
+      title: "Framer Motion",
+      icon: framerMotion,
+      stage: "beginner",
+    },
+  ],
+  Vision: [
+    {
+      title: "Linux",
+      icon: linux,
+      stage: "beginner",
     },
     {
-      title: "VS Code",
-      icon: vsCode,
-      stage: "advance",
+      title: "MySQL",
+      icon: mysql,
+      stage: "beginner",
+    },
+    {
+      title: "GoLang",
+      icon: go,
+      stage: "beginner",
+    },
+    {
+      title: "Docker",
+      icon: docker,
+      stage: "beginner",
     },
   ],
 };

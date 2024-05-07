@@ -1,19 +1,20 @@
 "use client";
 
+import Link from "next/link";
+import { useState } from "react";
+
 import { Meteors } from "$components/aceternity";
 import FoldText from "@/components/Unique/Buttons/FoldText/FoldText";
 import LiyaxuInput from "@/components/Unique/Input/liyaxuInput";
 import projectData from "@/data/Projects/projectData";
-import NextProjectCard from "@/sections//ProjectNext/NextProjectCard";
-import Link from "next/link";
-import { useState } from "react";
+import NextProjectCard from "@/sections/ProjectNext/NextProjectCard";
 
 const AllProjects = () => {
   const [searchValue, setSearchValue] = useState("");
 
   const filteredProjects =
     projectData.filter((project) =>
-      project?.name?.toLowerCase().includes(searchValue.toLowerCase()),
+      project?.name?.toLowerCase().includes(searchValue.toLowerCase())
     ) || ([] as typeof projectData);
 
   return (
@@ -44,7 +45,7 @@ const AllProjects = () => {
           {filteredProjects?.map((value, index) => {
             return (
               <NextProjectCard
-                key={index}
+                key={crypto.randomUUID()}
                 ProjectImage={value.ProjectImage}
                 id={index}
                 name={value.name}
@@ -53,6 +54,7 @@ const AllProjects = () => {
                 tag={value.tag}
                 description={value.description}
                 isTranslate={false}
+                notes={value.notes}
               />
             );
           })}

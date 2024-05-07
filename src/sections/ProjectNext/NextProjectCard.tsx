@@ -1,5 +1,5 @@
 import github from "@/assets/3d/github.png";
-import { projectTypes } from "@/data/Projects/projectData";
+import type { projectTypes } from "@/data/Projects/projectData";
 import { GupterFont, MooliFont, OswaldFont } from "@/utils/GoogleFonts";
 import Image from "next/image";
 import React from "react";
@@ -19,6 +19,7 @@ const NextProjectCard = ({
   description,
   tag,
   isTranslate,
+  notes,
 }: projectTypes & nextProjectCardProps) => {
   return (
     <div
@@ -39,6 +40,7 @@ const NextProjectCard = ({
             className={`text-xl font-bold text-blue-100   2xl:py-2 2xl:text-6xl ${OswaldFont.className}`}
           >
             {name}
+            {notes && <span>- {notes}</span>}
           </h3>
           <div className="flex items-center justify-center gap-x-2 2xl:gap-x-5">
             {gitHubLink && (
@@ -70,7 +72,7 @@ const NextProjectCard = ({
           return (
             <p
               className={`text-gray-300 2xl:text-2xl ${GupterFont.className} `}
-              key={tech + i}
+              key={crypto.randomUUID()}
             >
               #{tech}
             </p>

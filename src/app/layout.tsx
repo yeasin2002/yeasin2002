@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       "Portfolio of  Md Kawsar Islam Yeasin , a software Developer,Front end web developer, web developer and web designer,programmer,  from Bangladesh.",
     type: "website",
     locale: "en_IE",
-    url: "https://yeasin2002.netlify.app",
+    url: "https://yeasin2002.vercel.app/",
     siteName: "Md Kawsar Islam Yeasin",
     emails: "mdkawsarislam2002@gmail.com",
     countryName: "Bangladesh",

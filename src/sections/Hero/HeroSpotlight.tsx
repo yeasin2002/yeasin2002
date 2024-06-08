@@ -18,8 +18,8 @@ export function HeroSpotlight() {
       <div className="relative z-10 w-full p-4 pt-20 mx-auto max-w-7xl md:pt-0">
         <h1
           className={cn(
-            "silver-text text-center text-4xl font-bold md:text-6xl",
-            TitleFont.className
+            "silver-text text-center text-4xl font-bold md:text-6xl "
+            // TitleFont.className
           )}
         >
           MD KAWSAR ISLAM YEASIN

@@ -36,7 +36,7 @@ const projectData: projectTypes[] = [
     notes: "Under Development",
     ProjectImage: brightshift,
     liveLink: "",
-    gitHubLink: "",
+    gitHubLink: "https://github.com/brightshift/brightshift-ui",
     tag: ["Go", "Wails", "Nextjs", "Hybrid application"],
     description:
       "A hybrid application for the job seeker, This website will show all the job circulars. And you can set your preference and get a notification when a job circular is published. \n Currently it's under development.",

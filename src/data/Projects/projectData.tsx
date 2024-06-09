@@ -68,7 +68,26 @@ const projectData: projectTypes[] = [
   },
 
   {
-    name: "Story Craft - insurance agency",
+    name: "chiptoChainvers",
+    ProjectImage: chainVers,
+    liveLink: "https://crypto-chainverse.netlify.app/",
+    gitHubLink: "",
+    tag: ["React", "Tailwindcss"],
+    description: "Landing Page of Crypto currency selling website",
+  },
+
+  {
+    name: "kiyMovie",
+    ProjectImage: kiyMovie,
+    liveLink: "https://crypto-chainverse.netlify.app/",
+    gitHubLink: "https://github.com/Mdkawsarislam2002/kiy-movies",
+    tag: ["React", "Tailwindcss", "firebase", "IMDB"],
+    description:
+      "Movie Showing website using IMDB API. You can search for any movie and see the details of the movie.",
+  },
+
+  {
+    name: "Story Craft - Blog",
     ProjectImage: storyCraft,
     liveLink: "",
     gitHubLink: "https://github.com/yeasin-2002/StoryCraft",
@@ -87,31 +106,13 @@ const projectData: projectTypes[] = [
     Insurantly   is an insurance agency website. You can buy insurance from this website.    `,
   },
   {
-    name: "chiptoChainvers",
-    ProjectImage: chainVers,
-    liveLink: "https://crypto-chainverse.netlify.app/",
-    gitHubLink: "",
-    tag: ["React", "Tailwindcss"],
-    description: "Landing Page of Crypto currency selling website",
-  },
-
-  {
-    name: "kiyMovie",
-    ProjectImage: kiyMovie,
-    liveLink: "https://crypto-chainverse.netlify.app/",
-    gitHubLink: "https://github.com/Mdkawsarislam2002/kiy-movies",
-    tag: ["React", "Tailwindcss", "firebase", "IMDB"],
-    description:
-      "Movie Showing website using IMDB API. You can search for any movie and see the details of the movie.",
-  },
-  {
     name: "Twind-CLI (Alfa)",
     ProjectImage: twindCli,
     gitHubLink: "https://github.com/Mdkawsarislam2002/T_Wind-cli",
     liveLink: "",
     tag: ["nodejs", "TypeScript", "Tailwindcss", "CLI"],
     description:
-      "Tailwind is the most popular CSS Framework but installing and using Tailwind CSS from scratch is a little bit complicated, So using twind-cli you can setup Tailwind within a second.",
+      " [deprecated] Tailwind is the most popular CSS Framework but installing and using Tailwind CSS from scratch is a little bit complicated, So using twind-cli you can setup Tailwind within a second.",
   },
 ];
 

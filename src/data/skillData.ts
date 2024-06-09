@@ -13,6 +13,7 @@ import tailwind from "@/assets/icons/tailwind.svg";
 import express from "@/assets/icons/skill_icons/ExpressJS-Dark.svg";
 import mongodb from "@/assets/icons/skill_icons/MongoDB.svg";
 import node from "@/assets/icons/skill_icons/NodeJS-Dark.svg";
+import prisma from "@/assets/icons/skill_icons/prisma.svg";
 
 //! tools
 import gitAndGithub from "@/assets/icons/gitAndGithubsvg.svg";
@@ -83,6 +84,11 @@ const skillData: skillDataTypes = {
       title: "MongoDB",
       icon: mongodb,
       stage: "intermediate",
+    },
+    {
+      title: "Prisma",
+      icon: prisma,
+      stage: "beginner",
     },
   ],
   Tools: [

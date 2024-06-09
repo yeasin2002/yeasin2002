@@ -6,6 +6,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+
 import { cn } from "@/lib/utils";
 import { robotoSlab } from "@/utils/GoogleFonts";
 import { RiMenu3Fill } from "react-icons/ri";
@@ -16,11 +17,12 @@ interface MobileNavProps
 export const MobileNav: FC<MobileNavProps> = ({ ...rest }) => {
   return (
     <div {...rest}>
-      <Popover>
-        <PopoverTrigger className="cursor-pointer rounded-full bg-gray-100   p-2 text-lg font-semibold transition-all hover:bg-gray-200">
-          <RiMenu3Fill className="text-slate-950 " />
-        </PopoverTrigger>
-        <PopoverContent className="relative -left-5 top-5 flex w-40 flex-col">
+      <>
+        {/* <PopoverTrigger className="cursor-pointer rounded-full bg-gray-100   p-2 text-lg font-semibold transition-all hover:bg-gray-200"> */}
+        {/* <RiMenu3Fill className="text-slate-950 " /> */}
+        {/* </PopoverTrigger> */}
+        {/* <PopoverContent className="relative -left-5 top-5 flex w-40 flex-col"> */}
+        <div className="relative -left-5 top-5 flex w-40 flex-col">
           {navItems.map((val) => {
             return (
               <Link
@@ -35,8 +37,8 @@ export const MobileNav: FC<MobileNavProps> = ({ ...rest }) => {
               </Link>
             );
           })}
-        </PopoverContent>
-      </Popover>
+        </div>
+      </>
     </div>
   );
 };

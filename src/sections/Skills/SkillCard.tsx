@@ -4,7 +4,7 @@ import React from "react";
 //  icons and types
 import Revel from "@/components/Globals/Revel";
 import { ChelseaFont } from "@/utils/GoogleFonts";
-import { Item } from "./LoopOverSkill";
+import type { Item } from "./LoopOverSkill";
 
 interface thisProps extends Item {
   index: number;
@@ -42,7 +42,7 @@ const SkillCard = ({
             style={{
               boxShadow: boxShadowColor,
             }}
-          ></span>
+          />
           <div className="mx-4">
             <Image
               src={icon}

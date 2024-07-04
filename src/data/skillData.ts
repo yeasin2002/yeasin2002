@@ -1,13 +1,13 @@
 import type skillDataTypes from "./skillData.d";
 
 //! front end
-import next from "@/assets/icons/next2svg.svg";
-import react from "@/assets/icons/react.svg";
+import next from "@/assets/icons/skill_icons/next2svg.svg";
 import tanStackQuery from "@/assets/icons/skill_icons/react-query.svg";
+import react from "@/assets/icons/skill_icons/react.svg";
 import redux from "@/assets/icons/skill_icons/Redux.svg";
+import tailwind from "@/assets/icons/skill_icons/tailwind.svg";
 import typeScript from "@/assets/icons/skill_icons/TypeScript.svg";
 import zustand from "@/assets/icons/skill_icons/zustand.svg";
-import tailwind from "@/assets/icons/tailwind.svg";
 
 //! back ends
 import express from "@/assets/icons/skill_icons/ExpressJS-Dark.svg";
@@ -16,9 +16,9 @@ import node from "@/assets/icons/skill_icons/NodeJS-Dark.svg";
 import prisma from "@/assets/icons/skill_icons/prisma.svg";
 
 //! tools
-import gitAndGithub from "@/assets/icons/gitAndGithubsvg.svg";
 import figma from "@/assets/icons/skill_icons/Figma-Dark.svg";
 import framerMotion from "@/assets/icons/skill_icons/framer-motion.svg";
+import gitAndGithub from "@/assets/icons/skill_icons/gitAndGithubsvg.svg";
 import notion from "@/assets/icons/skill_icons/notions.svg";
 
 // Vision

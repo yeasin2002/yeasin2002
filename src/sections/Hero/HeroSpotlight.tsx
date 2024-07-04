@@ -5,7 +5,8 @@ import { Meteors, Spotlight } from "@/components/aceternity";
 import { SubtitleFont, TitleFont } from "@/utils";
 import { cn } from "@/utils/cn";
 
-import BlueStar_Btn from "$components/Unique/Buttons/BlueStar/BlueStar_Btn";
+import { HireMe } from "$components/Buttons/HireMe";
+
 import Space_Btn from "$components/Unique/Buttons/Space_Btn/Space_Btn";
 
 export function HeroSpotlight() {
@@ -19,28 +20,26 @@ export function HeroSpotlight() {
         <h1
           className={cn(
             "silver-text text-center text-4xl font-bold md:text-6xl "
-            // TitleFont.className
           )}
         >
           MD KAWSAR ISLAM YEASIN
         </h1>
         <p
           className={cn(
-            "mx-auto mt-4 max-w-xl text-center text-base font-normal text-neutral-300 ",
+            "mx-auto mt-4 max-w-2xl text-center text-base font-normal text-neutral-300 ",
             SubtitleFont.className
           )}
         >
-          A self-taught Front-end web developer, who loves to build things for
-          the web with a passion for creating visually appealing web
-          applications and a flair for TypeScript and Next.Js
+          Hello, I am yeasin form Dhaka and I am 21 year old. {`I'm`} a
+          self-taught front-end focused Full Stack Web Developer. TypeScript and
+          Nextjs enthusiast. I have been doing freelance project from last 1
+          year and working with teams to make good projects.
+          <br />
+          {`Let's`} build something amazing together! 🖤
         </p>
         <div className="flex flex-col items-center justify-center mt-10 gap-x-4 gap-y-3 sm:gap-y-0 md:flex-row ">
           <Space_Btn title="Download CV" />
-          <Link href={"/blogs"}>
-            <BlueStar_Btn className="text-lg xl:text-xl 2xl:text-2xl">
-              Blogs
-            </BlueStar_Btn>
-          </Link>
+          <HireMe />
         </div>
       </div>
       <Meteors number={20} />

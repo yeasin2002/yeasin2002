@@ -7,6 +7,7 @@ import chainVers from "@/assets/projects/chiptoChainvers.png";
 import insurgency from "@/assets/projects/insurgency.png";
 import kismatTravel from "@/assets/projects/kismat-travel.png";
 import kiyMovie from "@/assets/projects/kiyMovie.png";
+import rimasDental from "@/assets/projects/Rima-s-Dental.png";
 import storyCraft from "@/assets/projects/storyCraft.png";
 import TaskHub from "@/assets/projects/taskHub.png";
 import twindCli from "@/assets/projects/twindCli.png";
@@ -22,6 +23,14 @@ export type projectTypes = {
 };
 
 const projectData: projectTypes[] = [
+  {
+    name: "Rima's Dental",
+    ProjectImage: rimasDental,
+    liveLink: "https://rimas-dental.vercel.app/",
+    gitHubLink: "https://github.com/yeasin-2002/Rimas-Dental",
+    tag: ["Nextjs", "Prisma", "mongoDB"],
+    description: `Rimas Dental is a user-friendly website for dental clinics to efficiently manage operations. It facilitates patient appointment scheduling and features an intuitive dashboard for users, doctors, and sales management, providing insightful analytics to streamline clinic workflows.`,
+  },
   {
     name: "Amader bazar",
     ProjectImage: amader_bazar,

@@ -12,7 +12,7 @@ const Skills = () => {
       <LoopOverSkill skillType={skillData.FrontEnd} title="Front End" />
       <LoopOverSkill skillType={skillData.BackEnd} title="Back End" />
       <LoopOverSkill skillType={skillData.Tools} title="Others" />
-      <LoopOverSkill skillType={skillData.Vision} title="Vision / Exploring" />
+      {/* <LoopOverSkill skillType={skillData.Vision} title="Vision / Exploring" /> */}
     </section>
   );
 };

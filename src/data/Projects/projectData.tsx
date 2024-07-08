@@ -27,7 +27,7 @@ const projectData: projectTypes[] = [
     name: "Rima's Dental",
     ProjectImage: rimasDental,
     liveLink: "https://rimas-dental.vercel.app/",
-    gitHubLink: "https://github.com/yeasin-2002/Rimas-Dental",
+    gitHubLink: "https://github.com/yeasin2002/Rimas-Dental",
     tag: ["Nextjs", "Prisma", "mongoDB"],
     description: `Rimas Dental is a user-friendly website for dental clinics to efficiently manage operations. It facilitates patient appointment scheduling and features an intuitive dashboard for users, doctors, and sales management, providing insightful analytics to streamline clinic workflows.`,
   },
@@ -35,7 +35,7 @@ const projectData: projectTypes[] = [
     name: "Amader bazar",
     ProjectImage: amader_bazar,
     liveLink: "https://amaderbazar.netlify.app/",
-    gitHubLink: "https://github.com/yeasin-2002/Amazer_Bazar-client",
+    gitHubLink: "https://github.com/yeasin2002/Amazer_Bazar-client",
     tag: ["React", "Tailwindcss", "tanstack-query", "node/express", "mongoDB"],
     description:
       "A full stack e-commerce website\n , The project is an online store that sells a variety of products and allows customers to browse, purchase, and track their orders. This repository contains only the code for the dashboard, which provides an interface for store administrators to manage products, view sales data, and track orders",
@@ -53,7 +53,7 @@ const projectData: projectTypes[] = [
   {
     name: "Kismat Travels",
     ProjectImage: kismatTravel,
-    gitHubLink: "https://github.com/yeasin-2002/Kismat_Travels-OTA/tree/main",
+    gitHubLink: "https://github.com/yeasin2002/Kismat_Travels-OTA/tree/main",
     liveLink: "",
     tag: [
       "nextjs 12",
@@ -99,7 +99,7 @@ const projectData: projectTypes[] = [
     name: "Story Craft - Blog",
     ProjectImage: storyCraft,
     liveLink: "",
-    gitHubLink: "https://github.com/yeasin-2002/StoryCraft",
+    gitHubLink: "https://github.com/yeasin2002/StoryCraft",
     tag: ["nextjs 14", "Tailwindcss", "prisma", "notions Editor"],
     description: `Story Craft is a blog website. You can write your own blog and publish it. You can also read other's blog.`,
   },

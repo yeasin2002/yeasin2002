@@ -9,7 +9,6 @@ export interface Academy extends React.HtmlHTMLAttributes<HTMLDivElement> {
   courseInstituteImg?: StaticImageData;
   imageData: StaticImageData;
   desc?: string;
-  haveCertificate?: boolean;
   certificateUrl?: string;
 }
 
@@ -19,7 +18,6 @@ const TrainingCard = ({
   courseInstituteImg,
   imageData,
   desc,
-  haveCertificate,
   certificateUrl,
   ...props
 }: Academy) => {
@@ -60,7 +58,7 @@ const TrainingCard = ({
           </div>
         </div>
       </div>
-      {haveCertificate && (
+      {certificateUrl && (
         <a
           href={certificateUrl}
           download={courseName}

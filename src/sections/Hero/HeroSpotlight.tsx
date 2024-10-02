@@ -8,6 +8,7 @@ import { cn } from "@/utils/cn";
 import { HireMe } from "$components/Buttons/HireMe";
 
 import Space_Btn from "$components/Unique/Buttons/Space_Btn/Space_Btn";
+import { HireMeCTA } from "$components/Globals/HireMeCTA";
 
 export function HeroSpotlight() {
   return (
@@ -39,7 +40,8 @@ export function HeroSpotlight() {
         </p>
         <div className="flex flex-col items-center justify-center mt-10 gap-x-4 gap-y-3 sm:gap-y-0 md:flex-row ">
           <Space_Btn title="Download CV" />
-          <HireMe />
+          {/* <HireMe /> */}
+          <HireMeCTA />
         </div>
       </div>
       <Meteors number={20} />

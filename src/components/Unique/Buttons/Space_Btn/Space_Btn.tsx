@@ -3,7 +3,7 @@ import classes from "./Space_Btn.module.css";
 const Space_Btn = ({ title = "space", ...rest }: SpaceBtn) => {
   return (
     <a
-      href={"/Yeasin2002.pdf"}
+      href={"/yeasin2002.pdf"}
       download={"yeasin2002"}
       target="_blank"
       rel="noopener noreferrer"

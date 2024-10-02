@@ -14,7 +14,6 @@ const Training = () => {
         desc="Batch 1"
         imageData={redux}
         courseInstituteImg={lws}
-        haveCertificate
         certificateUrl={"/LWS-Certificate.pdf"}
       />
       <TrainingCard
@@ -23,6 +22,7 @@ const Training = () => {
         imageData={react}
         desc="Batch 1"
         courseInstituteImg={lws}
+        certificateUrl="rnext.pdf"
       />
     </div>
   );

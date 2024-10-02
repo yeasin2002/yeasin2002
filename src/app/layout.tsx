@@ -11,10 +11,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body
         className="overflow-x-hidden"
-        style={{
-          background: "#000000",
-          color: "white",
-        }}
+        style={{ background: "#000000", color: "white" }}
       >
         {children}
       </body>

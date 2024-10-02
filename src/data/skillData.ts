@@ -14,17 +14,18 @@ import express from "@/assets/icons/skill_icons/ExpressJS-Dark.svg";
 import mongodb from "@/assets/icons/skill_icons/MongoDB.svg";
 import node from "@/assets/icons/skill_icons/NodeJS-Dark.svg";
 import prisma from "@/assets/icons/skill_icons/prisma.svg";
+import graphql from "@/assets/icons/skill_icons/graphql.svg";
 
 //! tools
 import figma from "@/assets/icons/skill_icons/Figma-Dark.svg";
 import framerMotion from "@/assets/icons/skill_icons/framer-motion.svg";
 import gitAndGithub from "@/assets/icons/skill_icons/gitAndGithubsvg.svg";
 import notion from "@/assets/icons/skill_icons/notions.svg";
+import linux from "@/assets/icons/skill_icons/Linux-Dark.svg";
 
-// Vision
+//! Vision
 import docker from "@/assets/icons/skill_icons/Docker.svg";
 import go from "@/assets/icons/skill_icons/GoLang.svg";
-import linux from "@/assets/icons/skill_icons/Linux-Dark.svg";
 import mysql from "@/assets/icons/skill_icons/MySQL.svg";
 
 const skillData: skillDataTypes = {
@@ -85,9 +86,10 @@ const skillData: skillDataTypes = {
       icon: mongodb,
       stage: "intermediate",
     },
+
     {
-      title: "Prisma",
-      icon: prisma,
+      title: "Graphql",
+      icon: graphql,
       stage: "beginner",
     },
   ],
@@ -110,17 +112,12 @@ const skillData: skillDataTypes = {
       stage: "intermediate",
     },
     {
-      title: "Framer Motion",
-      icon: framerMotion,
-      stage: "beginner",
-    },
-  ],
-  Vision: [
-    {
       title: "Linux",
       icon: linux,
       stage: "beginner",
     },
+  ],
+  Vision: [
     {
       title: "MySQL",
       icon: mysql,

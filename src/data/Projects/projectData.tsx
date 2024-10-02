@@ -11,6 +11,7 @@ import rimasDental from "@/assets/projects/Rima-s-Dental.png";
 import storyCraft from "@/assets/projects/storyCraft.png";
 import TaskHub from "@/assets/projects/taskHub.png";
 import twindCli from "@/assets/projects/twindCli.png";
+import lokingForSortru from "@/assets/projects/lookingForSotru.jpg";
 
 export type projectTypes = {
   name: string;
@@ -49,6 +50,15 @@ const projectData: projectTypes[] = [
     tag: ["Go", "Wails", "Nextjs", "Hybrid application"],
     description:
       "A hybrid application for the job seeker, This website will show all the job circulars. And you can set your preference and get a notification when a job circular is published. \n Currently it's under development.",
+  },
+  {
+    name: "brightshift ",
+    notes: "",
+    ProjectImage: lokingForSortru,
+    liveLink: "https://looking-for-sotru.vercel.app/",
+    gitHubLink: "https://github.com/yeasin2002/Looking-for-sotru",
+    tag: ["Landing Page", "Tailwindcss", "Nextjs"],
+    description: `I noticed many of you have been posting about him and he’s gone viral on social media, so I thought, why not create a portfolio about Babor? Just for fun, actually. It only took me a few hours to put together. If you spot any mistakes, I kindly ask for your understanding and forgiveness. Also, If you are looking for a Web Developer feel free to DM me. I’m also Open, Looking for clients.`,
   },
   {
     name: "Kismat Travels",

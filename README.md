@@ -12,11 +12,11 @@ Let's build something amazing together! 🖤
 
  </br>
 
-##### Currently, **I'm open to work and employment opportunities near Dhaka or Remote**. [Download My CV](https://drive.google.com/file/d/1Mg_3eN4rJPD3rvfv4LLEBAwpcw42sLwB/view?usp=drive_link)
+##### Currently, **I'm open to work and employment opportunities near Dhaka or Remote**
 
 - 💬 Loves to Talk about Technology, Software, Coding, And Ideas
 - 🤝 Open for Collaboration, Excited to collaborate on innovative projects.
-- 🌱 Explorering Go,Database,Linux, AWS etc.
+- 🌱 Explorering Back-EndDatabase,Linux,AWS etc.
 
 #### Specialized In [ Front End ]
 
@@ -24,7 +24,7 @@ Let's build something amazing together! 🖤
 
 #### Familiar with [ Back End ]
 
-![Back End](https://skillicons.dev/icons?i=nodejs,express,mongodb,prisma)
+![Back End](https://skillicons.dev/icons?i=nodejs,nest,mongodb,prisma,postgresql,graphql) 
 
 #### Others
 

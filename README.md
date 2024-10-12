@@ -16,13 +16,13 @@ Let's build something amazing together! 🖤
 
 - 💬 Loves to Talk about Technology, Software, Coding, And Ideas
 - 🤝 Open for Collaboration, Excited to collaborate on innovative projects.
-- 🌱 Explorering Back-EndDatabase,Linux,AWS etc.
+- 🌱 Explorering Back-End, Database,Linux etc.
 
 #### Specialized In [ Front End ]
 
 <img src="https://skillicons.dev/icons?i=ts,next,tailwind,redux" /> <img src="./public/icons/zustand.svg" width="50" /> <img src="./public/icons/react-query.svg" width="50" />
 
-#### Familiar with [ Back End ]
+#### Learning [ Back End ]
 
 ![Back End](https://skillicons.dev/icons?i=nodejs,nest,mongodb,prisma,postgresql,graphql) 
 

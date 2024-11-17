@@ -1,34 +1,34 @@
   <h1> 💫 Hi, I'm Md Kawsar Islam Yeasin</h1>
   <p>A chef Who loves to cook visually appealing web applications with different technologies.  </p>
 
- </br>
- 
- ###  About Me
- <p> Hello, I am yeasin form Dhaka and I am 21 year old. I'm a  self-taught front-end focused Full Stack Web Developer.  TypeScript and Nextjs enthusiast. I have been doing freelance project  from last 1 year and working with teams to make good  projects.
- With a keen eye for detail and a dedication to writing clean, efficient code, I strive to build user-friendly and visually appealing web applications.
-Let's build something amazing together! 🖤
+Hello, I am yeasin form Dhaka and I am 22 year old. I'm a self-taught front-end focused Full Stack Web Developer. TypeScript and Nextjs enthusiast. I have been doing freelance project from last 1 year and working with teams to make good projects.
+Wanna collaborate? Let's build something amazing together! 🖤
 
- </p>
-
- </br>
-
-##### Currently, **I'm open to work and employment opportunities near Dhaka or Remote**
+<!-- ##### Currently, **I'm open to work and employment opportunities near Dhaka or Remote** -->
 
 - 💬 Loves to Talk about Technology, Software, Coding, And Ideas
 - 🤝 Open for Collaboration, Excited to collaborate on innovative projects.
-- 🌱 Explorering Back-End, Database,Linux etc.
+- 🌱 Explorering GO,Back-End, Database,Linux etc.
 
-#### Specialized In [ Front End ]
+#### Enthusiast For
+
+<img src="https://skillicons.dev/icons?i=ts,go,tailwindcss,next,nest,postgresql,linux" />
+
+<!--
+ #### Specialized In [ Front End ]
 
 <img src="https://skillicons.dev/icons?i=ts,next,tailwind,redux" /> <img src="./public/icons/zustand.svg" width="50" /> <img src="./public/icons/react-query.svg" width="50" />
 
 #### Learning [ Back End ]
 
-![Back End](https://skillicons.dev/icons?i=nodejs,nest,mongodb,prisma,postgresql,graphql) 
+![Back End](https://skillicons.dev/icons?i=nodejs,nest,mongodb,prisma,postgresql,graphql)
+
 
 #### Others
 
 <img src="https://skillicons.dev/icons?i=linux,figma,supabase" /> <img src="./public/icons/notions.svg" width="50" />
+
+-->
 
 #### Contact Info
 
@@ -53,9 +53,6 @@ Let's build something amazing together! 🖤
        <img src="https://img.shields.io/badge/leetcode-323330?style=for-the-badge&logo=leetcode&logoColor=white" />
     </a>
 
-<a href="https://dev.to/yeasin2002">
-       <img src="https://img.shields.io/badge/dev.to-323330?style=for-the-badge&logo=dev.to&logoColor=white" />
-    </a>
 
 <br  />
 

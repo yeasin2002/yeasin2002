@@ -1,6 +1,7 @@
 import { RootMetadata } from "@/config/rootMetaData";
 import "../styles/keyframe.css";
 import "./globals.css";
+import { Noice } from "$components/Globals/Noice";
 
 export default function RootLayout({
   children,
@@ -13,7 +14,7 @@ export default function RootLayout({
         className="overflow-x-hidden"
         style={{ background: "#000000", color: "white" }}
       >
-        {children}
+        <Noice>{children}</Noice>
       </body>
     </html>
   );

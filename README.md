@@ -7,11 +7,15 @@ Wanna collaborate? Let's build something amazing together! 🖤
 
 - 💬 Loves to Talk about Technology, Software, Coding, And Ideas
 - 🤝 Open for Collaboration, Excited to collaborate on innovative projects.
-- 🌱 Explorering GO,Back-End, Database,Linux etc.
+- 🌱 Explorering Back-End, Database,Linux etc.
+
+<!--
 
 #### Enthusiast For
 
 <img src="https://skillicons.dev/icons?i=ts,go,tailwindcss,next,nest,postgresql,linux" />
+
+-->
 
 <!--
  #### Specialized In [ Front End ]

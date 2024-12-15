@@ -9,7 +9,9 @@ Wanna collaborate? Let's build something amazing together! 🖤
 - 🤝 Open for Collaboration, Excited to collaborate on innovative projects.
 - 🌱 Explorering Back-End, Database,Linux etc.
 
+#### Enthusiast For
 
+<img src="https://skillicons.dev/icons?i=ts,tailwindcss,react,next,nest,linux" /> 
 <!--
 #### Enthusiast For
 

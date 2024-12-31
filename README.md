@@ -12,28 +12,15 @@ Wanna collaborate? Let's build something amazing together! 🖤
 #### Enthusiast For
 
 <img src="https://skillicons.dev/icons?i=ts,tailwindcss,react,next,nest,linux" /> 
-<!--
-#### Enthusiast For
 
-<img src="https://skillicons.dev/icons?i=ts,go,tailwindcss,next,nest,postgresql,linux" />
--->
-
-
-<!--
- #### Specialized In [ Front End ]
-
-<img src="https://skillicons.dev/icons?i=ts,next,tailwind,redux" /> <img src="./public/icons/zustand.svg" width="50" /> <img src="./public/icons/react-query.svg" width="50" />
-
-#### Learning [ Back End ]
-
-![Back End](https://skillicons.dev/icons?i=nodejs,nest,mongodb,prisma,postgresql,graphql)
-
-
-#### Others
-
-<img src="https://skillicons.dev/icons?i=linux,figma,supabase" /> <img src="./public/icons/notions.svg" width="50" />
-
--->
+```js 
+{
+  "frontend": ["typescript", "react", "next.js", "redux | zustand | react-query", "css | tailwindcss"],
+  "backend": [ "nodejs", "express | nest.js", "mongodb | mySQL |prisma"],
+  "others": [ "git & github" , "linux", "Notion", "Figma"], 
+  "goal@2025": [ "vue js" ,  "gitHub action", "docker", "graphQL", "postgresql" , "Go/Golang" ,  "web scrapping" ] 
+}
+```
 
 #### Contact Info
 

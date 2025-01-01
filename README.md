@@ -13,6 +13,7 @@ Wanna collaborate? Let's build something amazing together! 🖤
 
 <img src="https://skillicons.dev/icons?i=ts,tailwindcss,react,next,nest,linux" /> 
 
+<!--
 ```js 
 {
   "frontend": ["typescript", "react", "next.js", "redux | zustand | react-query", "css | tailwindcss"],
@@ -21,6 +22,7 @@ Wanna collaborate? Let's build something amazing together! 🖤
   "goal@2025": ["vue","gitHub action", "docker","graphQL", "PostgreSQL", "Golang",] 
 }
 ```
+-->
 
 #### Contact Info
 

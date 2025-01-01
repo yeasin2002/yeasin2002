@@ -16,9 +16,9 @@ Wanna collaborate? Let's build something amazing together! 🖤
 ```js 
 {
   "frontend": ["typescript", "react", "next.js", "redux | zustand | react-query", "css | tailwindcss"],
-  "backend": [ "nodejs", "express | nest.js", "mongodb | mySQL |prisma"],
+  "backend": [ "nodejs", "express | nest.js", "mongodb | SQL"],
   "others": [ "git & github" , "linux", "Notion", "Figma"], 
-  "goal@2025": ["vue","gitHub action", "docker","graphQL", "PostgreSQL", "Golang", "web scrapping" ] 
+  "goal@2025": ["vue","gitHub action", "docker","graphQL", "PostgreSQL", "Golang",] 
 }
 ```
 

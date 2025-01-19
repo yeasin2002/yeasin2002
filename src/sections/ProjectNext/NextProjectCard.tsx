@@ -27,7 +27,7 @@ const NextProjectCard = ({
     ${isTranslate && id === 1 && "lg:-translate-y-40 2xl:-translate-y-72"}
     `}
     >
-      <div className="h-72 2xl:h-96">
+      <div className="h-72 2xl:h-72">
         <Image
           className="aspect-video h-full w-full rounded-lg  object-cover "
           src={ProjectImage}
@@ -37,7 +37,7 @@ const NextProjectCard = ({
       <div>
         <div className="my-5 flex items-center justify-between ">
           <h3
-            className={`text-xl font-bold text-blue-100   2xl:py-2 2xl:text-6xl ${OswaldFont.className}`}
+            className={`text-xl font-bold text-blue-100   2xl:py-2 2xl:text-3xl ${OswaldFont.className}`}
           >
             {name}
             {notes && <span>- {notes}</span>}
@@ -71,7 +71,7 @@ const NextProjectCard = ({
         {tag?.map((tech, i) => {
           return (
             <p
-              className={`text-gray-300 2xl:text-2xl ${GupterFont.className} `}
+              className={`text-gray-300  ${GupterFont.className} `}
               key={crypto.randomUUID()}
             >
               #{tech}
@@ -83,7 +83,7 @@ const NextProjectCard = ({
       <hr className="mb-5 mt-2" />
 
       <div
-        className={`mt-3 text-gray-400 2xl:py-4 2xl:text-2xl ${MooliFont.className}`}
+        className={`mt-3 text-gray-400 2xl:py-4 2xl:text-xl ${MooliFont.className}`}
       >
         {description}
       </div>

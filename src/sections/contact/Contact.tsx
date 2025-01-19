@@ -52,11 +52,10 @@ const Contact = () => {
       toast.error("Please try again later.");
     }
   };
-  console.log(errors);
 
   return (
     <section className="eachSections sectionHolder" id="contact">
-      <h3 className=" font-bold;  silver-text flex items-center justify-center text-2xl  font-bold">
+      <h3 className=" font-bold;  silver-text flex items-center justify-center text-2xl  font-bold 2xl:text-4xl">
         Get in Touch
       </h3>
 

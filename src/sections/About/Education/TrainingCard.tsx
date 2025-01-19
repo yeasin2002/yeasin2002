@@ -31,11 +31,11 @@ const TrainingCard = ({
         <Image
           src={imageData}
           alt={courseName}
-          className="h-16 w-16 xl:h-16 xl:w-16 2xl:h-24 2xl:w-24"
+          className="h-16 w-16 xl:h-16 xl:w-16 2xl:size-20"
         />
         <div>
           <h4
-            className={`text-xs font-semibold sm:text-lg sm:font-bold xl:text-2xl 2xl:text-3xl ${RozhaFont.className}`}
+            className={`text-xs font-semibold sm:text-lg sm:font-bold xl:text-2xl 2xl:text-xl ${RozhaFont.className}`}
           >
             {courseName}
             <span className="mx-3  text-xs font-normal ">{desc}</span>

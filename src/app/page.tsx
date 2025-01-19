@@ -11,7 +11,7 @@ import { Toaster } from "react-hot-toast";
 
 export default function Home() {
   return (
-    <Fragment>
+    <div className="2xl:container">
       <FloatingNav />
       <HeroSpotlight />
       <About />
@@ -20,6 +20,6 @@ export default function Home() {
       <Contact />
       <Footer />
       <Toaster />
-    </Fragment>
+    </div>
   );
 }

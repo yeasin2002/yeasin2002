@@ -25,11 +25,11 @@ const EduCard = ({
       <Image
         src={imageData}
         alt={name}
-        className="h-16 w-16 xl:h-16 xl:w-16 2xl:h-24 2xl:w-24"
+        className="h-16 w-16 xl:h-16 xl:w-16 2xl:size-20 "
       />
       <div>
         <h4
-          className={`text-xs font-semibold sm:text-lg sm:font-bold xl:text-2xl 2xl:text-3xl ${RozhaFont.className}`}
+          className={`text-xs font-semibold sm:text-lg sm:font-bold xl:text-2xl  ${RozhaFont.className}`}
         >
           {name}
         </h4>

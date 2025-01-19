@@ -11,7 +11,7 @@ Wanna collaborate? Let's build something amazing together! 🖤
 
 #### Enthusiast For
 
-<img src="https://skillicons.dev/icons?i=ts,tailwindcss,react,next,nest,linux" /> 
+<img src="https://skillicons.dev/icons?i=ts,tailwindcss,react,next,nuxt,express,mongodb" /> 
 
 <!--
 ```js 

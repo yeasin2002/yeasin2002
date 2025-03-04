@@ -47,10 +47,7 @@ export const LogoFont = Kaushan_Script({
   weight: "400",
   subsets: ["latin", "latin-ext"],
 });
-export const MenuFont = Creepster({
-  weight: "400",
-  subsets: ["latin"],
-});
+
 export const MeriendaFont = Merienda({
   weight: "400",
   subsets: ["latin"],
@@ -64,14 +61,6 @@ export const ChelseaFont = Chelsea_Market({
   subsets: ["latin"],
 });
 export const SkranjiFont = Skranji({
-  weight: "400",
-  subsets: ["latin"],
-});
-export const KalamFont = Kalam({
-  weight: "400",
-  subsets: ["latin"],
-});
-export const RokkittFont = Rokkitt({
   weight: "400",
   subsets: ["latin"],
 });
@@ -103,10 +92,7 @@ export const Modern_AntiquaFont = Modern_Antiqua({
   weight: "400",
   subsets: ["latin"],
 });
-export const MilongaFont = Milonga({
-  weight: "400",
-  subsets: ["latin"],
-});
+
 export const IM_Fell_Great_PrimerFont = IM_Fell_Great_Primer({
   weight: "400",
   subsets: ["latin"],
@@ -119,10 +105,7 @@ export const KellySlabFont = Kelly_Slab({
   weight: "400",
   subsets: ["latin"],
 });
-export const SedgwickAveFont = Sedgwick_Ave({
-  weight: "400",
-  subsets: ["latin"],
-});
+
 export const PragatiNarrowFont = Pragati_Narrow({
   weight: "400",
   subsets: ["latin"],
@@ -161,17 +144,7 @@ export const robotoSlab = Roboto_Slab({
   subsets: ["latin"],
 });
 
-export const bebasNeue = Bebas_Neue({
-  weight: "400",
-  subsets: ["latin"],
-});
-
 export const salsa = Salsa({
-  weight: "400",
-  subsets: ["latin"],
-});
-
-export const sriracha = Sriracha({
   weight: "400",
   subsets: ["latin"],
 });

@@ -1,6 +1,3 @@
-import { contactList } from "@/data/contactInfo";
-import Link from "next/link";
-
 export function Footer() {
   return (
     <footer className="w-full bg-[rgba(71,85,105,.2)] text-[hsla(0,0%,100%,.85)]  py-4 px-6 text-center text-xs md:text-xl">

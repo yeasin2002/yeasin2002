@@ -5,9 +5,9 @@ import Revel from "@/components/shared/Revel";
 import OverText from "@/components/ui/Buttons/OverText/OverText";
 import projectData from "@/data/projectData";
 
-import NextProjectCard from "./NextProjectCard";
+import { NextProjectCard } from "./NextProjectCard";
 
-const ProjectNext = () => {
+export const ProjectNext = () => {
   return (
     <section
       id="projects"
@@ -55,4 +55,4 @@ const ProjectNext = () => {
   );
 };
 
-export default ProjectNext;
+

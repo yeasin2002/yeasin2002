@@ -10,7 +10,7 @@ interface nextProjectCardProps {
   id: number;
 }
 
-const NextProjectCard = ({
+export const NextProjectCard = ({
   id,
   name,
   ProjectImage,
@@ -79,5 +79,3 @@ const NextProjectCard = ({
     </div>
   );
 };
-
-export default NextProjectCard;

@@ -1,7 +1,12 @@
 import { detailsAboutMe } from "@/data/details-aboutme";
-import { DetailsBento, Footer, Hero } from "@/sections";
-import ProjectNext from "@/sections/projects/ProjectNext";
-import Skills from "@/sections/Skills/Skills";
+import {
+  Contact,
+  DetailsBento,
+  Footer,
+  Hero,
+  ProjectNext,
+  Skills,
+} from "@/sections";
 
 export default function Home() {
   return (
@@ -12,6 +17,7 @@ export default function Home() {
       </div>
       <Skills />
       <ProjectNext />
+      <Contact />
       <Footer />
     </div>
   );

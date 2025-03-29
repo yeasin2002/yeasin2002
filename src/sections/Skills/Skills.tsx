@@ -2,7 +2,7 @@ import skillData from "@/data/skillData";
 import React from "react";
 import LoopOverSkill from "./LoopOverSkill";
 
-const Skills = () => {
+export const Skills = () => {
   return (
     <section
       className="sections-container w-full px-4 pb-3 pt-10 py-10 space-y-10"
@@ -14,4 +14,3 @@ const Skills = () => {
     </section>
   );
 };
-export default Skills;

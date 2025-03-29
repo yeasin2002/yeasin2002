@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 //  icons and types
-import Revel from "@/components/Globals/Revel";
+import Revel from "@/components/shared/Revel";
 
 import type { Item } from "./LoopOverSkill";
 

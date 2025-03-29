@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { useId } from "react";
 
-import Revel from "@/components/Globals/Revel";
-import OverText from "@/components/Unique/Buttons/OverText/OverText";
+import Revel from "@/components/shared/Revel";
+import OverText from "@/components/ui/Buttons/OverText/OverText";
 import projectData from "@/data/projectData";
 
 import NextProjectCard from "./NextProjectCard";
@@ -29,8 +29,8 @@ const ProjectNext = () => {
           {"Here's"} some of my projects that I have worked on.
         </p>
 
-        <Link href={"projects"}>
-          <OverText className="mt-5" text="Explore_More" />
+        <Link href={"projects"} className="cursor-pointer">
+          <OverText className="mt-5 !cursor-pointer" text="Explore_More" />
         </Link>
       </Revel>
       {/*  other dynamic grid colum */}

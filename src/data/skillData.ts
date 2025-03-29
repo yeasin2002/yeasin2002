@@ -1,7 +1,18 @@
-import type skillDataTypes from "./skillData.d";
+interface Item {
+  title: string;
+  icon: any;
+  reference?: string;
+}
+interface skillDataTypes {
+  Language?: Item[];
+  CssFramework?: Item[];
+  FrontEnd: Item[];
+  BackEnd: Item[];
+  Tools: Item[];
+  Vision: Item[];
+}
 
 //! front end
-import next from "@/assets/icons/skill_icons/next2svg.svg";
 import nuxt from "@/assets/icons/skill_icons/nuxt-logo.svg";
 import tanStackQuery from "@/assets/icons/skill_icons/react-query.svg";
 import react from "@/assets/icons/skill_icons/react.svg";
@@ -18,7 +29,6 @@ import prisma from "@/assets/icons/skill_icons/prisma.svg";
 
 //! tools
 import figma from "@/assets/icons/skill_icons/Figma-Dark.svg";
-import framerMotion from "@/assets/icons/skill_icons/framer-motion.svg";
 import gitAndGithub from "@/assets/icons/skill_icons/gitAndGithubsvg.svg";
 import githubAction from "@/assets/icons/skill_icons/GitHubActions.svg";
 import linux from "@/assets/icons/skill_icons/Linux-Dark.svg";
@@ -33,100 +43,87 @@ const skillData: skillDataTypes = {
     {
       title: "TypeScript",
       icon: typeScript,
-      stage: "advance",
     },
 
     {
       title: "React.js/Nextjs",
       icon: react,
-      stage: "advance",
     },
 
     {
       title: "vue/nuxt ",
       icon: nuxt,
-      stage: "beginner",
     },
     {
       title: "TailwindCSS",
       icon: tailwind,
-      stage: "advance",
     },
 
     {
       title: "Redux Toolkit",
       icon: redux,
-      stage: "intermediate",
     },
 
     {
       title: "Zustand",
       icon: zustand,
-      stage: "intermediate",
     },
     {
       title: "TanStack Query",
       icon: tanStackQuery,
-      stage: "advance",
     },
   ],
   BackEnd: [
     {
       title: "Node.js",
       icon: node,
-      stage: "intermediate",
     },
     {
       title: "Express.js",
       icon: express,
-      stage: "intermediate",
     },
 
     {
       title: "MongoDB",
       icon: mongodb,
-      stage: "intermediate",
+    },
+    {
+      title: "Prisma",
+      icon: prisma,
     },
   ],
   Tools: [
     {
       title: "Git & Github",
       icon: gitAndGithub,
-      stage: "intermediate",
     },
 
     {
       title: "Figma",
       icon: figma,
-      stage: "beginner",
     },
 
     {
       title: "Github Action",
       icon: githubAction,
-      stage: "intermediate",
     },
     {
       title: "Linux",
       icon: linux,
-      stage: "beginner",
     },
   ],
   Vision: [
     {
       title: "MySQL",
       icon: mysql,
-      stage: "beginner",
     },
     {
       title: "GoLang",
       icon: go,
-      stage: "beginner",
     },
     {
       title: "Docker",
       icon: docker,
-      stage: "beginner",
     },
   ],
 };

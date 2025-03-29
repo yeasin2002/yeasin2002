@@ -73,3 +73,21 @@
 .spin {
   animation: spin 50s linear infinite;
 }
+
+
+
+  /* Add borders between cells */
+  .bento-grid > div {
+    border-right: 1px solid rgb(31, 41, 55, 0.7); 
+    border-bottom: 1px solid rgb(31, 41, 55,0.7); 
+  }
+  
+  /* Remove right border from last column */
+  .bento-grid > div:nth-child(3n) {
+    border-right: none;
+  }
+  
+  /* Remove bottom border from last row */
+  .bento-grid > div:nth-child(n+4):nth-child(-n+6) {
+    border-bottom: none;
+  }

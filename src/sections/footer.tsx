@@ -1,4 +1,4 @@
-import contactList from "@/data/contactInfo";
+import { contactList } from "@/data/contactInfo";
 import Link from "next/link";
 
 export function Footer() {
@@ -34,7 +34,7 @@ export function Footer() {
                 className="hover:text-white transition-colors"
                 target="_blank"
               >
-                {item.components}
+                <item.components className="size-6" />
                 <span className="sr-only">{item.name}</span>
               </Link>
             );

@@ -2,13 +2,13 @@ import type skillDataTypes from "./skillData.d";
 
 //! front end
 import next from "@/assets/icons/skill_icons/next2svg.svg";
+import nuxt from "@/assets/icons/skill_icons/nuxt-logo.svg";
 import tanStackQuery from "@/assets/icons/skill_icons/react-query.svg";
 import react from "@/assets/icons/skill_icons/react.svg";
 import redux from "@/assets/icons/skill_icons/Redux.svg";
 import tailwind from "@/assets/icons/skill_icons/tailwind.svg";
 import typeScript from "@/assets/icons/skill_icons/TypeScript.svg";
 import zustand from "@/assets/icons/skill_icons/zustand.svg";
-import nuxt from "@/assets/icons/skill_icons/nuxt-logo.svg";
 
 //! back ends
 import express from "@/assets/icons/skill_icons/ExpressJS-Dark.svg";
@@ -20,8 +20,8 @@ import prisma from "@/assets/icons/skill_icons/prisma.svg";
 import figma from "@/assets/icons/skill_icons/Figma-Dark.svg";
 import framerMotion from "@/assets/icons/skill_icons/framer-motion.svg";
 import gitAndGithub from "@/assets/icons/skill_icons/gitAndGithubsvg.svg";
-import notion from "@/assets/icons/skill_icons/notions.svg";
 import linux from "@/assets/icons/skill_icons/Linux-Dark.svg";
+import notion from "@/assets/icons/skill_icons/notions.svg";
 
 //! Vision
 import docker from "@/assets/icons/skill_icons/Docker.svg";

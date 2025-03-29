@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
 import {
   motion,
-  useInView,
-  useAnimation,
-  Variants,
   Transition,
-} from "framer-motion";
+  useAnimation,
+  useInView,
+  Variants,
+} from "motion/react";
+import React, { useEffect, useRef } from "react";
 
 const defaultVariants = {
   hidden: { opacity: 0, y: 75 },

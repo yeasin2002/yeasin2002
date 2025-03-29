@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import { motion, useMotionTemplate, useMotionValue } from "from "motion/react";";
 import React, { MouseEvent } from "react";
 
 const Wrapper = ({ children }: { children: React.ReactNode }) => {

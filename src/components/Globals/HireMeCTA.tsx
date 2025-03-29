@@ -9,7 +9,7 @@ import {
   ModalTrigger,
 } from "./AnimatedModal";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { cn } from "@/utils";
 
 // my image

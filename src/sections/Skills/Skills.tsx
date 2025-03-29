@@ -4,7 +4,7 @@ import LoopOverSkill from "./LoopOverSkill";
 
 const Skills = () => {
   return (
-    <section className="w-full px-4 pb-3 pt-10 py-10" id="skill">
+    <section className="w-full px-4 pb-3 pt-10 py-10 space-y-10" id="skill">
       <LoopOverSkill skillType={skillData.FrontEnd} title="Front End" />
       <LoopOverSkill skillType={skillData.BackEnd} title="Back End" />
       <LoopOverSkill skillType={skillData.Tools} title="Others" />

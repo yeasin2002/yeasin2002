@@ -20,8 +20,8 @@ import prisma from "@/assets/icons/skill_icons/prisma.svg";
 import figma from "@/assets/icons/skill_icons/Figma-Dark.svg";
 import framerMotion from "@/assets/icons/skill_icons/framer-motion.svg";
 import gitAndGithub from "@/assets/icons/skill_icons/gitAndGithubsvg.svg";
+import githubAction from "@/assets/icons/skill_icons/GitHubActions.svg";
 import linux from "@/assets/icons/skill_icons/Linux-Dark.svg";
-import notion from "@/assets/icons/skill_icons/notions.svg";
 
 //! Vision
 import docker from "@/assets/icons/skill_icons/Docker.svg";
@@ -102,8 +102,8 @@ const skillData: skillDataTypes = {
     },
 
     {
-      title: "Notion",
-      icon: notion,
+      title: "Github Action",
+      icon: githubAction,
       stage: "intermediate",
     },
     {

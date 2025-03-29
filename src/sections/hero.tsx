@@ -7,9 +7,8 @@ export const Hero = () => {
             Junior Software Developer
           </h1>
           <p className="text-2xl  max-w-6xl">
-            In this year’s Octoverse report, we study how public and open source
-            activity on GitHub shows how AI is expanding as the global developer
-            community surges in size.
+            Hi, {`i'm`} Md Kawsar Islam Yeasin. I am a front-end focused Full
+            Stack web developer.
           </p>
         </div>
       </div>

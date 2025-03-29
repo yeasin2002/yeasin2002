@@ -3,7 +3,6 @@
 Hello, I am yeasin form Dhaka and I am 22 year old. I'm a self-taught front-end focused Full Stack Web Developer. TypeScript and Nextjs enthusiast. I have been doing freelance project from last 1 year and working with teams to make good projects.
 Wanna collaborate? Let's build something amazing together! 🖤
 
-<!-- ##### Currently, **I'm open to work and employment opportunities near Dhaka or Remote** -->
 
 - 💬 Loves to Talk about Technology, Software, Coding, And Ideas
 - 🤝 Open for Collaboration, Excited to collaborate on innovative projects.
@@ -13,16 +12,6 @@ Wanna collaborate? Let's build something amazing together! 🖤
 
 <img src="https://skillicons.dev/icons?i=ts,tailwindcss,react,next,nuxt,express,mongodb" /> 
 
-<!--
-```js 
-{
-  "frontend": ["typescript", "react", "next.js", "redux | zustand | react-query", "css | tailwindcss"],
-  "backend": [ "nodejs", "express | nest.js", "mongodb | SQL"],
-  "others": [ "git & github" , "linux", "Notion", "Figma"], 
-  "goal@2025": ["vue","gitHub action", "docker","graphQL", "PostgreSQL", "Golang",] 
-}
-```
--->
 
 #### Contact Info
 
@@ -50,11 +39,11 @@ Wanna collaborate? Let's build something amazing together! 🖤
 
 <br  />
 
+![yeasin2002's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=yeasin2002&langs_count=10&title_color=22c55e&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&locale=en&custom_title=Top%20%Languages&layout=compact)
+
 <details >
 <summary>  <h4 > 📈 GitHub States (Click to Open) </h4> </summary>
 <be>
-
-![yeasin2002's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=yeasin2002&langs_count=10&title_color=22c55e&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&locale=en&custom_title=Top%20%Languages&layout=compact)
 
 ![My GitHub stats](https://github-readme-stats.vercel.app/api?username=yeasin2002&show_icons=true)
 

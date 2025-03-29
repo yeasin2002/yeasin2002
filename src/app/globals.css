@@ -2,71 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --ring: 215 20.2% 65.1%;
-
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 85.7% 97.3%;
-
-    --ring: 217.2 32.6% 17.5%;
-  }
-}
 .TitleGradientText {
   background: linear-gradient(
     90deg,
@@ -77,14 +12,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
 
 @layer components {
   /*! global  */
@@ -102,34 +29,6 @@
   .eachSections {
     @apply w-full px-4 pb-3 pt-10;
   }
-  /*? them colors  */
-  .Greenish {
-    @apply bg-gradient-to-r from-mint-100 to-mint-200 text-sup;
-  }
-  .Midnight-Blue {
-    @apply bg-gradient-to-r from-conf to-mastery text-sup;
-  }
-  /*  navigation bat */
-  .navList {
-    @apply cursor-pointer px-4 py-2;
-  }
-  .navActive {
-    @apply rounded-lg bg-blue-500 p-1;
-  }
-
-  /* swiper's */
-  .SwiperSlide {
-    @apply inline-block h-52 w-52 bg-sup;
-  }
-
-  /* arrow icons  */
-  .arrowIcons {
-    @apply h-10 w-10;
-  }
-  /* buttons  */
-  .btn {
-    @apply rounded-lg px-4 py-2 outline-none;
-  }
 
   .SubTitle {
     @apply mb-2 mt-10 text-xl font-bold;
@@ -140,15 +39,11 @@
   .underBorder {
     @apply w-full rounded-md border-b-2 border-sup p-2 outline-none transition-all lg:p-3 2xl:p-4;
   }
-  .projectShowcase {
-    @apply h-auto w-full border border-teal-500;
-  }
+
   .contact-input-wrapper {
-    @apply my-4 grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-2 
+    @apply my-4 grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-2;
   }
 }
-
-
 
 @keyframes spin {
   0% {

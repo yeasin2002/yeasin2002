@@ -4,7 +4,7 @@ import LoopOverSkill from "./LoopOverSkill";
 
 const Skills = () => {
   return (
-    <section className="eachSections py-10" id="skill">
+    <section className="w-full px-4 pb-3 pt-10 py-10" id="skill">
       <h3 className="silver-text flex items-center justify-center text-2xl  font-bold">
         Skills
       </h3>

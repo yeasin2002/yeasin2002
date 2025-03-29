@@ -1,47 +1,51 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-.TitleGradientText {
-  background: linear-gradient(
-    90deg,
-    rgba(0, 255, 135, 1) 0%,
-    rgba(174, 251, 42, 1) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-boldonse: "Boldonse";
 }
 
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
 
-@layer components {
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@utility silver-text {
   /*! global  */
+  @apply bg-linear-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent;
+}
 
-  .silver-text {
-    @apply bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent;
-  }
+@utility underBorder {
+  @apply w-full rounded-md border-b-2  p-2 outline-hidden transition-all lg:p-3 2xl:p-4;
+}
 
-  .title {
-    @apply flex items-center justify-center text-2xl font-bold text-paste;
-  }
-  .into-center {
-    @apply flex items-center justify-center;
-  }
-  .eachSections {
-    @apply w-full px-4 pb-3 pt-10;
-  }
+@utility contact-input-wrapper {
+  @apply my-4 grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-2;
+}
 
-  .SubTitle {
-    @apply mb-2 mt-10 text-xl font-bold;
-  }
-  .slides {
-    @apply flex text-mastery;
-  }
-  .underBorder {
-    @apply w-full rounded-md border-b-2 border-sup p-2 outline-none transition-all lg:p-3 2xl:p-4;
-  }
-
-  .contact-input-wrapper {
-    @apply my-4 grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-2;
+@layer utilities {
+  .TitleGradientText {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 255, 135, 1) 0%,
+      rgba(174, 251, 42, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 

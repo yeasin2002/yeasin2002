@@ -54,7 +54,7 @@ export function HireMeCTA({ className }: Props) {
         <ModalTrigger
           className={cn(
             "group/modal-btn flex justify-center whitespace-nowrap bg-[#39bab5] text-[#FFFFFF] hover:bg-[#39bab5]/90",
-            "flex items-end justify-center  rounded-full  px-4   py-2 gap-x-2 ring ring-[#83f6c7]",
+            "flex items-end justify-center  rounded-full  px-4   py-2 gap-x-2 ring-3 ring-[#83f6c7]",
             className
           )}
         >
@@ -93,14 +93,14 @@ export function HireMeCTA({ className }: Props) {
                     rotate: 0,
                     zIndex: 100,
                   }}
-                  className="-mr-4 mt-4 flex-shrink-0 overflow-hidden rounded-xl border border-neutral-100 bg-white p-1 dark:border-neutral-700 dark:bg-neutral-800"
+                  className="-mr-4 mt-4 shrink-0 overflow-hidden rounded-xl border border-neutral-100 bg-white p-1 dark:border-neutral-700 dark:bg-neutral-800"
                 >
                   <Image
                     src={image}
                     alt="bali images"
                     width="500"
                     height="500"
-                    className="h-20 w-20 flex-shrink-0 rounded-lg object-cover md:h-40 md:w-40"
+                    className="h-20 w-20 shrink-0 rounded-lg object-cover md:h-40 md:w-40"
                   />
                 </motion.div>
               ))}

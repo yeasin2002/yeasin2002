@@ -17,7 +17,7 @@ type Inputs = {
   message: string;
 };
 
-const Contact = () => {
+export const Contact = () => {
   const {
     register,
     handleSubmit,
@@ -122,4 +122,3 @@ const Contact = () => {
     </section>
   );
 };
-export default Contact;

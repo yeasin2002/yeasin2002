@@ -11,7 +11,7 @@ const ProjectNext = () => {
   return (
     <section
       id="projects"
-      className=" grid grid-cols-1 gap-4  py-32  md:gap-x-6 lg:grid-cols-2  xl:gap-x-10 xl:gap-y-8  2xl:gap-10 "
+      className="sections-container grid grid-cols-1 gap-4  py-32  md:gap-x-6 lg:grid-cols-2  xl:gap-x-10 xl:gap-y-8  2xl:gap-10 "
     >
       <Revel
         className="px-4 py-8"

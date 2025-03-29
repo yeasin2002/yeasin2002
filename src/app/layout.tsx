@@ -1,6 +1,6 @@
 import { RootMetadata } from "@/config/rootMetaData";
+import { Toaster } from "react-hot-toast";
 
-import { Noice } from "$components/Globals/Noice";
 import { fontVariables } from "@/fonts";
 import "./globals.css";
 
@@ -12,7 +12,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={fontVariables}>
-        <Noice>{children}</Noice>
+        {children}
+        <Toaster />
       </body>
     </html>
   );

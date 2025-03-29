@@ -1,7 +1,7 @@
 export const Hero = () => {
   return (
     <div
-      className="min-h-[50vh]"
+      className="min-h-[50vh] relative"
       style={{
         backgroundImage:
           "linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px)",

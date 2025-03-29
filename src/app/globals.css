@@ -25,10 +25,13 @@
   }
 
   body {
-    @apply bg-black text-white
+    @apply bg-black text-white;
   }
 }
 
+@utility sections-container {
+  @apply 2xl:container mx-auto;
+}
 @utility silver-text {
   /*! global  */
   @apply bg-linear-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent;

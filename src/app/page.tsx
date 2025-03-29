@@ -1,16 +1,14 @@
-import { Hero } from "@/sections";
+import { Footer, Hero } from "@/sections";
 import ProjectNext from "@/sections/projects/ProjectNext";
 import Skills from "@/sections/Skills/Skills";
 
-import { Toaster } from "react-hot-toast";
-
 export default function Home() {
   return (
-    <div className="2xl:container mx-auto">
+    <div className="">
       <Hero />
       <Skills />
       <ProjectNext />
-      <Toaster />
+      <Footer />
     </div>
   );
 }

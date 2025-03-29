@@ -30,11 +30,7 @@ const SkillCard = ({
     <Revel transition={{ duration: 0.4, delay: index / 20 }}>
       <div
         className={`link group group relative flex select-none   items-center   overflow-hidden rounded-sm   py-2 font-medium text-conf   shadow-md  transition-all hover:scale-105
-      md:rounded-lg  md:px-4 xl:py-4 xl:text-xl    `}
-        style={{
-          background: `rgba(71,85,105,.2)`,
-          color: `hsla(0,0%,100%,.85)`,
-        }}
+      md:rounded-lg  md:px-4 xl:py-4 xl:text-xl    bg-[rgba(71,85,105,.2)] text-[hsla(0,0%,100%,.85)] `}
       >
         <div className="into-center w-full flex items-center gap-x-2">
           <span

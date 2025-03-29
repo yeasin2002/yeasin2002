@@ -1,5 +1,5 @@
 "use client";
-``;
+
 
 import Image from "next/image";
 // import { useActionState, useEffect } from "react";
@@ -38,7 +38,7 @@ export function ContactForm() {
 
       <div className="space-y-4">
         <label htmlFor="message" className="block text-xl text-gray-400">
-          You Message
+          Your Message
         </label>
         <textarea
           id="message"

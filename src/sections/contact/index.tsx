@@ -1,11 +1,13 @@
-"use client";
-
 import { ContactForm } from "./contact-form";
+import { ContactInfo } from "./contact-info";
 
 export const Contact = () => {
   return (
-    <div className="min-h-screen">
-      <div className="  flex items-center justify-center p-6">
+    <section
+      id="contact"
+      className=" grid grid-cols-2  container mx-auto min-h-[70vh]  pb-24"
+    >
+      <div className="  flex items-center justify-center ">
         <div className="w-full max-w-3xl">
           <h1 className="text-4xl md:text-5xl/relaxed font-bold text-yellow-vibe  font-boldonse text-main-yellow my-8">
             Get in touch
@@ -13,6 +15,8 @@ export const Contact = () => {
           <ContactForm />
         </div>
       </div>
-    </div>
+
+      <ContactInfo />
+    </section>
   );
 };

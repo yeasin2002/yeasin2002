@@ -28,6 +28,9 @@
   body {
     @apply spotlit-bg text-white;
   }
+  html {
+    @apply scroll-smooth;
+  }
 }
 
 @utility spotlit-bg {

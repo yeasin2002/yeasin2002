@@ -17,9 +17,12 @@ export const Hero = () => {
 
           <div className="flex gap-4">
             <button className="btn BoldStockBtn ">Download</button>
-            <button className="btn BoldStockBtn bg-zinc-900 hover:bg-zinc-800 z-40 text-white">
+            <a
+              href="#contact"
+              className="btn BoldStockBtn bg-zinc-900 hover:bg-zinc-800 z-40 text-white"
+            >
               Let’s Talk
-            </button>
+            </a>
           </div>
         </div>
       </div>

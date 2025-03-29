@@ -4,7 +4,7 @@ import { ElegantShape } from "@/components/shared";
 import { cn } from "@/utils";
 import { motion } from "motion/react";
 
-import Image from "next/image";
+
 import Link from "next/link";
 export default function RooNotFound() {
   const fadeUpVariants = {

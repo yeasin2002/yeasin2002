@@ -1,12 +1,8 @@
 "use client";
-import MainLoader from "@/components/Unique/Loaders/MainLoader";
+
 
 const Loading = () => {
-  return (
-    <section className="h-screen w-screen">
-      <MainLoader />
-    </section>
-  );
+  return <section className="h-screen w-screen">Loading</section>;
 };
 
 export default Loading;

@@ -3,7 +3,7 @@
 import React from "react";
 
 import { InputCombo as Input } from "@/components/ui/InputCombo";
-import SubmitBtn from "@/components/Unique/Buttons/submitBtn/submitBtn";
+// import SubmitBtn from "@/components/Unique/Buttons/submitBtn/submitBtn";
 
 import { cn } from "@/utils";
 import { useForm, type SubmitHandler } from "react-hook-form";
@@ -117,7 +117,7 @@ const Contact = () => {
           )}
           {...register("message", { required: true })}
         />
-        <SubmitBtn type="submit">submit</SubmitBtn>
+        <button type="submit">submit</button>
       </form>
     </section>
   );

@@ -1,7 +1,7 @@
 import { RootMetadata } from "@/config/rootMetaData";
-import "../styles/keyframe.css";
-import "./globals.css";
+
 import { Noice } from "$components/Globals/Noice";
+import "./globals.css";
 
 export default function RootLayout({
   children,

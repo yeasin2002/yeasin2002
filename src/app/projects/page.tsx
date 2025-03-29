@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-import { Meteors } from "$components/aceternity";
+
 import FoldText from "@/components/Unique/Buttons/FoldText/FoldText";
 import LiyaxuInput from "@/components/Unique/Input/liyaxuInput";
 import projectData from "@/data/Projects/projectData";
@@ -19,7 +19,6 @@ const AllProjects = () => {
 
   return (
     <main className=" h-full min-h-screen px-1 py-10 sm:px-2 md:px-4">
-      <Meteors number={20} />
       <div className="flex flex-col justify-between gap-y-6 md:flex-row md:gap-x-2">
         <div className="order-last md:order-first">
           <h1 className="silver-text text-3xl font-bold">Projects</h1>

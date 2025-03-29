@@ -25,7 +25,9 @@ export const ProjectNext = () => {
         >
           All Creative Works
         </h2>
-        <p className={`mb-6 text-xl text-gray-300 2xl:text-2xl `}>
+        <p
+          className={`mb-6 text-xl text-gray-300 2xl:text-2xl font-primary font-medium`}
+        >
           {"Here's"} some of my projects that I have worked on.
         </p>
 

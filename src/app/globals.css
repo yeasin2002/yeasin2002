@@ -4,32 +4,20 @@
 
 @theme {
   --font-boldonse: var(--font-boldonse);
+  --font-primary: var(--font-primary);
+  --font-secondary: var(--font-secondary);
+
   --color-main-yellow: #fffce1;
   --color-secondary: oklch(0.765 0.177 163.223);
 }
 
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+  html {
+    @apply scroll-smooth;
   }
 
   body {
-    @apply spotlit-bg text-white;
-  }
-  html {
-    @apply scroll-smooth;
+    @apply spotlit-bg text-white font-secondary;
   }
 }
 
@@ -40,16 +28,7 @@
   @apply 2xl:container mx-auto;
 }
 @utility silver-text {
-  /*! global  */
   @apply bg-linear-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent;
-}
-
-@utility underBorder {
-  @apply w-full rounded-md border-b-2  p-2 outline-hidden transition-all lg:p-3 2xl:p-4;
-}
-
-@utility contact-input-wrapper {
-  @apply my-4 grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-2;
 }
 
 @layer utilities {

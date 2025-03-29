@@ -37,7 +37,7 @@ export const NextProjectCard = ({
       <div>
         <div className="my-5 flex items-center justify-between ">
           <h3
-            className={`text-xl font-bold text-blue-100   2xl:py-2 2xl:text-3xl `}
+            className={`text-xl     2xl:py-2 2xl:text-3xl silver-text font-bold  font-primary`}
           >
             {name}
             {notes && <span>- {notes}</span>}
@@ -73,7 +73,7 @@ export const NextProjectCard = ({
 
       <hr className="mb-5 mt-2" />
 
-      <div className={`mt-3 text-gray-400 2xl:py-4 2xl:text-xl `}>
+      <div className={`mt-3 text-gray-400 2xl:py-4 2xl:text-lg `}>
         {description}
       </div>
     </div>

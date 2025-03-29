@@ -6,7 +6,7 @@ export const ContactInfo = () => {
   return (
     <div className=" text-white p-8 md:p-12 flex flex-col items-end">
       <div className="mb-16 text-end">
-        <p className="text-4xl md:text-5xl font-normal mb-2">
+        <p className="text-4xl md:text-5xl  mb-2 font-primary font-bold">
           {`Les't`} talk on <br /> something
           <span className="text-secondary mx-2">great</span>
         </p>

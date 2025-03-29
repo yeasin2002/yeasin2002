@@ -1,6 +1,6 @@
-import github from "@/assets/3d/github.png";
 import type { projectTypes } from "@/data/projectData";
 import { GupterFont, MooliFont, OswaldFont } from "@/utils/GoogleFonts";
+import { Github } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { BsLink45Deg } from "react-icons/bs";
@@ -45,13 +45,7 @@ const NextProjectCard = ({
           <div className="flex items-center justify-center gap-x-2 2xl:gap-x-5">
             {gitHubLink && (
               <a href={gitHubLink} target="_blank" rel="noopener noreferrer">
-                <Image
-                  src={github}
-                  alt="github"
-                  width={30}
-                  height={30}
-                  className="rounded-full bg-white p-[0.05rem]"
-                />
+                <Github />
               </a>
             )}
             {liveLink && (

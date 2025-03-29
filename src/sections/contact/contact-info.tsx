@@ -1,11 +1,18 @@
 import { contactList } from "@/data/contactInfo";
+import { cn } from "@/lib";
 import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
+interface Props extends React.ComponentProps<"div"> {}
 
-export const ContactInfo = () => {
+export const ContactInfo = ({ className }: Props) => {
   return (
-    <div className=" text-white p-8 md:p-12 flex flex-col items-end">
-      <div className="mb-16 text-end">
+    <div
+      className={cn(
+        " text-white p-8 md:p-12 flex flex-col items-center md:items-end",
+        className
+      )}
+    >
+      <div className="mb-16 text-center lg:text-end">
         <p className="text-4xl md:text-5xl  mb-2 font-primary font-bold">
           {`Les't`} talk on <br /> something
           <span className="text-secondary mx-2">great</span>

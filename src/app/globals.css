@@ -17,7 +17,7 @@
   }
 
   body {
-    @apply spotlit-bg text-white font-secondary;
+    @apply spotlit-bg text-white font-secondary mx-2;
   }
 }
 

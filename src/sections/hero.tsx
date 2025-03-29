@@ -1,7 +1,7 @@
 export const Hero = () => {
   return (
     <div
-      className="min-h-[50vh] relative"
+      className="min-h-[50vh] relative "
       style={{
         backgroundImage:
           "linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px)",
@@ -13,7 +13,7 @@ export const Hero = () => {
           <h1 className=" text-4xl md:text-5xl/relaxed font-bold text-yellow-vibe  font-boldonse text-main-yellow">
             Junior Software Developer
           </h1>
-          <p className="text-2xl ">
+          <p className="text-2xl  max-w-6xl">
             In this year’s Octoverse report, we study how public and open source
             activity on GitHub shows how AI is expanding as the global developer
             community surges in size.

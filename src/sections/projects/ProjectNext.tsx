@@ -20,7 +20,9 @@ const ProjectNext = () => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <h2 className={` silver-text text-2xl font-extrabold 2xl:text-5xl `}>
+        <h2
+          className={` font-boldonse text-2xl font-extrabold 2xl:text-3xl text-main-yellow`}
+        >
           All Creative Works
         </h2>
         <p className={`mb-6 text-xl text-gray-300 2xl:text-2xl `}>

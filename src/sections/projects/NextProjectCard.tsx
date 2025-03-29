@@ -1,5 +1,5 @@
 import type { projectTypes } from "@/data/projectData";
-import { GupterFont, MooliFont, OswaldFont } from "@/utils/GoogleFonts";
+
 import { Github } from "lucide-react";
 import Image from "next/image";
 import React from "react";
@@ -37,7 +37,7 @@ const NextProjectCard = ({
       <div>
         <div className="my-5 flex items-center justify-between ">
           <h3
-            className={`text-xl font-bold text-blue-100   2xl:py-2 2xl:text-3xl ${OswaldFont.className}`}
+            className={`text-xl font-bold text-blue-100   2xl:py-2 2xl:text-3xl `}
           >
             {name}
             {notes && <span>- {notes}</span>}
@@ -64,10 +64,7 @@ const NextProjectCard = ({
       <div className="flex flex-wrap gap-x-3 2xl:py-2 ">
         {tag?.map((tech, i) => {
           return (
-            <p
-              className={`text-gray-300  ${GupterFont.className} `}
-              key={crypto.randomUUID()}
-            >
+            <p className={`text-gray-300 `} key={crypto.randomUUID()}>
               #{tech}
             </p>
           );
@@ -76,9 +73,7 @@ const NextProjectCard = ({
 
       <hr className="mb-5 mt-2" />
 
-      <div
-        className={`mt-3 text-gray-400 2xl:py-4 2xl:text-xl ${MooliFont.className}`}
-      >
+      <div className={`mt-3 text-gray-400 2xl:py-4 2xl:text-xl `}>
         {description}
       </div>
     </div>

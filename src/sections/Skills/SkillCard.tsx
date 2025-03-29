@@ -3,7 +3,7 @@ import React from "react";
 
 //  icons and types
 import Revel from "@/components/Globals/Revel";
-import { ChelseaFont } from "@/utils/GoogleFonts";
+
 import type { Item } from "./LoopOverSkill";
 
 interface thisProps extends Item {
@@ -36,14 +36,14 @@ const SkillCard = ({
           color: `hsla(0,0%,100%,.85)`,
         }}
       >
-        <div className="into-center w-full">
+        <div className="into-center w-full flex items-center gap-x-2">
           <span
             className="absolute left-0 top-0 z-50 h-full w-full opacity-0 transition-all group-hover:opacity-60"
             style={{
               boxShadow: boxShadowColor,
             }}
           />
-          <div className="mx-4">
+          <div className="mx-4  ">
             <Image
               src={icon}
               alt={"Icons"}
@@ -53,7 +53,7 @@ const SkillCard = ({
           </div>
 
           <div className=" flex flex-1 gap-x-2">
-            <h3 className={ChelseaFont.className}>{title}</h3>
+            <h3>{title}</h3>
           </div>
         </div>
       </div>

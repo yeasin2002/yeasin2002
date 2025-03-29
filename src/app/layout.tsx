@@ -1,6 +1,7 @@
 import { RootMetadata } from "@/config/rootMetaData";
 
 import { Noice } from "$components/Globals/Noice";
+import { fontVariables } from "@/fonts";
 import "./globals.css";
 
 export default function RootLayout({
@@ -10,10 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body
-        className="overflow-x-hidden"
-        style={{ background: "#000000", color: "white" }}
-      >
+      <body className={fontVariables}>
         <Noice>{children}</Noice>
       </body>
     </html>

@@ -4,7 +4,7 @@ import { useId } from "react";
 import Revel from "@/components/Globals/Revel";
 import OverText from "@/components/Unique/Buttons/OverText/OverText";
 import projectData from "@/data/projectData";
-import { KellySlabFont, SkranjiFont } from "@/utils/GoogleFonts";
+
 import NextProjectCard from "./NextProjectCard";
 
 const ProjectNext = () => {
@@ -20,14 +20,10 @@ const ProjectNext = () => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <h2
-          className={` silver-text text-2xl font-extrabold 2xl:text-5xl ${SkranjiFont.className}`}
-        >
+        <h2 className={` silver-text text-2xl font-extrabold 2xl:text-5xl `}>
           All Creative Works
         </h2>
-        <p
-          className={`mb-6 text-xl text-gray-300 2xl:text-2xl ${KellySlabFont.className}`}
-        >
+        <p className={`mb-6 text-xl text-gray-300 2xl:text-2xl `}>
           {"Here's"} some of my projects that I have worked on.
         </p>
 

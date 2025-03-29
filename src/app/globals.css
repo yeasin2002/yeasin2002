@@ -3,7 +3,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-boldonse: "Boldonse";
+  --font-boldonse: var(--font-boldonse);
+  --color-main-yellow: #fffce1;
 }
 
 /*
@@ -21,6 +22,10 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  }
+
+  body {
+    @apply bg-black text-white
   }
 }
 
@@ -44,6 +49,7 @@
       rgba(0, 255, 135, 1) 0%,
       rgba(174, 251, 42, 1) 100%
     );
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

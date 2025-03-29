@@ -13,7 +13,7 @@ interface thisProps extends Item {
 const SkillCard = ({
   title,
   icon,
-  stage,
+
   reference = "",
   index,
 }: thisProps) => {

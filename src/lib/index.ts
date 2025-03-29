@@ -1,1 +1,1 @@
-export * from "./AboutMeFuncString";
+export * from "./utils";

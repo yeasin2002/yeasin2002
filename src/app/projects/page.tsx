@@ -6,8 +6,8 @@ import { useState } from "react";
 
 import FoldText from "@/components/Unique/Buttons/FoldText/FoldText";
 import LiyaxuInput from "@/components/Unique/Input/liyaxuInput";
-import projectData from "@/data/Projects/projectData";
-import NextProjectCard from "@/sections/ProjectNext/NextProjectCard";
+import projectData from "@/data/projectData";
+import NextProjectCard from "@/sections/projects/NextProjectCard";
 
 const AllProjects = () => {
   const [searchValue, setSearchValue] = useState("");

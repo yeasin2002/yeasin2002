@@ -1,6 +1,6 @@
-import ProjectNext from "@/sections/ProjectNext/ProjectNext";
-import Skills from "@/sections/Skills/Skills";
 import Contact from "@/sections/contact/Contact";
+import ProjectNext from "@/sections/projects/ProjectNext";
+import Skills from "@/sections/Skills/Skills";
 
 import { Toaster } from "react-hot-toast";
 

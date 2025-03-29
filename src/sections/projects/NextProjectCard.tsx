@@ -1,5 +1,5 @@
 import github from "@/assets/3d/github.png";
-import type { projectTypes } from "@/data/Projects/projectData";
+import type { projectTypes } from "@/data/projectData";
 import { GupterFont, MooliFont, OswaldFont } from "@/utils/GoogleFonts";
 import Image from "next/image";
 import React from "react";

@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { useId } from "react";
+
 
 import Revel from "@/components/shared/Revel";
 import OverText from "@/components/ui/Buttons/OverText/OverText";
 import projectData from "@/data/projectData";
 
-import { NextProjectCard } from "./NextProjectCard";
+import { ProjectCard } from "./ProjectCard";
 
-export const ProjectNext = () => {
+export const Projects = () => {
   return (
     <section
       id="projects"
@@ -30,18 +30,15 @@ export const ProjectNext = () => {
         >
           {"Here's"} some of my projects that I have worked on.
         </p>
-
         <Link href={"projects"} className="cursor-pointer">
           <OverText className="mt-5 !cursor-pointer" text="Explore_More" />
         </Link>
       </Revel>
-      {/*  other dynamic grid colum */}
+
       {projectData.slice(0, 3).map((value, index) => {
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        const id = useId();
         return (
-          <NextProjectCard
-            key={id}
+          <ProjectCard
+            key={index}
             ProjectImage={value.ProjectImage}
             id={index}
             name={value.name}
@@ -56,5 +53,3 @@ export const ProjectNext = () => {
     </section>
   );
 };
-
-

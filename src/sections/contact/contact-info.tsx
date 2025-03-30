@@ -13,7 +13,7 @@ export const ContactInfo = ({ className }: Props) => {
       )}
     >
       <div className="mb-16 text-center lg:text-end">
-        <p className="text-4xl md:text-5xl  mb-2 font-primary font-bold">
+        <p className="text-4xl md:text-5xl  mb-2 font-primary font-bold  text-main-yellow">
           {`Les't`} talk on <br /> something
           <span className="text-secondary mx-2">great</span>
         </p>

@@ -4,7 +4,7 @@ import {
   DetailsBento,
   Footer,
   Hero,
-  ProjectNext,
+  Projects,
   Skills,
 } from "@/sections";
 
@@ -16,7 +16,7 @@ export default function Home() {
         <DetailsBento data={detailsAboutMe} />
       </div>
       <Skills />
-      <ProjectNext />
+      <Projects />
       <Contact />
       <Footer />
     </div>

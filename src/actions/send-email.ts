@@ -1,37 +1,32 @@
 "use server";
 
+import { Env } from "@/utils";
 import { Resend } from "resend";
+import { GettingEmail } from "../../emails/gettings";
 
-export async function sendEmail(formData: FormData) {
+export async function sendEmail({
+  email,
+  message,
+}: {
+  email: string;
+  message: string;
+}) {
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    const resend = new Resend(Env.resendApiKey);
 
-    const name = formData.get("name") as string;
-    const email = formData.get("email") as string;
-    const message = formData.get("message") as string;
-    const interests = formData.get("interests") as string;
-
-    if (!email || !message || !name) {
+    if (!email || !message) {
       return { error: "All fields are required" };
     }
 
-    if (!process.env.RESEND_TO_EMAIL_ADDRESS) {
-      return { error: "Missing environment variable: RESEND_TO_EMAIL_ADDRESS" };
-    }
-
     const data = await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
-      to: process.env.RESEND_TO_EMAIL_ADDRESS,
-      subject: "New Contact Form Submission",
-      text: `
-        Name: ${name}
-        Email: ${email}
-        Interests: ${interests || "None selected"}
-        Message: ${message}
-      `,
+      from: "mdkawsarislam2002@gmail",
+      to: email,
+      subject: "hello world",
+      react: GettingEmail(),
     });
+    if (!data.data) throw new Error("Failed to send email", { cause: data });
 
-    return { success: "Email sent successfully" };
+    return { success: data.error, data: data };
   } catch (error: any) {
     if ("message" in error && error.message.includes("Missing API key")) {
       return { error: "Missing environment variable: RESEND_API_KEY" };

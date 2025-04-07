@@ -16,7 +16,7 @@ export const contactList = [
   {
     name: "Facebook",
     components: BsFacebook,
-    link: "https://www.facebook.com/yeasin2002/",
+    link: "https://www.facebook.com/yeasin2002.dev/",
   },
   {
     name: "Twitter",
@@ -26,6 +26,6 @@ export const contactList = [
   {
     name: "Instagram",
     components: AiOutlineInstagram,
-    link: "https://www.instagram.com/yeasin2002/",
+    link: "https://www.instagram.com/mdkawsarislam2002/",
   },
 ];

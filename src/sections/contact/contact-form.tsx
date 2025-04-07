@@ -21,7 +21,7 @@ export function ContactForm() {
       if (result.success) {
         toast.success("Success");
       } else {
-        throw new Error(result.error || "Failed to send email");
+        throw new Error(result.error, { cause: result });
       }
     } catch (error) {
       console.log("Error", error);

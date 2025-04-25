@@ -1,0 +1,16 @@
+---
+import classes from "./OverText.module.css";
+interface Props {
+  text: string;
+  className: string;
+}
+const size = "text-xl 2xl:text-5xl";
+const { text, className } = Astro.props;
+---
+
+<button data-text="Awesome" class={classes.button + " " + className}>
+  <span class={classes.actualText}>&nbsp;{text}&nbsp;</span>
+  <span class={classes.hoverText} aria-hidden="true">
+    &nbsp;{text}&nbsp;
+  </span>
+</button>

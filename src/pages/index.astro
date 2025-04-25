@@ -1,0 +1,23 @@
+---
+import {
+  DetailsBento,
+  Hero,
+  Skills,
+  ProjectNext,
+  Contact,
+  Footer,
+} from "@/features/homepage";
+import Layout from "../layouts/Layout.astro";
+import "@/styles/globals.css";
+---
+
+<Layout>
+  <div class="min-h-screen flex flex-col justify-evenly">
+    <Hero />
+    <DetailsBento />
+  </div>
+  <Skills />
+  <ProjectNext />
+  <Contact />
+  <Footer />
+</Layout>

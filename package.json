@@ -1,65 +1,21 @@
 {
   "name": "yeasin2002",
-  "keywords": [
-    "yeasin",
-    "yeasin2002",
-    "Md Kawsar Islam Yeasin",
-    "kawsar",
-    "Md kawsar",
-    "dev yeasin"
-  ],
-  "author": {
-    "name": "md kawsar islam yeasin",
-    "email": "mdkawsarislam2002@gmail.com",
-    "url": "https://github.com/Mdkawsarislam2002"
-  },
-  "description": " Portfolio of Md Kawsar Islam Yeasin , a software Developer,Front end web developer, web developer,web designer,programmer, and freelancer from in Bangladesh",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "next dev",
-    "start": "next start",
-    "turbo": "next dev --turbo",
-    "build": "next build",
-    "dev:email": "email dev",
-    "lint": "next lint",
-    "format": "npx prettier --write src/",
-    "db_push": "prisma db push"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@react-email/components": "^0.0.34",
-    "@tailwindcss/postcss": "^4.0.17",
-    "class-variance-authority": "^0.7.1",
+    "@lucide/astro": "^0.503.0",
+    "@tailwindcss/vite": "^4.1.4",
+    "astro": "^5.7.5",
     "clsx": "^2.1.1",
-    "eslint": "8.44.0",
-    "eslint-config-next": "13.4.7",
-    "lucide-react": "^0.485.0",
-    "motion": "^12.6.2",
-    "next": "14.2.26",
-    "postcss": "^8.5.3",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "react": "19.1.0",
-    "react-code-blocks": "^0.1.6",
-    "react-dom": "19.1.0",
-    "react-hook-form": "^7.55.0",
     "react-hot-toast": "^2.5.2",
-    "react-icons": "^4.12.0",
-    "react-toastify": "^9.1.3",
-    "resend": "^4.2.0",
-    "sharp": "^0.33.5",
-    "swiper": "^10.3.1",
-    "tailwind-merge": "^3.0.2",
-    "tailwindcss": "^4.0.17",
-    "tailwindcss-animate": "^1.0.7",
-    "typescript": "^5.8.2"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.7.3",
-    "@prisma/client": "^5.22.0",
-    "@types/node": "20.3.3",
-    "@types/react": "18.2.14",
-    "@types/react-dom": "18.2.6",
-    "prettier": "^3.5.3",
-    "prettier-plugin-tailwind-css": "^1.5.0",
-    "prisma": "^5.22.0",
-    "react-email": "4.0.2"
+    "react-icons": "^5.5.0",
+    "tailwind-merge": "^3.2.0",
+    "tailwindcss": "^4.1.4"
   }
 }

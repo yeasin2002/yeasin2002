@@ -1,0 +1,61 @@
+---
+import { contactList } from "@/data/contactInfo";
+import { cn } from "@/utils";
+import { Mail, MapPin, Phone } from "@lucide/astro";
+interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+---
+
+<div
+  class={cn(
+    " text-white p-8 md:p-12 flex flex-col items-center md:items-end",
+    className
+  )}
+>
+  <div class="mb-16 text-center lg:text-end">
+    <p
+      class="text-4xl md:text-5xl mb-2 font-primary font-bold text-main-yellow"
+    >
+      {`Les't`} talk on <br /> something
+      <span class="text-secondary mx-2">great</span>
+    </p>
+  </div>
+
+  <div class="space-y-8 mt-auto mb-16">
+    <a
+      href="mailto:mdkawsarislam2002@gmail.com"
+      class="flex items-center gap-4"
+    >
+      <Mail class="size-6 text-secondary" />
+      <span>mdkawsarislam2002@gmail.com</span>
+    </a>
+    <a href="tel:+880163227965" class="flex items-center gap-4">
+      <Phone class="size-6 text-secondary" />
+      <span>+880163227965</span>
+    </a>
+    <div class="flex items-center gap-4">
+      <MapPin class="size-6 text-secondary" />
+      <span>Dhaka Cantonment</span>
+    </div>
+  </div>
+
+  <div class="flex items-center gap-2 mt-auto">
+    {
+      contactList.map((item) => {
+        return (
+          <a
+            href={item.link}
+            class="hover:text-white transition-colors"
+            target="_blank"
+          >
+            <item.components class:list="size-7 text-secondary" />
+            <span class="sr-only">{item.name}</span>
+          </a>
+        );
+      })
+    }
+  </div>
+</div>

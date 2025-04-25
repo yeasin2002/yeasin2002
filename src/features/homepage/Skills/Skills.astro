@@ -1,0 +1,14 @@
+---
+import skillData from "@/data/skillData";
+import LoopOverSkill from "./LoopOverSkill.astro";
+---
+
+<section
+  class="sections-container w-full px-4 pb-3 pt-10 py-10 space-y-10"
+  id="skill"
+>
+  <h2 class="sr-only">Skills</h2>
+  <LoopOverSkill skillType={skillData.FrontEnd} title="Front End" />
+  <LoopOverSkill skillType={skillData.BackEnd} title="Back End" />
+  <LoopOverSkill skillType={skillData.Tools} title="Others" />
+</section>

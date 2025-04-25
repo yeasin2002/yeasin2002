@@ -1,4 +1,4 @@
-import { BookUser, Briefcase, Home, Swords } from "lucide-react";
+import { BookUser, Briefcase, Home, Swords } from "@lucide/astro";
 
 export const navItems = [
   {

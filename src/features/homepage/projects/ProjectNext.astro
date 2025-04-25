@@ -1,8 +1,7 @@
 ---
 import OverText from "@/components/ui/Buttons/OverText/OverText.astro";
 import projectData from "@/data/projectData";
-
-import { ProjectCard } from "./ProjectCard";
+import ProjectCard from "./ProjectCard.astro";
 ---
 
 <section
@@ -20,9 +19,9 @@ import { ProjectCard } from "./ProjectCard";
     >
       {"Here's"} some of my projects that I have worked on.
     </p>
-    <Link href={"projects"} class="cursor-pointer">
-      <OverText class="mt-5 !cursor-pointer" text="Explore_More" />
-    </Link>
+    <a href={"projects"} class="cursor-pointer">
+      <OverText className="mt-5 !cursor-pointer" text="Explore_More" />
+    </a>
   </div>
 
   {

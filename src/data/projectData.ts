@@ -1,5 +1,3 @@
-import type { StaticImageData } from "next/image";
-
 //  projects Images
 import amader_bazar from "@/assets/projects/amader_bazar.png";
 import brightshift from "@/assets/projects/brightshift.png";
@@ -7,16 +5,17 @@ import chainVers from "@/assets/projects/chiptoChainvers.png";
 import insurgency from "@/assets/projects/insurgency.png";
 import kismatTravel from "@/assets/projects/kismat-travel.png";
 import kiyMovie from "@/assets/projects/kiyMovie.png";
+import lokingForSortru from "@/assets/projects/lookingForSotru.jpg";
 import rimasDental from "@/assets/projects/Rima-s-Dental.png";
 import storyCraft from "@/assets/projects/storyCraft.png";
 import TaskHub from "@/assets/projects/taskHub.png";
 import twindCli from "@/assets/projects/twindCli.png";
-import lokingForSortru from "@/assets/projects/lookingForSotru.jpg";
+import type { ImageMetadata } from "astro";
 
 export type projectTypes = {
   name: string;
   notes?: string;
-  ProjectImage: StaticImageData;
+  ProjectImage: ImageMetadata;
   liveLink?: string;
   gitHubLink?: string;
   tag: string[];

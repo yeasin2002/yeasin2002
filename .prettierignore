@@ -1,6 +1,0 @@
-dist
-.next 
-node_modules
-pnpm-lock.yaml
-postcss.config.js
-public

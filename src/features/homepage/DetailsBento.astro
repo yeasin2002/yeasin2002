@@ -1,0 +1,36 @@
+---
+import { PlusMini } from "@/components/icons";
+import { detailsAboutMe as data } from "@/data/details-aboutme";
+---
+
+<div class="container mx-auto overflow-x-hidden">
+  <div
+    class="grid bento-grid grid-cols-1 md:grid-cols-3 border border-gray-800 relative mt-6"
+  >
+    {
+      data.map((feature, index) => (
+        <div class="p-8  relative">
+          <div class="flex items-center gap-2 mb-4" />
+          <h3 class="text-2xl font-bold mb-4 font-primary">{feature.label}</h3>
+          <p class="text-gray-400 mb-4 font-secondary">{feature.description}</p>
+
+          {(index === 0 || index === 1 || index === 3 || index === 4) && (
+            <div class="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 z-10">
+              <div class="w-6 h-6 flex items-center justify-center">
+                <PlusMini />
+              </div>
+            </div>
+          )}
+
+          {(index === 0 || index === 1 || index === 2) && (
+            <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-10">
+              <div class="w-6 h-6 flex items-center justify-center">
+                <PlusMini />
+              </div>
+            </div>
+          )}
+        </div>
+      ))
+    }
+  </div>
+</div>

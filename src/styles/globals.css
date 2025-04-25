@@ -3,9 +3,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-boldonse: var(--font-boldonse);
-  --font-primary: var(--font-primary);
-  --font-secondary: var(--font-secondary);
+  --font-boldonse: "Boldonse";
+  --font-primary: "Quicksand";
+  --font-secondary: "Montserrat";
 
   --color-main-yellow: #fffce1;
   --color-secondary: oklch(0.765 0.177 163.223);

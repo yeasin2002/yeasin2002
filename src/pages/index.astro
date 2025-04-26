@@ -14,10 +14,10 @@ import "@/styles/globals.css";
 <Layout>
   <div class="min-h-screen flex flex-col justify-evenly">
     <Hero />
-    <DetailsBento />
+    <DetailsBento client:visible />
   </div>
-  <Skills />
-  <ProjectNext />
-  <Contact />
-  <Footer />
+  <Skills client:visible />
+  <ProjectNext client:visible />
+  <Contact client:visible />
+  <Footer client:visible />
 </Layout>

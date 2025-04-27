@@ -9,7 +9,7 @@ Wanna collaborate? Let's build something amazing together! 🖤
 
 #### Enthusiast For
 
-<img src="https://skillicons.dev/icons?i=ts,tailwindcss,react,next,nuxt,express,mongodb" />
+<img src="https://skillicons.dev/icons?i=ts,tailwindcss,react,next,nuxt,astro,express,mongodb" />
 
 #### Contact Info
 

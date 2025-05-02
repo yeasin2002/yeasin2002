@@ -1,6 +1,7 @@
 ---
 import ogImg from "@/assets/others/og.png";
 import favicon from "@/assets/others/favicon.ico";
+import Analytics from "@vercel/analytics/astro";
 ---
 
 <!doctype html>
@@ -58,5 +59,6 @@ import favicon from "@/assets/others/favicon.ico";
   </head>
   <body>
     <slot />
+    <Analytics />
   </body>
 </html>

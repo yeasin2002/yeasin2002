@@ -7,11 +7,10 @@ Wanna collaborate? Let's build something amazing together! 🖤
 - 🤝 Open for Collaboration, Excited to collaborate on innovative projects.
 - 🌱 Explorering Back-End, Database,Linux etc.
 
-<br  />
-
 #### Enthusiast For
 
 <img src="https://go-skill-icons.vercel.app/api/icons?i=ts,tailwindcss,react,next,nuxt,express,mongodb,postgresql,docker,githubactions" />
+
 
 <br />
 
@@ -38,8 +37,9 @@ Wanna collaborate? Let's build something amazing together! 🖤
        <img src="https://go-skill-icons.vercel.app/api/icons?i=leetcode" />
     </a>
 
+
 <br  />
-<br  />
+
 
 
 <table>

@@ -11,14 +11,7 @@ Wanna collaborate? Let's build something amazing together! 🖤
 
 #### Enthusiast For
 
-##### Front End 
-<img src="https://go-skill-icons.vercel.app/api/icons?i=ts,tailwindcss,react,next,nuxt,redux,zustand" />
-
-##### Back End 
-<img src="https://go-skill-icons.vercel.app/api/icons?i=nodejs,express,mongodb,postgresql" />
-
-##### Others
-<img src="https://go-skill-icons.vercel.app/api/icons?i=figma,docker,githubactions" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=ts,tailwindcss,react,next,nuxt,express,mongodb,postgresql,docker,githubactions" />
 
 <br />
 

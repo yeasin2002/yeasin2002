@@ -7,31 +7,42 @@ Wanna collaborate? Let's build something amazing together! 🖤
 - 🤝 Open for Collaboration, Excited to collaborate on innovative projects.
 - 🌱 Explorering Back-End, Database,Linux etc.
 
+<br  />
+
 #### Enthusiast For
 
-<img src="https://skillicons.dev/icons?i=ts,tailwindcss,react,next,nuxt,astro,express,mongodb" />
+##### Front End 
+<img src="https://go-skill-icons.vercel.app/api/icons?i=ts,tailwindcss,react,next,nuxt,redux,zustand" />
+
+##### Back End 
+<img src="https://go-skill-icons.vercel.app/api/icons?i=nodejs,express,mongodb,postgresql" />
+
+##### Others
+<img src="https://go-skill-icons.vercel.app/api/icons?i=figma,docker,githubactions" />
+
+<br />
 
 #### Contact Info
 
 <a href="mailto:mdkawsarislam2002@gmail.com">
-    <img src="https://img.shields.io/badge/Email_me-323330?style=for-the-badge&logo=Gmail&logoColor=white" />
+    <img src="https://go-skill-icons.vercel.app/api/icons?i=gmail" />
 </a>
 <a href="https://yeasin2002.netlify.app/">
-   <img src="https://img.shields.io/badge/Portfolio-323330?style=for-the-badge&logo=Google-Chrome&logoColor=white" />
+   <img src="https://go-skill-icons.vercel.app/api/icons?i=chrome" />
 </a>
  <a href="https://www.linkedin.com/in/yeasin2002/">
-       <img src="https://img.shields.io/badge/Linkedin-323330?style=for-the-badge&logo=linkedin&logoColor=white" />
+       <img src="https://go-skill-icons.vercel.app/api/icons?i=linkedin" />
     </a>
     
  <a href="https://www.facebook.com/yeasin2002.dev/">
-       <img src="https://img.shields.io/badge/Facebook-323330?style=for-the-badge&logo=facebook&logoColor=white" />
+       <img src="https://go-skill-icons.vercel.app/api/icons?i=facebook" />
     </a>
  
   <a href="https://twitter.com/yeasin2002_dev">
-       <img src="https://img.shields.io/badge/Twitter-323330?style=for-the-badge&logo=twitter&logoColor=white" />
+       <img src="https://go-skill-icons.vercel.app/api/icons?i=x" />
     </a>
 <a href="https://leetcode.com/yeasin2002">
-       <img src="https://img.shields.io/badge/leetcode-323330?style=for-the-badge&logo=leetcode&logoColor=white" />
+       <img src="https://go-skill-icons.vercel.app/api/icons?i=leetcode" />
     </a>
 
 <br  />

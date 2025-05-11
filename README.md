@@ -12,7 +12,6 @@ Wanna collaborate? Let's build something amazing together! 🖤
 <img src="https://go-skill-icons.vercel.app/api/icons?i=ts,tailwindcss,react,next,nuxt,express,mongodb,postgresql,docker,githubactions" />
 
 
-<br />
 
 #### Contact Info
 
@@ -39,7 +38,7 @@ Wanna collaborate? Let's build something amazing together! 🖤
 
 
 <br  />
-
+<br />
 
 
 <table>

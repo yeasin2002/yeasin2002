@@ -9,7 +9,8 @@ Wanna collaborate? Let's build something amazing together! 🖤
 
 #### Enthusiast For
 
-<img src="https://go-skill-icons.vercel.app/api/icons?i=ts,tailwindcss,react,next,nuxt,express,mongodb,postgresql,docker,githubactions" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=ts,tailwindcss,react,next,nuxt" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=express,mongodb,postgresql,docker,githubactions" />
 
 
 
@@ -29,9 +30,6 @@ Wanna collaborate? Let's build something amazing together! 🖤
        <img src="https://go-skill-icons.vercel.app/api/icons?i=facebook" />
     </a>
  
-  <a href="https://twitter.com/yeasin2002_dev">
-       <img src="https://go-skill-icons.vercel.app/api/icons?i=x" />
-    </a>
 <a href="https://leetcode.com/yeasin2002">
        <img src="https://go-skill-icons.vercel.app/api/icons?i=leetcode" />
     </a>

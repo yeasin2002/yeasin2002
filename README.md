@@ -37,7 +37,9 @@ Wanna collaborate? Let's build something amazing together! 🖤
 
 <br  />
 <br />
+<br />
 
+# Statistics
 
 <table>
   <tr>
@@ -45,10 +47,26 @@ Wanna collaborate? Let's build something amazing together! 🖤
     <img  src="https://github-readme-stats.vercel.app/api/top-langs/?username=yeasin2002&langs_count=10&title_color=22c55e&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&locale=en&custom_title=Top%20%Languages&layout=compact" />
      </td>
     <td>
-     <img src="https://github-readme-streak-stats.herokuapp.com?user=yeasin2002&theme=tokyonight&hide_border=true)](https://git.io/streak-stats" /> 
+     <img src="https://leetcard.jacoblin.cool/yeasin2002" /> 
      </td>
   </tr>
 </table>
+
+
+<table>
+  <tr>
+
+<td>
+     <img src="https://github-readme-streak-stats.herokuapp.com?user=yeasin2002&theme=tokyonight&hide_border=true" /> 
+</td>
+<td> 
+    <img  src="https://github-readme-stats.vercel.app/api?username=yeasin2002&show_icons=true" />
+</td>
+  </tr>
+</table>
+
+
+<!--
 
 <details >
 <summary>  <h4 > 📈 More GitHub States (Click to Open) </h4> </summary>
@@ -59,5 +77,6 @@ Wanna collaborate? Let's build something amazing together! 🖤
 [![Leetcode Stats](https://leetcard.jacoblin.cool/yeasin2002)](https://leetcode.com/yeasin2002)
 
 </details>
+-->
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=80&section=footer&fontSize=20"  /></p>

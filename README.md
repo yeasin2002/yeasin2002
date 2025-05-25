@@ -9,8 +9,8 @@ Wanna collaborate? Let's build something amazing together! 🖤
 
 ### Enthusiast For
 
-<img src="https://go-skill-icons.vercel.app/api/icons?i=ts,tailwindcss,react,next,nuxt" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=express,mongodb,postgresql,docker,githubactions" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=ts,tailwindcss,react,next,nuxt,redux" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=nest,mongodb,postgresql,docker,githubactions,supabase" />
 
 
 

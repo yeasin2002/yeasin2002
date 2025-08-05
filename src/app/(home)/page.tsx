@@ -1,19 +1,24 @@
-import Link from 'next/link';
+import { detailsAboutMe } from "@/data/details-aboutme";
+import {
+  Contact,
+  DetailsBento,
+  Footer,
+  Hero,
+  Projects,
+  Skills,
+} from "@/sections";
 
 export default function HomePage() {
   return (
-    <main className="flex flex-1 flex-col justify-center text-center">
-      <h1 className="mb-4 text-2xl font-bold">Hello World</h1>
-      <p className="text-fd-muted-foreground">
-        You can open{' '}
-        <Link
-          href="/docs"
-          className="text-fd-foreground font-semibold underline"
-        >
-          /docs
-        </Link>{' '}
-        and see the documentation.
-      </p>
-    </main>
+    <div className="">
+      <div className="min-h-screen flex flex-col justify-evenly">
+        <Hero />
+        <DetailsBento data={detailsAboutMe} />
+      </div>
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
+    </div>
   );
 }

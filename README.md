@@ -1,45 +1,84 @@
-# yeasin2002
+#### 💫 A chef Who loves to cook visually appealing web applications with different technologies.
 
-This is a Next.js application generated with
-[Create Fumadocs](https://github.com/fuma-nama/fumadocs).
+Hello, I am yeasin form Dhaka and I am 22 year old. I'm a self-taught front-end focused Full Stack Web Developer. TypeScript and Nextjs enthusiast. I have been doing freelance project from last 1 year and working with teams to make good projects.
+Wanna collaborate? Let's build something amazing together! 🖤
 
-Run development server:
+- 💬 Loves to Talk about Technology, Software, Coding, And Ideas
+- 🤝 Open for Collaboration, Excited to collaborate on innovative projects.
+- 🌱 Explorering Back-End, Database,Linux etc.
 
-```bash
-npm run dev
-# or
-pnpm dev
-# or
-yarn dev
-```
+### Enthusiast For
 
-Open http://localhost:3000 with your browser to see the result.
+<img src="https://go-skill-icons.vercel.app/api/icons?i=ts,tailwindcss,react,next,nuxt,redux" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=nest,mongodb,postgresql,docker,githubactions,supabase" />
 
-## Explore
 
-In the project, you can see:
 
-- `lib/source.ts`: Code for content source adapter, [`loader()`](https://fumadocs.dev/docs/headless/source-api) provides the interface to access your content.
-- `app/layout.config.tsx`: Shared options for layouts, optional but preferred to keep.
+### Contact Info
 
-| Route                     | Description                                            |
-| ------------------------- | ------------------------------------------------------ |
-| `app/(home)`              | The route group for your landing page and other pages. |
-| `app/docs`                | The documentation layout and pages.                    |
-| `app/api/search/route.ts` | The Route Handler for search.                          |
+<a href="mailto:mdkawsarislam2002@gmail.com">
+    <img src="https://go-skill-icons.vercel.app/api/icons?i=gmail" />
+</a>
+<a href="https://yeasin2002.netlify.app/">
+   <img src="https://go-skill-icons.vercel.app/api/icons?i=chrome" />
+</a>
+ <a href="https://www.linkedin.com/in/yeasin2002/">
+       <img src="https://go-skill-icons.vercel.app/api/icons?i=linkedin" />
+    </a>
+    
+ <a href="https://www.facebook.com/yeasin2002.dev/">
+       <img src="https://go-skill-icons.vercel.app/api/icons?i=facebook" />
+    </a>
+ 
+<a href="https://leetcode.com/yeasin2002">
+       <img src="https://go-skill-icons.vercel.app/api/icons?i=leetcode" />
+    </a>
 
-### Fumadocs MDX
 
-A `source.config.ts` config file has been included, you can customise different options like frontmatter schema.
+<br  />
+<br />
+<br />
 
-Read the [Introduction](https://fumadocs.dev/docs/mdx) for further details.
+### Statistics
 
-## Learn More
+<table>
+  <tr>
+    <td> 
+    <img  src="https://github-readme-stats.vercel.app/api/top-langs/?username=yeasin2002&langs_count=10&title_color=22c55e&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&locale=en&custom_title=Top%20%Languages&layout=compact" />
+     </td>
+    <td>
+     <img src="https://leetcard.jacoblin.cool/yeasin2002" /> 
+     </td>
+  </tr>
+</table>
 
-To learn more about Next.js and Fumadocs, take a look at the following
-resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Fumadocs](https://fumadocs.vercel.app) - learn about Fumadocs
+<table>
+  <tr>
+
+<td>
+     <img src="https://github-readme-streak-stats.herokuapp.com?user=yeasin2002&theme=tokyonight&hide_border=true" /> 
+</td>
+<td> 
+    <img  src="https://github-readme-stats.vercel.app/api?username=yeasin2002&show_icons=true" />
+</td>
+  </tr>
+</table>
+
+
+<!--
+
+<details >
+<summary>  <h4 > 📈 More GitHub States (Click to Open) </h4> </summary>
+<be>
+
+![My GitHub stats](https://github-readme-stats.vercel.app/api?username=yeasin2002&show_icons=true)
+
+[![Leetcode Stats](https://leetcard.jacoblin.cool/yeasin2002)](https://leetcode.com/yeasin2002)
+
+</details>
+-->
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=80&section=footer&fontSize=20"  /></p>
+
+

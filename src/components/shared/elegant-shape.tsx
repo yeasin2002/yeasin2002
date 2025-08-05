@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/utils";
+import { cn } from "@/lib";
 import { motion } from "motion/react";
 
 export function ElegantShape({

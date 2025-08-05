@@ -4,7 +4,6 @@ interface Props extends React.ComponentProps<"button"> {
 }
 
 const OverText = ({ text, className }: Props) => {
-  const size = "text-xl 2xl:text-5xl";
   return (
     <>
       <button data-text="Awesome" className={classes.button + " " + className}>

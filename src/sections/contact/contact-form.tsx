@@ -16,12 +16,13 @@ export function ContactForm() {
     setIsPending(true);
 
     try {
-      const result = await sendEmail({ email, message });
+      const result = await sendEmail();
 
       if (result.success) {
         toast.success("Success");
       } else {
-        throw new Error(result.error, { cause: result });
+        console.log("Error", result);
+        // throw new Error(result.error, { cause: result });
       }
     } catch (error) {
       console.log("Error", error);

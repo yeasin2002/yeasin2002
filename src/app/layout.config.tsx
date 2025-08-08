@@ -8,9 +8,7 @@ import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
  * Docs Layout: app/docs/layout.tsx
  */
 export const baseOptions: BaseLayoutProps = {
-  nav: {
-    // title: <>Yeasin2002</>,
-  },
-  // see https://fumadocs.dev/docs/ui/navigation/links
+  githubUrl: "https://github.com/yeasin2002?ref=yeasin2002.dev",
+  nav: { title: "YEASIN2002" },
   links: [],
 };

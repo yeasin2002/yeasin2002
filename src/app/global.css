@@ -1,8 +1,7 @@
-@import 'tailwindcss';
-@import 'fumadocs-ui/css/neutral.css';
-@import 'fumadocs-ui/css/preset.css';
+@import "tailwindcss";
+@import "fumadocs-ui/css/neutral.css";
+@import "fumadocs-ui/css/preset.css";
 @custom-variant dark (&:is(.dark *));
-
 
 @theme {
   --font-boldonse: var(--font-boldonse);
@@ -11,6 +10,7 @@
 
   --color-main-yellow: #fffce1;
   --color-secondary: oklch(0.765 0.177 163.223);
+  --font-baloo-da2: var(--font-baloo-da2);
 }
 
 @layer base {

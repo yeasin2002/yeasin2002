@@ -1,4 +1,9 @@
-import { Montserrat, Quicksand } from "next/font/google";
+import {
+  Baloo_Da_2,
+  Montserrat,
+  Noto_Serif_Bengali,
+  Quicksand,
+} from "next/font/google";
 import Local from "next/font/local";
 
 const boldonse = Local({
@@ -20,6 +25,12 @@ const secondary = Montserrat({
   weight: ["400", "500", "700"],
 });
 
-const fontList = [boldonse, primary, secondary];
+const notoSerifBengali = Baloo_Da_2({
+  subsets: ["latin"],
+  variable: "--font-baloo-da2",
+  weight: ["400", "500", "700"],
+});
+
+const fontList = [boldonse, primary, secondary, notoSerifBengali];
 
 export const fontVariables = fontList.map((font) => font.variable).join(" ");

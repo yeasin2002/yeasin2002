@@ -1,4 +1,4 @@
-import skillData from "@/data/skillData";
+import skillData from "@/app/(home)/_data/skillData";
 import React from "react";
 import LoopOverSkill from "./LoopOverSkill";
 

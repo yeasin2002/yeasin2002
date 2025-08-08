@@ -1,4 +1,4 @@
-import { contactList } from "@/data/contactInfo";
+import { contactList } from "@/app/(home)/_data/contactInfo";
 import { cn } from "@/lib";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";

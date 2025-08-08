@@ -1,4 +1,3 @@
-import { detailsAboutMe } from "@/data/details-aboutme";
 import {
   Contact,
   DetailsBento,
@@ -6,7 +5,8 @@ import {
   Hero,
   Projects,
   Skills,
-} from "@/sections";
+} from "./_components";
+import { detailsAboutMe } from "./_data/";
 
 export default function HomePage() {
   return (

@@ -1,4 +1,4 @@
-import type { projectTypes } from "@/data/projectData";
+import type { projectTypes } from "@/app/(home)/_data/projectData";
 
 import { Github } from "lucide-react";
 import Image from "next/image";

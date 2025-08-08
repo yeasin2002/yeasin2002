@@ -1,9 +1,8 @@
 import Link from "next/link";
 
-
+import projectData from "@/app/(home)/_data/projectData";
 import Revel from "@/components/shared/Revel";
 import OverText from "@/components/ui/Buttons/OverText/OverText";
-import projectData from "@/data/projectData";
 
 import { ProjectCard } from "./ProjectCard";
 

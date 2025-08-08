@@ -1,9 +1,4 @@
-import {
-  Baloo_Da_2,
-  Montserrat,
-  Noto_Serif_Bengali,
-  Quicksand,
-} from "next/font/google";
+import { Baloo_Da_2, Montserrat, Quicksand } from "next/font/google";
 import Local from "next/font/local";
 
 const boldonse = Local({

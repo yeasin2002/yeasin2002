@@ -13,7 +13,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={inter.className} suppressHydrationWarning>
       <body className={cn("flex flex-col min-h-screen", fontVariables)}>
-        <RootProvider>{children}</RootProvider>
+        <RootProvider theme={{ defaultTheme: "dark" }}>{children}</RootProvider>
       </body>
     </html>
   );

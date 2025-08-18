@@ -23,7 +23,7 @@ export const ProjectCard = ({
 }: projectTypes & ProjectCardProps) => {
   return (
     <div
-      className={`h-full w-full  rounded-xl bg-[rgb(8,8,8,0.6)]  p-4  
+      className={`h-full w-full  rounded-xl bg-fd-secondary  p-4  
     ${isTranslate && id === 1 && "lg:-translate-y-40 2xl:-translate-y-72"}
     `}
     >

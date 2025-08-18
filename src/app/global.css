@@ -9,15 +9,18 @@
   --font-secondary: var(--font-secondary);
 
   --color-main-yellow: var(--color-main-yellow);
-  --color-secondary: oklch(0.765 0.177 163.223);
+  --color-secondary: var(--color-secondary);
   --font-baloo-da2: var(--font-baloo-da2);
 }
 @layer base {
   :root {
-    --color-main-yellow: #7a7545;
+    --color-main-yellow: #45474B;
+    --color-secondary: #fbd26a;   
   }
   .dark {
     --color-main-yellow: #fffce1;
+    --color-secondary: oklch(0.765 0.177 163.223);
+    
   }
 }
 

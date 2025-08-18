@@ -1,4 +1,6 @@
+import avatarImg from "@/assets/images/yeasin2002-avatar.png";
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
+import Image from "next/image";
 
 /**
  * Shared layout configurations
@@ -9,6 +11,17 @@ import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
  */
 export const baseOptions: BaseLayoutProps = {
   githubUrl: "https://github.com/yeasin2002?ref=yeasin2002.dev",
-  nav: { title: "YEASIN2002" },
+  nav: {
+    title: (
+      <div className="flex items-center gap-2">
+        <Image
+          src={avatarImg}
+          alt="Md Kawsar Islam Yeasin"
+          className="size-8 rounded-xl"
+        />
+        <span>Yeasin2002</span>
+      </div>
+    ),
+  },
   links: [],
 };

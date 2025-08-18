@@ -44,7 +44,7 @@ export function ContactForm() {
           name="email"
           placeholder="Enter your email"
           required
-          className="w-full bg-[#111] rounded-xl p-4 text-xl   placeholder:text-gray-600 ring-0 outline-none border border-main-yellow/10 "
+          className="w-full bg-fd-background rounded-xl p-4 text-xl   placeholder:text-gray-600 ring-0 outline-none border border-main-yellow/40 dark:border-main-yellow/10 "
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -60,7 +60,7 @@ export function ContactForm() {
           placeholder="Enter your message"
           required
           rows={6}
-          className="w-full bg-[#111] rounded-xl p-4 text-xl  ring-0 outline-none placeholder:text-gray-600 resize-none  border border-main-yellow/10 "
+          className="w-full bg-fd-background rounded-xl p-4 text-xl  ring-0 outline-none placeholder:text-gray-600 resize-none  border border-main-yellow/40 dark:border-main-yellow/10 "
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />

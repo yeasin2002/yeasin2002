@@ -2,7 +2,7 @@ import { contactList } from "@/app/(home)/_data/contactInfo";
 import { cn } from "@/lib";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
-interface Props extends React.ComponentProps<"div"> {}
+type Props = React.ComponentProps<"div">;
 
 export const ContactInfo = ({ className }: Props) => {
   return (
@@ -25,15 +25,17 @@ export const ContactInfo = ({ className }: Props) => {
           className="flex items-center gap-4"
         >
           <Mail className=" size-6 text-secondary" />
-          <span>mdkawsarislam2002@gmail.com</span>
+          <span className="text-fd-primary/80">
+            mdkawsarislam2002@gmail.com
+          </span>
         </Link>
         <Link href="tel:+880163227965" className="flex items-center gap-4">
           <Phone className=" size-6 text-secondary" />
-          <span>+880163227965</span>
+          <span className="text-fd-primary/80">+880163227965</span>
         </Link>
         <div className="flex items-center gap-4">
           <MapPin className=" size-6 text-secondary" />
-          <span>Dhaka Cantonment</span>
+          <span className="text-fd-primary/80">Dhaka Cantonment</span>
         </div>
       </div>
 

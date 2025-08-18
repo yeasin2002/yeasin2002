@@ -8,9 +8,17 @@
   --font-primary: var(--font-primary);
   --font-secondary: var(--font-secondary);
 
-  --color-main-yellow: #fffce1;
+  --color-main-yellow: var(--color-main-yellow);
   --color-secondary: oklch(0.765 0.177 163.223);
   --font-baloo-da2: var(--font-baloo-da2);
+}
+@layer base {
+  :root {
+    --color-main-yellow: #7a7545;
+  }
+  .dark {
+    --color-main-yellow: #fffce1;
+  }
 }
 
 @layer base {
@@ -19,13 +27,11 @@
   }
 
   body {
-    @apply spotlit-bg text-white font-secondary mx-2;
+    @apply text-fd-primary bg-fd-background font-secondary mx-2;
   }
 }
 
-@utility spotlit-bg {
-  @apply bg-gradient-to-br from-black via-zinc-900 to-black;
-}
+/* @utility spotlit-bg { @apply bg-gradient-to-br from-black via-zinc-900 to-black; } */
 @utility sections-container {
   @apply 2xl:container mx-auto;
 }

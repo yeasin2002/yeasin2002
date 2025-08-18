@@ -62,7 +62,7 @@ export const ProjectCard = ({
         </div>
       </div>
       <div className="flex flex-wrap gap-x-3 2xl:py-2 ">
-        {tag?.map((tech, i) => {
+        {tag?.map((tech) => {
           return (
             <p className={`text-gray-300 `} key={crypto.randomUUID()}>
               #{tech}

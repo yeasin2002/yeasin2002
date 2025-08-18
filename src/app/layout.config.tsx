@@ -23,5 +23,5 @@ export const baseOptions: BaseLayoutProps = {
       </div>
     ),
   },
-  links: [],
+  links: [{ text: "Blogs", url: "/my-blogs" }],
 };

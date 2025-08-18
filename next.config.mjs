@@ -5,7 +5,10 @@ const withMDX = createMDX();
 /** @type {import('next').NextConfig} */
 const config = {
   images: {
-    remotePatterns: [{ hostname: "cdn.techdiary.dev" }],
+    remotePatterns: [
+      { hostname: "cdn.techdiary.dev " },
+      { hostname: "images.unsplash.com" },
+    ],
   },
   reactStrictMode: true,
   eslint: {

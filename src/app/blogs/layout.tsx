@@ -6,8 +6,9 @@ import type { ReactNode } from "react";
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <DocsLayout
-      tree={source.pageTree}
       {...baseOptions}
+      tree={source.pageTree}
+      sidebar={{ enabled: false }}
       containerProps={{ className: "font-baloo-da2 " }}
     >
       {children}

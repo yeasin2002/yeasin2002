@@ -6,7 +6,7 @@ const withMDX = createMDX();
 const config = {
   images: {
     remotePatterns: [
-      { hostname: "cdn.techdiary.dev " },
+      { hostname: "cdn.techdiary.dev" },
       { hostname: "images.unsplash.com" },
     ],
   },

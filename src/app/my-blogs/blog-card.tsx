@@ -1,21 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { BlogItem } from "./useSearchBlog";
 
-export type BlogItemsType = {
-  id: string;
-  type: string;
-  content: string;
-  url: string;
-};
-
-export function BlogPostCard({ post }: { post: BlogItemsType }) {
-  //   const formatDate = (dateString: string) => {
-  //     return new Date(dateString).toLocaleDateString("en-US", {
-  //       year: "numeric",
-  //       month: "long",
-  //       day: "numeric",
-  //     });
-  //   };
+export function BlogPostCard({ post }: { post: BlogItem }) {
   const imgUrl = `https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1120&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`;
 
   return (
@@ -32,10 +19,10 @@ export function BlogPostCard({ post }: { post: BlogItemsType }) {
         </div>
         <div className="space-y-3">
           <h3 className="text-xl md:text-2xl font-bold leading-tight group-hover:text-blue-600 transition-colors">
-            {post.type}
+            {post.title}
           </h3>
           <p className="text-gray-600 leading-relaxed tracking-wide">
-            {post.content}
+            {post.description}
           </p>
           <div className="flex items-center space-x-4 text-sm text-gray-500">
             {/* <div className="flex items-center space-x-2">

@@ -17,6 +17,7 @@ export default function BlogsPage() {
     // transform: (raw) => raw.map(r => ({ id: r.url, title: r.title, ...r }))
   });
 
+  console.log(results);
   return (
     <main className="container mx-auto px-5">
       <section className="py-16 md:py-24">

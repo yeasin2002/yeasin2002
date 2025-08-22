@@ -1,33 +1,20 @@
-import { useDocsSearch } from "fumadocs-core/search/client";
-import { useState } from "react";
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+interface Props extends React.ComponentProps<"input"> {}
 
-export function SearchBar({ onSearch }: { onSearch: (query: string) => void }) {
-  const [query, setQuery] = useState("");
-  const {
-    search,
-    // setSearch,
-    // query: searchQuery,
-  } = useDocsSearch({ type: "fetch" });
-
-  console.log(search);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    onSearch(query);
-  };
-
+export function SearchBar({ ...props }: Props) {
   return (
-    <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
+    <div className="max-w-2xl mx-auto">
       <div className="relative">
         <input
           type="text"
           placeholder="Search blog posts..."
-          value={query}
-          onChange={(e) => {
-            setQuery(e.target.value);
-            onSearch(e.target.value);
-          }}
+          // value={query}
+          // onChange={(e) => {
+          //   setQuery(e.target.value);
+          //   onSearch(e.target.value);
+          // }}
           className="w-full px-6 py-4 text-lg border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          {...props}
         />
         <button
           type="submit"
@@ -36,6 +23,6 @@ export function SearchBar({ onSearch }: { onSearch: (query: string) => void }) {
           Search
         </button>
       </div>
-    </form>
+    </div>
   );
 }

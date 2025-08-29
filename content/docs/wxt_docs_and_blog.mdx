@@ -1,8 +1,9 @@
 ---
 title: WXT Documentation 
-description: This markdown file contains two distinct pieces of content about **WXT**: a comprehensive documentation article and a focused blog post on entrypoints.
-img: https://unsplash.com/s/photos/website-banner
+description:  a comprehensive documentation article and a focused blog post on entrypoints.
+
 ---
+
 
 # Details on WXT Documentation
 
@@ -172,3 +173,58 @@ WXT will generate the appropriate manifest fields automatically.
 ### Conclusion
 
 Entrypoints are fundamental to extension development, but managing them by hand is tedious. WXT simplifies this process with automatic detection, smart configuration, and intuitive project structure. If you’re building extensions with multiple moving parts, WXT’s entrypoint system will keep your codebase clean and scalable.
+
+
+### Example Structure 
+
+```
+your-extension/
+├─ src/                          # shared code (utils, components, types)
+│  ├─ utils/
+│  └─ ui/
+├─ entrypoints/
+│  ├─ background/
+│  │  └─ index.ts                # background service worker / persistent logic
+│  │
+│  ├─ popup/
+│  │  ├─ index.html              # popup HTML (optional)
+│  │  └─ index.tsx               # popup UI entrypoint
+│  │
+│  ├─ options/
+│  │  ├─ index.html              # options/settings page HTML
+│  │  └─ index.tsx               # options page logic/UI
+│  │
+│  ├─ content/
+│  │  ├─ main.content.ts         # content script (runs in page)
+│  │  ├─ injected.content.ts     # alternate content entry
+│  │  └─ content.styles.css      # content-only stylesheet
+│  │
+│  ├─ sidepanel/
+│  │  ├─ index.html              # side panel UI
+│  │  └─ index.tsx               # side panel script (Manifest V3)
+│  │
+│  ├─ devtools/
+│  │  ├─ panel.html              # DevTools panel page
+│  │  └─ panel.ts                # DevTools panel script
+│  │
+│  ├─ newtab/
+│  │  ├─ index.html              # override new tab page
+│  │  └─ index.tsx
+│  │
+│  ├─ uninstall/
+│  │  └─ index.html              # uninstall survey / feedback page
+│  │
+│  ├─ action/                    # optional separate UI for extension action
+│  │  └─ badge-handler.ts
+│  │
+│  ├─ background-helpers/        # non-entrypoint helper files (optional)
+│  │  └─ cron.ts
+│  │
+│  └─ _examples/                 # example runnable demos (not required)
+│     └─ quick-demo.ts
+├─ wxt.config.ts                 # wxt config maps modules, permissions, etc.
+├─ package.json
+└─ tsconfig.json
+
+
+```

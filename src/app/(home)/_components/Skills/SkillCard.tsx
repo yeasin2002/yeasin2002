@@ -14,7 +14,6 @@ const SkillCard = ({
   title,
   icon,
 
-  reference = "",
   index,
 }: thisProps) => {
   return (

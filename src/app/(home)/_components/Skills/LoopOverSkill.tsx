@@ -1,10 +1,11 @@
 
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import React from "react";
 import SkillCard from "./SkillCard";
 
 export interface Item {
   title: string;
-  icon: any;
+  icon: string | StaticImport;
   reference?: string;
   additionalMessage?: string;
 }

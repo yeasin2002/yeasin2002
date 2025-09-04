@@ -9,14 +9,16 @@
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "fumadocs-core": "15.6.9",
     "fumadocs-mdx": "11.7.3",
     "fumadocs-ui": "15.6.9",
+    "gsap": "^3.13.0",
     "lucide-react": "^0.539.0",
     "motion": "^12.23.12",
-    "next": "15.4.5",
+    "next": "^15.5.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-hot-toast": "^2.5.2",

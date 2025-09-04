@@ -8,12 +8,7 @@ interface thisProps extends Item {
   index: number;
 }
 
-const SkillCard = ({
-  title,
-  icon,
-
-  index,
-}: thisProps) => {
+const SkillCard = ({ title, icon }: thisProps) => {
   return (
     <div
       className="animate-fade"

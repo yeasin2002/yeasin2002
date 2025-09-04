@@ -5,11 +5,12 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev --turbo",
-    "start": "next start",
+    "start": "next start -p 3002",
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@types/gsap": "^3.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "fumadocs-core": "15.6.9",

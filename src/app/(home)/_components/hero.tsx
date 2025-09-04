@@ -1,12 +1,52 @@
+"use client";
+
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { SplitText } from "gsap/all";
+
 export const Hero = () => {
+  useGSAP(() => {
+    const heroSplit = new SplitText("#title", { type: "chars, words" });
+    const paragraphSplit = new SplitText("#subtitle", { type: "lines" });
+
+    // heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
+    gsap.from(heroSplit.chars, {
+      yPercent: 100,
+      duration: 1,
+      ease: "expo.out",
+      stagger: 0.02,
+    });
+    gsap.from(paragraphSplit.lines, {
+      opacity: 0,
+      yPercent: 100,
+      duration: 1.8,
+      ease: "expo.out",
+      stagger: 0.06,
+      delay: 1,
+    });
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: "#hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  }, []);
   return (
-    <div>
+    <div id="hero">
       <div className="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-start gap-8 relative">
         <div className=" space-y-6">
-          <h1 className=" text-3xl/relaxed md:text-5xl/relaxed font-bold text-yellow-vibe  font-boldonse text-main-yellow">
+          <h1
+            id="title"
+            className=" text-3xl/relaxed md:text-5xl/relaxed font-bold text-yellow-vibe  font-boldonse text-main-yellow"
+          >
             Junior Software Developer
           </h1>
-          <p className="text-xl  max-w-6xl font-primary font-normal">
+          <p
+            id="subtitle"
+            className="text-xl  max-w-6xl font-primary font-normal"
+          >
             Hi, {`i'm`} Md Kawsar Islam Yeasin. I am a front-end focused Full
             Stack web developer. TypeScript and Nextjs enthusiast. I have been
             doing freelance project from last 1 year and working with teams to

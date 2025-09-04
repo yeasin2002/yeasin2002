@@ -1,8 +1,6 @@
 import Image from "next/image";
-import React from "react";
 
 //  icons and types
-import Revel from "@/components/shared/Revel";
 
 import type { Item } from "./LoopOverSkill";
 
@@ -17,7 +15,10 @@ const SkillCard = ({
   index,
 }: thisProps) => {
   return (
-    <Revel transition={{ duration: 0.4, delay: index / 20 }}>
+    <div
+      className="animate-fade"
+      // transition={{ duration: 0.4, delay: index / 20 }}
+    >
       <div
         className={`link group group relative flex select-none   items-center   overflow-hidden rounded-sm   py-2 font-medium text-conf   shadow-md  transition-all hover:scale-105 hover:shadow-lg
       md:rounded-lg  md:px-4 xl:py-4 xl:text-xl    bg-[rgba(71,85,105,.2)] text-[hsla(0,0%,100%,.85)] hover:bg-[rgba(71,85,105,.3)]`}
@@ -38,7 +39,7 @@ const SkillCard = ({
           </div>
         </div>
       </div>
-    </Revel>
+    </div>
   );
 };
 export default SkillCard;

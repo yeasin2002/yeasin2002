@@ -1,1 +1,1 @@
-export * from "./elegant-shape";
+

@@ -1,90 +1,152 @@
-#### 💫 A chef Who loves to cook visually appealing web applications with different technologies.
+# Sleek Portfolio by ramxcodes
 
-Hello, I am yeasin form Dhaka and I am 22 year old. I'm a self-taught front-end focused Full Stack Web Developer. TypeScript and Nextjs enthusiast. I have been doing freelance project from last 1 year and working with teams to make good projects.
-Wanna collaborate? Let's build something amazing together! 🖤
+A modern, responsive portfolio website built with Next.js 15, TypeScript, Tailwind CSS, and Shadcn UI. Features a blog system, project showcase, work experience timeline, and contact form with Telegram integration.
 
-- 💬 Loves to Talk about Technology, Software, Coding, And Ideas
-- 🤝 Open for Collaboration, Excited to collaborate on innovative projects.
-- 🌱 Explorering Back-End, Database,Linux etc.
+![Portfolio Preview](/public/meta/hero.png)
 
-### Enthusiast For
+## Deploy 
 
-<img src="https://go-skill-icons.vercel.app/api/icons?i=ts,tailwindcss,react,next,nuxt,redux,reactquery" />
-<img src="https://go-skill-icons.vercel.app/api/icons?i=turborepo,hono,trpc,postgresql,githubactions,drizzle,linux" />
+Click here to your portfolio template now:
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Framxcodes%2Fsleek-portfolio&env=TELEGRAM_BOT_TOKEN,TELEGRAM_CHAT_ID,GEMINI_API_KEY,NEXT_PUBLIC_URL,NEXT_PUBLIC_UMAMI_SRC,NEXT_PUBLIC_UMAMI_ID)
 
+## Features
 
+- **Next.js 15** with App Router
+- **Tailwind CSS** for styling
+- **Shadcn UI** components
+- **Dark/Light** mode
+- **Responsive** design
+- **MDX** for blog posts and project details
+- **Contact Form** with Telegram integration
+- **SEO** optimized
+- **TypeScript** for type safety
+- **Umami Analytics** for privacy-focused web analytics
 
-### Contact Info
+## Prerequisites
 
-<a href="mailto:mdkawsarislam2002@gmail.com">
-    <img src="https://go-skill-icons.vercel.app/api/icons?i=gmail" />
-</a>
-<a href="https://yeasin2002.netlify.app/">
-   <img src="https://go-skill-icons.vercel.app/api/icons?i=chrome" />
-</a>
- <a href="https://www.linkedin.com/in/yeasin2002/">
-       <img src="https://go-skill-icons.vercel.app/api/icons?i=linkedin" />
-    </a>
-    
- <a href="https://www.facebook.com/yeasin2002.dev/">
-       <img src="https://go-skill-icons.vercel.app/api/icons?i=facebook" />
-    </a>
- 
+Before you begin, ensure you have the following installed:
 
-<a href="https://www.reddit.com/user/mdkawsarislam2002/">
-       <img src="https://go-skill-icons.vercel.app/api/icons?i=reddit" />
-    </a>
+- Node.js (v18 or higher)
+- Bun (preferred) or npm
 
-<a href="https://leetcode.com/yeasin2002">
-       <img src="https://go-skill-icons.vercel.app/api/icons?i=leetcode" />
-    </a>
+## Environment Variables
 
+Create a `.env` file in the root directory with the following variables:
 
-<br  />
-<br />
-<br />
+```env
+TELEGRAM_BOT_TOKEN="your-token"
+TELEGRAM_CHAT_ID="your-chat-id"
+GEMINI_API_KEY="your-api-key"
+NODE_ENV="development"
+NEXT_PUBLIC_URL="http://localhost:3000"
+NEXT_PUBLIC_UMAMI_SRC="your-umami-script-url"
+NEXT_PUBLIC_UMAMI_ID="your-umami-website-id"
+```
 
-### Statistics
+### Setting up Telegram Integration
 
-<table>
-  <tr>
-    <td> 
-    <img  src="https://github-readme-stats.vercel.app/api/top-langs/?username=yeasin2002&langs_count=10&title_color=22c55e&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&locale=en&custom_title=Top%20%Languages&layout=compact" />
-     </td>
-    <td>
-     <img src="https://leetcard.jacoblin.cool/yeasin2002" /> 
-     </td>
-  </tr>
-</table>
+1. Create a new bot with [@BotFather](https://t.me/botfather) on Telegram
+2. Copy the bot token provided
+3. Start a chat with your bot
+4. Get your chat ID by:
+   - Add your `bot` in a group as `admin`
+   - Then send `/id` to [@rosebot](https://t.me/MissRose_bot)
+   - Boom! you get your `id`
 
+### Setting up Umami Analytics
 
-<table>
-  <tr>
+1. Visit Umami:
+   - Self-host Umami or use [Umami Cloud](https://cloud.umami.is)
+   - Follow Umami's [installation guide](https://umami.is/docs/install)
 
-<td>
-     <img src="https://github-readme-streak-stats.herokuapp.com?user=yeasin2002&theme=tokyonight&hide_border=true" /> 
-</td>
-<td> 
-    <img  src="https://github-readme-stats.vercel.app/api?username=yeasin2002&show_icons=true" />
-</td>
-  </tr>
-</table>
+2. Get your credentials:
+   - Copy your Umami script URL (ends with `/script.js`)
+   - Get your website ID from Umami dashboard
 
+3. Configure environment variables:
+   ```env
+   NEXT_PUBLIC_UMAMI_SRC="https://[your-umami-instance]/script.js"
+   NEXT_PUBLIC_UMAMI_ID="your-website-id"
+   ```
 
-<!--
+## Getting Started
 
-<details >
-<summary>  <h4 > 📈 More GitHub States (Click to Open) </h4> </summary>
-<be>
+1. Clone the repository:
 
-![My GitHub stats](https://github-readme-stats.vercel.app/api?username=yeasin2002&show_icons=true)
+   ```bash
+   git clone https://github.com/ramxcodes/sleek-portfolio.git
+   cd sleek-portfolio
+   ```
 
-[![Leetcode Stats](https://leetcard.jacoblin.cool/yeasin2002)](https://leetcode.com/yeasin2002)
+2. Install dependencies:
 
-</details>
--->
+   ```bash
+   # Using bun (recommended)
+   bun install
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=80&section=footer&fontSize=20"  /></p>
+   # Using npm
+   npm install
+   ```
 
+3. Run the development server:
 
+   ```bash
+   # Using bun
+   bun dev
+
+   # Using npm
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Configuration
+
+The project uses configuration files in the `src/config` directory for easy customization:
+
+- `About.tsx` - About section content
+- `Contact.tsx` - Contact form settings
+- `Experience.tsx` - Work experience details
+- `Footer.tsx` - Footer links and content
+- `Gears.tsx` - Setup/gear section
+- `Hero.tsx` - Hero section content
+- `Meta.tsx` - SEO and metadata
+- `Navbar.tsx` - Navigation links
+- `Projects.tsx` - Project showcase settings
+- `Quote.ts` - Random quotes configuration
+- `Resume.ts` - Resume section details
+- `Setup.tsx` - Development setup information
+- `cat.ts` - Enable disable the cat
+
+## Adding New Technology Icons
+
+1. Visit [Devicon](https://devicon.dev/) to find the icon you want to add
+2. Create a new component in `src/components/technologies/`
+3. Follow the existing component structure for consistency
+
+Example:
+
+```tsx
+export const NewTechIcon = () => {
+  return <svg>// SVG content from devicon</svg>;
+};
+```
+
+## Adding Content
+
+### Blog Posts
+
+1. Create a new MDX file in `src/data/blog/`
+2. Add metadata and content following existing post structure
+3. Add blog thumbnail in `public/blog/`
+
+### Projects
+
+1. Create a new MDX file in `src/data/projects/`
+2. Add metadata and content following existing project structure
+3. Add project thumbnail in `public/project/`
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

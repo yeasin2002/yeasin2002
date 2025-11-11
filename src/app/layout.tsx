@@ -1,23 +1,45 @@
-import "@/app/global.css";
-import { fontVariables } from "@/fonts";
-import { cn } from "@/lib";
-import { RootProvider } from "fumadocs-ui/provider";
-import { Inter } from "next/font/google";
-import type { ReactNode } from "react";
-import { RootAnimation } from "./root-animation.provider";
+import UmamiAnalytics from '@/components/analytics/UmamiAnalytics';
+import ChatBubble from '@/components/common/ChatBubble';
+import Footer from '@/components/common/Footer';
+import Navbar from '@/components/common/Navbar';
+import OnekoCat from '@/components/common/OnekoCat';
+import { Quote } from '@/components/common/Quote';
+import { ThemeProvider } from '@/components/common/ThemeProviders';
+import { generateMetadata as getMetadata } from '@/config/Meta';
+import ReactLenis from 'lenis/react';
+import { ViewTransitions } from 'next-view-transitions';
 
-const inter = Inter({
-  subsets: ["latin"],
-});
+import './globals.css';
 
-export default function Layout({ children }: { children: ReactNode }) {
+export const metadata = getMetadata('/');
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="en" className={inter.className} suppressHydrationWarning>
-      <body className={cn("flex flex-col min-h-screen", fontVariables)}>
-        <RootProvider theme={{ defaultTheme: "dark" }}>
-          <RootAnimation>{children}</RootAnimation>
-        </RootProvider>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en" suppressHydrationWarning>
+        <body className={`font-hanken-grotesk antialiased`}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <ReactLenis root>
+              <Navbar />
+              {children}
+              <OnekoCat />
+              <Quote />
+              <Footer />
+              <ChatBubble />
+              <UmamiAnalytics />
+            </ReactLenis>
+          </ThemeProvider>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

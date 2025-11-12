@@ -7,27 +7,27 @@ import Phone from '@/components/svgs/devices/Phone';
 
 export const devices = [
   {
-    name: 'Apple MacBook Pro 16"in M4 48GB 512GB',
+    name: 'Your Laptop Model',
     icon: <Laptop className="size-4" />,
   },
   {
-    name: 'LG Ultragear 27GN650 (27 inch, 68.5 cm)',
+    name: 'Your Monitor Model',
     icon: <Monitor className="size-4" />,
   },
   {
-    name: 'Magic Keyboard',
+    name: 'Your Keyboard',
     icon: <Keyboard className="size-4" />,
   },
   {
-    name: 'Logitech MX Master 3S Mouse',
+    name: 'Your Mouse',
     icon: <Mouse className="size-4" />,
   },
   {
-    name: 'Crossbeats Roar 2.0 (Special Addition)',
+    name: 'Your Headphones',
     icon: <Headphones className="size-4" />,
   },
   {
-    name: 'Samsung S23 (256 GB)',
+    name: 'Your Phone Model',
     icon: <Phone className="size-4" />,
   },
 ];

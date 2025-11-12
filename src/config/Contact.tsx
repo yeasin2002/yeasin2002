@@ -1,7 +1,7 @@
 export const contactConfig = {
-  title: 'Contact',
+  title: 'Get in touch',
   description:
-    'Get in touch with me. I will get back to you as soon as possible.',
+    "Let's talk on something great. I will get back to you as soon as possible.",
   form: {
     labels: {
       name: 'Name',
@@ -12,7 +12,7 @@ export const contactConfig = {
     placeholders: {
       name: 'Your name',
       email: 'your.email@example.com',
-      phone: '+1 (555) 123-4567',
+      phone: '+880 1632227965',
       message: 'Tell me about your project...',
     },
     submitButton: 'Send Message',

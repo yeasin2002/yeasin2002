@@ -9,18 +9,18 @@ import ReactIcon from '@/components/technologies/ReactIcon';
 import TypeScript from '@/components/technologies/TypeScript';
 
 export const mySkills = [
-  <ReactIcon key="react" />,
-  <Bun key="bun" />,
-  <JavaScript key="javascript" />,
   <TypeScript key="typescript" />,
-  <MongoDB key="mongodb" />,
+  <ReactIcon key="react" />,
   <NextJs key="nextjs" />,
   <NodeJs key="nodejs" />,
+  <MongoDB key="mongodb" />,
   <PostgreSQL key="postgresql" />,
   <Prisma key="prisma" />,
+  <JavaScript key="javascript" />,
+  <Bun key="bun" />,
 ];
 
 export const about = {
-  name: 'Ramkrishna Swarnkar',
-  description: `I'm a Full Stack web developer and Open Source Contributor, I love building products to solve real-world problems. I'm specialized in building MVP's.`,
+  name: 'Md Kawsar Islam Yeasin',
+  description: `I'm a front-end focused Full Stack Developer with over 1 year of experience as a freelancer and in contract-based roles with agencies and indie devs. Engaged in open-source contributions. Skilled in cross-team collaboration and client communication.`,
 };

@@ -53,14 +53,14 @@ export const skillComponents = {
 
 export const heroConfig = {
   // Personal Information
-  name: 'Ram',
-  title: 'A Full Stack web developer.',
+  name: 'Yeasin',
+  title: 'Junior Software Developer',
   avatar: '/assets/logo.png',
 
   // Skills Configuration
   skills: [
     {
-      name: 'Typescript',
+      name: 'TypeScript',
       href: 'https://www.typescriptlang.org/',
       component: 'TypeScript',
     },
@@ -75,21 +75,21 @@ export const heroConfig = {
       component: 'NextJs',
     },
     {
-      name: 'Bun',
-      href: 'https://bun.sh/',
-      component: 'Bun',
+      name: 'Node.js',
+      href: 'https://nodejs.org/',
+      component: 'NodeJs',
     },
     {
-      name: 'PostgreSQL',
-      href: 'https://www.postgresql.org/',
-      component: 'PostgreSQL',
+      name: 'MongoDB',
+      href: 'https://www.mongodb.com/',
+      component: 'MongoDB',
     },
   ],
 
   // Description Configuration
   description: {
     template:
-      'I build interactive web apps using {skills:0}, {skills:1}, {skills:2}, {skills:3} and {skills:4}. With a focus on <b>UI</b> design. Enthusiastic about <b>Three.js</b>, driven by a keen eye for design.',
+      'I am a front-end focused Full Stack web developer. {skills:0} and {skills:2} enthusiast. I have been doing freelance projects for the last 1 year and working with teams to make good projects using {skills:1}, {skills:3}, and {skills:4}.',
   },
 
   // Buttons Configuration
@@ -102,7 +102,7 @@ export const heroConfig = {
     },
     {
       variant: 'default',
-      text: 'Get in touch',
+      text: "Let's Talk",
       href: '/contact',
       icon: 'Chat',
     },
@@ -113,22 +113,22 @@ export const heroConfig = {
 export const socialLinks = [
   {
     name: 'X',
-    href: 'https://x.com/ramxcodes',
+    href: 'https://x.com/yeasin2002',
     icon: <X />,
   },
   {
     name: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/ramxcodes/',
+    href: 'https://www.linkedin.com/in/yeasin2002/',
     icon: <LinkedIn />,
   },
   {
     name: 'Github',
-    href: 'https://github.com/ramxcodes',
+    href: 'https://github.com/yeasin2002',
     icon: <Github />,
   },
   {
     name: 'Email',
-    href: 'mailto:ramxcodes@gmail.com',
+    href: 'mailto:mdkawsarislam2002@gmail.com',
     icon: <Mail />,
   },
 ];

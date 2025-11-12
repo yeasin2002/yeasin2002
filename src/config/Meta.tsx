@@ -12,16 +12,16 @@ export interface PageMeta {
 // Base site configuration
 export const siteConfig = {
   name: heroConfig.name,
-  title: 'Sleek Portfolio',
-  description: 'Sleek Portfolio Template by @Ramxcodes',
+  title: 'Yeasin - Portfolio',
+  description: 'Front-end focused Full Stack Developer | TypeScript & Next.js Enthusiast',
   url: process.env.NEXT_PUBLIC_URL || 'http://localhost:3000',
   ogImage: '/meta/opengraph-image.png',
   author: {
     name: about.name,
-    twitter: '@ramxcodes',
-    github: 'ramxcodes',
-    linkedin: 'ramxcodes',
-    email: 'ramxcodes@gmail.com',
+    twitter: '@yeasin2002',
+    github: 'yeasin2002',
+    linkedin: 'yeasin2002',
+    email: 'mdkawsarislam2002@gmail.com',
   },
   keywords: [
     'portfolio',
@@ -31,7 +31,8 @@ export const siteConfig = {
     'nextjs',
     'typescript',
     'web development',
-    heroConfig.name.toLowerCase(),
+    'yeasin',
+    'frontend developer',
   ],
 };
 
@@ -39,13 +40,17 @@ export const pageMetadata: Record<string, PageMeta> = {
   // Home page
   '/': {
     title: `${heroConfig.name} - ${heroConfig.title}`,
-    description: `${about.description} Explore my projects, experience, and technical expertise.`,
+    description: `Front-end focused Full Stack Developer with 1+ year experience. TypeScript and Next.js enthusiast. Explore my projects, experience, and technical expertise.`,
     keywords: [
       'portfolio',
       'developer',
       'full-stack',
       'web development',
       'projects',
+      'yeasin',
+      'frontend',
+      'nextjs',
+      'typescript',
     ],
     ogImage: '/meta/hero.png',
     twitterCard: 'summary_large_image',

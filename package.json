@@ -2,6 +2,24 @@
   "name": "yeasin2002",
   "version": "0.0.0",
   "private": true,
+  "description": "Personal portfolio and blog of Yeasin - A self-taught Full Stack Web Developer specializing in TypeScript and Next.js",
+  "author": {
+    "name": "Md Kawsar Islam Yeasin",
+    "email": "mdkawsarislam2002@gmail.com",
+    "url": "https://yeasin2002.vercel.app/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yeasin2002/yeasin2002"
+  },
+  "keywords": [
+    "portfolio",
+    "nextjs",
+    "typescript",
+    "react",
+    "tailwindcss"
+  ],
+  "license": "MIT",
   "scripts": {
     "build": "next build",
     "dev": "next dev --turbo",

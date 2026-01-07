@@ -20,7 +20,7 @@ Wanna collaborate? Let's build something amazing together! 🖤
 <a href="mailto:mdkawsarislam2002@gmail.com">
     <img src="https://go-skill-icons.vercel.app/api/icons?i=gmail" />
 </a>
-<a href="https://yeasin2002.netlify.app/">
+<a href="https://yeasin2002.vercel.app/">
    <img src="https://go-skill-icons.vercel.app/api/icons?i=chrome" />
 </a>
  <a href="https://www.linkedin.com/in/yeasin2002/">
@@ -50,7 +50,7 @@ Wanna collaborate? Let's build something amazing together! 🖤
 <table>
   <tr>
     <td> 
-    <img  src="https://github-readme-stats.vercel.app/api/top-langs/?username=yeasin2002&langs_count=10&title_color=22c55e&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&locale=en&custom_title=Top%20%Languages&layout=compact" />
+    <img src="./profile/top-langs.svg" alt="Top Languages" />
      </td>
     <td>
      <img src="https://leetcard.jacoblin.cool/yeasin2002" /> 
@@ -63,10 +63,10 @@ Wanna collaborate? Let's build something amazing together! 🖤
   <tr>
 
 <td>
-     <img src="https://github-readme-streak-stats.herokuapp.com?user=yeasin2002&theme=tokyonight&hide_border=true" /> 
+     <img src="./profile/streak.svg" alt="GitHub Streak" /> 
 </td>
 <td> 
-    <img  src="https://github-readme-stats.vercel.app/api?username=yeasin2002&show_icons=true" />
+    <img src="./profile/stats.svg" alt="GitHub Stats" />
 </td>
   </tr>
 </table>

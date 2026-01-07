@@ -50,7 +50,7 @@ Wanna collaborate? Let's build something amazing together! 🖤
 <table>
   <tr>
     <td> 
-    <img src="./profile/top-langs.svg" alt="Top Languages" />
+    <img src="./public/states/top-langs.svg" alt="Top Languages" />
      </td>
     <td>
      <img src="https://leetcard.jacoblin.cool/yeasin2002" /> 
@@ -63,10 +63,10 @@ Wanna collaborate? Let's build something amazing together! 🖤
   <tr>
 
 <td>
-     <img src="./profile/streak.svg" alt="GitHub Streak" /> 
+     <img src="./public/states/streak.svg" alt="GitHub Streak" /> 
 </td>
 <td> 
-    <img src="./profile/stats.svg" alt="GitHub Stats" />
+    <img src="./public/states/stats.svg" alt="GitHub Stats" />
 </td>
   </tr>
 </table>

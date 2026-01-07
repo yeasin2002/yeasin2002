@@ -19,7 +19,7 @@ jobs:
         with:
           card: stats
           options: username=yeasin2002&show_icons=true&title_color=22c55e&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true
-          path: profile/stats.svg
+          path: public/states/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate top languages card
@@ -27,7 +27,7 @@ jobs:
         with:
           card: top-langs
           options: username=yeasin2002&langs_count=10&title_color=22c55e&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&layout=compact&custom_title=Top%20Languages
-          path: profile/top-langs.svg
+          path: public/states/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate streak card
@@ -35,13 +35,13 @@ jobs:
         with:
           card: streak
           options: username=yeasin2002&theme=tokyonight&hide_border=true
-          path: profile/streak.svg
+          path: public/states/streak.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit cards
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-          git add profile/*.svg
+          git add public/states/*.svg
           git commit -m "Update README cards" || echo "No changes to commit"
           git push origin HEAD

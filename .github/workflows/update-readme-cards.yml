@@ -2,7 +2,7 @@ name: Update README cards
 
 on:
   schedule:
-    - cron: "0 0 1 * *"
+    - cron: "0 0 * * 5"
   workflow_dispatch:
 
 permissions:
@@ -28,14 +28,6 @@ jobs:
           card: top-langs
           options: username=yeasin2002&langs_count=10&title_color=22c55e&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&layout=compact&custom_title=Top%20Languages
           path: public/states/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate streak card
-        uses: Pranesh-2005/github-readme-stats-fast-action@v1
-        with:
-          card: streak
-          options: username=yeasin2002&theme=tokyonight&hide_border=true
-          path: public/states/streak.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit cards

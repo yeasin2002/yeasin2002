@@ -47,10 +47,12 @@ export const Hero = () => {
             id="subtitle"
             className="text-xl  max-w-6xl font-primary font-normal"
           >
-            Hi, {`i'm`} Md Kawsar Islam Yeasin. I am a front-end focused Full
+            Front-end focus Full-Stack developer with over 1 year of experience. Also have experience in freelancing and contract-based work with a
+few agencies/indie devs. Engaged in small Open Source Contributions. Experienced in cross-team collaboration and client communication
+            {/* Hi, {`i'm`} Md Kawsar Islam Yeasin. I am a front-end focused Full
             Stack web developer. TypeScript and Nextjs enthusiast. I have been
             doing freelance project from last 1 year and working with teams to
-            make good projects
+            make good projects */}
           </p>
 
           <div className="flex gap-x-4 gap-y-8 flex-col md:flex-row ">

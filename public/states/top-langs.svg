@@ -12,7 +12,7 @@
         <desc id="descId"></desc>
         <style>
           .header {
-            font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+            font: 600 18px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif;
             fill: #22c55e;
             animation: fadeInAnimation 0.8s ease-in-out forwards;
           }
@@ -21,6 +21,24 @@
             .header { font-size: 15.5px; }
           }
           
+    .lang-name {
+      font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffffff;
+    }
+    .stagger {
+      opacity: 0;
+      animation: fadeInAnimation 0.3s ease-in-out forwards;
+    }
+    .lang-progress {
+      animation: growWidthAnimation 0.6s ease-in-out forwards;
+    }
+    #rect-mask rect {
+      animation: slideInAnimation 1s ease-in-out forwards;
+    }
+    @keyframes progressAnimation {
+      from {
+        width: 0;
+      }
+    }
     @keyframes slideInAnimation {
       from {
         width: 0;
@@ -37,29 +55,15 @@
         width: 100%;
       }
     }
-    .stat {
-      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #ffffff;
+    @keyframes fadeInAnimation {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
-    @supports(-moz-appearance: auto) {
-      /* Selector detects Firefox */
-      .stat { font-size:12px; }
-    }
-    .bold { font-weight: 700 }
-    .lang-name {
-      font: 400 11px "Segoe UI", Ubuntu, Sans-Serif;
-      fill: #ffffff;
-    }
-    .stagger {
-      opacity: 0;
-      animation: fadeInAnimation 0.3s ease-in-out forwards;
-    }
-    #rect-mask rect{
-      animation: slideInAnimation 1s ease-in-out forwards;
-    }
-    .lang-progress{
-      animation: growWidthAnimation 0.6s ease-in-out forwards;
-    }
-    
+  
 
           
       /* Animations */
@@ -79,6 +83,32 @@
           opacity: 1;
         }
       }
+      @keyframes slideInAnimation {
+        from {
+          transform: translateX(-10px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes bounceInAnimation {
+        0% {
+          transform: scale(0.3);
+          opacity: 0;
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        70% {
+          transform: scale(0.9);
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
     
           
         </style>
@@ -94,7 +124,7 @@
           stroke="#e4e2e2"
           width="299"
           fill="#1c1917"
-          stroke-opacity="0"
+          stroke-opacity="0.0"
         />
 
         
@@ -108,7 +138,7 @@
         y="0"
         class="header"
         data-testid="header"
-      >Top Languages</text>
+      >Top%20Languages</text>
     </g>
       </g>
     
@@ -122,13 +152,13 @@
       
   
       <mask id="rect-mask">
-          <rect x="0" y="0" width="250" height="8" fill="white" rx="5"/>
-        </mask>
-        
+        <rect x="0" y="0" width="250" height="8" fill="white" rx="5"/>
+      </mask>
+      
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="0"
+          x="0.00"
           y="0"
           width="183.89"
           height="8"
@@ -148,7 +178,7 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="209.35999999999999"
+          x="209.36"
           y="0"
           width="14.25"
           height="8"
@@ -158,7 +188,7 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="223.60999999999999"
+          x="223.62"
           y="0"
           width="18.59"
           height="8"
@@ -168,7 +198,7 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="232.2"
+          x="232.21"
           y="0"
           width="18.35"
           height="8"
@@ -178,7 +208,7 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="240.54999999999998"
+          x="240.56"
           y="0"
           width="14.08"
           height="8"
@@ -188,7 +218,7 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="244.63"
+          x="244.64"
           y="0"
           width="12.15"
           height="8"
@@ -198,7 +228,7 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="246.78"
+          x="246.80"
           y="0"
           width="11.94"
           height="8"
@@ -208,9 +238,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="248.72"
+          x="248.74"
           y="0"
-          width="11.1"
+          width="11.10"
           height="8"
           fill="#ff5a03"
         />
@@ -218,87 +248,67 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="249.82"
+          x="249.84"
           y="0"
           width="10.16"
           height="8"
           fill="#384d54"
         />
       
-      
-    <g transform="translate(0, 25)">
-      <g transform="translate(0, 0)"><g transform="translate(0, 0)">
+    
+  <g transform="translate(0, 25)">
+    <g transform="translate(0, 0)"><g transform="translate(0, 0)">
     <g class="stagger" style="animation-delay: 450ms">
       <circle cx="5" cy="6" r="5" fill="#3178c6" />
-      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        TypeScript 73.56%
-      </text>
+      <text data-testid="lang-name" x="15" y="10" class="lang-name">TypeScript 73.56%</text>
     </g>
   </g><g transform="translate(0, 25)">
     <g class="stagger" style="animation-delay: 600ms">
       <circle cx="5" cy="6" r="5" fill="#f1e05a" />
-      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        JavaScript 10.19%
-      </text>
+      <text data-testid="lang-name" x="15" y="10" class="lang-name">JavaScript 10.19%</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms">
       <circle cx="5" cy="6" r="5" fill="#41b883" />
-      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Vue 5.70%
-      </text>
+      <text data-testid="lang-name" x="15" y="10" class="lang-name">Vue 5.70%</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms">
       <circle cx="5" cy="6" r="5" fill="#fcb32c" />
-      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        MDX 3.44%
-      </text>
+      <text data-testid="lang-name" x="15" y="10" class="lang-name">MDX 3.44%</text>
     </g>
   </g><g transform="translate(0, 100)">
     <g class="stagger" style="animation-delay: 1050ms">
       <circle cx="5" cy="6" r="5" fill="#663399" />
-      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        CSS 3.34%
-      </text>
+      <text data-testid="lang-name" x="15" y="10" class="lang-name">CSS 3.34%</text>
     </g>
   </g></g><g transform="translate(150, 0)"><g transform="translate(0, 0)">
-    <g class="stagger" style="animation-delay: 450ms">
+    <g class="stagger" style="animation-delay: 1200ms">
       <circle cx="5" cy="6" r="5" fill="#89e051" />
-      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Shell 1.63%
-      </text>
+      <text data-testid="lang-name" x="15" y="10" class="lang-name">Shell 1.63%</text>
     </g>
   </g><g transform="translate(0, 25)">
-    <g class="stagger" style="animation-delay: 600ms">
+    <g class="stagger" style="animation-delay: 1350ms">
       <circle cx="5" cy="6" r="5" fill="#00ADD8" />
-      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Go 0.86%
-      </text>
+      <text data-testid="lang-name" x="15" y="10" class="lang-name">Go 0.86%</text>
     </g>
   </g><g transform="translate(0, 50)">
-    <g class="stagger" style="animation-delay: 750ms">
+    <g class="stagger" style="animation-delay: 1500ms">
       <circle cx="5" cy="6" r="5" fill="#e34c26" />
-      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        HTML 0.78%
-      </text>
+      <text data-testid="lang-name" x="15" y="10" class="lang-name">HTML 0.78%</text>
     </g>
   </g><g transform="translate(0, 75)">
-    <g class="stagger" style="animation-delay: 900ms">
+    <g class="stagger" style="animation-delay: 1650ms">
       <circle cx="5" cy="6" r="5" fill="#ff5a03" />
-      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Astro 0.44%
-      </text>
+      <text data-testid="lang-name" x="15" y="10" class="lang-name">Astro 0.44%</text>
     </g>
   </g><g transform="translate(0, 100)">
-    <g class="stagger" style="animation-delay: 1050ms">
+    <g class="stagger" style="animation-delay: 1800ms">
       <circle cx="5" cy="6" r="5" fill="#384d54" />
-      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Dockerfile 0.06%
-      </text>
+      <text data-testid="lang-name" x="15" y="10" class="lang-name">Dockerfile 0.06%</text>
     </g>
   </g></g>
-    </g>
+  </g>
   
     </svg>
   

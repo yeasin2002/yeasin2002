@@ -61,10 +61,6 @@ Wanna collaborate? Let's build something amazing together! 🖤
 
 <table>
   <tr>
-
-<td>
-     <img src="./public/states/streak.svg" alt="GitHub Streak" /> 
-</td>
 <td> 
     <img src="./public/states/stats.svg" alt="GitHub Stats" />
 </td>

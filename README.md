@@ -45,7 +45,10 @@ Wanna collaborate? Let's build something amazing together! 🖤
 <br />
 <br />
 
-### Statistics
+### GitHub Statistics/States
+<details>
+<summary>Click here to see the Magic!!! 🪄 </summary>
+<br>
 
 <table>
   <tr>
@@ -66,6 +69,9 @@ Wanna collaborate? Let's build something amazing together! 🖤
 </td>
   </tr>
 </table>
+</details>
+
+
 
 
 <!--

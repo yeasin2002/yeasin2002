@@ -41,7 +41,14 @@ Wanna collaborate? Let's build something amazing together! 🖤
 <br />
 <br />
 
-### Project Showcase 👨‍💻
+### Projects Showcase 👨‍💻
+
+
+#### Development Tools
+
+-  🍞 **[twist-toast](https://github.com/yeasin2002/twist-toast)**   [![Stars](https://img.shields.io/github/stars/yeasin2002/twist-toast?style=social)]()  - toast  library manages behavior, Your design system, not ours
+- 📚 **[cls-extended](https://github.com/yeasin2002/cls-extended)** -  Tailwind CSS responsive utilities with better developer experience.
+- 👟 **[better-next-app](https://github.com/yeasin2002/better-next-app)** -   CLI tool for scaffolding Next.js projects with extended feature, written in Go. 
 
 #### Starter/Boilerplate templates
 

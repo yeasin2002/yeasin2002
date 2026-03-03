@@ -51,6 +51,12 @@ Wanna collaborate? Let's build something amazing together! 🖤
 - 📦  npm-starter - [![Stars](https://img.shields.io/github/stars/yeasin2002/npm-starter?style=social)]() - Starter Template for creating NPM Packages
 -  🔌 unplugin-starter - [![Stars](https://img.shields.io/github/stars/yeasin2002/unplugin-starter?style=social)]()  -  Create cross platform build tools plugins like vite,rollup, farm, webpack etc. 
 
+#### Browser Extensions
+
+-  🤖 promptsu  - Adds AI-powered prompt enhancement to chatGPT etc.
+- 🖥️ ResponsiveKit -  Displays real-time responsive breakpoint information while browsing 
+
+
 
 
 ### GitHub Statistics/States

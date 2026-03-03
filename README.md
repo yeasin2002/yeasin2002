@@ -46,15 +46,9 @@ Wanna collaborate? Let's build something amazing together! 🖤
 #### Starter/Boilerplate templates
 
 -  ⏭️ bulletproof-nextjs-starter - [![Stars](https://img.shields.io/github/stars/yeasin2002/bulletproof-nextjs-starter?style=social)]() - A production-ready Next.js boilerplate with enterprise-grade features
-
-
 - 🌊 react-ts-starter - [![Stars](https://img.shields.io/github/stars/yeasin2002/react-ts-starter?style=social)]() -  Vite react-TS starter  for blazing-fast development
-
-
 -  👻  express-ts-starter - [![Stars](https://img.shields.io/github/stars/yeasin2002/express-ts-starter?style=social)]() -  TypeScript,Express with Docker, build tool to build hight scalable Backend. 
-
 - 📦  npm-starter - [![Stars](https://img.shields.io/github/stars/yeasin2002/npm-starter?style=social)]() - Starter Template for creating NPM Packages
-
 -  🔌 unplugin-starter - [![Stars](https://img.shields.io/github/stars/yeasin2002/unplugin-starter?style=social)]()  -  Create cross platform build tools plugins like vite,rollup, farm, webpack etc. 
 
 

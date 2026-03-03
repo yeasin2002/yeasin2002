@@ -45,6 +45,23 @@ Wanna collaborate? Let's build something amazing together! 🖤
 <br />
 <br />
 
+### Project Showcase 👨‍💻
+
+
+#### Starter/Boilerplate templates
+
+##### bulletproof-nextjs-starter
+[![Stars](https://img.shields.io/github/stars/yeasin2002/bulletproof-nextjs-starter?style=social)](https://github.com/yeasin2002/bulletproof-nextjs-starter)
+[![Forks](https://img.shields.io/github/forks/yeasin2002/bulletproof-nextjs-starter?style=social)](https://github.com/yeasin2002/bulletproof-nextjs-starter)
+
+A production-ready Next.js boilerplate with modern tooling, comprehensive testing, and enterprise-grade features
+
+
+
+
+
+Starter template for creating NPM packages.
+
 ### GitHub Statistics/States
 <details>
 <summary>Click here to see the Magic!!! 🪄 </summary>

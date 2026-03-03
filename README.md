@@ -45,19 +45,17 @@ Wanna collaborate? Let's build something amazing together! 🖤
 
 #### Starter/Boilerplate templates
 
--  bulletproof-nextjs-starter - [![Stars](https://img.shields.io/github/stars/yeasin2002/bulletproof-nextjs-starter?style=social)]() [![Forks](https://img.shields.io/github/forks/yeasin2002/bulletproof-nextjs-starter?style=social)]() - A production-ready Next.js boilerplate with modern tooling, comprehensive testing, and enterprise-grade features
+-  ⏭️ bulletproof-nextjs-starter - [![Stars](https://img.shields.io/github/stars/yeasin2002/bulletproof-nextjs-starter?style=social)]() - A production-ready Next.js boilerplate with modern tooling, comprehensive testing, and enterprise-grade features
 
 
--  react-ts-starter - [![Stars](https://img.shields.io/github/stars/yeasin2002/react-ts-starter?style=social)]() [![Forks](https://img.shields.io/github/forks/yeasin2002/react-ts-starter?style=social)]() - A production-ready Vite starter template combining React 19 with TypeScript for blazing-fast development and optimized builds.
+- 🌊 react-ts-starter - [![Stars](https://img.shields.io/github/stars/yeasin2002/react-ts-starter?style=social)]() - A production-ready Vite starter template combining React 19 with TypeScript for blazing-fast development and optimized builds.
 
 
--  express-ts-starter - [![Stars](https://img.shields.io/github/stars/yeasin2002/express-ts-starter?style=social)]() [![Forks](https://img.shields.io/github/forks/yeasin2002/express-ts-starter?style=social)]() - Perfect boilerplate templates for TypeScript and Express with Docker, build tool configured and scaffolded with all necessary packages to build hight scalable Backend. 
+-  👻  express-ts-starter - [![Stars](https://img.shields.io/github/stars/yeasin2002/express-ts-starter?style=social)]() - Perfect boilerplate templates for TypeScript and Express with Docker, build tool configured and scaffolded with all necessary packages to build hight scalable Backend. 
 
+- 📦  npm-starter - [![Stars](https://img.shields.io/github/stars/yeasin2002/npm-starter?style=social)]() - Starter Template for creating NPM Packages, build npm package with ease. provide all necessary build tools, CI/CD
 
-
--  npm-starter - [![Stars](https://img.shields.io/github/stars/yeasin2002/npm-starter?style=social)]() [![Forks](https://img.shields.io/github/forks/yeasin2002/npm-starter?style=social)]() - Starter Template for creating NPM Packages, build npm package with ease. provide all necessary build tools, CI/CD
-
--  unplugin-starter - [![Stars](https://img.shields.io/github/stars/yeasin2002/unplugin-starter?style=social)]() [![Forks](https://img.shields.io/github/forks/yeasin2002/unplugin-starter?style=social)]() - Starter Template for creating unplugin Packages to create cross platform build tools plugins like vite,rollup, farm, webpack etc. 
+-  🔌 unplugin-starter - [![Stars](https://img.shields.io/github/stars/yeasin2002/unplugin-starter?style=social)]()  - Starter Template for creating unplugin Packages to create cross platform build tools plugins like vite,rollup, farm, webpack etc. 
 
 
 

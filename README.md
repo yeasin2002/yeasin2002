@@ -15,11 +15,11 @@ Wanna collaborate? Let's build something amazing together! 🖤
 ### Projects Showcase 👨‍💻
 
 
-#### Development Tools
+#### Development Tools (Under Development)
 
--  🍞 **[twist-toast](https://github.com/yeasin2002/twist-toast)**   [![Stars](https://img.shields.io/github/stars/yeasin2002/twist-toast?style=social)]()  - toast  library manages behavior, Your design system, not ours
+-  🍞 **[twist-toast](https://github.com/yeasin2002/twist-toast)**   [![Stars](https://img.shields.io/github/stars/yeasin2002/twist-toast?style=social)]()  - headless toast library manages behavior not design 
 - 📚 **[cls-extended](https://github.com/yeasin2002/cls-extended)** -  Tailwind CSS responsive utilities with better developer experience.
-- 👟 **[better-next-app](https://github.com/yeasin2002/better-next-app)** -   CLI tool for scaffolding Next.js projects with extended feature, written in Go. 
+- 👟 **[better-next-app](https://github.com/yeasin2002/better-next-app)** - CLI tool for scaffolding Next.js projects with extended feature, written in Go. 
 
 #### Starter/Boilerplate templates
 
@@ -28,7 +28,7 @@ Wanna collaborate? Let's build something amazing together! 🖤
 -  👻 **[express-ts-starter](https://github.com/yeasin2002/express-ts-starter)**  - [![Stars](https://img.shields.io/github/stars/yeasin2002/express-ts-starter?style=social)]() -  TypeScript,Express with Docker, build tool to build hight scalable Backend. 
 - 📦 **[npm-starter](https://github.com/yeasin2002/npm-starter)**  - [![Stars](https://img.shields.io/github/stars/yeasin2002/npm-starter?style=social)]() - Starter Template for creating NPM Packages
 -  🔌 **[unplugin-starter](https://github.com/yeasin2002/unplugin-starter)**  - Create cross platform build tools plugins like vite,rollup, farm, webpack etc.
--  🔌 **[react-native Expo starter](https://github.com/yeasin2002/react-native-expo-starter)**  - A production-ready starter template for cross-platform mobile apps with Expo
+-  ⚛️ **[react-native expo starter](https://github.com/yeasin2002/react-native-expo-starter)**  - A production-ready starter template for cross-platform mobile apps with Expo
 
 #### Browser Extensions
 

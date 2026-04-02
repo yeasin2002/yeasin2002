@@ -12,13 +12,16 @@ Wanna collaborate? Let's build something amazing together! 🖤
 <img src="https://go-skill-icons.vercel.app/api/icons?i=ts,tailwindcss,react,next,nuxt,redux,reactquery" />
 <img src="https://go-skill-icons.vercel.app/api/icons?i=turborepo,bun,go,mongodb,postgresql,githubactions,linux" />
 
-### Projects Showcase 👨‍💻
 
-#### Open Source Contribution 
+
+### Open Source Contribution 
 - 💻 **[shadcn-ui](https://github.com/shadcn-ui/ui)** - [![Stars](https://img.shields.io/github/stars/shadcn-ui/ui?style=social)]() - Fixed CLI crash: input validation and resolved ESLint config issue in the Next.js monorepo template.
 - 🤺 **[skald](https://github.com/skaldlabs/skald)** - [![Stars](https://img.shields.io/github/stars/skaldlabs/skald?style=social)]() - Added auto-generation for OpenAPI spec and fixed user-name,email display in the sidebar UI.
 - 💿 **[TailAdmin/admin-dashboard](https://github.com/TailAdmin/free-nextjs-admin-dashboard)** - [![Stars](https://img.shields.io/github/stars/TailAdmin/free-nextjs-admin-dashboard?style=social)]() - Migrated from Next.js 15 to 16 and fixed Turborepo SVGR compatibility.
 
+<br/>
+
+### Projects Showcase 👨‍💻
     
 #### Development Tools (Under Development)
 

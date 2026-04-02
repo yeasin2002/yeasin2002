@@ -14,7 +14,19 @@ Wanna collaborate? Let's build something amazing together! 🖤
 
 ### Projects Showcase 👨‍💻
 
+#### Open Source Contribution 
+- 📚 **[shadcn-ui](https://github.com/shadcn-ui/ui)** - [![Stars](https://img.shields.io/github/stars/shadcn-ui/ui?style=social)]() 
+  - Bug fix: added validation on user input prompt that was crashing the CLI
+  - eslint config issue in next-monorepo template
 
+- 📚 **[skald](https://github.com/skaldlabs/skald)** - [![Stars](https://img.shields.io/github/stars/skaldlabs/skald?style=social)]() 
+  - feat: added auto-generate openapi spec
+  - fix(UI): user name and email on Sider 
+
+- 📚 **[TailAdmin/admin-dashboard](https://github.com/TailAdmin/free-nextjs-admin-dashboard)** - [![Stars](https://img.shields.io/github/stars/TailAdmin/free-nextjs-admin-dashboard?style=social)]() 
+  - feat: migrated to Nextjs 16 from 15 
+  - fix: turborepo SVGR compatibility issue with NextJS 16
+    
 #### Development Tools (Under Development)
 
 -  🍞 **[twist-toast](https://github.com/yeasin2002/twist-toast)**   [![Stars](https://img.shields.io/github/stars/yeasin2002/twist-toast?style=social)]()  - headless toast library manages behavior not design 

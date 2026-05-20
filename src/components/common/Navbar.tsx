@@ -4,7 +4,7 @@ import Image from 'next/image';
 import React from 'react';
 
 import Container from './Container';
-import { ThemeToggleButton } from './ThemeSwitch';
+import ThemeToggleButton from './ThemeToggleButtonClient';
 
 export default function Navbar() {
   return (

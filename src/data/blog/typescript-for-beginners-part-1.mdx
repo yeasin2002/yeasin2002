@@ -1,0 +1,461 @@
+---
+title: "TypeScript for Beginners: From JavaScript to Type-Safe Code"
+description: 'A practical guide to getting started with TypeScript — why it matters, core concepts, and how to start using it in your frontend projects today'
+image: '/blog/typescript-beginners.svg'
+tags: ['typescript', 'javascript', 'frontend', 'development']
+date: '2026-03-17'
+isPublished: true
+---
+
+# TypeScript for Beginners: From JavaScript to Type-Safe Code
+
+Hey there! 👋
+
+If you've been writing JavaScript for a while and keep hearing about TypeScript, this is your sign to finally try it. I put it off for a long time too — I thought it was going to slow me down or add unnecessary complexity. Spoiler: it did the opposite.
+
+This guide is written from the perspective of someone who already knows JavaScript. I'm not going to explain what a variable is. Instead, I'll focus on **what TypeScript adds** and **why it actually matters** in real projects.
+
+## Table of Contents
+
+- [Why TypeScript?](#why-typescript)
+- [Setting Up TypeScript](#setting-up-typescript)
+- [Your First Types](#your-first-types)
+- [Interfaces vs Type Aliases](#interfaces-vs-type-aliases)
+- [Type Inference — TypeScript is Smart](#type-inference)
+- [Functions with Types](#functions-with-types)
+- [Union Types and Optional Properties](#union-types-and-optional-properties)
+- [TypeScript with React](#typescript-with-react)
+- [Common Mistakes to Avoid](#common-mistakes-to-avoid)
+- [Next Steps](#next-steps)
+
+---
+
+## Why TypeScript?
+
+Let me paint a picture. You're working on a project and you call a function like this:
+
+```javascript
+function getUserAge(user) {
+  return user.age;
+}
+```
+
+Looks fine. But three weeks later, when someone passes a `null` user object, everything crashes in production. With vanilla JavaScript, you wouldn't know until runtime — or worse, until a user reports it.
+
+TypeScript catches this at the moment you're writing the code:
+
+```typescript
+function getUserAge(user: User): number {
+  return user.age;
+}
+```
+
+Now if you try to call `getUserAge(null)`, your editor screams at you immediately. No more guessing.
+
+**The real benefits:**
+- **Catch bugs before they happen** — type errors show up in your editor, not in production
+- **Better autocomplete** — your editor knows the shape of your data
+- **Self-documenting code** — types tell the next developer (or future you) exactly what a function expects
+- **Safer refactoring** — rename a property and TypeScript will tell you every place that breaks
+
+TypeScript compiles down to regular JavaScript, so it runs in the same environments. It's just a layer on top that disappears at build time.
+
+---
+
+## Setting Up TypeScript
+
+If you're using **Next.js**, TypeScript is already built in. Just rename any `.js` file to `.ts` (or `.tsx` for JSX) and it works.
+
+For a vanilla setup:
+
+```bash
+# Install TypeScript
+npm install --save-dev typescript
+
+# Create a TypeScript config file
+npx tsc --init
+```
+
+Your `tsconfig.json` will be auto-generated. The defaults are fine to start with, but here's a minimal config for a modern project:
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true
+  },
+  "include": ["src"]
+}
+```
+
+The most important option is `"strict": true`. Turn this on. It enables a set of rules that will save you from the most common TypeScript mistakes.
+
+---
+
+## Your First Types
+
+TypeScript has all the primitive types you'd expect:
+
+```typescript
+let name: string = 'Arif';
+let age: number = 25;
+let isPublished: boolean = true;
+let scores: number[] = [95, 87, 91];
+let tuple: [string, number] = ['hello', 42]; // fixed-length array with specific types
+```
+
+But here's the thing — you don't need to write types on every variable. TypeScript figures most of them out automatically (more on this in a minute).
+
+For objects, you describe the shape:
+
+```typescript
+type User = {
+  id: number;
+  name: string;
+  email: string;
+};
+
+const user: User = {
+  id: 1,
+  name: 'Arif',
+  email: 'arif@example.com',
+};
+```
+
+If you try to add a property that doesn't exist in the type, TypeScript will throw an error. If you forget a required property, same thing.
+
+---
+
+## Interfaces vs Type Aliases
+
+You'll see both of these constantly in TypeScript codebases:
+
+```typescript
+// Using interface
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+}
+
+// Using type alias
+type Product = {
+  id: number;
+  name: string;
+  price: number;
+};
+```
+
+For most cases, they're interchangeable. The practical difference:
+
+- **`interface`** can be extended and merged (useful for library authors)
+- **`type`** is more flexible — you can use it for unions, primitives, and complex compositions
+
+My personal rule: use `type` for most things in application code. Use `interface` when you're building something others will extend.
+
+```typescript
+// Extending an interface
+interface Animal {
+  name: string;
+}
+
+interface Dog extends Animal {
+  breed: string;
+}
+
+// Composing types
+type StringOrNumber = string | number;
+type AdminUser = User & { role: 'admin' };
+```
+
+---
+
+## Type Inference
+
+TypeScript is smart. It can figure out types without you explicitly writing them:
+
+```typescript
+// TypeScript knows this is a string
+const greeting = 'Hello, World!';
+
+// TypeScript knows this is number[]
+const numbers = [1, 2, 3, 4, 5];
+
+// TypeScript knows the return type is number
+function add(a: number, b: number) {
+  return a + b;
+}
+```
+
+This means you don't need to annotate everything. Let TypeScript infer where it can — only add explicit types where inference isn't possible or where it makes the code clearer.
+
+A good rule of thumb: **always annotate function parameters and return types explicitly**. Everything else, let TypeScript figure out.
+
+```typescript
+// Good — explicit params and return type
+function formatPrice(price: number, currency: string): string {
+  return `${currency}${price.toFixed(2)}`;
+}
+
+// Good — inferred local variables
+const result = formatPrice(9.99, '$');
+const doubled = result.length * 2;
+```
+
+---
+
+## Functions with Types
+
+Here's where TypeScript really shines. Let's look at different ways to type functions:
+
+```typescript
+// Basic function
+function greet(name: string): string {
+  return `Hello, ${name}!`;
+}
+
+// Arrow function
+const greet = (name: string): string => `Hello, ${name}!`;
+
+// Optional parameter with ?
+function greetUser(name: string, title?: string): string {
+  return title ? `Hello, ${title} ${name}!` : `Hello, ${name}!`;
+}
+
+// Default parameter
+function createUser(name: string, role: string = 'viewer') {
+  return { name, role };
+}
+
+// Function type as a variable
+type ClickHandler = (event: MouseEvent) => void;
+
+const handleClick: ClickHandler = (event) => {
+  console.log(event.target);
+};
+```
+
+The `void` return type means the function doesn't return a meaningful value (like event handlers). Don't confuse it with `undefined`.
+
+```typescript
+// Callback typing
+function fetchData(url: string, callback: (data: unknown) => void): void {
+  // fetch logic...
+  callback({ result: 'success' });
+}
+```
+
+---
+
+## Union Types and Optional Properties
+
+Union types let a value be one of several types:
+
+```typescript
+// A value that can be either type
+type Status = 'loading' | 'success' | 'error';
+type ID = string | number;
+
+let userId: ID = 123;
+userId = 'abc-456'; // also valid
+
+// In a function
+function formatId(id: string | number): string {
+  return typeof id === 'string' ? id : id.toString();
+}
+```
+
+Optional properties use `?`:
+
+```typescript
+type BlogPost = {
+  title: string;
+  content: string;
+  publishedAt: string;
+  tags?: string[];       // optional — may not exist
+  coverImage?: string;   // optional — may not exist
+};
+
+// This is valid even without tags and coverImage
+const post: BlogPost = {
+  title: 'TypeScript for Beginners',
+  content: '...',
+  publishedAt: '2026-03-17',
+};
+```
+
+You'll use `?` all the time. When you access an optional property, TypeScript forces you to handle the case where it doesn't exist:
+
+```typescript
+function getFirstTag(post: BlogPost): string {
+  // TypeScript error: post.tags might be undefined
+  return post.tags[0]; // ❌
+
+  // Safe access with optional chaining
+  return post.tags?.[0] ?? 'uncategorized'; // ✅
+}
+```
+
+---
+
+## TypeScript with React
+
+This is where things get really practical. Let's type some React components:
+
+```tsx
+// Typing props with type alias
+type ButtonProps = {
+  label: string;
+  onClick: () => void;
+  disabled?: boolean;
+  variant?: 'primary' | 'secondary' | 'ghost';
+};
+
+export function Button({ label, onClick, disabled = false, variant = 'primary' }: ButtonProps) {
+  return (
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={`btn btn-${variant}`}
+    >
+      {label}
+    </button>
+  );
+}
+```
+
+Now anyone who uses this `Button` component gets perfect autocomplete and will get errors if they forget to pass `label` or `onClick`.
+
+**Typing `useState`:**
+
+```tsx
+import { useState } from 'react';
+
+// TypeScript infers the type from the initial value
+const [count, setCount] = useState(0); // count: number
+
+// Explicitly typed when inference isn't enough
+const [user, setUser] = useState<User | null>(null);
+const [posts, setPosts] = useState<BlogPost[]>([]);
+```
+
+**Typing event handlers:**
+
+```tsx
+function SearchInput() {
+  const [query, setQuery] = useState('');
+
+  // TypeScript knows e is a React.ChangeEvent<HTMLInputElement>
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setQuery(e.target.value);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log('Searching for:', query);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input type="text" value={query} onChange={handleChange} />
+      <button type="submit">Search</button>
+    </form>
+  );
+}
+```
+
+---
+
+## Common Mistakes to Avoid
+
+**1. Overusing `any`**
+
+```typescript
+// ❌ This defeats the whole purpose
+function processData(data: any) {
+  return data.value;
+}
+
+// ✅ Use unknown for truly unknown data, then narrow it
+function processData(data: unknown) {
+  if (typeof data === 'object' && data !== null && 'value' in data) {
+    return (data as { value: string }).value;
+  }
+  throw new Error('Invalid data shape');
+}
+```
+
+`any` turns off type checking for that value. It's tempting to use it when you're stuck, but it spreads — values from `any` become `any`, and you lose all the benefits.
+
+**2. Non-null assertion when you're not sure**
+
+```typescript
+// ❌ The ! says "trust me, this is never null" — dangerous
+const element = document.getElementById('app')!;
+
+// ✅ Check first
+const element = document.getElementById('app');
+if (!element) throw new Error('Element #app not found');
+```
+
+**3. Not enabling strict mode**
+
+Without `"strict": true`, TypeScript lets a lot of common bugs through. Always enable it, especially on new projects.
+
+**4. Typing everything explicitly when inference works**
+
+```typescript
+// ❌ Over-annotated, noisy
+const name: string = 'Arif';
+const numbers: number[] = [1, 2, 3];
+const result: string = name.toUpperCase();
+
+// ✅ Clean — TypeScript infers these perfectly
+const name = 'Arif';
+const numbers = [1, 2, 3];
+const result = name.toUpperCase();
+```
+
+---
+
+## Next Steps
+
+You now know the core of TypeScript. Here's what to explore next:
+
+**Generics** — write reusable code that works with any type:
+
+```typescript
+function first<T>(arr: T[]): T | undefined {
+  return arr[0];
+}
+
+first([1, 2, 3]);       // returns number | undefined
+first(['a', 'b', 'c']); // returns string | undefined
+```
+
+**Utility Types** — TypeScript includes powerful built-in helpers:
+
+```typescript
+type PartialUser = Partial<User>;       // all fields optional
+type ReadonlyUser = Readonly<User>;     // all fields read-only
+type UserName = Pick<User, 'name'>;     // only the name field
+type WithoutId = Omit<User, 'id'>;     // everything except id
+```
+
+**Resources to keep learning:**
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html) — the official docs are actually great
+- [Total TypeScript](https://www.totaltypescript.com/) — Matt Pocock's free tutorials are excellent
+- [TypeScript Playground](https://www.typescriptlang.org/play) — experiment in the browser without setting up anything
+
+---
+
+The biggest shift with TypeScript isn't the syntax — it's the mindset. You start thinking about the *shape* of your data before you write the code. And once that clicks, you'll find it hard to go back to plain JavaScript.
+
+Start small. Convert one file in your existing project. See how it feels. That's all it takes to get started.
+
+Happy coding! 🚀

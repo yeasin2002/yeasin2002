@@ -199,19 +199,19 @@ export const BlogComponents = {
   }) => {
     const isPDF = href?.endsWith('.pdf');
     const isExternal = href?.startsWith('http');
-    
+
     return (
       <a
         href={href}
         target={isPDF || isExternal ? '_blank' : undefined}
         rel={isPDF || isExternal ? 'noopener noreferrer' : undefined}
-        className="text-primary hover:underline font-medium inline-flex items-center gap-1"
+        className="text-primary inline-flex items-center gap-1 font-medium hover:underline"
         {...props}
       >
         {children}
         {isPDF && (
           <svg
-            className="inline-block w-4 h-4"
+            className="inline-block h-4 w-4"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

@@ -51,17 +51,17 @@ export const webExtensions = [
     href: 'https://chromewebstore.google.com/detail/redux-devtools/lmhkpmdpjhnlmmfddppnefddmchfmpcn?hl=en',
   },
   {
-    name: "Temp Mail",
-    href: "https://temp-mail.org/en/"
+    name: 'Temp Mail',
+    href: 'https://temp-mail.org/en/',
   },
   {
-    name: "Mobile simulator",
-    href: "https://mobile-simulator.vercel.app/"
+    name: 'Mobile simulator',
+    href: 'https://mobile-simulator.vercel.app/',
   },
   {
-    name: "Fake filler",
-    href: "https://fakefiller.com/"
-  }
+    name: 'Fake filler',
+    href: 'https://fakefiller.com/',
+  },
 ];
 
 export const software = [

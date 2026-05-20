@@ -12,7 +12,8 @@ export interface PageMeta {
 // Base site configuration
 export const siteConfig = {
   name: heroConfig.name,
-  title: 'Md Kawsar Islam Yeasin | Front-End Focused Full-Stack Software Developer',
+  title:
+    'Md Kawsar Islam Yeasin | Front-End Focused Full-Stack Software Developer',
   description:
     'Portfolio of Md Kawsar Islam Yeasin, a front-end-focused full-stack software developer with freelance, contract, and client work across web, mobile, and AI-driven workflows.',
   url: process.env.NEXT_PUBLIC_URL || 'https://yeasin2002.netlify.app',

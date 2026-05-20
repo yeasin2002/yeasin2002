@@ -9,13 +9,7 @@ import { generateMetadata as getMetadata } from '@/config/Meta';
 import ReactLenis from 'lenis/react';
 import { ViewTransitions } from 'next-view-transitions';
 
-
-
 import './globals.css';
-
-
-
-
 
 export const metadata = getMetadata('/');
 

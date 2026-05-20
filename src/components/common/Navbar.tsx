@@ -33,10 +33,10 @@ export default function Navbar() {
           </div> */}
         </div>
         <div className="flex items-center gap-8">
-           <div className="flex items-center justify-center gap-4">
+          <div className="flex items-center justify-center gap-4">
             {navbarConfig.navItems.map((item) => (
               <Link
-                className="transition-all duration-300 ease-in-out font-semibold hover:underline hover:decoration-2 hover:underline-offset-4"
+                className="font-semibold transition-all duration-300 ease-in-out hover:underline hover:decoration-2 hover:underline-offset-4"
                 key={item.label}
                 href={item.href}
               >

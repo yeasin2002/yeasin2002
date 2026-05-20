@@ -8,7 +8,6 @@ export const contactConfig = {
       email: 'Email',
       phone: 'Phone Number',
       message: 'Message',
-      
     },
     placeholders: {
       name: 'Your name',

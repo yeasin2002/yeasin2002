@@ -94,7 +94,7 @@ export const heroConfig = {
   // Description Configuration
   description: {
     template:
-      "I build web and mobile products with {skills:0}, {skills:1}, {skills:2}, {skills:3}, {skills:4}, and {skills:5}, with a strong focus on <b>UI polish</b>, APIs, state management, and scalable architecture.",
+      'I build web and mobile products with {skills:0}, {skills:1}, {skills:2}, {skills:3}, {skills:4}, and {skills:5}, with a strong focus on <b>UI polish</b>, APIs, state management, and scalable architecture.',
   },
 
   // Buttons Configuration

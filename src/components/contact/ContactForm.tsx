@@ -20,7 +20,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2 } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 import * as z from 'zod';
@@ -84,7 +84,9 @@ export default function ContactForm() {
 
     // Client-side rate limiting
     if (timeSinceLastSubmission < minInterval) {
-      const remaining = Math.ceil((minInterval - timeSinceLastSubmission) / 1000);
+      const remaining = Math.ceil(
+        (minInterval - timeSinceLastSubmission) / 1000,
+      );
       toast.error(`Please wait ${remaining} seconds before submitting again.`);
       return;
     }
@@ -108,7 +110,9 @@ export default function ContactForm() {
         form.reset();
       } else if (response.status === 429) {
         const retryAfter = result.retryAfter || 60;
-        toast.error(`Too many requests. Please try again in ${retryAfter} seconds.`);
+        toast.error(
+          `Too many requests. Please try again in ${retryAfter} seconds.`,
+        );
         setCooldownRemaining(retryAfter);
 
         // Start countdown

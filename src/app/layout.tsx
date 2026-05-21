@@ -12,10 +12,6 @@ import { ViewTransitions } from 'next-view-transitions';
 
 import './globals.css';
 
-
-
-
-
 export const metadata = getMetadata('/');
 
 export default function RootLayout({
@@ -26,7 +22,7 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en" suppressHydrationWarning>
-        <body className={`font-hanken-grotesk antialiased, ${fontVariables}`}>
+        <body className={`${fontVariables} font-hanken-grotesk antialiased`}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

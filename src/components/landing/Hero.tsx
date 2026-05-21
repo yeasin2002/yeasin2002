@@ -62,7 +62,7 @@ export default function Hero() {
         />
 
         <h1 className="text-4xl font-bold ">
-          <span> {name} </span>
+          <span className={"uppercase"}> {name} </span>
           <br />
           <span className="sr-only" > - </span>
           <span className="text-[#FFFCE1] font-boldonse text-2xl ">

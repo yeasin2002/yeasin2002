@@ -52,23 +52,28 @@ export default function Hero() {
   return (
     <Container className="mx-auto max-w-5xl">
       {/* Image */}
-      <Image
-        src={avatar}
-        alt="hero"
-        width={100}
-        height={100}
-        className="size-24 rounded-full bg-blue-300 dark:bg-yellow-300"
-      />
+      <div className={`flex  items-end gap-x-4`}>
+        <Image
+          src={avatar}
+          alt="hero"
+          width={100}
+          height={100}
+          className="size-30 rounded-2xl bg-blue-300 dark:bg-yellow-300"
+        />
 
-      {/* Text Area */}
-      <div className="mt-8 flex flex-col gap-2">
-        <h1 className="text-4xl font-bold">
-          Hi, I&apos;m {name} — <span className="text-secondary">{title}</span>
+        <h1 className="text-4xl font-bold ">
+          <span> {name} </span>
+          <br />
+          <span className="sr-only" > - </span>
+          <span className="text-[#FFFCE1] font-boldonse text-2xl ">
+            {title}
+          </span>
         </h1>
+      </div>
 
-        <div className="mt-4 flex flex-wrap items-center gap-x-1.5 gap-y-2 text-base whitespace-pre-wrap text-neutral-500 md:text-lg">
-          {renderDescription()}
-        </div>
+      {/* className="mt-8 flex flex-col gap-2" */}
+      <div className="mt-4 flex flex-wrap items-center gap-x-1.5 gap-y-2 text-base whitespace-pre-wrap text-neutral-500 md:text-lg">
+        {renderDescription()}
       </div>
 
       {/* Buttons */}

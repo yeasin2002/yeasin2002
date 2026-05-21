@@ -6,10 +6,15 @@ import Navbar from '@/components/common/Navbar';
 import { Quote } from '@/components/common/Quote';
 import { ThemeProvider } from '@/components/common/ThemeProviders';
 import { generateMetadata as getMetadata } from '@/config/Meta';
+import { fontVariables } from '@/lib/fonts/index';
 import ReactLenis from 'lenis/react';
 import { ViewTransitions } from 'next-view-transitions';
 
 import './globals.css';
+
+
+
+
 
 export const metadata = getMetadata('/');
 
@@ -21,7 +26,7 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en" suppressHydrationWarning>
-        <body className={`font-hanken-grotesk antialiased`}>
+        <body className={`font-hanken-grotesk antialiased, ${fontVariables}`}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

@@ -35,6 +35,10 @@ import Redux from '@/components/technologies/Redux';
 import TailwindCss from '@/components/technologies/TailwindCss';
 import TypeScript from '@/components/technologies/TypeScript';
 
+
+
+
+
 // Component mapping for skills
 export const skillComponents = {
   TypeScript: TypeScript,
@@ -49,8 +53,8 @@ export const skillComponents = {
 export const heroConfig = {
   // Personal Information
   name: 'Md Kawsar Islam Yeasin',
-  title: 'Front-End Focused Full-Stack Software Developer',
-  avatar: '/assets/logo.png',
+  title: 'Junior Software Developer',
+  avatar: '/assets/yeasin2002.png',
 
   // Skills Configuration
   skills: [

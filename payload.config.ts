@@ -6,19 +6,23 @@ import { fileURLToPath } from 'node:url';
 import { buildConfig } from 'payload';
 import sharp from 'sharp';
 
-import { BlogPosts } from './src/payload/collections/BlogPosts';
-import { Experiences } from './src/payload/collections/Experiences';
-import { Media } from './src/payload/collections/Media';
-import { Projects } from './src/payload/collections/Projects';
-import { Quotes } from './src/payload/collections/Quotes';
-import { Skills } from './src/payload/collections/Skills';
-import { Users } from './src/payload/collections/Users';
-import { About } from './src/payload/globals/About';
-import { Resume } from './src/payload/globals/Resume';
+import { BlogPosts } from './src/payload/collections/BlogPosts.ts';
+import { Experiences } from './src/payload/collections/Experiences.ts';
+import { Media } from './src/payload/collections/Media.ts';
+import { Projects } from './src/payload/collections/Projects.ts';
+import { Quotes } from './src/payload/collections/Quotes.ts';
+import { Skills } from './src/payload/collections/Skills.ts';
+import { Users } from './src/payload/collections/Users.ts';
+import { About } from './src/payload/globals/About.ts';
+import { Resume } from './src/payload/globals/Resume.ts';
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 const rootDir = dirname;
+const blobReadWriteToken = process.env.BLOB_READ_WRITE_TOKEN;
+const hasBlobReadWriteToken =
+  typeof blobReadWriteToken === 'string' &&
+  blobReadWriteToken.startsWith('vercel_blob_rw_');
 
 export default buildConfig({
   admin: {
@@ -42,8 +46,8 @@ export default buildConfig({
   globals: [About, Resume],
   plugins: [
     vercelBlobStorage({
-      enabled: Boolean(process.env.BLOB_READ_WRITE_TOKEN),
-      token: process.env.BLOB_READ_WRITE_TOKEN,
+      enabled: hasBlobReadWriteToken,
+      token: blobReadWriteToken,
       collections: {
         media: true,
       },

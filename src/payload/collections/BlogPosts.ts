@@ -1,8 +1,8 @@
 import { lexicalEditor } from '@payloadcms/richtext-lexical';
 import type { CollectionBeforeValidateHook, CollectionConfig } from 'payload';
 
-import { isAdmin, publicRead } from '../access/isAdmin';
-import { slugify } from '../utils/slugify';
+import { isAdmin, publicRead } from '../access/isAdmin.ts';
+import { slugify } from '../utils/slugify.ts';
 
 const syncSlug: CollectionBeforeValidateHook = ({ data, operation }) => {
   const title = typeof data?.title === 'string' ? data.title : '';

@@ -1,6 +1,6 @@
 import type { GlobalConfig } from 'payload';
 
-import { isAdmin, publicRead } from '../access/isAdmin';
+import { isAdmin, publicRead } from '../access/isAdmin.ts';
 
 export const About: GlobalConfig = {
   slug: 'about',

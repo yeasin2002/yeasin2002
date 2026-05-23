@@ -1,6 +1,6 @@
 import type { CollectionConfig } from 'payload';
 
-import { isAdmin, publicRead } from '../access/isAdmin';
+import { isAdmin, publicRead } from '../access/isAdmin.ts';
 
 export const Quotes: CollectionConfig = {
   slug: 'quotes',

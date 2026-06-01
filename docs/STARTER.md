@@ -1,6 +1,6 @@
 # Project Starter Guide
 
-This repository is a personal portfolio built with Next.js, TypeScript, Tailwind CSS, and Payload CMS for the future dynamic content layer.
+This repository is a personal portfolio built with Next.js, TypeScript, and Tailwind CSS.
 
 The goal of this guide is to help you get productive quickly without accidentally breaking the current UI or content structure.
 
@@ -8,7 +8,6 @@ The goal of this guide is to help you get productive quickly without accidentall
 
 - A personal developer portfolio
 - A mostly configuration-driven Next.js app
-- A codebase that is being prepared for Payload CMS
 - A site where the visual design should stay stable while the underlying content source evolves
 
 ## Quick Start
@@ -41,10 +40,6 @@ Important variables in this repo include:
 - `TELEGRAM_BOT_TOKEN`
 - `TELEGRAM_CHAT_ID`
 - `GEMINI_API_KEY`
-- `PAYLOAD_SECRET`
-- `DATABASE_URL`
-- `POSTGRES_URL`
-- `BLOB_READ_WRITE_TOKEN`
 
 ### 3. Start the dev server
 
@@ -70,7 +65,6 @@ bun run start
 bun run dev
 bun run build
 bun run start
-bun run payload
 bun run format
 bun run knip
 bun run test-telegram
@@ -82,7 +76,6 @@ bun run test-telegram
 
 - `src/config/` holds the current portfolio content and copy
 - `src/data/` holds MDX content for blog and journey pages
-- `src/payload/` holds the Payload CMS collections and globals
 
 ### App structure
 
@@ -103,7 +96,6 @@ bun run test-telegram
 
 - Edit only the files that are directly related to the task
 - Reuse the existing folder structure and naming conventions
-- Keep content in `src/config/` until the Payload migration phase is ready
 
 ### Follow the current conventions
 
@@ -111,25 +103,6 @@ bun run test-telegram
 - Keep client components marked with `'use client'`
 - Use PascalCase for component and config filenames
 - Use kebab-case for hook filenames
-
-## Payload CMS Direction
-
-The future dynamic data layer is being designed around these pieces:
-
-- CV
-- Experience
-- Projects
-- About section skills and description
-- Blogs
-- Quotes
-
-Some things will remain static in code, such as:
-
-- Your name
-- Section labels
-- Certain UI-only headings or labels
-
-That means not every file in `src/config/` will eventually become dynamic. The goal is to move only the content that benefits from CMS editing.
 
 ## Suggested Workflow
 
@@ -151,13 +124,7 @@ That means not every file in `src/config/` will eventually become dynamic. The g
 If you are continuing development, these are the most useful areas to understand first:
 
 - `src/config/` for portfolio data
-- `src/payload/` for CMS schema design
 - `src/app/page.tsx` for homepage composition
 - `src/components/landing/` for section rendering
 - `src/lib/` for reusable logic
 
-## Notes For The Future
-
-- The site is being prepared to fetch content from Payload CMS later
-- The current config-driven data stays in place for now
-- The next major step will be replacing static content reads with CMS-backed queries gradually, section by section

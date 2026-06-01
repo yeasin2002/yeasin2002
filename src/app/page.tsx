@@ -10,6 +10,8 @@ import Work from '@/components/landing/Projects';
 import Setup from '@/components/landing/Setup';
 import React from 'react';
 
+export const dynamic = 'force-dynamic';
+
 export default function page() {
   return (
     <Container className="min-h-screen py-16">

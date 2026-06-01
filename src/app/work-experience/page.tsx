@@ -1,8 +1,16 @@
 import Container from '@/components/common/Container';
 import { ExperienceList } from '@/components/experience/ExperienceList';
 import { Separator } from '@/components/ui/separator';
-import { experiences } from '@/config/Experience';
+import {
+  type Experience,
+  experiences as fallbackExperiences,
+} from '@/config/Experience';
 import { generateMetadata as getMetadata } from '@/config/Meta';
+import {
+  type ExperienceRow,
+  mapExperienceRowToExperience,
+} from '@/lib/experience';
+import { createClient } from '@/lib/supabase/server';
 import { Metadata } from 'next';
 import { Robots } from 'next/dist/lib/metadata/types/metadata-types';
 
@@ -21,7 +29,29 @@ export const metadata: Metadata = {
   } as Robots,
 };
 
-export default function WorkExperiencePage() {
+export const dynamic = 'force-dynamic';
+
+export default async function WorkExperiencePage() {
+  let list: Experience[] = [];
+  try {
+    const supabase = await createClient();
+    const { data, error } = await supabase
+      .from('experiences')
+      .select('*')
+      .order('sort_order', { ascending: true });
+
+    if (error || !data || data.length === 0) {
+      list = fallbackExperiences;
+    } else {
+      list = data.map((exp: ExperienceRow) =>
+        mapExperienceRowToExperience(exp),
+      );
+    }
+  } catch (e) {
+    console.error('Error fetching experiences from Supabase:', e);
+    list = fallbackExperiences;
+  }
+
   return (
     <Container className="py-16">
       <div className="space-y-8">
@@ -42,16 +72,16 @@ export default function WorkExperiencePage() {
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-semibold">
               All Experiences
-              {experiences.length > 0 && (
+              {list.length > 0 && (
                 <span className="text-muted-foreground ml-2 text-sm font-normal">
-                  ({experiences.length}{' '}
-                  {experiences.length === 1 ? 'experience' : 'experiences'})
+                  ({list.length}{' '}
+                  {list.length === 1 ? 'experience' : 'experiences'})
                 </span>
               )}
             </h2>
           </div>
 
-          <ExperienceList experiences={experiences} />
+          <ExperienceList experiences={list} />
         </div>
       </div>
     </Container>

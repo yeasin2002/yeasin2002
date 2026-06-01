@@ -1,24 +1,24 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
-import { Link } from 'next-view-transitions';
-import { createClient } from '@/lib/supabase/client';
 import ThemeToggleButton from '@/components/common/ThemeToggleButtonClient';
+import { createClient } from '@/lib/supabase/client';
 import {
-  LayoutDashboard,
-  FolderKanban,
-  Image as ImageIcon,
-  User,
-  Wrench,
-  Compass,
-  LogOut,
-  Menu,
-  X,
-  Search,
   Bell,
   ChevronDown,
+  Compass,
+  FolderKanban,
+  Image as ImageIcon,
+  LayoutDashboard,
+  LogOut,
+  Menu,
+  Search,
+  User,
+  Wrench,
+  X,
 } from 'lucide-react';
+import { Link } from 'next-view-transitions';
+import { usePathname, useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -51,11 +51,13 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
 
   const navItems = [
     { label: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
+    {
+      label: 'Experiences',
+      href: '/dashboard/experiences',
+      icon: FolderKanban,
+    },
     { label: 'Projects', href: '/dashboard/projects', icon: FolderKanban },
-    { label: 'Media Library', href: '/dashboard/media', icon: ImageIcon },
-    { label: 'Profile', href: '/dashboard/profile', icon: User },
-    { label: 'Gears & Setup', href: '/dashboard/gears', icon: Wrench },
-    { label: 'Journey', href: '/dashboard/journey', icon: Compass },
+    { label: 'About Me', href: '/dashboard/me', icon: User },
   ];
 
   return (
@@ -113,7 +115,9 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                         : 'text-neutral-500 hover:bg-neutral-50 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800/40 dark:hover:text-neutral-100 border border-transparent'
                     }`}
                   >
-                    <Icon className={`h-5 w-5 ${isActive ? 'text-blue-600 dark:text-blue-400' : ''}`} />
+                    <Icon
+                      className={`h-5 w-5 ${isActive ? 'text-blue-600 dark:text-blue-400' : ''}`}
+                    />
                     {item.label}
                   </Link>
                 );
@@ -197,8 +201,12 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                   />
                   <div className="absolute right-0 mt-2 z-50 w-56 origin-top-right rounded-xl border border-neutral-200 bg-white p-1.5 shadow-md dark:border-neutral-800 dark:bg-neutral-900">
                     <div className="px-3 py-2 border-b border-neutral-100 dark:border-neutral-800">
-                      <p className="text-xs text-neutral-400 dark:text-neutral-500">Signed in as</p>
-                      <p className="truncate text-sm font-semibold">{user?.email || 'admin@portfolio.com'}</p>
+                      <p className="text-xs text-neutral-400 dark:text-neutral-500">
+                        Signed in as
+                      </p>
+                      <p className="truncate text-sm font-semibold">
+                        {user?.email || 'admin@portfolio.com'}
+                      </p>
                     </div>
                     <div className="mt-1">
                       <Link

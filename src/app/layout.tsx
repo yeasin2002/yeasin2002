@@ -1,9 +1,5 @@
 import UmamiAnalytics from '@/components/analytics/UmamiAnalytics';
-import ChatBubble from '@/components/common/ChatBubble';
-import Footer from '@/components/common/Footer';
-import Navbar from '@/components/common/Navbar';
-// import OnekoCat from '@/components/common/OnekoCat';
-import { Quote } from '@/components/common/Quote';
+import LayoutWrapper from '@/components/common/LayoutWrapper';
 import { ThemeProvider } from '@/components/common/ThemeProviders';
 import { generateMetadata as getMetadata } from '@/config/Meta';
 import { fontVariables } from '@/lib/fonts/index';
@@ -30,11 +26,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <ReactLenis root>
-              <Navbar />
-              {children}
-              <Quote />
-              <Footer />
-              <ChatBubble />
+              <LayoutWrapper>{children}</LayoutWrapper>
               <UmamiAnalytics />
             </ReactLenis>
           </ThemeProvider>

@@ -2,7 +2,7 @@ import { createServerClient } from '@supabase/ssr';
 import { NextResponse, type NextRequest } from 'next/server';
 
 export async function updateSession(request: NextRequest) {
-  const response = NextResponse.next({
+  let response = NextResponse.next({
     request: {
       headers: request.headers,
     },
@@ -26,10 +26,23 @@ export async function updateSession(request: NextRequest) {
     },
   );
 
-  const { data, error } = await supabase.auth.getClaims();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
 
-  if (error || !data?.claims) {
-    return NextResponse.redirect(new URL('/', request.url));
+  const isDashboard = request.nextUrl.pathname.startsWith('/dashboard');
+  const isLogin = request.nextUrl.pathname.startsWith('/login');
+
+  if (isDashboard && !user) {
+    const url = request.nextUrl.clone();
+    url.pathname = '/login';
+    return NextResponse.redirect(url);
+  }
+
+  if (isLogin && user) {
+    const url = request.nextUrl.clone();
+    url.pathname = '/dashboard';
+    return NextResponse.redirect(url);
   }
 
   return response;

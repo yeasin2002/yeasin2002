@@ -2,6 +2,7 @@
 
 import ThemeToggleButton from '@/components/common/ThemeToggleButtonClient';
 import { createClient } from '@/lib/supabase/client';
+import { MusicNoteSimpleIcon } from '@phosphor-icons/react';
 import {
   Bell,
   ChevronDown,
@@ -9,6 +10,8 @@ import {
   LayoutDashboard,
   LogOut,
   Menu,
+  Power,
+  PowerCircle,
   Search,
   Upload,
   User,
@@ -61,6 +64,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
     { label: 'Projects', href: '/dashboard/projects', icon: FolderKanban },
     { label: 'About Me', href: '/dashboard/me', icon: User },
     { label: 'Media Library', href: '/dashboard/media-library', icon: Upload },
+    { label: 'Skills', href: '/dashboard/skills', icon: Power },
   ];
 
   return (

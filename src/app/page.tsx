@@ -9,15 +9,11 @@ import Journey from '@/components/landing/Journey';
 import Work from '@/components/landing/Projects';
 import Setup from '@/components/landing/Setup';
 
-
-
-
-
 export const dynamic = 'force-dynamic';
 
 export default function page() {
   return (
-    <Container className="min-h-screen py-16">
+    <div className="min-h-screen py-16 animate-fade-in-blur container mx-auto max-w-7xl">
       <Hero />
       <Experience />
       <Work />
@@ -27,6 +23,6 @@ export default function page() {
       <CTA />
       <Setup />
       <Journey />
-    </Container>
+    </div>
   );
 }

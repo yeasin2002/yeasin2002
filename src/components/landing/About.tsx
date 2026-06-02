@@ -1,8 +1,8 @@
 import { createClient } from '@/lib/supabase/server';
 import {
   fetchAboutProfile,
-  renderAboutSkillIcon,
 } from '@/lib/about';
+import { fetchSkillsBySlugs } from '@/lib/skills';
 import Image from 'next/image';
 
 import Container from '../common/Container';
@@ -12,6 +12,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
 export default async function About() {
   const supabase = await createClient();
   const aboutProfile = await fetchAboutProfile(supabase);
+  const skills = await fetchSkillsBySlugs(supabase, aboutProfile.skills);
 
   return (
     <Container className="mt-20">
@@ -30,24 +31,33 @@ export default async function About() {
           <p className="text-secondary mt-4">{aboutProfile.description}</p>
           <p className="text-secondary mt-8 font-bold">Skills</p>
           <div className="flex flex-wrap gap-2">
-            {aboutProfile.skills.map((skill) => {
-              const skillIcon = renderAboutSkillIcon(skill);
-
-              if (!skillIcon) {
-                return null;
-              }
-
-              return (
-                <Tooltip key={skill}>
-                  <TooltipTrigger asChild>
-                    <div className="mt-4 size-6 hover:cursor-pointer">
-                      {skillIcon}
-                    </div>
-                  </TooltipTrigger>
-                  <TooltipContent>{skill}</TooltipContent>
-                </Tooltip>
-              );
-            })}
+            {skills.length > 0
+              ? skills.map((skill) => {
+                  return (
+                    <Tooltip key={skill.slug}>
+                      <TooltipTrigger asChild>
+                        <div className="mt-4 size-6 overflow-hidden rounded-full hover:cursor-pointer">
+                          <Image
+                            src={skill.imageUrl}
+                            alt={skill.name}
+                            width={24}
+                            height={24}
+                            className="size-6 rounded-full object-cover"
+                          />
+                        </div>
+                      </TooltipTrigger>
+                      <TooltipContent>{skill.name}</TooltipContent>
+                    </Tooltip>
+                  );
+                })
+              : aboutProfile.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="mt-4 rounded-full border border-neutral-200 px-2.5 py-1 text-xs text-neutral-500 dark:border-neutral-800 dark:text-neutral-400"
+                  >
+                    {skill}
+                  </span>
+                ))}
           </div>
         </div>
       </div>

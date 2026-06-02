@@ -5,12 +5,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { aboutSkillOptions, type AboutProfile, upsertAboutProfile } from '@/lib/about';
+import { type AboutProfile, upsertAboutProfile } from '@/lib/about';
 import { createClient } from '@/lib/supabase/client';
+import { fetchSkills, type Skill } from '@/lib/skills';
 import { cn } from '@/lib/utils';
 import { Loader2, Save } from 'lucide-react';
 import Image from 'next/image';
-import { useMemo, useState, useTransition } from 'react';
+import { useEffect, useMemo, useState, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 
@@ -22,16 +23,30 @@ export function AboutMeManager({ initialProfile }: AboutMeManagerProps) {
   const router = useRouter();
   const supabase = useMemo(() => createClient(), []);
   const [isPending, startTransition] = useTransition();
+  const [availableSkills, setAvailableSkills] = useState<Skill[]>([]);
   const [name, setName] = useState(initialProfile.name);
   const [description, setDescription] = useState(initialProfile.description);
   const [image, setImage] = useState(initialProfile.image);
   const [skills, setSkills] = useState(initialProfile.skills);
 
-  const toggleSkill = (skillName: (typeof aboutSkillOptions)[number]['name']) => {
+  useEffect(() => {
+    const loadSkills = async () => {
+      try {
+        const records = await fetchSkills(supabase);
+        setAvailableSkills(records);
+      } catch {
+        setAvailableSkills([]);
+      }
+    };
+
+    void loadSkills();
+  }, [supabase]);
+
+  const toggleSkill = (skillSlug: string) => {
     setSkills((currentSkills) =>
-      currentSkills.includes(skillName)
-        ? currentSkills.filter((name) => name !== skillName)
-        : [...currentSkills, skillName],
+      currentSkills.includes(skillSlug)
+        ? currentSkills.filter((name) => name !== skillSlug)
+        : [...currentSkills, skillSlug],
     );
   };
 
@@ -78,14 +93,23 @@ export function AboutMeManager({ initialProfile }: AboutMeManagerProps) {
           <div className="space-y-2">
             <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">Skills</p>
             <div className="flex flex-wrap gap-2">
-              {skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1 text-xs font-medium text-neutral-600 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-300"
-                >
-                  {skill}
-                </span>
-              ))}
+              {availableSkills
+                .filter((skill) => skills.includes(skill.slug))
+                .map((skill) => (
+                  <span
+                    key={skill.slug}
+                    className="flex items-center gap-2 rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1 text-xs font-medium text-neutral-600 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-300"
+                  >
+                    <Image
+                      src={skill.imageUrl}
+                      alt={skill.name}
+                      width={18}
+                      height={18}
+                      className="size-4 rounded-full object-cover"
+                    />
+                    {skill.name}
+                  </span>
+                ))}
             </div>
           </div>
         </CardContent>
@@ -139,14 +163,14 @@ export function AboutMeManager({ initialProfile }: AboutMeManagerProps) {
             </div>
 
             <div className="flex flex-wrap gap-2">
-              {aboutSkillOptions.map((skill) => {
-                const isSelected = skills.includes(skill.name);
+              {availableSkills.map((skill) => {
+                const isSelected = skills.includes(skill.slug);
 
                 return (
                   <button
-                    key={skill.name}
+                    key={skill.slug}
                     type="button"
-                    onClick={() => toggleSkill(skill.name)}
+                    onClick={() => toggleSkill(skill.slug)}
                     className={cn(
                       'flex items-center gap-2 rounded-full border px-3 py-2 text-xs font-semibold transition-all',
                       isSelected
@@ -154,7 +178,13 @@ export function AboutMeManager({ initialProfile }: AboutMeManagerProps) {
                         : 'border-neutral-200 bg-white text-neutral-600 hover:border-neutral-300 hover:bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 dark:hover:bg-neutral-800',
                     )}
                   >
-                    <span className="size-4">{skill.icon}</span>
+                    <Image
+                      src={skill.imageUrl}
+                      alt={skill.name}
+                      width={18}
+                      height={18}
+                      className="size-4 rounded-full object-cover"
+                    />
                     <span>{skill.name}</span>
                   </button>
                 );

@@ -55,7 +55,7 @@ const parseDescription = (text: string): string => {
 };
 
 export function ExperienceCard({ experience }: ExperienceCardProps) {
-  console.log('🚀 ~ ExperienceCard ~ experience:', experience);
+  
   return (
     <div className="flex flex-col gap-4">
       {/* Company Header */}

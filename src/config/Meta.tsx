@@ -1,5 +1,5 @@
-import { about } from './About';
 import { heroConfig } from './Hero';
+import { aboutFallback } from '@/lib/about';
 
 export interface PageMeta {
   title: string;
@@ -19,7 +19,7 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_URL || 'https://yeasin2002.netlify.app',
   ogImage: '/meta/opengraph-image.png',
   author: {
-    name: about.name,
+    name: aboutFallback.name,
     twitter: '@yeasin2002_dev',
     github: 'yeasin2002',
     linkedin: 'yeasin2002',
@@ -51,7 +51,7 @@ export const pageMetadata: Record<string, PageMeta> = {
   // Home page
   '/': {
     title: `${heroConfig.name} - ${heroConfig.title}`,
-    description: `${about.description} Explore my projects, experience, and technical expertise.`,
+    description: `${aboutFallback.description} Explore my projects, experience, and technical expertise.`,
     keywords: [
       'portfolio',
       'frontend developer',

@@ -8,7 +8,10 @@ import Hero from '@/components/landing/Hero';
 import Journey from '@/components/landing/Journey';
 import Work from '@/components/landing/Projects';
 import Setup from '@/components/landing/Setup';
-import React from 'react';
+
+
+
+
 
 export const dynamic = 'force-dynamic';
 

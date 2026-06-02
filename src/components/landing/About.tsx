@@ -1,18 +1,33 @@
-import { createClient } from '@/lib/supabase/server';
-import {
-  fetchAboutProfile,
-} from '@/lib/about';
+import { fetchAboutProfile } from '@/lib/about';
 import { fetchSkillsBySlugs } from '@/lib/skills';
+import { createClient } from '@/lib/supabase/server';
 import Image from 'next/image';
 
 import Container from '../common/Container';
 import SectionHeading from '../common/SectionHeading';
-import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
+import Skill from '../common/Skill';
+
+
+
+
+
+type mySkills = {
+  id: string;
+  name: string;
+  slug: string;
+  imageUrl: string;
+  sortOrder: 0;
+  createdAt: string;
+  updatedAt: string;
+};
 
 export default async function About() {
   const supabase = await createClient();
   const aboutProfile = await fetchAboutProfile(supabase);
-  const skills = await fetchSkillsBySlugs(supabase, aboutProfile.skills);
+  const skills = (await fetchSkillsBySlugs(
+    supabase,
+    aboutProfile.skills,
+  )) as mySkills[];
 
   return (
     <Container className="mt-20">
@@ -30,34 +45,13 @@ export default async function About() {
           <h3 className="text-2xl font-bold">{aboutProfile.name}</h3>
           <p className="text-secondary mt-4">{aboutProfile.description}</p>
           <p className="text-secondary mt-8 font-bold">Skills</p>
-          <div className="flex flex-wrap gap-2">
-            {skills.length > 0
-              ? skills.map((skill) => {
-                  return (
-                    <Tooltip key={skill.slug}>
-                      <TooltipTrigger asChild>
-                        <div className="mt-4 size-6 overflow-hidden rounded-full hover:cursor-pointer">
-                          <Image
-                            src={skill.imageUrl}
-                            alt={skill.name}
-                            width={24}
-                            height={24}
-                            className="size-6 rounded-full object-cover"
-                          />
-                        </div>
-                      </TooltipTrigger>
-                      <TooltipContent>{skill.name}</TooltipContent>
-                    </Tooltip>
-                  );
-                })
-              : aboutProfile.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="mt-4 rounded-full border border-neutral-200 px-2.5 py-1 text-xs text-neutral-500 dark:border-neutral-800 dark:text-neutral-400"
-                  >
-                    {skill}
-                  </span>
-                ))}
+          <div className="flex flex-wrap gap-2 mt-1">
+            {skills.length > 0 &&
+              skills.map((skill) => (
+                <Skill key={skill.id} name={skill.name} href={''}>
+                  <img src={skill.imageUrl} alt={skill.name} />
+                </Skill>
+              ))}
           </div>
         </div>
       </div>

@@ -2,25 +2,22 @@
 
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
+import { MediaAssetPicker } from '@/components/common/MediaAssetPicker';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import type { ExperienceRow } from '@/lib/experience';
+import { fetchMediaAssets, toMediaAssetOption, type MediaAssetOption } from '@/lib/media';
+import { createClient } from '@/lib/supabase/client';
 import { allTechnologyNames } from '@/lib/technologies';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2, Plus, Trash2 } from 'lucide-react';
-import { useEffect } from 'react';
-import { useFieldArray, useForm } from 'react-hook-form';
+import { useEffect, useMemo, useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 
-
-
 import { type ExperienceFormValues, experienceFormSchema, getDefaultExperienceFormValues } from '../experience-schema';
-
-
-
-
 
 interface ExperienceFormDialogProps {
   open: boolean;
@@ -45,18 +42,20 @@ export function ExperienceFormDialog({
   onSaved,
   onSubmitExperience,
 }: ExperienceFormDialogProps) {
+  const supabase = useMemo(() => createClient(), []);
   const form = useForm<ExperienceFormValues>({
     resolver: zodResolver(experienceFormSchema),
     defaultValues: getDefaultExperienceFormValues(),
   });
 
-  const descriptionFields = useFieldArray<ExperienceFormValues, 'descriptionLines'>({
-    control: form.control,
-    name: 'descriptionLines',
-  });
-
+  const [mediaAssets, setMediaAssets] = useState<MediaAssetOption[]>([]);
+  const descriptionLines = form.watch('descriptionLines');
   const isCurrent = form.watch('isCurrent');
+  const imageValue = form.watch('image');
   const selectedTechnologies = form.watch('technologies');
+
+  const getErrorMessage = (error: unknown) =>
+    error instanceof Error ? error.message : 'Unable to save experience.';
 
   useEffect(() => {
     if (!open) {
@@ -66,13 +65,30 @@ export function ExperienceFormDialog({
     form.reset(getDefaultExperienceFormValues(experience ?? null));
   }, [experience, form, open]);
 
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+
+    const loadMediaAssets = async () => {
+      try {
+        const records = await fetchMediaAssets(supabase, 200);
+        setMediaAssets(records.map((record) => toMediaAssetOption(supabase, record)));
+      } catch {
+        setMediaAssets([]);
+      }
+    };
+
+    void loadMediaAssets();
+  }, [open, supabase]);
+
   const handleSubmit = async (values: ExperienceFormValues) => {
     try {
       await onSubmitExperience(values, sortOrder, experience?.id ?? null);
       onOpenChange(false);
       await onSaved();
-    } catch (error: any) {
-      toast.error(error?.message || 'Unable to save experience.');
+    } catch (error) {
+      toast.error(getErrorMessage(error));
     }
   };
 
@@ -85,6 +101,24 @@ export function ExperienceFormDialog({
       shouldDirty: true,
       shouldValidate: true,
     });
+  };
+
+  const appendDescriptionLine = () => {
+    form.setValue('descriptionLines', [...descriptionLines, ''], {
+      shouldDirty: true,
+      shouldValidate: true,
+    });
+  };
+
+  const removeDescriptionLine = (index: number) => {
+    form.setValue(
+      'descriptionLines',
+      descriptionLines.filter((_, currentIndex) => currentIndex !== index),
+      {
+        shouldDirty: true,
+        shouldValidate: true,
+      },
+    );
   };
 
   return (
@@ -165,17 +199,34 @@ export function ExperienceFormDialog({
                     control={form.control}
                     name="image"
                     render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Image/Logo Path</FormLabel>
-                        <FormControl>
-                          <Input
-                            {...field}
-                            placeholder="e.g. /company/google.png"
-                            className="rounded-xl"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
+                      <div className="space-y-4">
+                        <FormItem>
+                          <FormLabel>Image/Logo Path</FormLabel>
+                          <FormControl>
+                            <Input
+                              {...field}
+                              placeholder="e.g. /company/google.png or a Supabase public URL"
+                              className="rounded-xl"
+                            />
+                          </FormControl>
+                          <p className="text-xs text-neutral-500 dark:text-neutral-400">
+                            You can paste a direct path or pick an uploaded image below.
+                          </p>
+                          <FormMessage />
+                        </FormItem>
+
+                        <MediaAssetPicker
+                          assets={mediaAssets}
+                          label="Choose from media library"
+                          value={imageValue}
+                          onChange={(nextValue) =>
+                            form.setValue('image', nextValue, {
+                              shouldDirty: true,
+                              shouldValidate: true,
+                            })
+                          }
+                        />
+                      </div>
                     )}
                   />
                 </div>
@@ -349,7 +400,7 @@ export function ExperienceFormDialog({
                       type="button"
                       variant="outline"
                       size="sm"
-                      onClick={() => descriptionFields.append('')}
+                      onClick={appendDescriptionLine}
                       className="flex h-8 items-center gap-1 rounded-xl"
                     >
                       <Plus className="h-3.5 w-3.5" />
@@ -358,8 +409,8 @@ export function ExperienceFormDialog({
                   </div>
 
                   <div className="space-y-2">
-                    {descriptionFields.fields.map((field, index) => (
-                      <div key={field.id} className="flex items-center gap-2">
+                    {descriptionLines.map((_, index) => (
+                      <div key={index} className="flex items-center gap-2">
                         <FormField
                           control={form.control}
                           name={`descriptionLines.${index}`}
@@ -380,8 +431,8 @@ export function ExperienceFormDialog({
                           type="button"
                           variant="destructive"
                           size="icon"
-                          onClick={() => descriptionFields.remove(index)}
-                          disabled={descriptionFields.fields.length === 1}
+                          onClick={() => removeDescriptionLine(index)}
+                          disabled={descriptionLines.length === 1}
                           className="size-9 shrink-0 rounded-xl"
                         >
                           <Trash2 className="h-4 w-4" />

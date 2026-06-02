@@ -4,6 +4,8 @@ import { Link } from 'next-view-transitions';
 import Image from 'next/image';
 import React from 'react';
 
+
+
 import Skill from '../common/Skill';
 import Github from '../svgs/Github';
 import LinkedIn from '../svgs/LinkedIn';
@@ -11,28 +13,64 @@ import Website from '../svgs/Website';
 import X from '../svgs/X';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
 
+
+
+
+
 interface ExperienceCardProps {
   experience: Experience;
 }
+
+const imageExtensions = new Set([
+  '.avif',
+  '.bmp',
+  '.gif',
+  '.ico',
+  '.jpeg',
+  '.jpg',
+  '.png',
+  '.svg',
+  '.webp',
+]);
+
+const isImageSource = (value: string) => {
+  const trimmed = value.trim();
+
+  if (!trimmed) {
+    return false;
+  }
+
+  try {
+    const url = new URL(trimmed, 'http://localhost');
+    const pathname = url.pathname.toLowerCase();
+
+    return [...imageExtensions].some((extension) => pathname.endsWith(extension));
+  } catch {
+    return false;
+  }
+};
 
 const parseDescription = (text: string): string => {
   return text.replace(/\*(.*?)\*/g, '<b>$1</b>');
 };
 
 export function ExperienceCard({ experience }: ExperienceCardProps) {
+  console.log('🚀 ~ ExperienceCard ~ experience:', experience);
   return (
     <div className="flex flex-col gap-4">
       {/* Company Header */}
       <div className="flex flex-col gap-2 md:flex-row md:justify-between">
         {/* Left Side */}
         <div className="flex items-center gap-4">
-          <Image
-            src={experience.image}
-            alt={experience.company}
-            width={100}
-            height={100}
-            className="size-12 rounded-md"
-          />
+          {isImageSource(experience.image) && (
+            <Image
+              src={experience.image}
+              alt={experience.company}
+              width={100}
+              height={100}
+              className="size-12 rounded-md"
+            />
+          )}
           <div className="flex flex-col">
             <div className="flex items-center gap-2">
               <h3

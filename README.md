@@ -1,158 +1,114 @@
-# Personal Portfolio by Md Kawsar Islam Yeaisn
+#### 💫 A chef who loves to cook visually appealing web applications with different technologies.
 
-A modern, responsive portfolio website built with Next.js 15, TypeScript, Tailwind CSS, and Shadcn UI. Features a blog system, project showcase, work experience timeline, and contact form with Telegram integration.
+Hello, I am yeasin form Dhaka and I am 22 year old. I'm a  front-end focused Full Stack Web Developer: TypeScript and NextJS enthusiast. I have been doing freelance project from last 2 year and working with teams to make good projects.
+Wanna collaborate? Let's build something amazing together! 🖤
 
-![Portfolio Preview](/public/meta/hero.png)
+- 💬 Loves to Talk about Technology, Software, Coding, And Ideas
+- 🤝 Open for Collaboration, Excited to collaborate on innovative projects.
+- 🌱 Explorering Back-End, Database,Linux etc.
 
-## Deploy
+### Enthusiast For
 
-Click here to your portfolio template now:
+<img src="https://go-skill-icons.vercel.app/api/icons?i=ts,tailwindcss,react,next,nuxt,redux,reactquery" />
+<img src="https://go-skill-icons.vercel.app/api/icons?i=turborepo,bun,go,mongodb,postgresql,githubactions,linux" />
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Framxcodes%2Fsleek-portfolio&env=TELEGRAM_BOT_TOKEN,TELEGRAM_CHAT_ID,GEMINI_API_KEY,NEXT_PUBLIC_URL,NEXT_PUBLIC_UMAMI_SRC,NEXT_PUBLIC_UMAMI_ID)
 
-## Features
 
-- **Next.js 15** with App Router
-- **Tailwind CSS** for styling
-- **Shadcn UI** components
-- **Dark/Light** mode
-- **Responsive** design
-- **MDX** for blog posts and project details
-- **Contact Form** with Telegram integration
-- **SEO** optimized
-- **TypeScript** for type safety
-- **Umami Analytics** for privacy-focused web analytics
+### Open Source Contribution 
+- 💻 **[shadcn-ui](https://github.com/shadcn-ui/ui)** - [![Stars](https://img.shields.io/github/stars/shadcn-ui/ui?style=social)]() - Fixed CLI crash: input validation and resolved ESLint config issue in the Next.js monorepo template.
+- 🤺 **[skald](https://github.com/skaldlabs/skald)** - [![Stars](https://img.shields.io/github/stars/skaldlabs/skald?style=social)]() - Added auto-generation for OpenAPI spec and fixed user-name,email display in the sidebar UI.
+- 💿 **[TailAdmin/admin-dashboard](https://github.com/TailAdmin/free-nextjs-admin-dashboard)** - [![Stars](https://img.shields.io/github/stars/TailAdmin/free-nextjs-admin-dashboard?style=social)]() - Migrated from Next.js 15 to 16 and fixed Turborepo SVGR compatibility.
 
-## Prerequisites
+<br/>
 
-Before you begin, ensure you have the following installed:
+### Projects Showcase 👨‍💻
+    
+#### Development Tools (Under Development)
 
-- Node.js (v18 or higher)
-- Bun (preferred) or npm
+-  🍞 **[twist-toast](https://github.com/yeasin2002/twist-toast)**   [![Stars](https://img.shields.io/github/stars/yeasin2002/twist-toast?style=social)]()  - headless toast library manages behavior not design 
+- 📚 **[cls-extended](https://github.com/yeasin2002/cls-extended)** -  Tailwind CSS responsive utilities with better developer experience.
+- 👟 **[better-next-app](https://github.com/yeasin2002/better-next-app)** - CLI tool for scaffolding Next.js projects with extended feature, written in Go. 
 
-## Environment Variables
+#### Starter/Boilerplate templates
 
-Create a `.env` file in the root directory with the following variables:
+-  ⏭️ **[bulletproof-nextjs-starter](https://github.com/yeasin2002/bulletproof-nextjs-starter)** - [![Stars](https://img.shields.io/github/stars/yeasin2002/bulletproof-nextjs-starter?style=social)]() - A production-ready Next.js boilerplate with enterprise-grade features
+- 🌊 **[react-ts-starter](https://github.com/yeasin2002/react-ts-starter)**  - [![Stars](https://img.shields.io/github/stars/yeasin2002/react-ts-starter?style=social)]() -  Vite react-TS starter  for blazing-fast development
+-  👻 **[express-ts-starter](https://github.com/yeasin2002/express-ts-starter)**  - [![Stars](https://img.shields.io/github/stars/yeasin2002/express-ts-starter?style=social)]() -  TypeScript,Express with Docker, build tool to build hight scalable Backend. 
+- 📦 **[npm-starter](https://github.com/yeasin2002/npm-starter)**  - [![Stars](https://img.shields.io/github/stars/yeasin2002/npm-starter?style=social)]() - Starter Template for creating NPM Packages
+-  🔌 **[unplugin-starter](https://github.com/yeasin2002/unplugin-starter)**  - Create cross platform build tools plugins like vite,rollup, farm, webpack etc.
+-  ⚛️ **[react-native expo starter](https://github.com/yeasin2002/react-native-expo-starter)**  - A production-ready starter template for cross-platform mobile apps with Expo
 
-```env
-TELEGRAM_BOT_TOKEN="your-token"
-TELEGRAM_CHAT_ID="your-chat-id"
-GEMINI_API_KEY="your-api-key"
-NODE_ENV="development"
-NEXT_PUBLIC_URL="http://localhost:3000"
-NEXT_PUBLIC_UMAMI_SRC="your-umami-script-url"
-NEXT_PUBLIC_UMAMI_ID="your-umami-website-id"
-```
+#### Browser Extensions
 
-### Setting up Telegram Integration
+-  🤖 **[promptsu](https://github.com/yeasin2002/promptsu)**  - Add AI-powered prompt enhancement to chatGPT etc.
+- 🖥️ **[ResponsiveKit](https://github.com/yeasin2002/ResponsiveKit)** -  Displays real-time responsive breakpoint information while browsing 
 
-1. Create a new bot with [@BotFather](https://t.me/botfather) on Telegram
-2. Copy the bot token and add it to your `.env` file as `TELEGRAM_BOT_TOKEN`
-3. Start a chat with your bot and send any message (e.g., "hello")
-4. Get your chat ID:
 
-   ```bash
-   # Run the test script to get your chat ID
-   bun run test-telegram
-   ```
 
-   - The script will show your Chat ID from the message you sent
-   - Copy the Chat ID and add it to your `.env` file as `TELEGRAM_CHAT_ID`
-   - Run the script again to verify everything works
 
-### Setting up Umami Analytics
+### Contact Info
 
-1. Visit Umami:
-   - Self-host Umami or use [Umami Cloud](https://cloud.umami.is)
-   - Follow Umami's [installation guide](https://umami.is/docs/install)
+<a href="mailto:mdkawsarislam2002@gmail.com">
+    <img src="https://go-skill-icons.vercel.app/api/icons?i=gmail" />
+</a>
+<a href="https://yeasin2002.vercel.app/">
+   <img src="https://go-skill-icons.vercel.app/api/icons?i=chrome" />
+</a>
+ <a href="https://www.linkedin.com/in/yeasin2002/">
+       <img src="https://go-skill-icons.vercel.app/api/icons?i=linkedin" />
+    </a>
+    
+ <a href="https://www.facebook.com/yeasin2002.dev/">
+       <img src="https://go-skill-icons.vercel.app/api/icons?i=facebook" />
+    </a>
 
-2. Get your credentials:
-   - Copy your Umami script URL (ends with `/script.js`)
-   - Get your website ID from Umami dashboard
 
-3. Configure environment variables:
-   ```env
-   NEXT_PUBLIC_UMAMI_SRC="https://[your-umami-instance]/script.js"
-   NEXT_PUBLIC_UMAMI_ID="your-website-id"
-   ```
+<a href="https://www.reddit.com/user/mdkawsarislam2002/">
+       <img src="https://go-skill-icons.vercel.app/api/icons?i=reddit" />
+    </a>
 
-## Getting Started
+<a href="https://leetcode.com/yeasin2002">
+       <img src="https://go-skill-icons.vercel.app/api/icons?i=leetcode" />
+    </a>
+    
 
-1. Clone the repository:
+### GitHub Statistics/States
 
-   ```bash
-   git clone https://github.com/ramxcodes/sleek-portfolio.git
-   cd sleek-portfolio
-   ```
+<details>
+<summary>Click here to see the Magic!!! 🪄 </summary>
+<br>
 
-2. Install dependencies:
+<table>
+  <tr>
+    <td> 
+    <img src="./public/states/top-langs.svg" alt="Top Languages" />
+     </td>
+    <td>
+     <img src="https://leetcard.jacoblin.cool/yeasin2002" /> 
+     </td>
+  </tr>
+</table>
 
-   ```bash
-   # Using bun (recommended)
-   bun install
+<table>
+  <tr>
+<td> 
+    <img src="./public/states/stats.svg" alt="GitHub Stats" />
+</td>
+  </tr>
+</table>
+</details>
 
-   # Using npm
-   npm install
-   ```
+<!--
 
-3. Run the development server:
+<details >
+<summary>  <h4 > 📈 More GitHub States (Click to Open) </h4> </summary>
+<be>
 
-   ```bash
-   # Using bun
-   bun dev
+![My GitHub stats](https://github-readme-stats.vercel.app/api?username=yeasin2002&show_icons=true)
 
-   # Using npm
-   npm run dev
-   ```
+[![Leetcode Stats](https://leetcard.jacoblin.cool/yeasin2002)](https://leetcode.com/yeasin2002)
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+</details>
+-->
 
-## Configuration
-
-The project uses configuration files in the `src/config` directory for easy customization:
-
-- `About.tsx` - About section content
-- `Contact.tsx` - Contact form settings
-- `Experience.tsx` - Work experience details
-- `Footer.tsx` - Footer links and content
-- `Gears.tsx` - Setup/gear section
-- `Hero.tsx` - Hero section content
-- `Meta.tsx` - SEO and metadata
-- `Navbar.tsx` - Navigation links
-- `Projects.tsx` - Project showcase settings
-- `Quote.ts` - Random quotes configuration
-- `Resume.ts` - Resume section details
-- `Setup.tsx` - Development setup information
-- `cat.ts` - Enable disable the cat
-
-## Adding New Technology Icons
-
-1. Visit [Devicon](https://devicon.dev/) to find the icon you want to add
-2. Create a new component in `src/components/technologies/`
-3. Follow the existing component structure for consistency
-
-Example:
-
-```tsx
-export const NewTechIcon = () => {
-  return <svg>// SVG content from devicon</svg>;
-};
-```
-
-## Adding Content
-
-### Blog Posts
-
-1. Create a new MDX file in `src/data/blog/`
-2. Add metadata and content following existing post structure
-3. Add blog thumbnail in `public/blog/`
-
-### Projects
-
-1. Create a new MDX file in `src/data/projects/`
-2. Add metadata and content following existing project structure
-3. Add project thumbnail in `public/project/`
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=80&section=footer&fontSize=20"  /></p>

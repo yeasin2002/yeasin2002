@@ -5,20 +5,22 @@ import { createClient } from '@/lib/supabase/client';
 import {
   Bell,
   ChevronDown,
-  Compass,
   FolderKanban,
-  Image as ImageIcon,
   LayoutDashboard,
   LogOut,
   Menu,
   Search,
+  Upload,
   User,
-  Wrench,
   X,
 } from 'lucide-react';
 import { Link } from 'next-view-transitions';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+
+
+
+
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -58,6 +60,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
     },
     { label: 'Projects', href: '/dashboard/projects', icon: FolderKanban },
     { label: 'About Me', href: '/dashboard/me', icon: User },
+    { label: 'Media Library', href: '/dashboard/media-library', icon: Upload },
   ];
 
   return (

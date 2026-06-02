@@ -28,6 +28,7 @@
     ]
   },
   "dependencies": {
+    "@base-ui/react": "^1.5.0",
     "@calcom/embed-react": "^1.5.3",
     "@hookform/resolvers": "^5.2.2",
     "@mdx-js/loader": "^3.1.1",
@@ -82,6 +83,7 @@
     "next-mdx-remote": "^6.0.0",
     "next-themes": "^0.4.6",
     "next-view-transitions": "^0.3.5",
+    "radix-ui": "^1.4.3",
     "react": "^19.2.6",
     "react-activity-calendar": "^2.7.15",
     "react-day-picker": "^9.14.0",

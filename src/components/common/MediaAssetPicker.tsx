@@ -4,6 +4,7 @@ import { Combobox, ComboboxContent, ComboboxEmpty, ComboboxInput, ComboboxItem, 
 import { cn } from '@/lib/utils';
 import type { MediaAssetOption } from '@/lib/media';
 import Image from 'next/image';
+import { useRef } from 'react';
 
 interface MediaAssetPickerProps {
   assets: MediaAssetOption[];
@@ -24,10 +25,11 @@ export function MediaAssetPicker({
   placeholder = 'Search saved images...',
   value,
 }: MediaAssetPickerProps) {
+  const portalContainerRef = useRef<HTMLDivElement | null>(null);
   const selectedAsset = assets.find((asset) => asset.value === value) ?? null;
 
   return (
-    <div className={cn('space-y-2', className)}>
+    <div ref={portalContainerRef} className={cn('space-y-2', className)}>
       <div className="flex items-end justify-between gap-3">
         <div>
           <p className="text-sm font-semibold">{label}</p>
@@ -65,7 +67,7 @@ export function MediaAssetPicker({
           placeholder={placeholder}
           className="w-full"
         />
-        <ComboboxContent>
+        <ComboboxContent container={portalContainerRef}>
           <ComboboxList>
             <ComboboxEmpty>No saved images found.</ComboboxEmpty>
             {assets.map((asset) => (

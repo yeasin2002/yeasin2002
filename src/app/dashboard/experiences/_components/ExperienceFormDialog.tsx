@@ -1,14 +1,31 @@
 'use client';
 
+import { MediaAssetPicker } from '@/components/common/MediaAssetPicker';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
-import { MediaAssetPicker } from '@/components/common/MediaAssetPicker';
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import type { ExperienceRow } from '@/lib/experience';
-import { fetchMediaAssets, toMediaAssetOption, type MediaAssetOption } from '@/lib/media';
+import {
+  type MediaAssetOption,
+  fetchMediaAssets,
+  toMediaAssetOption,
+} from '@/lib/media';
 import { createClient } from '@/lib/supabase/client';
 import { allTechnologyNames } from '@/lib/technologies';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -17,7 +34,11 @@ import { useEffect, useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 
-import { type ExperienceFormValues, experienceFormSchema, getDefaultExperienceFormValues } from '../experience-schema';
+import {
+  type ExperienceFormValues,
+  experienceFormSchema,
+  getDefaultExperienceFormValues,
+} from '../experience-schema';
 
 interface ExperienceFormDialogProps {
   open: boolean;
@@ -73,7 +94,9 @@ export function ExperienceFormDialog({
     const loadMediaAssets = async () => {
       try {
         const records = await fetchMediaAssets(supabase, 200);
-        setMediaAssets(records.map((record) => toMediaAssetOption(supabase, record)));
+        setMediaAssets(
+          records.map((record) => toMediaAssetOption(supabase, record)),
+        );
       } catch {
         setMediaAssets([]);
       }
@@ -123,7 +146,7 @@ export function ExperienceFormDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-h-[90vh] min-w-6xl overflow-hidden p-0">
+      <DialogContent className="flex max-h-[calc(100vh-2rem)] min-w-6xl flex-col overflow-y-scroll overflow-x-hidden p-0">
         <div className="border-b border-neutral-100 px-6 pt-6 dark:border-neutral-800">
           <DialogHeader>
             <DialogTitle>
@@ -138,9 +161,9 @@ export function ExperienceFormDialog({
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(handleSubmit)}
-            className="flex max-h-[calc(90vh-6rem)] flex-col"
+            className="flex min-h-0 flex-1 flex-col"
           >
-            <ScrollArea className="flex-1 px-6 py-6">
+            <ScrollArea className="min-h-0 flex-1 px-6 py-6">
               <div className="space-y-6">
                 <div className="grid gap-4 sm:grid-cols-2">
                   <FormField
@@ -150,7 +173,11 @@ export function ExperienceFormDialog({
                       <FormItem>
                         <FormLabel>Company Name</FormLabel>
                         <FormControl>
-                          <Input {...field} placeholder="e.g. Google" className="rounded-xl" />
+                          <Input
+                            {...field}
+                            placeholder="e.g. Google"
+                            className="rounded-xl"
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -198,13 +225,13 @@ export function ExperienceFormDialog({
                   <FormField
                     control={form.control}
                     name="image"
-                    render={({ field }) => (
+                    render={() => (
                       <div className="space-y-4">
                         <FormItem>
                           <FormLabel>Image/Logo Path</FormLabel>
                           <FormControl>
                             <Input
-                              {...field}
+                              {...form.register('image')}
                               placeholder="e.g. /company/google.png or a Supabase public URL"
                               className="rounded-xl"
                             />
@@ -359,7 +386,9 @@ export function ExperienceFormDialog({
                         <FormControl>
                           <Checkbox
                             checked={field.value}
-                            onCheckedChange={(checked) => field.onChange(!!checked)}
+                            onCheckedChange={(checked) =>
+                              field.onChange(!!checked)
+                            }
                           />
                         </FormControl>
                         <FormLabel className="cursor-pointer text-sm font-semibold">
@@ -377,7 +406,9 @@ export function ExperienceFormDialog({
                         <FormControl>
                           <Checkbox
                             checked={field.value}
-                            onCheckedChange={(checked) => field.onChange(!!checked)}
+                            onCheckedChange={(checked) =>
+                              field.onChange(!!checked)
+                            }
                           />
                         </FormControl>
                         <FormLabel className="cursor-pointer text-sm font-semibold">
@@ -391,7 +422,9 @@ export function ExperienceFormDialog({
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-sm font-semibold">Description Bullet Points</p>
+                      <p className="text-sm font-semibold">
+                        Description Bullet Points
+                      </p>
                       <p className="text-xs text-neutral-500 dark:text-neutral-400">
                         Keep each bullet short and specific.
                       </p>
@@ -449,7 +482,9 @@ export function ExperienceFormDialog({
                     <FormItem>
                       <div className="space-y-3">
                         <div>
-                          <p className="text-sm font-semibold">Technologies Used</p>
+                          <p className="text-sm font-semibold">
+                            Technologies Used
+                          </p>
                           <p className="text-xs text-neutral-500 dark:text-neutral-400">
                             Select the stack used in this role.
                           </p>
@@ -466,7 +501,9 @@ export function ExperienceFormDialog({
                                   <button
                                     key={technologyName}
                                     type="button"
-                                    onClick={() => toggleTechnology(technologyName)}
+                                    onClick={() =>
+                                      toggleTechnology(technologyName)
+                                    }
                                     className={`rounded-lg border px-2.5 py-1.5 text-xs font-semibold transition-all ${
                                       isSelected
                                         ? 'border-blue-600 bg-blue-600 text-white'
@@ -485,35 +522,35 @@ export function ExperienceFormDialog({
                     </FormItem>
                   )}
                 />
+
+                <div className="border-t border-neutral-100 pt-4 dark:border-neutral-800 pb-6">
+                  <div className="flex justify-end gap-3">
+                    <Button
+                      type="button"
+                      variant="outline"
+                      onClick={() => onOpenChange(false)}
+                      className="h-11 rounded-xl"
+                    >
+                      Cancel
+                    </Button>
+                    <Button
+                      type="submit"
+                      disabled={form.formState.isSubmitting}
+                      className="flex h-11 items-center gap-2 rounded-xl bg-blue-600 font-semibold text-white hover:bg-blue-700"
+                    >
+                      {form.formState.isSubmitting ? (
+                        <>
+                          <Loader2 className="h-4 w-4 animate-spin" />
+                          Saving...
+                        </>
+                      ) : (
+                        'Save Experience'
+                      )}
+                    </Button>
+                  </div>
+                </div>
               </div>
             </ScrollArea>
-
-            <div className="border-t border-neutral-100 px-6 py-4 dark:border-neutral-800">
-              <div className="flex justify-end gap-3">
-                <Button
-                  type="button"
-                  variant="outline"
-                  onClick={() => onOpenChange(false)}
-                  className="h-11 rounded-xl"
-                >
-                  Cancel
-                </Button>
-                <Button
-                  type="submit"
-                  disabled={form.formState.isSubmitting}
-                  className="flex h-11 items-center gap-2 rounded-xl bg-blue-600 font-semibold text-white hover:bg-blue-700"
-                >
-                  {form.formState.isSubmitting ? (
-                    <>
-                      <Loader2 className="h-4 w-4 animate-spin" />
-                      Saving...
-                    </>
-                  ) : (
-                    'Save Experience'
-                  )}
-                </Button>
-              </div>
-            </div>
           </form>
         </Form>
       </DialogContent>

@@ -42,7 +42,7 @@ yeasin2002/
 │   └── validate/         # Testing/validation scripts
 ├── public/               # Static assets
 ├── supabase/            # Supabase configuration
-├── .kiro/               # Kiro AI configuration
+├── AGENTS.md/               # AI configuration
 └── .agents/             # Agent skills and steering
 ```
 

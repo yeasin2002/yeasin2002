@@ -1,218 +1,277 @@
-# Product
+<!-- Product -->
 
-This is a personal developer portfolio website for Md Kawsar Islam Yeasin, a junior full-stack software developer. It serves as a professional presence for attracting recruiters, clients, and collaborators.
+# Product Overview
 
-## Pages & Sections
+## What This Is
 
-- **Home (landing):** Hero, experience, projects, about, GitHub activity, blog preview, CTA, setup, journey
-- **Blog:** MDX-based technical articles with syntax highlighting
-- **Projects:** Showcase of client work, freelance projects, and experiments
-- **Work Experience:** Professional history with company logos and role details
-- **Contact:** Form with Telegram bot integration for lead capture
-- **Resume:** Downloadable CV
-- **Gears / Setup:** Development tools and VS Code configuration guide
+A personal portfolio website for Yeasin (yeasin2002), a front-end focused full-stack web developer specializing in TypeScript and Next.js. The site showcases projects, blog posts, work experience, tech stack, and provides contact capabilities.
 
 ## Key Features
 
-- Dark/light theme with system preference detection
-- Smooth scrolling (Lenis) and page transitions (next-view-transitions)
-- Privacy-focused analytics (Umami)
-- Contact form with server-side rate limiting (3 req/min) and Telegram notifications
-- SEO: OG images, sitemap, robots.txt, per-page metadata
-- Configuration-driven content — most copy lives in `src/config/`
+- **Developer Portfolio**: Showcases open-source contributions, development tools, starter templates, and browser extensions
+- **Blog Platform**: MDX-based blog system with syntax highlighting and rich content
+- **Project Gallery**: Displays personal and professional projects with detailed information
+- **Interactive Experience**: Smooth animations, theme switching (light/dark), and haptic feedback
+- **Contact Integration**: Cal.com scheduling embed and Telegram bot integration for inquiries
+- **Analytics**: Umami analytics integration for privacy-focused tracking
+- **Authentication**: Supabase-based auth system with dashboard functionality
 
-## Customization
+## Target Audience
 
-The portfolio is designed to be forkable. All personal content (name, skills, experience, projects) is centralized in `src/config/` with inline documentation for easy replacement.
+- Potential employers and clients
+- Developers interested in collaboration
+- Readers of technical blog content
+- Open-source community members
 
+<!-- Structure -->
 
-<!--  structure -->
 # Project Structure
 
-## Top-Level
+## Directory Organization
 
 ```
-src/          # All application source code
-public/       # Static assets served at root
-.kiro/        # Kiro steering and spec files
+yeasin2002/
+├── src/                    # Source code
+│   ├── app/               # Next.js App Router
+│   ├── components/        # React components
+│   ├── config/           # Configuration files
+│   ├── data/             # Static data and content
+│   ├── hooks/            # Custom React hooks
+│   ├── lib/              # Utility functions and helpers
+│   ├── types/            # TypeScript type definitions
+│   └── validate/         # Testing/validation scripts
+├── public/               # Static assets
+├── supabase/            # Supabase configuration
+├── .kiro/               # Kiro AI configuration
+└── .agents/             # Agent skills and steering
 ```
 
-## `src/` Directory
+## App Router Structure
 
+The `src/app/` directory follows Next.js 13+ App Router conventions:
+
+- **(auth)/**: Authentication-related pages (route group, no URL segment)
+- **(home)/**: Homepage sections and components (route group)
+- **blog/**: Blog listing and individual post pages
+- **dashboard/**: Protected dashboard area
+- **api/**: API routes for backend functionality
+- Root files: `layout.tsx`, `page.tsx`, `globals.css`, SEO files
+
+## Component Architecture
+
+### `src/components/`
+
+Components are organized by feature/domain:
+
+- **ui/**: shadcn/ui components (Button, Card, Dialog, etc.)
+- **common/**: Shared layout components (LayoutWrapper, ThemeProvider)
+- **analytics/**: Analytics integration components
+- **blog/**: Blog-specific components
+- **contact/**: Contact form and related components
+- **experience/**: Work experience display
+- **gears/**: Tech stack/gear showcase
+- **landing/**: Homepage sections
+- **projects/**: Project gallery components
+- **technologies/**: Technology/skills display
+- **svgs/**: Custom SVG components
+
+### Component Naming
+
+- Use PascalCase for component files: `LayoutWrapper.tsx`
+- Co-locate related components in feature directories
+- UI primitives in `components/ui/` (managed by shadcn CLI)
+
+## Configuration Pattern
+
+### `src/config/`
+
+Site-wide configuration organized by section:
+
+- Each file exports configuration for a specific site section
+- Examples: `Hero.tsx`, `Projects.tsx`, `Experience.tsx`, `Navbar.tsx`
+- Mix of `.ts` (data) and `.tsx` (JSX content)
+
+## Data Layer
+
+### `src/data/`
+
+Static content and markdown files:
+
+- **blog/**: Legacy blog posts (if applicable)
+- **blogs/**: MDX blog posts with frontmatter
+- **journey/**: Career journey/timeline content
+
+## Library & Utilities
+
+### `src/lib/`
+
+Helper functions and utility modules:
+
+- **fonts/**: Font configuration and loading
+- **supabase/**: Supabase client initialization
+- Feature-specific helpers: `blog.ts`, `project.ts`, `hero.ts`
+- **utils.ts**: Common utilities (includes `cn()` for className merging)
+
+## Custom Hooks
+
+### `src/hooks/`
+
+Reusable React hooks:
+
+- `use-mobile.ts`: Responsive breakpoint detection
+- `use-umami.ts`: Analytics tracking
+- `use-haptic-feedback.ts`: Touch feedback
+
+## Type Definitions
+
+### `src/types/`
+
+TypeScript interfaces and types:
+
+- `blog.ts`: Blog post types
+- `project.ts`: Project data types
+- `analytics.ts`: Analytics event types
+
+## Styling Conventions
+
+- **Global styles**: `src/app/globals.css`
+- **Tailwind utilities**: Use via `className` prop
+- **Component variants**: Use `cva` from `class-variance-authority`
+- **Class merging**: Use `cn()` helper from `@/lib/utils`
+- **CSS variables**: Defined in `globals.css` for theming
+
+## Import Conventions
+
+Always use path aliases:
+
+```typescript
+import { Button } from '@/components/ui/button';
+import { useUmami } from '@/hooks/use-umami';
+import { cn } from '@/lib/utils';
+import { ProjectType } from '@/types/project';
 ```
-src/
-├── app/                  # Next.js App Router
-│   ├── api/              # API route handlers
-│   │   └── contact/      # Contact form endpoint (rate-limited, Zod-validated)
-│   ├── blog/             # Blog listing + [slug] dynamic pages
-│   ├── projects/         # Project listing + [slug] dynamic pages
-│   ├── contact/
-│   ├── resume/
-│   ├── work-experience/
-│   ├── gears/
-│   ├── setup/
-│   ├── journey/
-│   ├── layout.tsx        # Root layout — providers, fonts, Navbar, Footer
-│   ├── page.tsx          # Homepage (assembles landing section components)
-│   ├── globals.css
-│   ├── robots.ts
-│   └── sitemap.ts
-│
-├── components/
-│   ├── ui/               # Shadcn UI components — do not edit directly
-│   ├── common/           # Shared layout components (Navbar, Footer, Container, etc.)
-│   ├── landing/          # Homepage section components (Hero, Experience, Blog, etc.)
-│   ├── blog/             # Blog-specific components
-│   ├── projects/         # Project-specific components
-│   ├── contact/          # ContactForm component
-│   ├── experience/       # Work experience components
-│   ├── gears/            # Gears/setup components
-│   ├── technologies/     # Tech stack SVG icon components (40+)
-│   ├── svgs/             # Custom SVG icon components
-│   └── analytics/        # Umami analytics component
-│
-├── config/               # Content & configuration — primary place to edit copy/data
-│   ├── Hero.tsx          # Name, title, skills, description template, social links
-│   ├── Meta.tsx          # SEO metadata for every page + helper functions
-│   ├── About.tsx
-│   ├── Experience.tsx    # Work history data
-│   ├── Projects.tsx      # Project data
-│   ├── Navbar.tsx        # Nav links
-│   ├── Footer.tsx        # Footer links
-│   ├── Gears.tsx         # Tools & equipment list
-│   ├── Setup.tsx         # Dev setup info
-│   ├── Journey.tsx       # Timeline/certificates
-│   ├── CTA.tsx
-│   ├── Quote.ts
-│   ├── ChatPrompt.ts     # AI chat system prompt
-│   └── Cat.ts            # Oneko cat toggle
-│
-├── data/                 # MDX content files
-│   ├── blog/             # Blog post .mdx files
-│   └── journey/          # Journey/timeline .mdx files
-│
-├── lib/                  # Utilities and helpers
-│   ├── utils.ts          # cn() Tailwind class merging utility
-│   ├── blog.ts           # Blog MDX parsing and data fetching
-│   ├── project.ts        # Project MDX parsing
-│   ├── hero.ts           # Hero description template parser
-│   ├── fonts/            # Font configuration
-│   └── lenis.ts          # Smooth scroll setup
-│
-├── hooks/                # Custom React hooks
-│   ├── use-mobile.ts
-│   ├── use-umami.ts
-│   └── use-haptic-feedback.ts
-│
-├── types/                # Shared TypeScript type definitions
-│
-└── validate/             # One-off scripts (e.g., testTelegram.ts)
-```
 
-## `public/` Directory
+Never use relative imports like `../../../components`
 
-```
-public/
-├── assets/       # Profile images, CV/PDF
-├── blog/         # Blog post thumbnail images
-├── project/      # Project screenshot images
-├── company/      # Company logo images
-├── meta/         # OG images for SEO (one per page)
-└── oneko/        # Oneko cat animation files
-```
+## File Naming
 
-## Conventions
+- **Components**: PascalCase (e.g., `LayoutWrapper.tsx`)
+- **Utilities/Hooks**: kebab-case (e.g., `use-mobile.ts`)
+- **Config files**: PascalCase matching domain (e.g., `Projects.tsx`)
+- **Types**: kebab-case (e.g., `project.ts`)
 
-- **Components:** PascalCase filenames (`Hero.tsx`, `ContactForm.tsx`)
-- **Hooks:** kebab-case filenames with `use-` prefix (`use-mobile.ts`)
-- **Utilities:** camelCase filenames (`utils.ts`, `blog.ts`)
-- **Config files:** PascalCase (`Hero.tsx`, `Meta.tsx`) — these are `.tsx` because they may contain JSX (e.g., SVG icon JSX in social links)
-- **Imports:** Always use `@/` alias for `src/` paths; never use relative `../../` paths across feature boundaries
-- **Client components:** Mark with `'use client'` at the top; default to Server Components
-- **Content changes:** Edit `src/config/` for copy/data; edit `src/data/` for MDX blog/project content
-- **UI components:** Add new Shadcn components to `src/components/ui/` via the Shadcn CLI; do not hand-edit generated files
+## Route Organization
 
-
-<!-- tech -->
-
-# Tech Stack
-
-## Core
-
-- **Next.js 16.2.6** — App Router, file-based routing, server/client components
-- **React 19.2.6**
-- **TypeScript 6.0.3** — strict mode enabled
-
-## Styling & UI
-
-- **Tailwind CSS 4.3.0** — primary styling, mobile-first, utility classes sorted by Prettier plugin
-- **Shadcn UI** — pre-built component library (`src/components/ui/`)
-- **Radix UI** — headless primitives underlying Shadcn
-- **Lucide React** + **Phosphor Icons** — icon sets
-- **Motion 12.39.0** — animations
-- **Lenis 1.3.23** — smooth scrolling
-
-## Content
-
-- **MDX** (`@next/mdx`, `next-mdx-remote`) — blog posts and project pages
-- **Gray Matter** — YAML frontmatter parsing
-- **Shiki** — syntax highlighting in MDX
-- **Remark plugins** — GFM and frontmatter support
-
-## Forms & Validation
-
-- **React Hook Form 7.76.0**
-- **Zod 3.25.76** — schema validation on both client and server
-- **@hookform/resolvers** — integration layer
-
-## Other Libraries
-
-- **next-themes** — theme management
-- **next-view-transitions** — page transition animations
-- **Sonner** — toast notifications
-- **Recharts** — data visualization
-- **Embla Carousel** — carousel component
-- **React Activity Calendar** — GitHub-style contribution graph
-- **Cal.com Embed** — scheduling integration
-
-## Dev Tooling
-
-- **pnpm** — package manager (workspace config in `pnpm-workspace.yaml`)
-- **Bun** — used for running scripts (`bun run <script>`)
-- **Prettier 3.8.3** — formatting with `@trivago/prettier-plugin-sort-imports` and `prettier-plugin-tailwindcss`
-- **ESLint 9.39.4** — flat config, extends `next/core-web-vitals` + `next/typescript`
-- **Husky + lint-staged** — pre-commit hooks that auto-format and lint staged files
-- **Knip** — detects unused exports and dependencies
+- Use route groups `(folder)` for logical grouping without affecting URLs
+- Co-locate page components with their routes in `app/`
+- Server Components by default, add `'use client'` only when needed
+- Use `loading.tsx`, `error.tsx`, and `not-found.tsx` for loading/error states
 
 ## Environment Variables
 
-Defined in `.env.example`:
+- Store in `.env` (gitignored)
+- Example template in `.env.example`
+- Prefix public variables with `NEXT_PUBLIC_`
+- Required variables: Supabase keys, API keys, analytics IDs
 
-| Variable | Purpose |
-|---|---|
-| `TELEGRAM_BOT_TOKEN` | Contact form notifications |
-| `TELEGRAM_CHAT_ID` | Telegram recipient |
-| `GEMINI_API_KEY` | AI/chat features |
-| `NEXT_PUBLIC_URL` | Site base URL |
-| `NEXT_PUBLIC_UMAMI_SRC` | Umami analytics script |
-| `NEXT_PUBLIC_UMAMI_ID` | Umami website ID |
+<!-- Tech -->
+
+# Technology Stack
+
+## Core Framework
+
+- **Next.js 16.2.6**: React framework with App Router architecture
+- **React 19.2.6**: UI library with React Server Components (RSC)
+- **TypeScript 6.0.3**: Strict mode enabled, ES2017 target
+
+## Build System & Package Management
+
+- **Bun**: Primary package manager and runtime
+- **Turbopack**: Next.js development bundler (via `--turbopack` flag)
+- **PostCSS**: CSS processing with Tailwind CSS plugin
+
+## Styling
+
+- **Tailwind CSS 4.3.0**: Utility-first CSS framework with CSS variables
+- **shadcn/ui**: Component library (New York style variant)
+- **Radix UI**: Headless UI primitives for accessible components
+- **class-variance-authority (cva)**: Variant-based component styling
+- **tailwind-merge + clsx**: Utility for merging Tailwind classes
+
+## UI & Animation
+
+- **Motion (Framer Motion)**: Animation library
+- **Lenis**: Smooth scroll implementation
+- **next-view-transitions**: Page transition effects
+- **next-themes**: Dark/light theme management
+- **Lucide React**: Icon library
+- **Phosphor Icons**: Additional icon set
+
+## Content & Documentation
+
+- **MDX**: Markdown with JSX support via `@next/mdx` and `next-mdx-remote`
+- **Shiki**: Syntax highlighting for code blocks
+- **gray-matter**: Front matter parsing for blog posts
+- **remark-gfm**: GitHub Flavored Markdown support
+
+## Backend & Data
+
+- **Supabase**: Authentication, database (PostgreSQL), and storage
+- **@supabase/ssr**: Server-side rendering support for auth
+- **Vercel Postgres**: Database connection
+- **Vercel Blob**: File storage
+
+## Forms & Validation
+
+- **React Hook Form 7.76.0**: Form state management
+- **Zod 3.25.76**: Schema validation
+- **@hookform/resolvers**: Zod integration for form validation
+
+## Integrations
+
+- **Cal.com**: Scheduling embed (`@calcom/embed-react`)
+- **Umami**: Privacy-focused analytics
+- **Telegram Bot**: Contact form integration
+
+## Code Quality
+
+- **ESLint**: Linting with Next.js recommended config
+- **Prettier 3.8.3**: Code formatting
+  - **@trivago/prettier-plugin-sort-imports**: Auto-sort imports
+  - **prettier-plugin-tailwindcss**: Auto-sort Tailwind classes
+- **Husky**: Git hooks management
+- **lint-staged**: Pre-commit linting and formatting
+- **Knip**: Unused file and dependency detection
 
 ## Common Commands
 
 ```bash
-bun run dev        # Start dev server with Turbopack
-bun run build      # Production build
-bun run start      # Start production server
-bun run lint       # Run ESLint
-bun run format     # Format all files with Prettier
-bun run knip       # Check for unused code/exports
-bun run test-telegram  # Test Telegram bot integration
+# Development
+bun run dev              # Start dev server with Turbopack
+
+# Build & Deploy
+bun run build            # Production build
+bun run start            # Start production server
+
+# Code Quality
+bun run lint             # Run ESLint
+bun run format           # Format code with Prettier
+bun run format:all       # Format with all Prettier configs
+bun run knip             # Detect unused dependencies
+
+# Testing
+bun run test-telegram    # Test Telegram bot integration
 ```
 
-## TypeScript Path Aliases
+## Path Aliases
 
-`@/*` maps to `./src/*` — always use this for imports within `src/`.
+All imports use `@/` prefix mapped to `src/`:
 
+- `@/components` → Component library
+- `@/lib` → Utilities and helper functions
+- `@/hooks` → Custom React hooks
+- `@/config` → Site configuration
+- `@/types` → TypeScript type definitions
 
 <!-- rules -->
 

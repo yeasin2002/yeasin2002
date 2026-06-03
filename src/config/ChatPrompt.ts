@@ -1,7 +1,8 @@
+import { aboutFallback } from '@/lib/about';
+
 import { experiences } from './Experience';
 import { heroConfig, socialLinks } from './Hero';
 import { projects } from './Projects';
-import { aboutFallback } from '@/lib/about';
 
 function generateSystemPrompt(): string {
   const skillNames = heroConfig.skills.map((skill) => skill.name).join(', ');

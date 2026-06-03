@@ -1,6 +1,7 @@
 'use client';
 
 import type { ExperienceRow } from '@/lib/experience';
+
 import { ExperienceCard } from './ExperienceCard';
 
 interface ExperienceListProps {
@@ -31,4 +32,3 @@ export function ExperienceList({
     </div>
   );
 }
-

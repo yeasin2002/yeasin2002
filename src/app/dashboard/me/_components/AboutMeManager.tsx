@@ -1,18 +1,24 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { type AboutProfile, upsertAboutProfile } from '@/lib/about';
+import { type Skill, fetchSkills } from '@/lib/skills';
 import { createClient } from '@/lib/supabase/client';
-import { fetchSkills, type Skill } from '@/lib/skills';
 import { cn } from '@/lib/utils';
 import { Loader2, Save } from 'lucide-react';
 import Image from 'next/image';
-import { useEffect, useMemo, useState, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
+import { useEffect, useMemo, useState, useTransition } from 'react';
 import { toast } from 'sonner';
 
 interface AboutMeManagerProps {
@@ -62,7 +68,11 @@ export function AboutMeManager({ initialProfile }: AboutMeManagerProps) {
         toast.success('About section updated successfully.');
         router.refresh();
       } catch (error) {
-        toast.error(error instanceof Error ? error.message : 'Unable to update about section.');
+        toast.error(
+          error instanceof Error
+            ? error.message
+            : 'Unable to update about section.',
+        );
       }
     });
   };
@@ -72,7 +82,9 @@ export function AboutMeManager({ initialProfile }: AboutMeManagerProps) {
       <Card className="gap-0 overflow-hidden">
         <CardHeader className="border-b border-neutral-100 dark:border-neutral-800">
           <CardTitle>Preview</CardTitle>
-          <CardDescription>How the About section will look on the landing page.</CardDescription>
+          <CardDescription>
+            How the About section will look on the landing page.
+          </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4 pt-6">
           <div className="overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800">
@@ -85,13 +97,17 @@ export function AboutMeManager({ initialProfile }: AboutMeManagerProps) {
             />
           </div>
           <div className="space-y-2">
-            <h2 className="text-xl font-bold text-neutral-900 dark:text-neutral-50">{name}</h2>
+            <h2 className="text-xl font-bold text-neutral-900 dark:text-neutral-50">
+              {name}
+            </h2>
             <p className="text-sm leading-6 text-neutral-500 dark:text-neutral-400">
               {description}
             </p>
           </div>
           <div className="space-y-2">
-            <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">Skills</p>
+            <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-100">
+              Skills
+            </p>
             <div className="flex flex-wrap gap-2">
               {availableSkills
                 .filter((skill) => skills.includes(skill.slug))
@@ -118,7 +134,9 @@ export function AboutMeManager({ initialProfile }: AboutMeManagerProps) {
       <Card className="gap-0 overflow-hidden">
         <CardHeader className="border-b border-neutral-100 dark:border-neutral-800">
           <CardTitle>Edit About</CardTitle>
-          <CardDescription>Update the name, image, description, and displayed skills.</CardDescription>
+          <CardDescription>
+            Update the name, image, description, and displayed skills.
+          </CardDescription>
         </CardHeader>
         <CardContent className="space-y-5 pt-6">
           <div className="space-y-2">

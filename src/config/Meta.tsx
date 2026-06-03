@@ -1,5 +1,6 @@
-import { heroConfig } from './Hero';
 import { aboutFallback } from '@/lib/about';
+
+import { heroConfig } from './Hero';
 
 export interface PageMeta {
   title: string;

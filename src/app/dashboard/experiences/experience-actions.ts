@@ -1,8 +1,12 @@
 import { experiences as fallbackExperiences } from '@/config/Experience';
-import { mapExperienceRowToRecord, mapExperienceToPayload } from '@/lib/experience';
-import { createClient } from '@/lib/supabase/client';
-import type { ExperienceFormValues } from './experience-schema';
+import {
+  mapExperienceRowToRecord,
+  mapExperienceToPayload,
+} from '@/lib/experience';
 import type { ExperienceRow } from '@/lib/experience';
+import { createClient } from '@/lib/supabase/client';
+
+import type { ExperienceFormValues } from './experience-schema';
 
 export const fetchExperiences = async (): Promise<ExperienceRow[]> => {
   const supabase = createClient();
@@ -51,7 +55,9 @@ export const saveExperience = async (
     location: normalizeString(values.location),
     image: normalizeString(values.image),
     description:
-      description.length > 0 ? description : ['Completed daily operational tasks.'],
+      description.length > 0
+        ? description
+        : ['Completed daily operational tasks.'],
     start_date: normalizeString(values.startDate),
     end_date: values.isCurrent ? 'Present' : normalizeString(values.endDate),
     website: normalizeString(values.website ?? ''),
@@ -86,10 +92,12 @@ export const saveExperience = async (
 
 export const deleteExperience = async (experienceId: string) => {
   const supabase = createClient();
-  const { error } = await supabase.from('experiences').delete().eq('id', experienceId);
+  const { error } = await supabase
+    .from('experiences')
+    .delete()
+    .eq('id', experienceId);
 
   if (error) {
     throw error;
   }
 };
-

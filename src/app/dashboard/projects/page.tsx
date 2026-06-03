@@ -5,16 +5,17 @@ import { FileDown, Info, Loader2, Plus } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { toast } from 'sonner';
 
+
+
 import { ProjectFormDialog } from './_components/ProjectFormDialog';
 import { ProjectList } from './_components/ProjectList';
 import type { ProjectRow } from './project-actions';
-import {
-  deleteProject,
-  fetchProjects,
-  saveProject,
-  seedProjects,
-} from './project-actions';
+import { deleteProject, fetchProjects, saveProject, seedProjects } from './project-actions';
 import type { ProjectFormValues } from './project-schema';
+
+
+
+
 
 export default function ProjectsManagementPage() {
   const [items, setItems] = useState<ProjectRow[]>([]);
@@ -56,9 +57,10 @@ export default function ProjectsManagementPage() {
       await deleteProject(project.id!);
       toast.success('Project deleted successfully!');
       setItems((current) => current.filter((item) => item.id !== project.id));
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error(error);
-      toast.error('Delete failed: ' + error.message);
+      const message = error instanceof Error ? error.message : String(error);
+      toast.error('Delete failed: ' + message);
     }
   };
 
@@ -68,9 +70,10 @@ export default function ProjectsManagementPage() {
       await seedProjects();
       toast.success('Successfully imported static projects!');
       await loadProjects();
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error(error);
-      toast.error('Import failed: ' + error.message);
+      const message = error instanceof Error ? error.message : String(error);
+      toast.error('Import failed: ' + message);
     } finally {
       setSeeding(false);
     }
@@ -82,15 +85,15 @@ export default function ProjectsManagementPage() {
     projectId?: string | null,
   ) => {
     // Normalize technologies string if user entered comma separated string
-    const normalized = { ...values } as any;
+    const normalized = { ...values } as unknown as { technologies?: string | string[] } & Record<string, unknown>;
     if (typeof normalized.technologies === 'string') {
       normalized.technologies = normalized.technologies
         .split(',')
-        .map((s: string) => s.trim())
-        .filter((s: string) => s.length > 0);
+        .map((s) => s.trim())
+        .filter((s) => s.length > 0);
     }
 
-    await saveProject(normalized, sortOrder, projectId);
+    await saveProject(normalized as Partial<ProjectRow>, sortOrder, projectId);
     toast.success(
       projectId
         ? 'Project updated successfully!'

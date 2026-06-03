@@ -3,12 +3,30 @@
 import { MediaAssetPicker } from '@/components/common/MediaAssetPicker';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Textarea } from '@/components/ui/textarea';
-import { fetchMediaAssets, toMediaAssetOption } from '@/lib/media';
+import {
+  MediaAssetOption,
+  MediaAssetRecord,
+  fetchMediaAssets,
+  toMediaAssetOption,
+} from '@/lib/media';
 import { createClient } from '@/lib/supabase/client';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2, Plus, Trash2 } from 'lucide-react';
@@ -16,17 +34,16 @@ import { useEffect, useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 
-
-
-import { ProjectFormValues, getDefaultProjectFormValues, projectFormSchema } from '../project-schema';
-
-
-
-
+import type { ProjectRow } from '../project-actions';
+import {
+  ProjectFormValues,
+  getDefaultProjectFormValues,
+  projectFormSchema,
+} from '../project-schema';
 
 interface ProjectFormDialogProps {
   open: boolean;
-  project?: any | null;
+  project?: ProjectRow | null;
   sortOrder: number;
   onOpenChange: (open: boolean) => void;
   onSaved: () => Promise<void> | void;
@@ -52,7 +69,7 @@ export function ProjectFormDialog({
     defaultValues: getDefaultProjectFormValues(),
   });
 
-  const [mediaAssets, setMediaAssets] = useState<any[]>([]);
+  const [mediaAssets, setMediaAssets] = useState<MediaAssetOption[]>([]);
   const imageValue = form.watch('image');
   const technologies = form.watch('technologies');
 
@@ -82,9 +99,7 @@ export function ProjectFormDialog({
     const loadMediaAssets = async () => {
       try {
         const records = await fetchMediaAssets(supabase, 200);
-        setMediaAssets(
-          records.map((r: any) => toMediaAssetOption(supabase, r)),
-        );
+        setMediaAssets(records.map((r: MediaAssetRecord) => toMediaAssetOption(supabase, r)));
       } catch {
         setMediaAssets([]);
       }

@@ -2,7 +2,6 @@
 
 import ThemeToggleButton from '@/components/common/ThemeToggleButtonClient';
 import { createClient } from '@/lib/supabase/client';
-import { MusicNoteSimpleIcon } from '@phosphor-icons/react';
 import {
   Bell,
   ChevronDown,
@@ -11,7 +10,6 @@ import {
   LogOut,
   Menu,
   Power,
-  PowerCircle,
   Search,
   Upload,
   User,
@@ -21,10 +19,6 @@ import { Link } from 'next-view-transitions';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-
-
-
-
 interface DashboardLayoutProps {
   children: React.ReactNode;
 }
@@ -33,7 +27,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
   const router = useRouter();
   const pathname = usePathname();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<unknown | null>(null);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   useEffect(() => {

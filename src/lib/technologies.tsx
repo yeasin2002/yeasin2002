@@ -1,4 +1,3 @@
-import React from 'react';
 import AWS from '@/components/technologies/AWS';
 import Appwrite from '@/components/technologies/Appwrite';
 import BootStrap from '@/components/technologies/BootStrap';
@@ -34,6 +33,7 @@ import TailwindCss from '@/components/technologies/TailwindCss';
 import ThreeJs from '@/components/technologies/ThreeJs';
 import TypeScript from '@/components/technologies/TypeScript';
 import Vercel from '@/components/technologies/Vercel';
+import React from 'react';
 
 export interface Technology {
   name: string;
@@ -41,39 +41,42 @@ export interface Technology {
   icon: React.ReactNode;
 }
 
-export const technologiesMap: Record<string, { href: string; icon: React.ReactNode }> = {
+export const technologiesMap: Record<
+  string,
+  { href: string; icon: React.ReactNode }
+> = {
   'Next.js': { href: 'https://nextjs.org/', icon: <NextJs /> },
-  'React': { href: 'https://react.dev/', icon: <ReactIcon /> },
-  'TypeScript': { href: 'https://www.typescriptlang.org/', icon: <TypeScript /> },
+  React: { href: 'https://react.dev/', icon: <ReactIcon /> },
+  TypeScript: { href: 'https://www.typescriptlang.org/', icon: <TypeScript /> },
   'Tailwind CSS': { href: 'https://tailwindcss.com/', icon: <TailwindCss /> },
-  'Redux': { href: 'https://redux.js.org/', icon: <Redux /> },
+  Redux: { href: 'https://redux.js.org/', icon: <Redux /> },
   'Node.js': { href: 'https://nodejs.org/', icon: <NodeJs /> },
   'Express.js': { href: 'https://expressjs.com/', icon: <ExpressJs /> },
-  'MongoDB': { href: 'https://www.mongodb.com/', icon: <MongoDB /> },
-  'PostgreSQL': { href: 'https://www.postgresql.org/', icon: <PostgreSQL /> },
+  MongoDB: { href: 'https://www.mongodb.com/', icon: <MongoDB /> },
+  PostgreSQL: { href: 'https://www.postgresql.org/', icon: <PostgreSQL /> },
   'React Native': { href: 'https://reactnative.dev/', icon: <ReactNative /> },
-  'Expo': { href: 'https://expo.dev/', icon: <Expo /> },
-  'Figma': { href: 'https://figma.com/', icon: <Figma /> },
-  'Postman': { href: 'https://www.postman.com/', icon: <Postman /> },
-  'Vercel': { href: 'https://vercel.com/', icon: <Vercel /> },
-  'Sentry': { href: 'https://sentry.io/', icon: <Sentry /> },
-  'JavaScript': { href: 'https://www.javascript.com/', icon: <JavaScript /> },
-  'Netlify': { href: 'https://www.netlify.com/', icon: <Netlify /> },
-  'AWS': { href: 'https://aws.amazon.com/', icon: <AWS /> },
-  'Appwrite': { href: 'https://appwrite.io/', icon: <Appwrite /> },
-  'Bootstrap': { href: 'https://getbootstrap.com/', icon: <BootStrap /> },
-  'Bun': { href: 'https://bun.sh/', icon: <Bun /> },
-  'CSS': { href: 'https://www.w3.org/Style/CSS/', icon: <CSS /> },
-  'DaisyUI': { href: 'https://daisyui.com/', icon: <DaisyUi /> },
+  Expo: { href: 'https://expo.dev/', icon: <Expo /> },
+  Figma: { href: 'https://figma.com/', icon: <Figma /> },
+  Postman: { href: 'https://www.postman.com/', icon: <Postman /> },
+  Vercel: { href: 'https://vercel.com/', icon: <Vercel /> },
+  Sentry: { href: 'https://sentry.io/', icon: <Sentry /> },
+  JavaScript: { href: 'https://www.javascript.com/', icon: <JavaScript /> },
+  Netlify: { href: 'https://www.netlify.com/', icon: <Netlify /> },
+  AWS: { href: 'https://aws.amazon.com/', icon: <AWS /> },
+  Appwrite: { href: 'https://appwrite.io/', icon: <Appwrite /> },
+  Bootstrap: { href: 'https://getbootstrap.com/', icon: <BootStrap /> },
+  Bun: { href: 'https://bun.sh/', icon: <Bun /> },
+  CSS: { href: 'https://www.w3.org/Style/CSS/', icon: <CSS /> },
+  DaisyUI: { href: 'https://daisyui.com/', icon: <DaisyUi /> },
   'Fabric.js': { href: 'https://fabricjs.com/', icon: <FabricJs /> },
-  'Firebase': { href: 'https://firebase.google.com/', icon: <Firebase /> },
-  'GitHub': { href: 'https://github.com/', icon: <Github /> },
-  'HTML': { href: 'https://html.spec.whatwg.org/', icon: <Html /> },
-  'MDX': { href: 'https://mdxjs.com/', icon: <MDXIcon /> },
+  Firebase: { href: 'https://firebase.google.com/', icon: <Firebase /> },
+  GitHub: { href: 'https://github.com/', icon: <Github /> },
+  HTML: { href: 'https://html.spec.whatwg.org/', icon: <Html /> },
+  MDX: { href: 'https://mdxjs.com/', icon: <MDXIcon /> },
   'Framer Motion': { href: 'https://motion.dev/', icon: <Motion /> },
-  'NativeWind': { href: 'https://www.nativewind.dev/', icon: <NativeWind /> },
-  'NestJS': { href: 'https://nestjs.com/', icon: <NestJs /> },
-  'Prisma': { href: 'https://www.prisma.io/', icon: <Prisma /> },
+  NativeWind: { href: 'https://www.nativewind.dev/', icon: <NativeWind /> },
+  NestJS: { href: 'https://nestjs.com/', icon: <NestJs /> },
+  Prisma: { href: 'https://www.prisma.io/', icon: <Prisma /> },
   'Shadcn UI': { href: 'https://ui.shadcn.com/', icon: <Shadcn /> },
   'Socket.io': { href: 'https://socket.io/', icon: <SocketIo /> },
   'Three.js': { href: 'https://threejs.org/', icon: <ThreeJs /> },

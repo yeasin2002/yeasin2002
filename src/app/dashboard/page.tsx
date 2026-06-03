@@ -9,7 +9,8 @@ export default function DashboardPage() {
           Hello World
         </h1>
         <p className="mt-2 text-neutral-500 dark:text-neutral-400">
-          Welcome to your administrative dashboard. You can begin managing your portfolio content here in the future.
+          Welcome to your administrative dashboard. You can begin managing your
+          portfolio content here in the future.
         </p>
       </div>
     </div>

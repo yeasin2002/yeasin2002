@@ -35,10 +35,6 @@ import Redux from '@/components/technologies/Redux';
 import TailwindCss from '@/components/technologies/TailwindCss';
 import TypeScript from '@/components/technologies/TypeScript';
 
-
-
-
-
 // Component mapping for skills
 export const skillComponents = {
   TypeScript: TypeScript,

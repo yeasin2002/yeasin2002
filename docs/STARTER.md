@@ -127,4 +127,3 @@ If you are continuing development, these are the most useful areas to understand
 - `src/app/page.tsx` for homepage composition
 - `src/components/landing/` for section rendering
 - `src/lib/` for reusable logic
-

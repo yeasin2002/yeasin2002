@@ -7,10 +7,6 @@ import Container from '../common/Container';
 import SectionHeading from '../common/SectionHeading';
 import Skill from '../common/Skill';
 
-
-
-
-
 type mySkills = {
   id: string;
   name: string;

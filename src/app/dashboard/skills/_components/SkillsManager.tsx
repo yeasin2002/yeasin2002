@@ -2,18 +2,37 @@
 
 import { MediaAssetPicker } from '@/components/common/MediaAssetPicker';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
+import {
+  type MediaAssetOption,
+  fetchMediaAssets,
+  toMediaAssetOption,
+} from '@/lib/media';
+import {
+  type Skill,
+  buildSkillSlug,
+  deleteSkill,
+  fetchSkills,
+  upsertSkill,
+} from '@/lib/skills';
 import { createClient } from '@/lib/supabase/client';
-import { buildSkillSlug, deleteSkill, fetchSkills, type Skill, upsertSkill } from '@/lib/skills';
-import { fetchMediaAssets, toMediaAssetOption, type MediaAssetOption } from '@/lib/media';
-import { cn } from '@/lib/utils';
 import { Loader2, Plus, RefreshCcw, Search, Trash2 } from 'lucide-react';
 import Image from 'next/image';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { toast } from 'sonner';
+
+
+
+
 
 const getErrorMessage = (error: unknown) =>
   error instanceof Error ? error.message : 'Unable to save skill.';
@@ -38,7 +57,9 @@ export function SkillsManager() {
       ]);
 
       setSkills(skillRecords);
-      setMediaAssets(mediaRecords.map((record) => toMediaAssetOption(supabase, record)));
+      setMediaAssets(
+        mediaRecords.map((record) => toMediaAssetOption(supabase, record)),
+      );
     } catch (error) {
       toast.error(getErrorMessage(error));
       setSkills([]);
@@ -60,7 +81,10 @@ export function SkillsManager() {
     }
 
     return skills.filter((skill) =>
-      [skill.name, skill.slug, skill.imageUrl].join(' ').toLowerCase().includes(normalizedQuery),
+      [skill.name, skill.slug, skill.imageUrl]
+        .join(' ')
+        .toLowerCase()
+        .includes(normalizedQuery),
     );
   }, [searchQuery, skills]);
 
@@ -113,7 +137,9 @@ export function SkillsManager() {
   const handleDelete = async (skillId: string) => {
     try {
       await deleteSkill(supabase, skillId);
-      setSkills((currentSkills) => currentSkills.filter((skill) => skill.id !== skillId));
+      setSkills((currentSkills) =>
+        currentSkills.filter((skill) => skill.id !== skillId),
+      );
       toast.success('Skill deleted.');
     } catch (error) {
       toast.error(getErrorMessage(error));
@@ -136,8 +162,9 @@ export function SkillsManager() {
               Manage reusable skills
             </h1>
             <p className="max-w-2xl text-neutral-500 dark:text-neutral-400">
-              Add skills once, attach them to an uploaded image from the media library, and reuse
-              them across the About section or anywhere else in the dashboard.
+              Add skills once, attach them to an uploaded image from the media
+              library, and reuse them across the About section or anywhere else
+              in the dashboard.
             </p>
           </div>
           <Button
@@ -290,7 +317,11 @@ export function SkillsManager() {
                         </Button>
                       </div>
 
-                      <Input readOnly value={skill.imageUrl} className="h-9 rounded-xl text-xs" />
+                      <Input
+                        readOnly
+                        value={skill.imageUrl}
+                        className="h-9 rounded-xl text-xs"
+                      />
                     </CardContent>
                   </Card>
                 ))}
@@ -302,7 +333,8 @@ export function SkillsManager() {
 
       <Separator className="bg-neutral-200 dark:bg-neutral-800" />
       <p className="text-sm text-neutral-500 dark:text-neutral-400">
-        These skills are reusable across the About section and any other part of the dashboard.
+        These skills are reusable across the About section and any other part of
+        the dashboard.
       </p>
     </div>
   );

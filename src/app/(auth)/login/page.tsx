@@ -9,10 +9,6 @@ import { Eye, EyeOff, Loader2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
-
-
-
-
 export default function LoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState('');
@@ -45,8 +41,9 @@ export default function LoginPage() {
         router.push('/dashboard');
         router.refresh();
       }
-    } catch (err: any) {
-      setError('An unexpected error occurred. Please try again.');
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : 'An unexpected error occurred. Please try again.';
+      setError(msg);
     } finally {
       setLoading(false);
     }

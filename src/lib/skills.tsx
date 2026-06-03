@@ -71,7 +71,9 @@ export const fetchSkillsBySlugs = async (
     throw error;
   }
 
-  const skills = (data ?? []).map((record) => normalizeSkill(record as SkillRecord));
+  const skills = (data ?? []).map((record) =>
+    normalizeSkill(record as SkillRecord),
+  );
   const skillMap = new Map(skills.map((skill) => [skill.slug, skill]));
 
   return slugs.map((slug) => skillMap.get(slug)).filter(Boolean) as Skill[];
@@ -104,7 +106,10 @@ export const upsertSkill = async (
   return normalizeSkill(data as SkillRecord);
 };
 
-export const deleteSkill = async (supabase: SupabaseClient, skillId: string) => {
+export const deleteSkill = async (
+  supabase: SupabaseClient,
+  skillId: string,
+) => {
   const { error } = await supabase.from('skills').delete().eq('id', skillId);
 
   if (error) {

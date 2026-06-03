@@ -89,8 +89,9 @@ export const toMediaAsset = (
   supabase: SupabaseClient,
   asset: MediaAssetRecord,
 ): MediaAsset => {
-  const publicUrl = supabase.storage.from(MEDIA_BUCKET).getPublicUrl(asset.object_path)
-    .data.publicUrl;
+  const publicUrl = supabase.storage
+    .from(MEDIA_BUCKET)
+    .getPublicUrl(asset.object_path).data.publicUrl;
 
   return {
     ...asset,

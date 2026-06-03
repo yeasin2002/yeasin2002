@@ -1,24 +1,37 @@
 'use client';
 
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
-import { createClient } from '@/lib/supabase/client';
 import {
+  MEDIA_BUCKET,
+  type MediaAsset,
   buildMediaObjectPath,
   fetchMediaAssets,
   hashFile,
   isImageFile,
-  MEDIA_BUCKET,
   mediaAssetSelect,
   parseMediaTags,
   toMediaAsset,
-  type MediaAsset,
 } from '@/lib/media';
-import { Badge } from '@/components/ui/badge';
-import { Copy, ImageIcon, Loader2, RefreshCcw, Search, Upload } from 'lucide-react';
+import { createClient } from '@/lib/supabase/client';
+import {
+  Copy,
+  ImageIcon,
+  Loader2,
+  RefreshCcw,
+  Search,
+  Upload,
+} from 'lucide-react';
 import Image from 'next/image';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { toast } from 'sonner';
@@ -75,8 +88,10 @@ export function MediaLibraryManager() {
       return assets;
     }
 
-    return assets.filter((asset) =>
-      asset.searchText.includes(normalizedQuery) || asset.displayLabel.toLowerCase().includes(normalizedQuery),
+    return assets.filter(
+      (asset) =>
+        asset.searchText.includes(normalizedQuery) ||
+        asset.displayLabel.toLowerCase().includes(normalizedQuery),
     );
   }, [assets, searchQuery]);
 
@@ -116,10 +131,12 @@ export function MediaLibraryManager() {
         toast.success('That image already existed, so we reused it.');
       } else {
         const objectPath = buildMediaObjectPath(contentHash, selectedFile.name);
-        const uploadResponse = await supabase.storage.from(MEDIA_BUCKET).upload(objectPath, selectedFile, {
-          contentType: selectedFile.type,
-          upsert: false,
-        });
+        const uploadResponse = await supabase.storage
+          .from(MEDIA_BUCKET)
+          .upload(objectPath, selectedFile, {
+            contentType: selectedFile.type,
+            upsert: false,
+          });
 
         if (uploadResponse.error) {
           throw uploadResponse.error;
@@ -180,8 +197,9 @@ export function MediaLibraryManager() {
               Upload once, reuse everywhere
             </h1>
             <p className="max-w-2xl text-neutral-500 dark:text-neutral-400">
-              Store reusable logos, screenshots, and images in Supabase Storage, then search them
-              by title, filename, alt text, or tags from anywhere in the dashboard.
+              Store reusable logos, screenshots, and images in Supabase Storage,
+              then search them by title, filename, alt text, or tags from
+              anywhere in the dashboard.
             </p>
           </div>
 
@@ -189,7 +207,9 @@ export function MediaLibraryManager() {
             <p className="text-xs uppercase tracking-[0.18em] text-neutral-400 dark:text-neutral-500">
               Bucket
             </p>
-            <p className="font-semibold text-neutral-900 dark:text-neutral-100">{MEDIA_BUCKET}</p>
+            <p className="font-semibold text-neutral-900 dark:text-neutral-100">
+              {MEDIA_BUCKET}
+            </p>
           </div>
         </div>
       </div>
@@ -198,7 +218,9 @@ export function MediaLibraryManager() {
         <Card className="gap-0 overflow-hidden">
           <CardHeader className="border-b border-neutral-100 dark:border-neutral-800">
             <CardTitle>Upload image</CardTitle>
-            <CardDescription>Upload a new image or reuse an existing one by its hash.</CardDescription>
+            <CardDescription>
+              Upload a new image or reuse an existing one by its hash.
+            </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4 pt-6">
             <div className="space-y-2">
@@ -208,7 +230,9 @@ export function MediaLibraryManager() {
                 id="media-file"
                 type="file"
                 accept="image/*"
-                onChange={(event) => setSelectedFile(event.target.files?.[0] ?? null)}
+                onChange={(event) =>
+                  setSelectedFile(event.target.files?.[0] ?? null)
+                }
                 className="rounded-xl"
               />
               {selectedFile && (
@@ -271,8 +295,8 @@ export function MediaLibraryManager() {
             </Button>
 
             <div className="rounded-2xl border border-dashed border-neutral-200 bg-neutral-50 px-4 py-3 text-xs text-neutral-500 dark:border-neutral-800 dark:bg-neutral-950/50 dark:text-neutral-400">
-              Exact duplicate files are reused automatically, so you can upload a file once and
-              keep selecting it later.
+              Exact duplicate files are reused automatically, so you can upload
+              a file once and keep selecting it later.
             </div>
           </CardContent>
         </Card>
@@ -282,7 +306,9 @@ export function MediaLibraryManager() {
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <CardTitle>Recent uploads</CardTitle>
-                <CardDescription>Search and copy public URLs or storage paths.</CardDescription>
+                <CardDescription>
+                  Search and copy public URLs or storage paths.
+                </CardDescription>
               </div>
 
               <div className="flex items-center gap-2">
@@ -351,7 +377,10 @@ export function MediaLibraryManager() {
                               {asset.file_name}
                             </p>
                           </div>
-                          <Badge variant="secondary" className="shrink-0 rounded-full">
+                          <Badge
+                            variant="secondary"
+                            className="shrink-0 rounded-full"
+                          >
                             {formatBytes(asset.size_bytes)}
                           </Badge>
                         </div>
@@ -364,7 +393,11 @@ export function MediaLibraryManager() {
                       {asset.tags.length > 0 && (
                         <div className="flex flex-wrap gap-1.5">
                           {asset.tags.map((tag) => (
-                            <Badge key={tag} variant="outline" className="rounded-full text-[11px]">
+                            <Badge
+                              key={tag}
+                              variant="outline"
+                              className="rounded-full text-[11px]"
+                            >
                               {tag}
                             </Badge>
                           ))}
@@ -416,8 +449,8 @@ export function MediaLibraryManager() {
 
       <Separator className="bg-neutral-200 dark:bg-neutral-800" />
       <p className="text-sm text-neutral-500 dark:text-neutral-400">
-        To reference an uploaded image anywhere else in the dashboard, use the public URL from
-        this library.
+        To reference an uploaded image anywhere else in the dashboard, use the
+        public URL from this library.
       </p>
     </div>
   );

@@ -1,8 +1,15 @@
 'use client';
 
-import { Combobox, ComboboxContent, ComboboxEmpty, ComboboxInput, ComboboxItem, ComboboxList } from '@/components/ui/combobox';
-import { cn } from '@/lib/utils';
+import {
+  Combobox,
+  ComboboxContent,
+  ComboboxEmpty,
+  ComboboxInput,
+  ComboboxItem,
+  ComboboxList,
+} from '@/components/ui/combobox';
 import type { MediaAssetOption } from '@/lib/media';
+import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { useRef } from 'react';
 
@@ -54,11 +61,15 @@ export function MediaAssetPicker({
             return true;
           }
 
-          const candidateText = [item.searchText, item.label].join(' ').toLowerCase();
+          const candidateText = [item.searchText, item.label]
+            .join(' ')
+            .toLowerCase();
 
           return candidateText.includes(searchQuery);
         }}
-        isItemEqualToValue={(item, currentValue) => item.value === currentValue.value}
+        isItemEqualToValue={(item, currentValue) =>
+          item.value === currentValue.value
+        }
       >
         <ComboboxInput
           showTrigger

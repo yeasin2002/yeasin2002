@@ -4,18 +4,12 @@ import { Link } from 'next-view-transitions';
 import Image from 'next/image';
 import React from 'react';
 
-
-
 import Skill from '../common/Skill';
 import Github from '../svgs/Github';
 import LinkedIn from '../svgs/LinkedIn';
 import Website from '../svgs/Website';
 import X from '../svgs/X';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
-
-
-
-
 
 interface ExperienceCardProps {
   experience: Experience;
@@ -44,7 +38,9 @@ const isImageSource = (value: string) => {
     const url = new URL(trimmed, 'http://localhost');
     const pathname = url.pathname.toLowerCase();
 
-    return [...imageExtensions].some((extension) => pathname.endsWith(extension));
+    return [...imageExtensions].some((extension) =>
+      pathname.endsWith(extension),
+    );
   } catch {
     return false;
   }
@@ -55,7 +51,6 @@ const parseDescription = (text: string): string => {
 };
 
 export function ExperienceCard({ experience }: ExperienceCardProps) {
-  
   return (
     <div className="flex flex-col gap-4">
       {/* Company Header */}

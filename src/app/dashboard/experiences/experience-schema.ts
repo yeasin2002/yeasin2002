@@ -1,6 +1,5 @@
-import { z } from 'zod';
-
 import type { ExperienceRow } from '@/lib/experience';
+import { z } from 'zod';
 
 const isValidOptionalUrl = (value: string) => {
   const trimmed = value.trim();

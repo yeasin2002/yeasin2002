@@ -52,8 +52,9 @@ export function ExperienceDeleteDialog({
         <AlertDialogHeader>
           <AlertDialogTitle>Delete this experience?</AlertDialogTitle>
           <AlertDialogDescription>
-            This removes <span className="font-medium">{experience.company}</span>{' '}
-            from the dashboard and the public site.
+            This removes{' '}
+            <span className="font-medium">{experience.company}</span> from the
+            dashboard and the public site.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
@@ -79,4 +80,3 @@ export function ExperienceDeleteDialog({
     </AlertDialog>
   );
 }
-

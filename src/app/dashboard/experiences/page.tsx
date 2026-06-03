@@ -6,14 +6,15 @@ import type { ExperienceRow } from '@/lib/experience';
 import { FileDown, Info, Loader2, Plus } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { toast } from 'sonner';
+
+import { ExperienceFormDialog } from './_components/ExperienceFormDialog';
+import { ExperienceList } from './_components/ExperienceList';
 import {
   deleteExperience,
   fetchExperiences,
   saveExperience,
   seedExperiences,
 } from './experience-actions';
-import { ExperienceFormDialog } from './_components/ExperienceFormDialog';
-import { ExperienceList } from './_components/ExperienceList';
 import type { ExperienceFormValues } from './experience-schema';
 
 export default function ExperiencesPage() {
@@ -21,7 +22,8 @@ export default function ExperiencesPage() {
   const [loading, setLoading] = useState(true);
   const [seeding, setSeeding] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const [editingExperience, setEditingExperience] = useState<ExperienceRow | null>(null);
+  const [editingExperience, setEditingExperience] =
+    useState<ExperienceRow | null>(null);
 
   const loadExperiences = async () => {
     setLoading(true);
@@ -55,7 +57,9 @@ export default function ExperiencesPage() {
     try {
       await deleteExperience(experience.id!);
       toast.success('Experience deleted successfully!');
-      setItems((current) => current.filter((item) => item.id !== experience.id));
+      setItems((current) =>
+        current.filter((item) => item.id !== experience.id),
+      );
     } catch (error: any) {
       console.error(error);
       toast.error('Delete failed: ' + error.message);
@@ -82,7 +86,11 @@ export default function ExperiencesPage() {
     experienceId?: string | null,
   ) => {
     await saveExperience(values, sortOrder, experienceId);
-    toast.success(experienceId ? 'Experience updated successfully!' : 'Experience added successfully!');
+    toast.success(
+      experienceId
+        ? 'Experience updated successfully!'
+        : 'Experience added successfully!',
+    );
   };
 
   const hasExperiences = items.length > 0;
@@ -95,7 +103,8 @@ export default function ExperiencesPage() {
             Work Experiences
           </h1>
           <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">
-            Manage your employment history, role details, links, and technologies.
+            Manage your employment history, role details, links, and
+            technologies.
           </p>
         </div>
 
@@ -153,7 +162,9 @@ export default function ExperiencesPage() {
         open={isFormOpen}
         mode={editingExperience ? 'edit' : 'create'}
         experience={editingExperience}
-        sortOrder={editingExperience ? editingExperience.sort_order : items.length}
+        sortOrder={
+          editingExperience ? editingExperience.sort_order : items.length
+        }
         onOpenChange={(open) => {
           setIsFormOpen(open);
           if (!open) {

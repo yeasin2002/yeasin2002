@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button';
 import type { ExperienceRow } from '@/lib/experience';
 import { Calendar, Edit2, ExternalLink, MapPin } from 'lucide-react';
+
 import { ExperienceDeleteDialog } from './ExperienceDeleteDialog';
 
 interface ExperienceCardProps {
@@ -95,4 +96,3 @@ export function ExperienceCard({
     </div>
   );
 }
-

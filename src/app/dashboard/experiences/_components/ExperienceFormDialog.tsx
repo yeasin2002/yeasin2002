@@ -237,7 +237,8 @@ export function ExperienceFormDialog({
                             />
                           </FormControl>
                           <p className="text-xs text-neutral-500 dark:text-neutral-400">
-                            You can paste a direct path or pick an uploaded image below.
+                            You can paste a direct path or pick an uploaded
+                            image below.
                           </p>
                           <FormMessage />
                         </FormItem>

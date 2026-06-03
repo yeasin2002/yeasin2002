@@ -1,7 +1,6 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { experiences as fallbackExperiences } from '@/config/Experience';
 import type { ExperienceRow } from '@/lib/experience';
 import { FileDown, Info, Loader2, Plus } from 'lucide-react';
 import { useEffect, useState } from 'react';
@@ -60,9 +59,10 @@ export default function ExperiencesPage() {
       setItems((current) =>
         current.filter((item) => item.id !== experience.id),
       );
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error(error);
-      toast.error('Delete failed: ' + error.message);
+      const message = error instanceof Error ? error.message : String(error);
+      toast.error('Delete failed: ' + message);
     }
   };
 
@@ -72,9 +72,10 @@ export default function ExperiencesPage() {
       await seedExperiences();
       toast.success('Successfully imported all static experiences!');
       await loadExperiences();
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error(error);
-      toast.error('Import failed: ' + error.message);
+      const message = error instanceof Error ? error.message : String(error);
+      toast.error('Import failed: ' + message);
     } finally {
       setSeeding(false);
     }

@@ -65,7 +65,7 @@ export default function Hero() {
           <span className={'uppercase'}> {name} </span>
           <br />
           <span className="sr-only"> - </span>
-          <span className="text-[#FFFCE1] font-boldonse text-2xl ">
+          <span className="dark:text-[#FFFCE1] text-gray-700   font-boldonse text-2xl ">
             {title}
           </span>
         </h1>

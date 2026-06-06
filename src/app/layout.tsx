@@ -20,7 +20,7 @@ export default function RootLayout({
         <body className={`${fontVariables} font-hanken-grotesk antialiased`}>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="light"
             enableSystem
             disableTransitionOnChange
           >

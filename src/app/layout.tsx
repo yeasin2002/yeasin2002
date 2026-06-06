@@ -1,5 +1,4 @@
 import UmamiAnalytics from '@/components/analytics/UmamiAnalytics';
-import LayoutWrapper from '@/components/common/LayoutWrapper';
 import { ThemeProvider } from '@/components/common/ThemeProviders';
 import { generateMetadata as getMetadata } from '@/config/Meta';
 import { fontVariables } from '@/lib/fonts/index';
@@ -26,7 +25,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <ReactLenis root>
-              <LayoutWrapper>{children}</LayoutWrapper>
+              {children}
               <UmamiAnalytics />
             </ReactLenis>
           </ThemeProvider>

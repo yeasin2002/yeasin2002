@@ -19,6 +19,10 @@ import { Link } from 'next-view-transitions';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
+type adminuserInfo = {
+  email: 'mdkawsarislam2002@gmail.com';
+};
+
 interface DashboardLayoutProps {
   children: React.ReactNode;
 }
@@ -27,7 +31,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
   const router = useRouter();
   const pathname = usePathname();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [user, setUser] = useState<unknown | null>(null);
+  const [user, setUser] = useState<adminuserInfo | null>(null);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   useEffect(() => {
@@ -36,7 +40,8 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
       const {
         data: { user },
       } = await supabase.auth.getUser();
-      setUser(user);
+      setUser(user as adminuserInfo);
+      console.log(user);
     };
     fetchUser();
   }, []);
@@ -189,7 +194,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                   <User className="h-4 w-4" />
                 </div>
                 <span className="hidden text-sm font-semibold sm:inline">
-                  {user ? user.email?.split('@')[0] : 'Admin'}
+                  {user ? user?.email?.split('@')[0] : 'Admin'}
                 </span>
                 <ChevronDown className="h-4 w-4 text-neutral-400" />
               </button>

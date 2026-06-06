@@ -43,6 +43,7 @@ import {
 
 interface ProjectFormDialogProps {
   open: boolean;
+  mode: 'create' | 'edit';
   project?: ProjectRow | null;
   sortOrder: number;
   onOpenChange: (open: boolean) => void;
@@ -90,7 +91,20 @@ export function ProjectFormDialog({
 
   useEffect(() => {
     if (!open) return;
-    form.reset(getDefaultProjectFormValues(project ?? null));
+    form.reset(
+      getDefaultProjectFormValues(
+        project
+          ? {
+              ...project,
+              video: project.video ?? '',
+              github: project.github ?? '',
+              live: project.live ?? '',
+              projectDetailsPageSlug: project.project_details_page_slug ?? '',
+              isWorking: project.is_working,
+            }
+          : null,
+      ),
+    );
   }, [project, form, open]);
 
   useEffect(() => {

@@ -1,5 +1,3 @@
-import { SectionHeading } from "./SectionHeading";
-
 const jobs = [
   {
     role: "Software Developer",

@@ -12,7 +12,7 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
   // Ignore the .agents folder (tooling and agent skills)
-  { ignores: ['.agents/**'] },
+  { ignores: ['.agents/**', 'node_modules/**', `.next/**`] },
 ];
 
 export default eslintConfig;

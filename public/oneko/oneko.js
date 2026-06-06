@@ -47,7 +47,7 @@
     let newLocation;
     try {
       newLocation = new URL(target.href);
-    } catch (e) {
+    } catch {
       return;
     }
     if (

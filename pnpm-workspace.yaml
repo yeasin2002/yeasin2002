@@ -4,9 +4,11 @@ packages:
 allowBuilds:
   bufferutil: true
   esbuild: true
+  lefthook: set this to true or false
   sharp: true
   unrs-resolver: true
 
 minimumReleaseAge: 1080
 blockExoticSubdeps: true
+
 # trustedPackages: noDowngrade

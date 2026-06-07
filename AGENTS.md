@@ -239,8 +239,7 @@ Never use relative imports like `../../../components`
 - **Prettier 3.8.3**: Code formatting
   - **@trivago/prettier-plugin-sort-imports**: Auto-sort imports
   - **prettier-plugin-tailwindcss**: Auto-sort Tailwind classes
-- **Husky**: Git hooks management
-- **lint-staged**: Pre-commit linting and formatting
+- **Lefthook**: Git hooks management and staged-file automation
 - **Knip**: Unused file and dependency detection
 
 ## Common Commands

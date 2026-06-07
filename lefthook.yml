@@ -1,0 +1,11 @@
+pre-commit:
+  parallel: true # Runs commands simultaneously to save time
+  commands:
+    linter:
+      glob: '*.{js,ts,jsx,tsx}' # Filters the files to pass
+      run: pnpm exec eslint {staged_files} --fix
+      stage_fixed: true # Re-stages files changed by eslint --fix
+    formatter:
+      glob: '*.{json,md,js,jsx,ts,tsx}'
+      run: pnpm exec prettier --write {staged_files}
+      stage_fixed: true

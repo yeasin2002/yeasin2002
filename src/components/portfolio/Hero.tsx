@@ -49,7 +49,8 @@ export function Hero() {
               See my work →
             </a>
             <a
-              href="/assets/cv.html"
+              href="/assets/cv.pdf"
+              download
               className="rounded-full bg-cream text-ink px-7 py-3.5 text-sm font-semibold brutal-border hover:bg-sunshine transition-colors"
             >
               Resume / CV

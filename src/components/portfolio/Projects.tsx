@@ -1,11 +1,12 @@
 import { projects } from '@/data/projects.data';
+import Image from 'next/image';
 
 import { SectionHeading } from './SectionHeading';
 import { Star8 } from './Shapes';
 
 export function Projects() {
   return (
-    <section id="projects" className="mx-auto max-w-7xl px-6 py-24 relative">
+    <section id="projects" className="relative mx-auto max-w-7xl px-6 py-24">
       <Star8 className="absolute top-16 right-6 w-14 h-14 text-indigo-pop" />
       <SectionHeading
         eyebrow="Selected work"
@@ -13,44 +14,67 @@ export function Projects() {
         emphasis="built lately"
       />
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((p, i) => (
           <a
             key={p.name}
             href={p.link}
             target="_blank"
             rel="noreferrer"
-            className="group relative block"
+            className="group block h-full"
           >
-            <div className="absolute inset-0 translate-x-2 translate-y-2 rounded-2xl bg-ink group-hover:translate-x-3 group-hover:translate-y-3 transition-transform" />
-            <article
-              className={`relative rounded-2xl brutal-border p-7 h-full flex flex-col ${p.color}`}
-            >
-              <div className="flex items-start justify-between mb-6">
-                <span className="font-mono text-xs opacity-70">
-                  0{i + 1} / 0{projects.length}
-                </span>
+            <article className="flex h-full flex-col overflow-hidden rounded-[28px] border-2 border-ink bg-cream shadow-[10px_10px_0_0_rgba(10,10,10,0.95)] transition-transform duration-300 group-hover:translate-y-[0.08]">
+              <div className="relative aspect-[16/10] overflow-hidden bg-neutral-200">
+                <Image
+                  src={p.image}
+                  alt={p.name}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
+
+                <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full border-2 border-ink bg-cream px-3 py-1 text-xs font-semibold tracking-[0.2em] text-ink shadow-[3px_3px_0_0_rgba(10,10,10,0.95)]">
+                  {String(i + 1).padStart(2, '0')} /{' '}
+                  {String(projects.length).padStart(2, '0')}
+                </div>
+
                 <span
-                  className={`h-8 w-8 rounded-full ${p.accent} brutal-border flex items-center justify-center text-ink font-bold`}
+                  className={`absolute right-4 top-4 flex size-11 items-center justify-center rounded-full border-2 border-ink ${p.accent} text-lg font-bold text-ink shadow-[3px_3px_0_0_rgba(10,10,10,0.95)] transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110`}
                 >
                   ↗
                 </span>
               </div>
-              <h3 className="font-display text-3xl font-medium leading-tight mb-3">
-                {p.name}
-              </h3>
-              <p className="text-sm opacity-85 leading-relaxed mb-6 grow">
-                {p.blurb}
-              </p>
-              <div className="flex flex-wrap gap-1.5">
-                {p.tech.map((t) => (
-                  <span
-                    key={t}
-                    className="rounded-full border border-current/30 px-2.5 py-0.5 text-[11px] font-medium"
-                  >
-                    {t}
-                  </span>
-                ))}
+
+              <div
+                className={`flex flex-1 flex-col gap-5 px-6 py-7 ${p.color}`}
+              >
+                <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.25em] opacity-75">
+                  <span>{p.year}</span>
+                  <span>•</span>
+                  <span>{p.role}</span>
+                </div>
+
+                <div>
+                  <h3 className="font-display text-3xl font-medium leading-tight">
+                    {p.name}
+                  </h3>
+                </div>
+
+                <p className="text-base leading-relaxed opacity-90">
+                  {p.blurb}
+                </p>
+
+                <div className="mt-auto flex flex-wrap gap-2">
+                  {p.tech.map((t) => (
+                    <span
+                      key={t}
+                      className="rounded-full border border-current/30 px-3 py-1 text-xs font-medium"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </div>
             </article>
           </a>

@@ -6,10 +6,12 @@ export function Quote() {
           “
         </span>
         <blockquote className="relative font-display text-3xl md:text-4xl lg:text-5xl font-light italic leading-tight text-ink">
-          A man who is master of patience is master of everything else.
+          Just because I give you advice doesn't mean I'm smarter than you...
+          <br />
+          It means I've made more mistakes.
         </blockquote>
         <figcaption className="mt-6 font-mono text-xs uppercase tracking-widest text-indigo-pop">
-          — George Savile
+          — Alfa wolf
         </figcaption>
       </figure>
     </section>

@@ -11,18 +11,18 @@ export const experienceJobs = [
     ],
     tech: ['Next.js', 'React', 'TypeScript', 'Node.js', 'MongoDB', 'Sentry'],
   },
-  {
-    role: 'Full Stack Developer',
-    company: 'Freelance & Contract',
-    period: '2024 — Present',
-    current: true,
-    bullets: [
-      'Worked with agencies and indie devs across freelance and contract projects.',
-      'Built TypeScript-first web and mobile apps; collaborated with backend devs and clients.',
-      'Kept codebases modular, performant, and a joy to maintain.',
-    ],
-    tech: ['Next.js', 'React Native', 'Expo', 'Redux', 'PostgreSQL', 'Figma'],
-  },
+  // {
+  //   role: 'Full Stack Developer',
+  //   company: 'Freelance & Contract',
+  //   period: '2024 — Present',
+  //   current: true,
+  //   bullets: [
+  //     'Worked with agencies and indie devs across freelance and contract projects.',
+  //     'Built TypeScript-first web and mobile apps; collaborated with backend devs and clients.',
+  //     'Kept codebases modular, performant, and a joy to maintain.',
+  //   ],
+  //   tech: ['Next.js', 'React Native', 'Expo', 'Redux', 'PostgreSQL', 'Figma'],
+  // },
   {
     role: 'Frontend Developer',
     company: 'Neonency',

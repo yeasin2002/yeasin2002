@@ -30,12 +30,12 @@ export function Experience() {
                     {j.period} • Remote
                   </p>
                 </div>
-                {j.current && (
+                {/* {j.current && (
                   <span className="inline-flex items-center gap-2 rounded-full bg-sunshine text-ink px-3 py-1 text-xs font-semibold">
                     <span className="h-2 w-2 rounded-full bg-ink animate-pulse" />{' '}
                     Currently here
                   </span>
-                )}
+                )} */}
               </div>
               <ul className="space-y-2 text-cream/80 mb-5">
                 {j.bullets.map((b) => (

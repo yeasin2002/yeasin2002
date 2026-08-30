@@ -1,7 +1,7 @@
 export const experienceJobs = [
   {
     role: 'Software Developer',
-    company: 'Techfosys',
+    company: 'Teachfosys',
     period: 'Jul 2025 — Present',
     current: true,
     bullets: [

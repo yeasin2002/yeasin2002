@@ -41,7 +41,7 @@ export const projects: Project[] = [
     role: 'Full-stack developer',
     blurb:
       'AI-powered skincare e-commerce with full English LTR and Arabic RTL support. Clean, scalable storefront and admin.',
-    link: 'https://glowmi.net/',
+    link: 'https://glowmi-net.vercel.app/en',
     image: '/project/glowmi-coming-soon.jpg',
     tech: ['Next.js', 'TypeScript', 'Redux', 'Tailwind', 'shadcn/ui'],
     color: 'bg-blush text-ink',

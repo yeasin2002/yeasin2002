@@ -24,7 +24,7 @@ export function Projects() {
             className="group block h-full"
           >
             <article className="flex h-full flex-col overflow-hidden rounded-[28px] border-2 border-ink bg-cream shadow-[10px_10px_0_0_rgba(10,10,10,0.95)] transition-transform duration-300 group-hover:translate-y-[0.08]">
-              <div className="relative aspect-[16/10] overflow-hidden bg-neutral-200">
+              <div className="relative aspect-16/10 overflow-hidden bg-neutral-200">
                 <Image
                   src={p.image}
                   alt={p.name}
@@ -32,7 +32,7 @@ export function Projects() {
                   sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/35 via-black/5 to-transparent" />
 
                 <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full border-2 border-ink bg-cream px-3 py-1 text-xs font-semibold tracking-[0.2em] text-ink shadow-[3px_3px_0_0_rgba(10,10,10,0.95)]">
                   {String(i + 1).padStart(2, '0')} /{' '}

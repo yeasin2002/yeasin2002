@@ -1,4 +1,4 @@
-import portrait from '@/assets/yeasin2002.png';
+import portrait from '@/assets/hero-alt-2.png';
 import Image from 'next/image';
 
 import { Asterisk, Star5, Star8 } from './Shapes';
@@ -24,7 +24,7 @@ export function Hero() {
             <span className="absolute -bottom-2 -left-2 w-4 h-4 bg-sunshine brutal-border" />
             <span className="absolute -bottom-2 -right-2 w-4 h-4 bg-sunshine brutal-border" />
             <p className="font-mono text-xs uppercase tracking-widest text-indigo-pop mb-3">
-              Junior Software Developer • Bangladesh
+              Software Developer • Bangladesh
             </p>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-medium leading-[0.95] text-ink">
               I craft{' '}
@@ -34,17 +34,18 @@ export function Hero() {
           </div>
 
           <p className="mt-8 max-w-lg text-base md:text-lg text-ink/75 leading-relaxed">
-            Hey, I&apos;m{' '}
-            <strong className="text-ink">Md Kawsar Islam Yeasin</strong> — a
-            front-end-focused full-stack dev with ~2 years shipping production
-            apps in TypeScript, React, Next.js, React Native, and Node. I obsess
-            over UI polish, APIs, state, and scalable architecture.
+            Hola, I&apos;m{' '}
+            <strong className="text-ink">Md Kawsar Islam Yeasin</strong> —
+            Front-end-focused full-stack software developer with almost 2 years
+            of experience, skilled in building scalable, responsive, and
+            high-performance applications. Strong in modern web technologies,
+            clean code, problem-solving, and AI-driven development.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
               href="#projects"
-              className="rounded-full bg-ink text-cream px-7 py-3.5 text-sm font-semibold hover:bg-indigo-pop transition-colors brutal-shadow"
+              className="rounded-full bg-ink text-cream px-7 py-3.5 text-sm font-semibold hover:bg-indigo-pop  hover:brutal-shadow transition-all"
             >
               See my work →
             </a>

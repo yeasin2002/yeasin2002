@@ -3,12 +3,11 @@ import { Star5 } from './Shapes';
 
 const highlights = [
   { k: 'Expertise', v: 'Full-Stack & Mobile App Development' },
-  { k: 'Front-End', v: 'TypeScript • React • Next.js' },
-  { k: 'Mobile App', v: 'React Native + Expo' },
-  { k: 'Backend', v: 'Node • Express • Mongo • Postgres' },
-  { k: 'Tools', v: 'Turborepo, Git and GitHub, Docker, GitHub CI/CD' },
-  { k: 'Soft Skills', v: 'Debugging, communication, teamwork, leadership' },
-  // { k: 'AI Integrations', v: 'GitHub Copilot, ChatGPT, Claude' },
+  { k: 'Front-End', v: 'TypeScript • React • Next.js • TailwindCSS' },
+  { k: 'Mobile App', v: 'React Native • Expo' },
+  { k: 'Backend', v: 'Node • Express/Nest • Mongo • PostgreSQL' },
+  { k: 'Tools', v: 'Turborepo • Git and GitHub • Docker • GitHub CI/CD' },
+  { k: 'Soft Skills', v: 'Debugging • communication • teamwork • leadership' },
 ];
 
 export function About() {
@@ -31,25 +30,24 @@ export function About() {
           </p>
           <p>
             I contribute to open source —{' '}
-            <strong className="text-ink">622+ GitHub stars</strong> overall —
-            and enjoy AI-driven workflows, agent-based development, close client
-            collaboration, and maintainable freelance &amp; contract work.
+            <strong className="text-ink mx-1">622+ GitHub stars</strong> overall
+            — and enjoy AI-driven workflows, agent-based development, close
+            client collaboration, and maintainable freelance &amp; contract
+            work.
           </p>
         </div>
 
-        <div className="">
-          <div className="brutal-border bg-cream rounded-2xl p-6 brutal-shadow">
-            <dl className="divide-y divide-ink/15">
-              {highlights.map((h) => (
-                <div key={h.k} className="py-3 flex items-baseline gap-4">
-                  <dt className="font-mono text-xs uppercase tracking-wider text-indigo-pop w-30 shrink-0 ">
-                    {h.k}
-                  </dt>
-                  <dd className="font-medium text-ink">{h.v}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
+        <div className="brutal-border bg-cream rounded-2xl p-6 brutal-shadow w-full">
+          <dl className="divide-y divide-ink/15">
+            {highlights.map((h) => (
+              <div key={h.k} className="py-3 flex items-baseline gap-4">
+                <dt className="font-mono text-xs uppercase tracking-wider text-indigo-pop w-30 shrink-0 ">
+                  {h.k}
+                </dt>
+                <dd className="font-medium text-ink">{h.v}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </div>
     </section>

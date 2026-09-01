@@ -7,7 +7,6 @@ import { Footer } from '@/components/portfolio/Footer';
 import { Hero } from '@/components/portfolio/Hero';
 import { Navbar } from '@/components/portfolio/Navbar';
 import { Projects } from '@/components/portfolio/Projects';
-import { Quote } from '@/components/portfolio/Quote';
 import { Skills } from '@/components/portfolio/Skills';
 import { GithubStatus } from '@/components/portfolio/github-status';
 

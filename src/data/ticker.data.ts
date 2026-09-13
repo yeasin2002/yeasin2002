@@ -1,0 +1,11 @@
+export const TICKER_ITEMS: string[] = [
+  'TYPESCRIPT',
+  'REACT & NEXT.JS',
+  'REACT NATIVE & EXPO',
+  'NODE.JS & BACKEND',
+  'POSTGRESQL & MONGO',
+  'AI AGENTS & LLMS',
+  'TAILWIND CSS',
+  'OPEN SOURCE',
+  'PERFORMANCE 90+',
+];

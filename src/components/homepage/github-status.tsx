@@ -1,5 +1,6 @@
 'use client';
 
+import { GITHUB_REPOS, GITHUB_STATS } from '@/data';
 import {
   ArrowUpRight,
   GitBranch,
@@ -7,69 +8,6 @@ import {
   GitPullRequest,
   Star,
 } from 'lucide-react';
-
-const repos = [
-  {
-    name: 'shadcn-ui / ui',
-    badge: 'Contribution',
-    url: 'https://github.com/shadcn-ui/ui',
-    description:
-      'A set of beautifully-designed, accessible components and code distribution platform for modern web frameworks.',
-    language: 'TypeScript',
-    stars: '116k',
-    forks: '9k',
-  },
-  {
-    name: 'skaldlabs / skald',
-    badge: 'Contribution',
-    url: 'https://github.com/skaldlabs/skald',
-    description:
-      'Context layer platform designed to run directly within engineering cloud infrastructure.',
-    language: 'TypeScript',
-    stars: '556',
-    forks: '40',
-  },
-  {
-    name: 'TailAdmin / free-nextjs-admin-dashboard',
-    badge: 'Contribution',
-    url: 'https://github.com/TailAdmin/free-nextjs-admin-dashboard',
-    description:
-      'Next.js + Tailwind CSS open-source admin dashboard template with rich layout components.',
-    language: 'TypeScript',
-    stars: '2.5k',
-    forks: '832',
-  },
-  {
-    name: 'yeasin2002 / bulletproof-nextjs-starter',
-    badge: 'Author / Pinned',
-    url: 'https://github.com/yeasin2002/bulletproof-nextjs-starter',
-    description:
-      'Production-ready Next.js boilerplate with modern tooling, comprehensive testing, and enterprise architecture.',
-    language: 'TypeScript',
-    stars: '228',
-    forks: '51',
-  },
-  {
-    name: 'yeasin2002 / react-ts-starter',
-    badge: 'Author / Pinned',
-    url: 'https://github.com/yeasin2002/react-ts-starter',
-    description:
-      'Full-stack starter combining React 19 + TypeScript with a Nitro API. Vite-powered, blazing-fast DX.',
-    language: 'TypeScript',
-    stars: '102',
-    forks: '22',
-  },
-  {
-    name: 'yeasin2002 / Grow',
-    badge: 'Author / Pinned',
-    url: 'https://github.com/yeasin2002/Grow',
-    description:
-      'Routine-based productivity & task management application emphasizing daily discipline and habit formation.',
-    language: 'TypeScript',
-    stars: 'Active',
-    forks: 'App',
-  },
-];
 
 export function GithubStatus() {
   return (
@@ -105,55 +43,38 @@ export function GithubStatus() {
 
         {/* GitHub Contribution Counters */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 rounded-2xl bg-white/[0.03] border border-white/10 mb-12">
-          <div className="flex items-center gap-3">
-            <GitCommit className="text-primary flex-shrink-0" size={20} />
-            <div>
-              <span className="block text-xl md:text-2xl font-bold text-white">
-                1,840+
-              </span>
-              <span className="text-[11px] font-mono text-[#888] uppercase">
-                Yearly Commits
-              </span>
+          {GITHUB_STATS.map((stat) => (
+            <div key={stat.label} className="flex items-center gap-3">
+              {stat.iconType === 'commit' && (
+                <GitCommit className="text-primary flex-shrink-0" size={20} />
+              )}
+              {stat.iconType === 'pr' && (
+                <GitPullRequest
+                  className="text-primary flex-shrink-0"
+                  size={20}
+                />
+              )}
+              {stat.iconType === 'star' && (
+                <Star className="text-primary flex-shrink-0" size={20} />
+              )}
+              {stat.iconType === 'repo' && (
+                <GitBranch className="text-primary flex-shrink-0" size={20} />
+              )}
+              <div>
+                <span className="block text-xl md:text-2xl font-bold text-white">
+                  {stat.value}
+                </span>
+                <span className="text-[11px] font-mono text-[#888] uppercase">
+                  {stat.label}
+                </span>
+              </div>
             </div>
-          </div>
-          <div className="flex items-center gap-3">
-            <GitPullRequest className="text-primary flex-shrink-0" size={20} />
-            <div>
-              <span className="block text-xl md:text-2xl font-bold text-white">
-                120+
-              </span>
-              <span className="text-[11px] font-mono text-[#888] uppercase">
-                Pull Requests
-              </span>
-            </div>
-          </div>
-          <div className="flex items-center gap-3">
-            <Star className="text-primary flex-shrink-0" size={20} />
-            <div>
-              <span className="block text-xl md:text-2xl font-bold text-white">
-                622+
-              </span>
-              <span className="text-[11px] font-mono text-[#888] uppercase">
-                Stars Earned
-              </span>
-            </div>
-          </div>
-          <div className="flex items-center gap-3">
-            <GitBranch className="text-primary flex-shrink-0" size={20} />
-            <div>
-              <span className="block text-xl md:text-2xl font-bold text-white">
-                48
-              </span>
-              <span className="text-[11px] font-mono text-[#888] uppercase">
-                Public Repos
-              </span>
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* Repos Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {repos.map((repo) => (
+          {GITHUB_REPOS.map((repo) => (
             <a
               key={repo.name}
               href={repo.url}

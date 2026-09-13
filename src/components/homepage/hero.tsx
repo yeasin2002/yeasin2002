@@ -1,4 +1,5 @@
 import heroPortrait from '@/assets/me/hero-alt-2.png';
+import { HERO_DATA, HERO_METRICS } from '@/data';
 import { FileText } from 'lucide-react';
 import Image from 'next/image';
 
@@ -11,7 +12,7 @@ export function Hero() {
       <div className="mx-auto w-full max-w-372.5 relative z-10">
         {/* Top Eyebrow */}
         <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-wider text-muted-foreground">
-          <span>Software Developer • Bangladesh</span>
+          <span>{HERO_DATA.eyebrow}</span>
         </div>
 
         {/* Main Grid Content */}
@@ -38,7 +39,7 @@ export function Hero() {
               <div className="hero-portrait-frame">
                 <Image
                   src={heroPortrait}
-                  alt="Md Kawsar Islam Yeasin - Software Developer"
+                  alt={`${HERO_DATA.name} - Software Developer`}
                   priority
                   width={1000}
                   height={1180}
@@ -78,17 +79,14 @@ export function Hero() {
             <p className="text-base md:text-[17px] leading-relaxed text-foreground/80">
               Hola, I&apos;m{' '}
               <strong className="font-bold text-foreground">
-                Md Kawsar Islam Yeasin
+                {HERO_DATA.name}
               </strong>{' '}
-              — Front-end-focused full-stack software developer with almost 2
-              years of experience, building scalable, responsive, and
-              high-performance applications with clean code, problem-solving,
-              and AI-driven workflows.
+              — {HERO_DATA.bio}
             </p>
             <div className="mt-5 flex flex-wrap items-center gap-3">
               <a
-                href="/assets/cv.pdf"
-                download="Md_Kawsar_Islam_Yeasin_CV.pdf"
+                href={HERO_DATA.cvPath}
+                download={HERO_DATA.cvFilename}
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-foreground/30 text-xs font-mono uppercase tracking-wider font-semibold hover:bg-foreground hover:text-background transition-colors"
                 aria-label="Download CV PDF"
               >
@@ -107,38 +105,16 @@ export function Hero() {
 
         {/* Key Metrics Bar */}
         <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-6 border-t border-foreground/10 pt-8">
-          <div>
-            <span className="block text-3xl md:text-4xl font-extrabold tracking-tight text-foreground">
-              2+
-            </span>
-            <span className="mt-1 block text-[11px] font-mono uppercase tracking-wider text-muted-foreground">
-              Years shipping products
-            </span>
-          </div>
-          <div>
-            <span className="block text-3xl md:text-4xl font-extrabold tracking-tight text-foreground">
-              10+
-            </span>
-            <span className="mt-1 block text-[11px] font-mono uppercase tracking-wider text-muted-foreground">
-              Client &amp; freelance builds
-            </span>
-          </div>
-          <div>
-            <span className="block text-3xl md:text-4xl font-extrabold tracking-tight text-foreground">
-              622+
-            </span>
-            <span className="mt-1 block text-[11px] font-mono uppercase tracking-wider text-muted-foreground">
-              GitHub stars earned
-            </span>
-          </div>
-          <div>
-            <span className="block text-3xl md:text-4xl font-extrabold tracking-tight text-foreground">
-              5+
-            </span>
-            <span className="mt-1 block text-[11px] font-mono uppercase tracking-wider text-muted-foreground">
-              AI features in prod
-            </span>
-          </div>
+          {HERO_METRICS.map((metric) => (
+            <div key={metric.label}>
+              <span className="block text-3xl md:text-4xl font-extrabold tracking-tight text-foreground">
+                {metric.value}
+              </span>
+              <span className="mt-1 block text-[11px] font-mono uppercase tracking-wider text-muted-foreground">
+                {metric.label}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,29 +1,4 @@
-const steps = [
-  {
-    id: '01',
-    title: 'Discover & Scope',
-    description:
-      'Understand the core product objectives, target users, edge cases, and architectural constraints.',
-  },
-  {
-    id: '02',
-    title: 'Architecture',
-    description:
-      'Design data models, API contracts, state management, and component hierarchies for long-term scalability.',
-  },
-  {
-    id: '03',
-    title: 'Build & Polish',
-    description:
-      'Write clean, type-safe code with strict standards, fluid micro-interactions, and WCAG accessibility.',
-  },
-  {
-    id: '04',
-    title: 'Ship & Monitor',
-    description:
-      'Deploy via CI/CD, verify Lighthouse 90+ benchmarks, configure monitoring, and optimize in production.',
-  },
-];
+import { PROCESS_STEPS } from '@/data';
 
 export function Process() {
   return (
@@ -41,7 +16,7 @@ export function Process() {
 
         {/* 4-Step Grid with full borders and distinct background cards */}
         <div className="process-grid-wrapper">
-          {steps.map((step) => (
+          {PROCESS_STEPS.map((step) => (
             <article key={step.id} className="process-card">
               <span className="process-num">{step.id}</span>
               <div className="process-card-content">

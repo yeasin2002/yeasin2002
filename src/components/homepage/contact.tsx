@@ -1,4 +1,5 @@
 import yeasinSticker from '@/assets/yeasin-sticker.png';
+import { CONTACT_DATA, SOCIAL_LINKS } from '@/data';
 import { ArrowUpRight, FileText, Mail, MessageSquare } from 'lucide-react';
 import Image from 'next/image';
 
@@ -57,10 +58,8 @@ export function Contact() {
         <div className="mx-auto max-w-[1490px] relative z-10">
           {/* Top Row */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-[11px] font-mono uppercase tracking-wider text-foreground/80">
-            <span>08 — Have an opportunity?</span>
-            <span>
-              Available for full-time, contract &amp; freelance builds
-            </span>
+            <span>{CONTACT_DATA.kicker}</span>
+            <span>{CONTACT_DATA.availability}</span>
           </div>
 
           {/* Headline */}
@@ -73,20 +72,18 @@ export function Contact() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 border-t border-foreground/20 pt-8 items-start">
             <div className="md:col-span-6 max-w-md">
               <p className="text-base md:text-lg leading-relaxed text-foreground/85 font-medium">
-                Open to product engineering roles, agency partnerships, and
-                high-impact software builds across web, mobile, and AI-driven
-                workflows.
+                {CONTACT_DATA.pitch}
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4 text-xs font-mono">
                 <a
-                  href="/assets/cv.pdf"
-                  download="Md_Kawsar_Islam_Yeasin_CV.pdf"
+                  href={CONTACT_DATA.cvPath}
+                  download={CONTACT_DATA.cvFilename}
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-foreground/30 font-semibold hover:bg-foreground hover:text-background transition-colors"
                 >
                   <FileText size={14} /> Download CV (PDF)
                 </a>
                 <span className="text-muted-foreground">
-                  Dhaka, Bangladesh (UTC+6)
+                  {CONTACT_DATA.location}
                 </span>
               </div>
             </div>
@@ -94,64 +91,46 @@ export function Contact() {
             <div className="md:col-span-6 flex flex-col gap-3">
               <a
                 className="contact-link-row"
-                href="mailto:mdkawsarislam2002@gmail.com"
+                href={`mailto:${CONTACT_DATA.email}`}
               >
                 <span className="flex items-center gap-3">
                   <Mail size={18} className="text-foreground/70" />
-                  <span>mdkawsarislam2002@gmail.com</span>
+                  <span>{CONTACT_DATA.email}</span>
                 </span>
                 <ArrowUpRight size={20} />
               </a>
 
               <a
                 className="contact-link-row"
-                href="https://wa.me/966573576731"
+                href={CONTACT_DATA.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span className="flex items-center gap-3">
                   <MessageSquare size={18} className="text-foreground/70" />
-                  <span>WhatsApp (+966 57 357 6731)</span>
+                  <span>WhatsApp ({CONTACT_DATA.whatsappNumber})</span>
                 </span>
                 <ArrowUpRight size={20} />
               </a>
 
               <div className="pt-4 grid grid-cols-3 gap-3">
-                <a
-                  href="https://github.com/yeasin2002"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-between p-3.5 rounded-xl border border-foreground/20 bg-white/20 hover:bg-white/40 transition-colors text-xs font-mono uppercase font-bold"
-                >
-                  <span className="flex items-center gap-2">
-                    <GithubIcon size={15} /> GitHub
-                  </span>
-                  <ArrowUpRight size={14} />
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/in/yeasin2002-dev/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-between p-3.5 rounded-xl border border-foreground/20 bg-white/20 hover:bg-white/40 transition-colors text-xs font-mono uppercase font-bold"
-                >
-                  <span className="flex items-center gap-2">
-                    <LinkedinIcon size={15} /> LinkedIn
-                  </span>
-                  <ArrowUpRight size={14} />
-                </a>
-
-                <a
-                  href="https://x.com/yeasin2002_dev"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-between p-3.5 rounded-xl border border-foreground/20 bg-white/20 hover:bg-white/40 transition-colors text-xs font-mono uppercase font-bold"
-                >
-                  <span className="flex items-center gap-2">
-                    <XIcon size={15} /> X
-                  </span>
-                  <ArrowUpRight size={14} />
-                </a>
+                {SOCIAL_LINKS.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between p-3.5 rounded-xl border border-foreground/20 bg-white/20 hover:bg-white/40 transition-colors text-xs font-mono uppercase font-bold"
+                  >
+                    <span className="flex items-center gap-2">
+                      {item.type === 'github' && <GithubIcon size={15} />}
+                      {item.type === 'linkedin' && <LinkedinIcon size={15} />}
+                      {item.type === 'x' && <XIcon size={15} />}
+                      {item.name}
+                    </span>
+                    <ArrowUpRight size={14} />
+                  </a>
+                ))}
               </div>
             </div>
           </div>

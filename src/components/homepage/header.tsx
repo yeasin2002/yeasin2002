@@ -8,6 +8,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
+import { NAV_LINKS } from '@/data';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -66,11 +67,11 @@ export function Header() {
         </Link>
 
         <nav aria-label="Primary navigation">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#work">Work</a>
-          <a href="#skills">Skills</a>
-          <a href="#oss">Open Source</a>
+          {NAV_LINKS.map((link) => (
+            <a key={link.href} href={link.href}>
+              {link.label}
+            </a>
+          ))}
         </nav>
 
         <a className="header-cta" href="mailto:mdkawsarislam2002@gmail.com">
@@ -114,41 +115,16 @@ export function Header() {
           aria-label="Mobile navigation"
           className="flex flex-col gap-5 sm:gap-6 justify-center py-16"
         >
-          <a
-            href="#about"
-            onClick={closeMenu}
-            className="text-[38px] sm:text-[48px] font-bold tracking-[-0.05em] text-foreground leading-[1.1] hover:opacity-70 transition-opacity w-fit"
-          >
-            About
-          </a>
-          <a
-            href="#experience"
-            onClick={closeMenu}
-            className="text-[38px] sm:text-[48px] font-bold tracking-[-0.05em] text-foreground leading-[1.1] hover:opacity-70 transition-opacity w-fit"
-          >
-            Experience
-          </a>
-          <a
-            href="#work"
-            onClick={closeMenu}
-            className="text-[38px] sm:text-[48px] font-bold tracking-[-0.05em] text-foreground leading-[1.1] hover:opacity-70 transition-opacity w-fit"
-          >
-            Work
-          </a>
-          <a
-            href="#skills"
-            onClick={closeMenu}
-            className="text-[38px] sm:text-[48px] font-bold tracking-[-0.05em] text-foreground leading-[1.1] hover:opacity-70 transition-opacity w-fit"
-          >
-            Skills
-          </a>
-          <a
-            href="#oss"
-            onClick={closeMenu}
-            className="text-[38px] sm:text-[48px] font-bold tracking-[-0.05em] text-foreground leading-[1.1] hover:opacity-70 transition-opacity w-fit"
-          >
-            Open Source
-          </a>
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={closeMenu}
+              className="text-[38px] sm:text-[48px] font-bold tracking-[-0.05em] text-foreground leading-[1.1] hover:opacity-70 transition-opacity w-fit"
+            >
+              {link.label}
+            </a>
+          ))}
           <a
             href="#contact"
             onClick={closeMenu}

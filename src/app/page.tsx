@@ -1,14 +1,14 @@
-import { About } from '@/app/components/about';
-import { Contact } from '@/app/components/contact';
-import { Experience } from '@/app/components/experience';
-import { GithubStatus } from '@/app/components/github-status';
-import { Header } from '@/app/components/header';
-import { Hero } from '@/app/components/hero';
-import { PointOfView } from '@/app/components/point-of-view';
-import { Process } from '@/app/components/process';
-import { SelectedWork } from '@/app/components/selected-work';
-import { Services } from '@/app/components/services';
-import { Ticker } from '@/app/components/ticker';
+import { About } from '@/components/homepage/about';
+import { Contact } from '@/components/homepage/contact';
+import { Experience } from '@/components/homepage/experience';
+import { GithubStatus } from '@/components/homepage/github-status';
+import { Header } from '@/components/homepage/header';
+import { Hero } from '@/components/homepage/hero';
+import { PointOfView } from '@/components/homepage/point-of-view';
+import { Process } from '@/components/homepage/process';
+import { SelectedWork } from '@/components/homepage/selected-work';
+import { Services } from '@/components/homepage/services';
+import { Ticker } from '@/components/homepage/ticker';
 
 export default function RootPage() {
   return (

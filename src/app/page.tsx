@@ -1,30 +1,29 @@
-'use client';
+import { About } from '@/components/homepage/about';
+import { Contact } from '@/components/homepage/contact';
+import { Experience } from '@/components/homepage/experience';
+import { GithubStatus } from '@/components/homepage/github-status';
+import { Header } from '@/components/homepage/header';
+import { Hero } from '@/components/homepage/hero';
+import { PointOfView } from '@/components/homepage/point-of-view';
+import { Process } from '@/components/homepage/process';
+import { SelectedWork } from '@/components/homepage/selected-work';
+import { Services } from '@/components/homepage/services';
+import { Ticker } from '@/components/homepage/ticker';
 
-import { About } from '@/components/portfolio/About';
-import { CTA } from '@/components/portfolio/CTA';
-import { Experience } from '@/components/portfolio/Experience';
-import { Footer } from '@/components/portfolio/Footer';
-import { Hero } from '@/components/portfolio/Hero';
-import { Navbar } from '@/components/portfolio/Navbar';
-import { Projects } from '@/components/portfolio/Projects';
-import { Skills } from '@/components/portfolio/Skills';
-import { GithubStatus } from '@/components/portfolio/github-status';
-
-export default function MainPage() {
+export default function RootPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Skills />
-        <GithubStatus />
-        {/* <Quote /> */}
-        <CTA />
-      </main>
-      <Footer />
-    </div>
+    <main id="top" className="bg-background text-foreground">
+      <Header />
+      <Hero />
+      <Ticker />
+      <SelectedWork />
+      <PointOfView />
+      <Experience />
+      <Services />
+      <About />
+      <GithubStatus />
+      <Process />
+      <Contact />
+    </main>
   );
 }

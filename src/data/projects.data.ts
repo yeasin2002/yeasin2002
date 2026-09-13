@@ -1,50 +1,63 @@
-export type Project = {
-  name: string;
-  year: string;
-  role: string;
-  blurb: string;
-  link: string;
-  image: string;
-  tech: string[];
-  color: string;
-  accent: string;
-};
+import giftGuru from '@/assets/project-gift-guru.png';
+import glowmi from '@/assets/project-glowmi.jpg';
+import portavacation from '@/assets/project-portavacation.jpg';
+import wiiz from '@/assets/project-wiiz.png';
+import type { StaticImageData } from 'next/image';
 
-export const projects: Project[] = [
+export interface Project {
+  title: string;
+  tag: string;
+  role: string;
+  subtitle: string;
+  description: string;
+  image: StaticImageData;
+  link: string;
+  stack: string[];
+}
+
+export const PROJECTS: Project[] = [
   {
-    name: 'Port a Vacation',
-    year: '2024',
-    role: 'Full-stack developer',
-    blurb:
-      'Vacation rental & property management for a USA client. Dynamic search, filters, and rich property pages.',
+    title: 'Port a Vacation',
+    tag: '01. PRODUCTION',
+    role: '2024 • Full-stack developer',
+    subtitle: 'Vacation rental & property management for USA client',
+    description:
+      'Dynamic property search, real-time filtering, responsive booking layout, and performant server architecture built for an international travel platform.',
+    image: portavacation,
     link: 'https://www.portavacation.co/',
-    image: '/project/portavacation-property.jpg',
-    tech: ['Next.js', 'TypeScript', 'Tailwind', 'Node', 'MongoDB'],
-    color: 'bg-indigo-pop text-cream',
-    accent: 'bg-sunshine',
+    stack: ['Next.js', 'TypeScript', 'Tailwind', 'Node.js', 'MongoDB'],
   },
   {
-    name: 'Wiiz AI',
-    year: '2025',
-    role: 'Front-end developer',
-    blurb:
-      'AI-based job marketplace for a German client. Strict Biome.js linting, 50+ issues fixed, ongoing production support.',
+    title: 'Wiiz AI',
+    tag: '02. PRODUCTION',
+    role: '2025 • Front-end developer',
+    subtitle: 'AI-based job marketplace for German client',
+    description:
+      'AI job bidding ecosystem featuring strict Biome.js quality gates, 50+ bugs resolved, performant dashboard flows, and continuous production support.',
+    image: wiiz,
     link: 'https://wiiz.ai/',
-    image: '/project/swish-job-bidding.png',
-    tech: ['Next.js', 'TypeScript', 'Redux', 'Express', 'shadcn/ui'],
-    color: 'bg-sunshine text-ink',
-    accent: 'bg-indigo-pop',
+    stack: ['Next.js', 'TypeScript', 'Redux', 'Express', 'shadcn/ui'],
   },
   {
-    name: 'Glowmi.net',
-    year: '2025',
-    role: 'Full-stack developer',
-    blurb:
-      'AI-powered skincare e-commerce with full English LTR and Arabic RTL support. Clean, scalable storefront and admin.',
+    title: 'Glowmi.net',
+    tag: '03. PRODUCTION',
+    role: '2025 • Full-stack developer',
+    subtitle: 'AI-powered skincare e-commerce (LTR & Arabic RTL)',
+    description:
+      'Multi-regional e-commerce storefront with dual English LTR and Arabic RTL support, AI-driven skincare recommendations, and scalable inventory admin.',
+    image: glowmi,
     link: 'https://glowmi-net.vercel.app/en',
-    image: '/project/glowmi-coming-soon.jpg',
-    tech: ['Next.js', 'TypeScript', 'Redux', 'Tailwind', 'shadcn/ui'],
-    color: 'bg-blush text-ink',
-    accent: 'bg-ink',
+    stack: ['Next.js', 'TypeScript', 'Redux', 'Tailwind CSS', 'shadcn/ui'],
+  },
+  {
+    title: 'Gift Guru & Mobile App',
+    tag: '04. MOBILE & WEB',
+    role: '2025 • Mobile developer',
+    subtitle: 'Cross-platform gifting & recommendation application',
+    description:
+      'Mobile first application built with React Native and Expo, featuring AI gift matching, social wishlists, and seamless cross-platform deployment.',
+    image: giftGuru,
+    link: 'https://github.com/yeasin2002',
+    stack: ['React Native', 'Expo', 'TypeScript', 'Supabase'],
   },
 ];

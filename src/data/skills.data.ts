@@ -1,43 +1,84 @@
-export type Skill = {
-  name: string;
-  icon: string;
-};
+import bunIcon from '@/assets/skills/bun.png';
+import jsIcon from '@/assets/skills/javascript.png';
+import mongoIcon from '@/assets/skills/mongodb.png';
+import nextIcon from '@/assets/skills/nextjs.png';
+import nodeIcon from '@/assets/skills/node.png';
+import pgIcon from '@/assets/skills/postgresql.png';
+import prismaIcon from '@/assets/skills/prisma.png';
+import reactIcon from '@/assets/skills/react.png';
+import tsIcon from '@/assets/skills/typescript.png';
+import type { StaticImageData } from 'next/image';
 
-export const skills: Skill[] = [
+export interface SkillBadge {
+  name: string;
+  icon: StaticImageData;
+}
+
+export interface Capability {
+  id: string;
+  title: string;
+  description: string;
+}
+
+export const SKILLS: SkillBadge[] = [
+  { name: 'TypeScript', icon: tsIcon },
+  { name: 'React', icon: reactIcon },
+  { name: 'Next.js', icon: nextIcon },
+  { name: 'JavaScript', icon: jsIcon },
+  { name: 'Node.js', icon: nodeIcon },
+  { name: 'PostgreSQL', icon: pgIcon },
+  { name: 'MongoDB', icon: mongoIcon },
+  { name: 'Prisma', icon: prismaIcon },
+  { name: 'Bun', icon: bunIcon },
+];
+
+export const CAPABILITIES: Capability[] = [
   {
-    name: 'JavaScript',
-    icon: '/skills/javascript.png',
+    id: '01',
+    title: 'TypeScript & JavaScript',
+    description:
+      'Type-safe full-stack codebases, clean design patterns, and strict compiler standards across web and mobile.',
   },
   {
-    name: 'TypeScript',
-    icon: '/skills/typescript.png',
+    id: '02',
+    title: 'React & Next.js',
+    description:
+      'High-performance App Router, Server Components, dynamic streaming, and Lighthouse 90+ optimization.',
   },
   {
-    name: 'React',
-    icon: '/skills/react.png',
+    id: '03',
+    title: 'React Native & Expo',
+    description:
+      'Cross-platform iOS and Android applications with native device capabilities and polished micro-interactions.',
   },
   {
-    name: 'Next.js',
-    icon: '/skills/nextjs.png',
+    id: '04',
+    title: 'Node.js & Backend APIs',
+    description:
+      'Scalable REST APIs, Express, Nest.js, Bun runtime, background tasks, and real-time socket connections.',
   },
   {
-    name: 'Node.js',
-    icon: '/skills/node.png',
+    id: '05',
+    title: 'PostgreSQL, Mongo & Prisma',
+    description:
+      'Relational and document schema modeling, ACID transactions, Prisma ORM migrations, and performant querying.',
   },
   {
-    name: 'MongoDB',
-    icon: '/skills/mongodb.png',
+    id: '06',
+    title: 'AI Endpoints & Agentic Workflows',
+    description:
+      'Structured outputs, tool calling, Gemini & OpenAI integration, streaming UI, and agent-driven workflows.',
   },
   {
-    name: 'PostgreSQL',
-    icon: '/skills/postgresql.png',
+    id: '07',
+    title: 'Tailwind CSS & UI Systems',
+    description:
+      'Accessible design systems, custom theme tokens, Radix / Base UI primitives, and responsive fluid styling.',
   },
   {
-    name: 'Prisma',
-    icon: '/skills/prisma.png',
-  },
-  {
-    name: 'Bun',
-    icon: '/skills/bun.png',
+    id: '08',
+    title: 'DevOps & Monorepos',
+    description:
+      'Turborepo build orchestration, Docker containers, GitHub CI/CD automation, Vercel edge, and Sentry monitoring.',
   },
 ];

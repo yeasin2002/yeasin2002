@@ -1,38 +1,65 @@
-export const experienceJobs = [
+export interface ExperienceItem {
+  period: string;
+  role: string;
+  company: string;
+  location: string;
+  current: boolean;
+  description: string;
+  highlights: string[];
+  stack: string[];
+}
+
+export const EXPERIENCES: ExperienceItem[] = [
   {
+    period: 'Jul 2025 — Present',
     role: 'Software Developer',
     company: 'Teachfosys',
-    period: 'Jul 2025 — Present',
+    location: 'Remote',
     current: true,
-    bullets: [
-      'Integrated AI API endpoints, collaborating closely with backend devs for seamless delivery.',
-      'Met with foreign clients, gathered requirements, and translated them into delivery plans.',
-      'Delivered 5+ client projects with strong W3C and cross-browser standards.',
+    description:
+      'Integrating AI API endpoints, collaborating closely with backend developers, and leading end-to-end delivery of client software solutions.',
+    highlights: [
+      'Integrated AI endpoints & streaming responses with reliable error recovery.',
+      'Engaged directly with international clients to translate product requirements into technical roadmaps.',
+      'Delivered 5+ client web platforms strictly following W3C accessibility and cross-browser standards.',
     ],
-    tech: ['Next.js', 'React', 'TypeScript', 'Node.js', 'MongoDB', 'Sentry'],
+    stack: ['Next.js', 'React', 'TypeScript', 'Node.js', 'MongoDB', 'Sentry'],
   },
-  // {
-  //   role: 'Full Stack Developer',
-  //   company: 'Freelance & Contract',
-  //   period: '2024 — Present',
-  //   current: true,
-  //   bullets: [
-  //     'Worked with agencies and indie devs across freelance and contract projects.',
-  //     'Built TypeScript-first web and mobile apps; collaborated with backend devs and clients.',
-  //     'Kept codebases modular, performant, and a joy to maintain.',
-  //   ],
-  //   tech: ['Next.js', 'React Native', 'Expo', 'Redux', 'PostgreSQL', 'Figma'],
-  // },
   {
+    period: 'Dec 2023 — Sep 2024',
     role: 'Frontend Developer',
     company: 'Neonency',
-    period: 'Dec 2023 — Sep 2024',
+    location: 'Remote',
     current: false,
-    bullets: [
-      'Optimized frontend performance and improved overall UX across products.',
-      'Built responsive layouts and fixed unnecessary re-rendering across the app.',
-      'Improved Lighthouse scores by 10–20 points, targeting 90+ wherever feasible.',
+    description:
+      'Engineered responsive user interfaces and executed comprehensive performance optimizations across core web products.',
+    highlights: [
+      'Optimized client-side rendering workflows and eliminated recurring unnecessary component re-renders.',
+      'Boosted Lighthouse performance and accessibility scores by 10–20 points, consistently reaching 90+.',
+      'Developed modular UI component libraries with scalable styling using Tailwind CSS and Redux.',
     ],
-    tech: ['React', 'JavaScript', 'Tailwind CSS', 'Redux', 'Vercel'],
+    stack: ['React', 'JavaScript', 'Tailwind CSS', 'Redux', 'Vercel'],
+  },
+  {
+    period: '2024 — Present',
+    role: 'Open Source & Contract Engineer',
+    company: 'Independent',
+    location: 'Worldwide',
+    current: false,
+    description:
+      'Building high-performance starter templates, contributing to ecosystem libraries, and delivering bespoke full-stack applications.',
+    highlights: [
+      'Authored bulletproof-nextjs-starter and react-ts-starter, accumulating 330+ GitHub stars.',
+      'Active contributor to popular open-source repositories including shadcn/ui and Skald.',
+      'Designed full-stack and mobile client MVPs with automated CI/CD and strict TypeScript type safety.',
+    ],
+    stack: [
+      'TypeScript',
+      'Next.js',
+      'React Native',
+      'Expo',
+      'Docker',
+      'Turborepo',
+    ],
   },
 ];

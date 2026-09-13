@@ -4,7 +4,7 @@ packages:
 allowBuilds:
   bufferutil: true
   esbuild: true
-  lefthook: set this to true or false
+  lefthook: true
   sharp: true
   unrs-resolver: true
 

@@ -1,36 +1,18 @@
-import UmamiAnalytics from '@/components/analytics/UmamiAnalytics';
-import { ThemeProvider } from '@/components/common/ThemeProviders';
-import { siteConfig } from '@/config/Meta';
-import { fontVariables } from '@/lib/fonts/index';
+import { siteConfig } from '@/config/meta.config';
+import { FONTS_LIST } from '@/lib/fonts';
+import { cn } from '@/lib/utils';
 import ReactLenis from 'lenis/react';
 import type { Metadata } from 'next';
-import { ViewTransitions } from 'next-view-transitions';
 
 import './globals.css';
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
-    <ViewTransitions>
-      <html lang="en" suppressHydrationWarning>
-        <body className={`${fontVariables} font-hanken-grotesk antialiased`}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="light"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <ReactLenis root>
-              {children}
-              <UmamiAnalytics />
-            </ReactLenis>
-          </ThemeProvider>
-        </body>
-      </html>
-    </ViewTransitions>
+    <html lang="en" className={cn('h-full antialiased font-sans', FONTS_LIST)}>
+      <ReactLenis root>
+        <body className="min-h-full flex flex-col font-sans">{children}</body>
+      </ReactLenis>
+    </html>
   );
 }
 

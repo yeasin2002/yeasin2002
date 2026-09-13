@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Md Kawsar Islam Yeasin - CV</title>
+    <style>
+      @font-face {
+        font-family: 'Hanken Grotesk';
+        src: url('/fonts/HankenGrotesk-Variable.ttf') format('truetype');
+        font-weight: 100 900;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'Hanken Grotesk';
+        src: url('/fonts/HankenGrotesk-Italic-Variable.ttf') format('truetype');
+        font-weight: 100 900;
+        font-style: italic;
+      }
+
+      :root {
+        color-scheme: light;
+        --bg: #f7f5ef;
+        --panel: rgba(255, 255, 255, 0.86);
+        --panel-strong: rgba(255, 255, 255, 0.95);
+        --text: #0f172a;
+        --muted: #475569;
+        --accent: #0f766e;
+        --accent-soft: rgba(15, 118, 110, 0.1);
+        --line: rgba(15, 23, 42, 0.12);
+        --shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
+
+      body {
+        font-family: 'Hanken Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(15, 118, 110, 0.18), transparent 26%),
+          radial-gradient(circle at top right, rgba(244, 114, 182, 0.12), transparent 22%),
+          linear-gradient(180deg, #fbfaf7 0%, #f3f4f6 100%);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      main {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 24px 18px 40px;
+      }
+
+      .hero,
+      .section {
+        border: 1px solid var(--line);
+        background: var(--panel);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(14px);
+      }
+
+      .hero {
+        border-radius: 28px;
+        padding: 24px;
+      }
+
+      .hero-top {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 18px;
+        align-items: center;
+      }
+
+      .avatar {
+        width: 84px;
+        height: 84px;
+        border-radius: 24px;
+        object-fit: cover;
+        border: 1px solid var(--line);
+        background: #fff;
+      }
+
+      .eyebrow {
+        margin: 0 0 6px;
+        color: var(--accent);
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        line-height: 0.96;
+        letter-spacing: -0.04em;
+      }
+
+      .role {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 1.05rem;
+        font-weight: 700;
+      }
+
+      .summary {
+        margin-top: 18px;
+        max-width: 72ch;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .stat {
+        padding: 14px 16px;
+        border-radius: 18px;
+        border: 1px solid var(--line);
+        background: var(--panel-strong);
+      }
+
+      .stat strong {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 1rem;
+      }
+
+      .stat span {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 9px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(15, 23, 42, 0.04);
+        font-size: 0.92rem;
+        font-weight: 600;
+      }
+
+      .section {
+        margin-top: 22px;
+        border-radius: 28px;
+        padding: 22px;
+      }
+
+      .section-title {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .section-title h2 {
+        font-size: 1.25rem;
+        letter-spacing: -0.03em;
+      }
+
+      .section-title span {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .skill-groups {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+      }
+
+      .skill-group {
+        padding: 16px;
+        border-radius: 20px;
+        border: 1px solid var(--line);
+        background: rgba(15, 23, 42, 0.03);
+      }
+
+      .skill-group h3 {
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 11px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: #fff;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      .entry-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .entry {
+        padding: 18px;
+        border-radius: 20px;
+        border: 1px solid var(--line);
+        background: rgba(15, 23, 42, 0.03);
+      }
+
+      .entry-top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+
+      .entry-top h3 {
+        font-size: 1.05rem;
+        margin-bottom: 4px;
+      }
+
+      .meta {
+        color: var(--muted);
+        font-size: 0.92rem;
+        line-height: 1.5;
+      }
+
+      .bullets {
+        display: grid;
+        gap: 8px;
+        margin-top: 12px;
+        padding-left: 0;
+        list-style: none;
+      }
+
+      .bullets li {
+        position: relative;
+        padding-left: 18px;
+        color: var(--text);
+        line-height: 1.55;
+      }
+
+      .bullets li::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+      }
+
+      .inline-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 14px;
+      }
+
+      .project {
+        padding: 18px;
+        border-radius: 20px;
+        border: 1px solid var(--line);
+        background: rgba(15, 23, 42, 0.03);
+      }
+
+      .project-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
+      .project-head h3 {
+        font-size: 1.02rem;
+      }
+
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 12px;
+        font-size: 0.92rem;
+      }
+
+      .links a {
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      .education {
+        display: grid;
+        gap: 12px;
+      }
+
+      .education-card {
+        padding: 18px;
+        border-radius: 20px;
+        border: 1px solid var(--line);
+        background: rgba(15, 23, 42, 0.03);
+      }
+
+      .education-card h3 {
+        font-size: 1.05rem;
+        margin-bottom: 6px;
+      }
+
+      .note {
+        margin-top: 12px;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      footer {
+        padding: 18px 6px 0;
+        color: var(--muted);
+        font-size: 0.88rem;
+        text-align: center;
+      }
+
+      @media (max-width: 720px) {
+        .hero-top {
+          grid-template-columns: 1fr;
+        }
+
+        .avatar {
+          width: 72px;
+          height: 72px;
+        }
+
+        .stats {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        main {
+          padding: 0;
+        }
+
+        .hero,
+        .section,
+        .entry,
+        .project,
+        .education-card {
+          box-shadow: none;
+        }
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <div class="hero-top">
+          <img class="avatar" src="/assets/logo.png" alt="Md Kawsar Islam Yeasin" />
+          <div>
+            <p class="eyebrow">Curriculum Vitae</p>
+            <h1>Md Kawsar Islam Yeasin</h1>
+            <p class="role">Front-End Focused Full-Stack Developer</p>
+          </div>
+        </div>
+
+        <p class="summary">
+          Front-end-focused full-stack developer with almost 2 years of industry experience.
+          Also experienced in freelancing and contract-based work with agencies and indie
+          teams. I build web and mobile products, work with AI-assisted workflows, and keep
+          codebases clean, maintainable, and production-ready. Fluent in English and comfortable
+          with client communication and cross-team collaboration.
+        </p>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>2 years</strong>
+            <span>Industry experience</span>
+          </div>
+          <div class="stat">
+            <strong>622+ GitHub stars</strong>
+            <span>Open source footprint</span>
+          </div>
+          <div class="stat">
+            <strong>Remote friendly</strong>
+            <span>Freelance and contract work</span>
+          </div>
+        </div>
+
+        <div class="contact">
+          <a class="pill" href="mailto:mdkawsarislam2002@gmail.com">mdkawsarislam2002@gmail.com</a>
+          <a class="pill" href="https://github.com/yeasin2002" target="_blank" rel="noreferrer">GitHub / yeasin2002</a>
+          <a class="pill" href="https://www.linkedin.com/in/yeasin2002/" target="_blank" rel="noreferrer">LinkedIn / yeasin2002</a>
+          <a class="pill" href="https://x.com/yeasin2002_dev" target="_blank" rel="noreferrer">X / @yeasin2002_dev</a>
+          <a class="pill" href="https://cal.com/yeasin2002/15min" target="_blank" rel="noreferrer">Book a 15 min call</a>
+        </div>
+      </header>
+
+      <section class="section">
+        <div class="section-title">
+          <h2>Skills</h2>
+          <span>Frontend, backend, mobile, and tooling</span>
+        </div>
+        <div class="skill-groups">
+          <div class="skill-group">
+            <h3>Frontend</h3>
+            <div class="chips">
+              <span class="chip">TypeScript</span>
+              <span class="chip">React</span>
+              <span class="chip">Next.js</span>
+              <span class="chip">Tailwind CSS</span>
+              <span class="chip">Redux</span>
+              <span class="chip">Zustand</span>
+              <span class="chip">React Query</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Backend</h3>
+            <div class="chips">
+              <span class="chip">Node.js</span>
+              <span class="chip">Express.js</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">PostgreSQL</span>
+              <span class="chip">Prisma</span>
+              <span class="chip">Socket.io</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Mobile & Tooling</h3>
+            <div class="chips">
+              <span class="chip">React Native</span>
+              <span class="chip">Expo</span>
+              <span class="chip">Git</span>
+              <span class="chip">GitHub</span>
+              <span class="chip">Docker</span>
+              <span class="chip">Figma</span>
+              <span class="chip">Turborepo</span>
+              <span class="chip">Vite</span>
+              <span class="chip">WXT.dev</span>
+              <span class="chip">GitHub CI/CD</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <h2>Experience</h2>
+          <span>Selected roles and current work</span>
+        </div>
+        <div class="entry-list">
+          <article class="entry">
+            <div class="entry-top">
+              <div>
+                <h3>Freelance & Contract Work</h3>
+                <div class="meta">Full Stack Developer | Remote</div>
+              </div>
+              <div class="meta">2024 - Present</div>
+            </div>
+            <ul class="bullets">
+              <li>Worked with agencies and indie teams to ship client-facing web and mobile products from planning to deployment.</li>
+              <li>Built and maintained projects such as <strong>Port a Vacation</strong>, <strong>Wiiz AI</strong>, and <strong>Glowmi.net</strong> with a TypeScript-first workflow.</li>
+              <li>Integrated AI APIs, improved performance, and coordinated delivery through clear client communication.</li>
+              <li>Kept codebases modular and maintainable with reusable components, clean state management, and scalable architecture.</li>
+            </ul>
+            <div class="inline-tech">
+              <span class="chip">Next.js</span>
+              <span class="chip">React</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">Tailwind CSS</span>
+              <span class="chip">Redux</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">Express.js</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">PostgreSQL</span>
+              <span class="chip">Prisma</span>
+              <span class="chip">React Native</span>
+              <span class="chip">Expo</span>
+              <span class="chip">NativeWind</span>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-top">
+              <div>
+                <h3>Techfosys</h3>
+                <div class="meta">Software Developer | Remote</div>
+              </div>
+              <div class="meta">Jul 2025 - Present</div>
+            </div>
+            <ul class="bullets">
+              <li>Integrated AI-related API endpoints and supported backend handoff for production delivery.</li>
+              <li>Worked with foreign clients to gather requirements, clarify scope, and ship updates.</li>
+              <li>Built and maintained applications and API endpoints across multiple client projects.</li>
+              <li>Improved query caching, revalidation, and browser compatibility while keeping W3C standards in check.</li>
+            </ul>
+            <div class="inline-tech">
+              <span class="chip">Next.js</span>
+              <span class="chip">React</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">Express.js</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">Redux</span>
+              <span class="chip">Postman</span>
+              <span class="chip">Figma</span>
+              <span class="chip">Vercel</span>
+              <span class="chip">Sentry</span>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-top">
+              <div>
+                <h3>EzMart</h3>
+                <div class="meta">Full Stack Developer | Dhaka, Bangladesh (Remote)</div>
+              </div>
+              <div class="meta">Jul 2025 - Present</div>
+            </div>
+            <ul class="bullets">
+              <li>Built the EzMart e-commerce experience with Next.js, Node.js, and shadcn/ui.</li>
+              <li>Implemented cart, checkout, and payment flows with <strong>Redux Toolkit</strong> and <strong>SSLCommerz</strong>.</li>
+              <li>Shipped a responsive admin and user experience with maintainable component structure.</li>
+            </ul>
+            <div class="inline-tech">
+              <span class="chip">Next.js</span>
+              <span class="chip">React</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">Tailwind CSS</span>
+              <span class="chip">Redux</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">Express.js</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">shadcn/ui</span>
+              <span class="chip">Postman</span>
+              <span class="chip">Vercel</span>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="entry-top">
+              <div>
+                <h3>Neonency</h3>
+                <div class="meta">Frontend Developer | Remote</div>
+              </div>
+              <div class="meta">Dec 2023 - September 2024</div>
+            </div>
+            <ul class="bullets">
+              <li>Optimized frontend performance, reduced loading times, and improved the overall user experience.</li>
+              <li>Built responsive layouts across screen sizes and fixed unnecessary re-rendering and client-side issues.</li>
+              <li>Improved Lighthouse scores by 10-20 points and consistently targeted 90+ whenever feasible.</li>
+            </ul>
+            <div class="inline-tech">
+              <span class="chip">React</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Tailwind CSS</span>
+              <span class="chip">Redux</span>
+              <span class="chip">Figma</span>
+              <span class="chip">Netlify</span>
+              <span class="chip">Vercel</span>
+              <span class="chip">Postman</span>
+              <span class="chip">Sentry</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <h2>Selected Projects</h2>
+          <span>Client work and product builds</span>
+        </div>
+        <div class="projects-grid">
+          <article class="project">
+            <div class="project-head">
+              <h3>Port a Vacation</h3>
+              <span class="meta">USA client</span>
+            </div>
+            <p class="meta">Vacation rental and property management website with dynamic search, filters, and detailed property pages.</p>
+            <div class="links">
+              <a href="https://www.portavacation.co/" target="_blank" rel="noreferrer">Live</a>
+            </div>
+            <div class="inline-tech">
+              <span class="chip">Next.js</span>
+              <span class="chip">React</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">Tailwind CSS</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">MongoDB</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-head">
+              <h3>Wiiz AI</h3>
+              <span class="meta">German client</span>
+            </div>
+            <p class="meta">AI-based job marketplace with ongoing production support, bug fixes, and feature maintenance.</p>
+            <div class="links">
+              <a href="https://wiiz.ai/" target="_blank" rel="noreferrer">Live</a>
+            </div>
+            <div class="inline-tech">
+              <span class="chip">Next.js</span>
+              <span class="chip">React</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">Tailwind CSS</span>
+              <span class="chip">Redux</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">shadcn/ui</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-head">
+              <h3>Glowmi.net</h3>
+              <span class="meta">Under development</span>
+            </div>
+            <p class="meta">AI-powered skincare e-commerce platform with English LTR and Arabic RTL support.</p>
+            <div class="links">
+              <a href="https://glowmi.net/" target="_blank" rel="noreferrer">Live</a>
+            </div>
+            <div class="inline-tech">
+              <span class="chip">Next.js</span>
+              <span class="chip">React</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">Tailwind CSS</span>
+              <span class="chip">Redux</span>
+              <span class="chip">shadcn/ui</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-head">
+              <h3>Rima's Dental</h3>
+              <span class="meta">Client site</span>
+            </div>
+            <p class="meta">Responsive dental clinic website with a polished patient-first presentation.</p>
+            <div class="links">
+              <a href="https://rimasclinic.com/en/home/" target="_blank" rel="noreferrer">Live</a>
+              <a href="https://github.com/yeasin2002/Rimas-Dental" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+            <div class="inline-tech">
+              <span class="chip">Next.js</span>
+              <span class="chip">React</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">Tailwind CSS</span>
+              <span class="chip">Redux</span>
+              <span class="chip">Vercel</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-head">
+              <h3>Amader Bazar</h3>
+              <span class="meta">Marketplace</span>
+            </div>
+            <p class="meta">Marketplace website with a responsive storefront and a lightweight API-backed product flow.</p>
+            <div class="links">
+              <a href="https://amaderbazar.netlify.app/" target="_blank" rel="noreferrer">Live</a>
+              <a href="https://github.com/yeasin2002/Amazer_Bazar-client" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+            <div class="inline-tech">
+              <span class="chip">React</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Tailwind CSS</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">Express.js</span>
+              <span class="chip">MongoDB</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-head">
+              <h3>TaskHub</h3>
+              <span class="meta">Task tracker</span>
+            </div>
+            <p class="meta">Task tracking platform with a clean dashboard experience for planning, organizing, and shipping work.</p>
+            <div class="links">
+              <a href="https://taskhub2002.netlify.app/" target="_blank" rel="noreferrer">Live</a>
+            </div>
+            <div class="inline-tech">
+              <span class="chip">React</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">Tailwind CSS</span>
+              <span class="chip">Redux</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">Express.js</span>
+              <span class="chip">shadcn/ui</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <h2>Education</h2>
+          <span>Current study</span>
+        </div>
+        <div class="education">
+          <div class="education-card">
+            <h3>Govt. Bangla College</h3>
+            <div class="meta">Dhaka, Bangladesh</div>
+            <div class="meta">B.B.A (Honors) - October 2024 to Present</div>
+          </div>
+        </div>
+        <p class="note">
+          Open source contributions include shadcn/ui PRs and other small community efforts.
+          I am also building micro-SaaS products, development tools, and browser extensions
+          with an AI-assisted workflow.
+        </p>
+      </section>
+
+      <footer>Md Kawsar Islam Yeasin - CV</footer>
+    </main>
+  </body>
+</html>

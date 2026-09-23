@@ -1,4 +1,5 @@
 import { FlatCompat } from '@eslint/eslintrc';
+import { plugin as shadcn } from '@shadcn/lint';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -11,6 +12,20 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
+  {
+    plugins: {
+      shadcn,
+    },
+    rules: {
+      // Choose and configure your design system rules here:
+      'shadcn/no-arbitrary-values': 'error',
+      'shadcn/no-raw-colors': 'error',
+      // 'shadcn/no-restyle': ['error', { allow: ['layout'] }],
+      // 'shadcn/no-inline-styles': 'error',
+      // 'shadcn/no-unknown-classes': 'error',
+      // 'shadcn/require-static-classes': 'error',
+    },
+  },
   // Ignore the .agents folder (tooling and agent skills)
   { ignores: ['.agents/**', 'node_modules/**', `.next/**`] },
 ];

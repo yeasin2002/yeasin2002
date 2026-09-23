@@ -18,12 +18,18 @@ const eslintConfig = [
     },
     rules: {
       // Choose and configure your design system rules here:
-      'shadcn/no-arbitrary-values': 'error',
+      'shadcn/no-arbitrary-values': ['error', { allow: ['layout'] }],
       'shadcn/no-raw-colors': 'error',
       // 'shadcn/no-restyle': ['error', { allow: ['layout'] }],
       // 'shadcn/no-inline-styles': 'error',
       // 'shadcn/no-unknown-classes': 'error',
       // 'shadcn/require-static-classes': 'error',
+    },
+  },
+  {
+    files: ['src/components/ui/**'],
+    rules: {
+      'shadcn/no-arbitrary-values': 'off',
     },
   },
   // Ignore the .agents folder (tooling and agent skills)

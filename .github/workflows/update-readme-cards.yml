@@ -28,7 +28,7 @@ jobs:
         uses: soulteary/github-readme-stats-action@v1
         with:
           card: top-langs
-          options: username=yeasin2002&langs_count=10&title_color=22c55e&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&layout=compact&custom_title=Top%20Languages
+          options: username=yeasin2002&langs_count=10&title_color=22c55e&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&layout=compact&custom_title=Top Languages
           path: public/states/top-langs.svg
           token: ${{ secrets.PROFILE_STATS_TOKEN || secrets.GITHUB_TOKEN }}
 
